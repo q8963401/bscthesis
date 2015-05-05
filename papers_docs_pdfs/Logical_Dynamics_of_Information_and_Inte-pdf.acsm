@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<fulfillmentToken fulfillmentType="buy" xmlns="http://ns.adobe.com/adept">
+<distributor>urn:uuid:00000000-0000-0000-0000-000000000001</distributor>
+<operatorURL>http://books.google.com/books/acs4/fulfillment</operatorURL>
+<expiration>2015-04-25T05:37:27-07:00</expiration>
+<transaction>ge:7785ccb3-2a7e-123c-9561-00e2e8344acd:1429964547948900</transaction>
+<userId>12975328925000609417</userId>
+<resourceItemInfo>
+<resource>urn:uuid:7785ccb3-2a7e-123c-9561-00e2e8344acd</resource>
+<resourceItem>1</resourceItem>
+<src>http://books.google.de/books/download/Logical_Dynamics_of_Information_and_Inte.pdf?acsid=urn:uuid:7785ccb3-2a7e-123c-9561-00e2e8344acd&amp;output=acs4_book_bytes&amp;ar=d23b07ba31f432452ca57277d51ca762</src>
+<downloadType>simple</downloadType>
+</resourceItemInfo>
+<hmac>JHYDD8qFm+/CHNcKMNLDL2oye4Q=</hmac>
+</fulfillmentToken>

@@ -1,0 +1,460 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass extarticle
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+\end_modules
+\maintain_unincluded_children false
+\language ngerman
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 11
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\topmargin 2cm
+\bottommargin 2cm
+\headsep 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip smallskip
+\quotes_language german
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Exposé zur Bachelorarbeit mit dem Thema: 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Ausführliche Darstellung eines klassischen Systems der probabilistischen
+ epistemischen Logik und Beschreibung neuerer Entwicklungen
+\end_layout
+
+\begin_layout Author
+David Baldin
+\end_layout
+
+\begin_layout Abstract
+Das vorliegende Exposé gibt einen kurzen Überblick über Motivation, Methodik,
+ vorläufige Strukturierung sowie relevanter Literatur der zu erstellenden
+ Bachelorarbeit.
+\end_layout
+
+\begin_layout Part
+Einführung und Motivation
+\end_layout
+
+\begin_layout Standard
+Das Ziel der zu erstellenden Arbeit ist es, einen technischen und möglichst
+ vollständigen Überblick über ein klassisches System der probalistischen
+ epistemischen Logik zu geben und darauf aufbauende, neuere Entwicklungen
+ darzustellen.
+ 
+\end_layout
+
+\begin_layout Standard
+Der Hauptteil der Arbeit gliedert sich in drei aufeinander aufbauende Teile.
+\end_layout
+
+\begin_layout Standard
+Im ersten Teil wird die in 
+\shape italic
+Reasoning about uncertainty, 2005 - J.Y.
+ Halpern
+\shape default
+ vorgestellte Axiomatisierung 
+\begin_inset Formula $AX_{n}^{prob}$
+\end_inset
+
+ der Sprache 
+\begin_inset Formula $\mathcal{L}_{n}^{QU}$
+\end_inset
+
+ ausführlich auf Basis der klassischen Aussagenlogik und einer modalen Wissenslo
+gik mit mehreren Agenten aufgebaut und dargestellt.
+ Es werden grundlegende Begriffe wie bspw.
+ Wahrscheinlichkeit, Ungewissheit und Wissen bezüglich ihrer technischen
+ Representation im Rahmen der Logik dargestellt.
+ Es werden wichtige Sätze (bspw.
+ 
+\begin_inset Formula $K,T,D,4,5,MP,GEN$
+\end_inset
+
+, Korrektheits- und Vollständigkeitseigenschaften) der vorgestellten Systeme
+ ausgearbeitet.
+ Zum Ende des ersten Teils werden Komplexitätseigenschaften, insbesondere
+ von 
+\begin_inset Formula $\mathcal{L}_{n}^{QU}$
+\end_inset
+
+ ausgearbeitet.
+\end_layout
+
+\begin_layout Standard
+Im zweiten Teil werden neuere Entwicklungen auf dem Gebiet der dynamischen
+ probalistischen Wissenslogik dargestellt.
+ Es werden die in 
+\shape italic
+Logical dynamics of information and interaction, 2012 - J.
+ van Benthem
+\shape default
+ eingeführten Logiken 
+\series bold
+
+\begin_inset Formula $DEL$
+\end_inset
+
+ 
+\series default
+und 
+\begin_inset Formula $PAL$
+\end_inset
+
+ dargestellt und anhand von Beispielen erläutert.
+ Es wird technisch dargestellt, wie sich eine dynamische Wissenslogik um
+ Wahrscheinlichkeiten erweitern lässt und welche Eigenschaften sich daraus
+ ergeben.
+\end_layout
+
+\begin_layout Standard
+Der dritte Teil analysiert das im zweiten Teil dargestellte System der dynamisch
+en Wissenslogik mit Wahrscheinlichkeiten bezüglich aktueller Forschungsfragen.
+ Insbesondere soll dabei ein Vergleich mit Bayesschen Netzen durchgeführt
+ werden.
+ Der Vergleich wird durch die Frage motiviert, wie sich die logischen Eigenschaf
+ten der dargestellten Systeme mit der ausgereiften Theorie Bayesscher Netzte
+ kombinieren lassen.
+ 
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Struktur der Arbeit
+\end_layout
+
+\begin_layout Standard
+Die Struktur der Arbeit wird sich an folgender Grobstruktur orientieren.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Inhaltsverzeichnis
+\end_layout
+
+\begin_layout Enumerate
+Einleitung
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Motivation und Ziel der Arbeit 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+(
+\begin_inset Quotes gld
+\end_inset
+
+Lässt sich Wissenslogik mit Baysschen Netzen kombinieren?
+\begin_inset Quotes grd
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Allgemeine Darstellung des Themas 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Hauptteil
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Darstellung eines klassischen Systems der Wissenslogik mit Wahrscheinlichkeiten
+\end_layout
+
+\begin_layout Enumerate
+Darstellung eines dynamischen Systemes der Wissenslogik mit Wahrscheinlichkeiten
+\end_layout
+
+\begin_layout Enumerate
+Analyse aktueller Forschungsfragen 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Schlussteil
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Zusammenfassung 
+\end_layout
+
+\begin_layout Enumerate
+Fazit
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Literaturverzeichniss
+\end_layout
+
+\begin_layout Part
+Anmerkungen zur Arbeitsweise
+\end_layout
+
+\begin_layout Itemize
+Die zur Darstellung notwendigen Formalismen (wie bspw.
+ ein System der Aussagenlogik und der Modallogik) werden technisch eingeführt
+ und relevante Sätze ausführlich dargestellt.
+ Soweit es das Verständnis erfordert werden Beispiele angegeben.
+ 
+\end_layout
+
+\begin_layout Itemize
+Soweit es erforderlich ist werden Formalismen syntaktisch vereinheitlicht.
+\end_layout
+
+\begin_layout Itemize
+Fachlich wird sich die Arbeit primär an Arbeiten von J.
+ Y.
+ Halpern und J.
+ van Benthem orientieren.
+ 
+\end_layout
+
+\begin_layout Itemize
+Die Formalismen und Termina werden sich an der aktuellen englischsprachigen
+ Literatur orientieren.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Literaturliste
+\end_layout
+
+\begin_layout Standard
+Zum Zeitpunkt der Fertigstellung des Exposés wurden folgende Arbeiten für
+ die Arbeit als relevant eingestuft:
+\end_layout
+
+\begin_layout Itemize
+Handbook of Epistemic Logic, 2015 - H.
+ van Ditmarsch, J.
+ Y.
+ Halpern, W.
+ van de Hoek
+\end_layout
+
+\begin_layout Itemize
+Reasoning about uncertainty, 2005 - J.
+ Y.
+ Halpern
+\end_layout
+
+\begin_layout Itemize
+Logical dynamics of information and interaction, 2012 - J.
+ van Benthem
+\end_layout
+
+\begin_layout Itemize
+A mathematical introduction to logic, 1972 - H.
+ B.
+ Enderton
+\end_layout
+
+\begin_layout Itemize
+The Logic of Relevance and Necessity, 1972 - A.
+ R.
+ Anderson, N.
+ D.
+ Belnap
+\end_layout
+
+\begin_layout Itemize
+Dynamic Epistemic Logic, 2007 - H.
+ van Ditmarsch, W.
+ van der Hoek, B.
+ Kooi
+\end_layout
+
+\begin_layout Itemize
+Epistemic logic and information update, 2008 - A.
+ Baltag, H.
+ van Ditmarsch, L.S.
+ Moss
+\end_layout
+
+\begin_layout Itemize
+Dynamic update with probabilities, 2009 - J.
+ van Benthem, J.
+ Gerbrandy, B.
+ Kooi
+\end_layout
+
+\begin_layout Itemize
+When all is done but not (yet) said: Dynamic rationality in extensive games,
+ 2008 - A.
+ Baltag, S.
+ Smets, J.A.
+ Zvesper
+\end_layout
+
+\begin_layout Itemize
+Extending probabilistic dynamic epistemic logic, 2009 - J.
+ Sack
+\end_layout
+
+\begin_layout Itemize
+A Logic for Reasoning about Upper Probabilities, 2001 - J.
+ Y.
+ Halpern, R.
+ Pucella
+\end_layout
+
+\begin_layout Itemize
+An Introduction to Logics of Knowledge and Belief, 2015 - H.
+ van Ditmarsch, J.
+ Y.
+ Halpern, W.
+ van der Hoek, B.
+ Kooi
+\end_layout
+
+\begin_layout Itemize
+Computation as conversation, 2008 - J.
+ van Benthem
+\end_layout
+
+\begin_layout Itemize
+The stories of logic and information, 2008 - J.
+ van Benthem, M.
+ Martinez
+\end_layout
+
+\begin_layout Itemize
+Decisions, actions, and games: A logical perspective, 2009 - J.
+ van Benthem
+\end_layout
+
+\begin_layout Itemize
+Probabilistic Dynamic Epistemic Logic, 2003 - B.
+ Kooi
+\end_layout
+
+\begin_layout Itemize
+Epistemic Probability Logic Simplified, 2014 - J.
+ van Eijck
+\end_layout
+
+\begin_layout Itemize
+A logical Approach to Reasoning about Uncertainty: A Tutorial, 1995 - J.
+ Y.
+ Halpern
+\end_layout
+
+\begin_layout Itemize
+Conditional Probability and Update Logic, 2003 - J.
+ van Benthem
+\end_layout
+
+\begin_layout Itemize
+Reasoning About Knowledge, 1995 - R.
+ Fagin, J.
+ Y.
+ Halpern, Y.
+ Moses, M.
+ Y.
+ Vardi
+\end_layout
+
+\begin_layout Itemize
+Open Problems in logical Dynamics, 2005 - J.
+ van Benthem
+\end_layout
+
+\end_body
+\end_document
