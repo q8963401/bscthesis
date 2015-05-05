@@ -1,7 +1,10 @@
 **/*.pdf
 *.bak
-*.html
 *.zip
 *~
 *xoj
-./private
+private
+elyxer-1.2.5
+*.py
+*.sh
+*.log

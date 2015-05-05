@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="generator" content="http://www.nongnu.org/elyxer/"/>
+<meta name="create-date" content="2015-05-05"/>
+<link rel="stylesheet" href="http://elyxer.nongnu.org/lyx.css" type="text/css" media="all"/>
+<title>Notes on Reasoning about Uncertainty</title>
+</head>
+<body>
+<div id="globalWrapper">
+<h1 class="title">
+Random Notes on reading trough &ldquo;Reasoning about unvertainty&rdquo;
+</h1>
+<h1 class="Section-">
+<a class="toc" name="toc-Section--1"></a>Allgemeines
+</h1>
+<ul>
+<li>
+Wie kann ungewissheit / unvertainty repräsentiert werden?<ul>
+<li>
+Es gibt verschiedem Ansätze, z.B. DempsterSchäfer belief functions, possibility measures, ranking functions
+</li>
+
+</ul>
+
+</li>
+<li>
+Die meisten Repräsentationen von Ungewissheit starten mit <b>Möglichen Welten</b> (manchmal auch &ldquo;states&rdquo; oder &ldquo;elementary outcomes&rdquo; genannt)
+</li>
+<li>
+Möglichen Welten sind die Ergebnisse die ein Agent für möglich hält.<ul>
+<li>
+Die möglichen Welten des Agenten &ldquo;Werfer einer Münze&rdquo; besteht aus 6 möglichen Welten, d.h. <span class="formula"><i>W</i>: = <span class="symbol">{</span><i>w</i><sub>1</sub>, <i>w</i><sub>2</sub>, <i>w</i><sub>3</sub>, <i>w</i><sub>4</sub>, <i>w</i><sub>5</sub>, <i>w</i><sub>6</sub><span class="symbol">}</span></span> , d.h. die Welt <span class="formula"><i>w</i><sub><i>i</i></sub></span> ist die Welt in welcher der Würfel auf <span class="formula"><i>i</i></span> landet.
+</li>
+<li>
+Die _bekannten Objekte_ werden <b>Events</b> genannt. Ein Event ist eine Menge möglicher Welten.
+</li>
+
+</ul>
+
+</li>
+<li>
+Sei eine Menge <span class="formula"><i>W</i></span> möglicher Welten.<ul>
+<li>
+Angenommen die <b>Ungewissheit</b> eines Agenten wird durch <span class="formula"><i>W</i><sup>’</sup> ⊆ <i>W</i></span> bezeichnet.
+</li>
+<li>
+Der Agent hält <span class="formula"><i>U</i></span> für <b>möglich</b> wenn <span class="formula"><i>U</i>∩<i>W</i>’ ≠ ∅</span> gilt, d.h. wenn der Agent mindestens ein Event für möglich hält welches in <span class="formula"><i>U</i></span> ist.
+</li>
+<li>
+Der Agent weiß <span class="formula"><i>U</i></span> wenn <span class="formula"><i>W</i>’ ⊆ <i>U</i></span>, d.h. wenn in allen Welten welche der Agent für möglich hält <span class="formula"><i>U</i></span>gilt. Um es anders auszudrücken: Ein Agent weiß <span class="formula"><i>U</i></span>wenn er <span class="formula"><span class="overline"><i>U</i></span></span> nicht für möglich hält.
+</li>
+<li>
+Was ein Agent weiß hängt davon 
+</li>
+
+</ul>
+
+</li>
+<li>
+Eine formale Logik besteht aus einer Syntax (z.B. einer Sprache) und einer Semantik, d.h. Modellen welche benutzt werden um zu entscheiden ob Formeln in der Sprache wahr oder falsch sind.
+</li>
+
+</ul>
+<h1 class="Section-">
+<a class="toc" name="toc-Section--2"></a>Wahrscheinlichkeits Maß
+</h1>
+<div class="Description">
+<span class="Description-entry">DEF_2.2.1</span> Eine Algebra über <span class="formula"><i>W</i></span> ist eine Menge <span class="formula">ℱ</span>von Teilmengen von <span class="formula"><i>W</i></span> welche <span class="formula"><i>W</i></span> enthält und unter <b><span class="formula">∩</span> </b>und<b> <span class="formula">∪</span> </b>abgeschlossen ist. D.h. sind <span class="formula"><i>V</i>, <i>U</i> ∈ ℱ</span>, so auch <span class="formula"><i>V</i>∪<i>U</i> ∈ ℱ</span> und <span class="formula"><i>V</i>∩<i>U</i> ∈ ℱ</span>. Eine <span class="formula"><i>σ</i></span>-Algebra ist abgeschlossen unter Komplement und aufzählbarer Vereinigung, d.h. sind <span class="formula"><i>U</i><sub>1</sub>, <i>U</i><sub>2</sub>, ⋯, <i>U</i><sub><i>n</i></sub> ∈ ℱ</span> so auch <span class="formula">∪<span class="limits"></span><sub><i>i</i> ∈ <span class="symbol">{</span>1, 2, ⋯, <i>n</i><span class="symbol">}</span></sub><i>U</i><sub><i>i</i></sub></span>.
+</div>
+<div class="Description">
+<span class="Description-entry">Minimal</span> Ein <span class="formula"><i>U</i> ∈ ℱ</span> ist genau dann minimal, wenn <span class="formula"><i>U</i> ≠ ∅</span> und <span class="formula"><i>U</i>’ ⊆ <i>U</i> ⇒ <i>U</i>’ = ∅</span>
+</div>
+<div class="Description">
+<span class="Description-entry">DEF_2.2.2</span> Ein probalistischer Raum ist ein ein tuple <span class="formula">(<i>W</i>, ℱ, <i>μ</i>)</span>, wobei <span class="formula">ℱ</span>eine algebra über <span class="formula"><i>W</i></span> ist und <span class="formula"><i>μ</i>:<i>F</i> → <span class="symbol">[</span>0, 1<span class="symbol">]</span></span>die folgenden Bedingungen erfüllt
+</div>
+<ul>
+<li class="nested">
+<div class="Description">
+<span class="Description-entry">P1</span> <span class="formula"><i>μ</i>(<i>W</i>) = 1</span>
+</div>
+<div class="Description">
+<span class="Description-entry">P2</span> <span class="formula"><i>μ</i>(<i>U</i>∪<i>V</i>) = <i>μ</i>(<i>U</i>) + <i>μ</i>(<i>V</i>)</span> wenn <span class="formula"><i>U</i></span> und <span class="formula"><i>V</i></span> disjunkte Elemente von <span class="formula">ℱ</span> sind.
+</div>
+<div class="Description">
+<span class="Description-entry">Bemerkung</span> Die Mengen in <span class="formula">ℱ</span>werden messbare Mengen genannt, <span class="formula"><i>μ</i></span> wird Wahrscheinlichkeitsmaß auf <span class="formula"><i>W</i></span> (oder über <span class="formula">ℱ</span>mit <span class="formula"><i>F</i> ≠ 2<sup><i>W</i></sup></span>) genannt. Die Argumente von <span class="formula"><i>μ</i></span> sind keine Elemente von <span class="formula"><i>W</i></span> sondern Teilmengen aus <span class="formula"><i>W</i></span>.
+</div>
+
+</li>
+
+</ul>
+<h1 class="Section-">
+<a class="toc" name="toc-Section--3"></a>Multi-Agenten Systeme
+</h1>
+<div class="Description">
+<span class="Description-entry">Epistemic-Frame</span> Ein epistemic Frame <span class="formula"><i>F</i></span> ist ein Paar <span class="formula">(<i>W</i>, <span class="scriptfont">K</span>)</span> wobei <span class="formula"><i>W</i></span> die Mengen der möglichen Welten darstellt und <span class="formula"><span class="scriptfont">K</span> ⊆ <i>W</i> × <i>W</i></span> eine binäre Relation auf <span class="formula"><i>W</i></span> ist. <span class="formula"><span class="scriptfont">K</span></span> wird manchmal als Möglichkeitsrelation oder Erreichbarkeitsrelation bezeichnet wird. Intuitiv gesprochen ist <span class="formula">(<i>w</i>, <i>w</i>’) ∈ <span class="scriptfont">K</span></span> genau dann, wenn der Agent <span class="formula"><i>w</i>’</span> für eine mögliche Welt in <span class="formula"><i>w</i></span> hält.
+</div>
+<div class="Description">
+<span class="Description-entry">Möglichkeitsrelation</span> <span class="formula"><span class="scriptfont">K</span>(<i>w</i>) = <span class="symbol">{</span><i>w</i>’:(<i>w</i>, <i>w</i>’) ∈ <span class="scriptfont">K</span><span class="symbol">}</span></span>. Es ist <span class="formula"><span class="scriptfont">K</span>(<i>w</i>)</span> die Menge der Welten die ein Agent in der Welt <span class="formula"><i>w</i></span> für möglich. Sei bspw. <span class="formula"><i>W</i> = <span class="symbol">{</span><span class="symbol">{</span><i>w</i><sub>1</sub>, <i>w</i><sub>2</sub>, <i>w</i><sub>3</sub>, <i>w</i><sub>4</sub>, <i>w</i><sub>5</sub>, <i>w</i><sub>6</sub><span class="symbol">}</span>, <span class="symbol">{</span><i>w</i><sub>1</sub><span class="symbol">}</span>, <span class="symbol">{</span><i>w</i><sub>6</sub><span class="symbol">}</span><span class="symbol">}</span></span> die Menge der Welten wobei <span class="formula"><i>w</i><sub>1</sub>...<i>w</i><sub>6</sub></span> für die Augenfarben eines Würfels stehen und <span class="formula"><span class="scriptfont">K</span> = <span class="symbol">{</span>(<span class="symbol">{</span><i>w</i><sub>1</sub>, <i>w</i><sub>2</sub>, <i>w</i><sub>3</sub>, <i>w</i><sub>4</sub>, <i>w</i><sub>5</sub>, <i>w</i><sub>6</sub><span class="symbol">}</span>, <span class="symbol">{</span><i>w</i><sub>1</sub><span class="symbol">}</span>), (<span class="symbol">{</span><i>w</i><sub>1</sub>, <i>w</i><sub>2</sub>, <i>w</i><sub>3</sub>, <i>w</i><sub>4</sub>, <i>w</i><sub>5</sub>, <i>w</i><sub>6</sub><span class="symbol">}</span>, <span class="symbol">{</span><i>w</i><sub>6</sub><span class="symbol">}</span>)<span class="symbol">}</span></span> also <span class="formula"><span class="scriptfont">K</span>(<span class="symbol">{</span><i>w</i><sub>1</sub>, <i>w</i><sub>2</sub>, <i>w</i><sub>3</sub>, <i>w</i><sub>4</sub>, <i>w</i><sub>5</sub>, <i>w</i><sub>6</sub><span class="symbol">}</span>) = <span class="symbol">{</span><span class="symbol">{</span><i>w</i><sub>1</sub><span class="symbol">}</span>, <span class="symbol">{</span><i>w</i><sub>6</sub><span class="symbol">}</span><span class="symbol">}</span></span>. Dann hält der Agent es einzig für möglich, dass eine 1 oder eine 6 gewürfelt wird ;-)
+</div>
+<div class="Unindented">
+Die Frage ob ein Agent ein Event für möglich hält oder ein Event weiß, hängt von der Welt ab. 
+</div>
+<ul>
+<li>
+Ein Agent hält <span class="formula"><i>U</i></span> für <b>möglich</b> in der Welt <span class="formula"><i>w</i></span> (in einem epistemic-frame), genau dann wenn <span class="formula"><i>U</i>∩<span class="scriptfont">K</span>(<i>w</i>) ≠ ∅</span>. 
+</li>
+<li>
+Der Agent <b>weiß</b> <span class="formula"><i>U</i></span> in der Welt <span class="formula"><i>w</i></span>, wenn <span class="formula"><span class="scriptfont">K</span>(<i>w</i>) ⊆ <i>U</i></span>. D.h. wenn jede Welt die er für möglich hält in <span class="formula"><i>U</i></span> liegt.
+</li>
+
+</ul>
+<div class="Unindented">
+Es lassen sich einige Standardsätze der Relationentheorie über <span class="formula"><span class="scriptfont">K</span></span> formulieren (eine Auswahl):
+</div>
+<div class="Description">
+<span class="Description-entry">Reflexiv</span> <span class="formula"><span class="scriptfont">K</span></span> wird reflexiv genannt, wenn für alle <span class="formula"><i>w</i> ∈ <i>W</i></span> gilt <span class="formula">(<i>w</i>, <i>w</i>) ∈ <span class="scriptfont">K</span></span>.
+</div>
+<div class="Description">
+<span class="Description-entry">Euklidisch</span> <span class="formula"><span class="scriptfont">K</span></span> wird euklidisch genannt, wenn aus <span class="formula">(<i>u</i>, <i>v</i>), (<i>u</i>, <i>w</i>) ∈ <span class="scriptfont">K</span></span> folgt, dass <span class="formula">(<i>v</i>, <i>w</i>) ∈ <span class="scriptfont">K</span></span> für alle <span class="formula"><i>u</i>, <i>v</i> ∈ <span class="scriptfont">K</span></span>.
+</div>
+<div class="Description">
+<span class="Description-entry">Seriell</span> <span class="formula"><span class="scriptfont">K</span></span> wird seriell genannt wenn es für jedes <span class="formula"><i>w</i> ∈ <i>W</i></span> ein <span class="formula"><i>w</i>’ ∈ <i>W</i></span> gibt, so dass <span class="formula">(<i>w</i>, <i>w</i>’) ∈ <span class="scriptfont">K</span></span> ist. Dies lässt sich so interpretieren, dass der Agent immer irgendeine Welt für möglich hält.
+</div>
+<div class="Description">
+<span class="Description-entry">Transitiv</span> <span class="formula"><span class="scriptfont">K</span></span> wird transitiv genannt wenn aus <span class="formula">(<i>u</i>, <i>v</i>), (<i>v</i>, <i>w</i>) ∈ <span class="scriptfont">K</span></span> folgt, dass <span class="formula">(<i>u</i>, <i>w</i>) ∈ <span class="scriptfont">K</span></span> für alle <span class="formula"><i>u</i>, <i>v</i>, <i>w</i> ∈ <span class="scriptfont">K</span></span>.
+</div>
+<div class="Description">
+<span class="Description-entry">Äquivalent</span> <span class="formula"><span class="scriptfont">K</span></span> ist eine Äquivalenzrelation, wenn <span class="formula"><span class="scriptfont">K</span></span> reflexiv, symmetrisch und transitiv ist.
+</div>
+<div class="Unindented">
+Wie werden mehrere Agenten repräsentiert? Ein epistemic-frame <span class="formula"><i>F</i></span> für <span class="formula"><i>n</i></span> Agenten ist ein Tupel <span class="formula">(<i>W</i>, <span class="scriptfont">K</span><sub>1</sub>, ⋯, <span class="scriptfont"> K</span><sub><i>n</i></sub>)</span> wobei jedes <span class="formula"><span class="scriptfont">K</span><sub><i>i</i></sub></span> eine binäre Relation auf <span class="formula"><i>W</i></span> ist. <span class="formula"><i>K</i><sub><i>i</i></sub>(<i>w</i>)</span> ist entsprechend wieder die Menge der Welten die Agent <span class="formula"><i>i</i></span> in <span class="formula"><i>w</i></span> für möglich hält.
+</div>
+<div class="Indented">
+Ein Beispiel: 
+</div>
+<ul>
+<li>
+Sei ein Kartenspiel mit 3 Karten A, B und C und die Welt <span class="formula"><i>W</i> = <span class="symbol">{</span><i>A</i>, <i>B</i>, <i>C</i><span class="symbol">}</span></span> sowie 2 Agenten, Agent 1 mit <span class="formula"><span class="scriptfont">K</span><sub>1</sub></span> und Agent 2 mit <span class="formula"><span class="scriptfont">K</span><sub>2</sub></span>. 
+</li>
+<li>
+Jeder Agent hat eine Karte, weiß aber nicht welche Karte der andere Agent hat, die dritte Karte liegt verdeckt auf dem Tisch. 
+</li>
+<li>
+Eine mögliche Welt wird dadurch charakterisiert, welcher Agent welche Karte hält, d.h. hat Agent 1 Karte A und Agent 2 Karte B so lautet die mögliche Welt <span class="formula">(<i>A</i>, <i>B</i>)</span>. 
+</li>
+<li>
+Es sind 6 mögliche Welten denkbar: <span class="formula">(<i>A</i>, <i>B</i>), (<i>A</i>, <i>C</i>), (<i>B</i>, <i>A</i>), (<i>B</i>, <i>C</i>), (<i>C</i>, <i>A</i>), (<i>C</i>, <i>B</i>)</span>. 
+</li>
+<li>
+Hat bspw. Agent 1 die Karte A und weiß nicht welche Karte Agent 2 hat, so hält Agent 1 die Welten <span class="formula">(<i>A</i>, <i>B</i>)</span> und <span class="formula">(<i>A</i>, <i>C</i>)</span> für möglich, d.h. es ist <span class="formula"><span class="scriptfont">K</span><sub>1</sub>(<span class="symbol">{</span><i>A</i><span class="symbol">}</span>) = <span class="symbol">{</span><i>B</i>, <i>C</i><span class="symbol">}</span></span>. Umgekehrt hält Agent 2 die Welten <span class="formula">(<i>B</i>, <i>A</i>), (<i>B</i>, <i>C</i>)</span> für möglich bzw. <span class="formula"><span class="scriptfont">K</span><sub>2</sub>(<span class="symbol">{</span><i>B</i><span class="symbol">}</span>) = <span class="symbol">{</span><i>A</i>, <i>C</i><span class="symbol">}</span></span>
+</li>
+
+</ul>
+<h1 class="Section-">
+<a class="toc" name="toc-Section--4"></a>Logics for reasoning about Uncertainty
+</h1>
+<div class="Unindented">
+Propositional logic:
+</div>
+<ul>
+<li>
+Set of primitive propositions <span class="formula">Φ ≠ ∅</span> is a vocabulary that contains fixed statements that predicate things like „it is raining“ or „today is monday“
+</li>
+<li>
+<span class="formula">ℒ<sup><i>Prop</i></sup>(Φ)</span> is the set of all formulas that can be built by conjunction and negation of the primitive propositions that are given by the vocabulary <span class="formula">Φ</span>.<ul>
+<li>
+Let <span class="formula"><i>φ</i>, <i>ψ</i> ∈ Φ</span> primitive propositions, so are <span class="formula">¬<i>φ</i>, (<i>φ</i>∧<i>ψ</i>), (<i>φ</i>∨<i>ψ</i>), (<i>φ</i> → <i>ψ</i>) ∈ ℒ<sup><i>Prop</i></sup>(Φ)</span> formulas.
+</li>
+<li>
+There are some abbreviations:<ul>
+<li>
+<span class="formula"><i>φ</i>∨<i>ψ</i> ≡ ¬(¬<i>φ</i>∧¬<i>ψ</i>)</span>
+</li>
+<li>
+<span class="formula"><i>φ</i> ⇒ <i>ψ</i> ≡ ¬<i>φ</i>∨<i>ψ</i></span>
+</li>
+<li>
+<span class="formula"><i>φ</i> ⇔ <i>ψ</i> ≡ (<i>φ</i> ⇒ <i>ψ</i>)∧(<i>ψ</i> ⇒ <i>φ</i>)</span>
+</li>
+<li>
+<span class="formula"><i>true</i> ≡ <i>φ</i>∨¬<i>φ</i></span> where <span class="formula"><i>φ</i> ∈ Φ</span> is a primitive proposition (tautology)
+</li>
+<li>
+<span class="formula"><i>false</i> ≡ ¬<i>true</i></span>
+</li>
+
+</ul>
+
+</li>
+
+</ul>
+
+</li>
+<li>
+Semantics assigns a truth-value to a given formula. This is acomplished by the truth assignment. The truth assigment is a function that maps the primitive propositions of <span class="formula">Φ</span> to a truth value. A truth value is an element of the Set <span class="formula"><span class="symbol">{</span><i>true</i>, <i>false</i><span class="symbol">}</span></span>.<ul>
+<li>
+The truth assigment guarantees that each primitive proposition has <b>exactly one</b> truth value. Is either true or false, not true and false and not neither, true nor false. This leads to the two <b>value logic</b>.<ul>
+<li>
+Truth Assigment: Is a mapping <span class="formula"><i>v</i>:Φ → <span class="symbol">{</span><i>true</i>, <i>false</i><span class="symbol">}</span></span> where <span class="formula">Φ</span> is the set of primitive propositions.
+</li>
+<li>
+Satisfiability under truth assignment: If an arbitrary formula <span class="formula"><i>φ</i></span> is satisfied by a truth assignment <span class="formula"><i>v</i></span>, it is written <span class="formula"><i>v</i>⊨<i>φ</i></span>
+</li>
+
+</ul>
+
+</li>
+<li>
+<span class="formula"><i>v</i>⊨<i>φ</i></span> determines the satifiability of the formula <b><span class="formula"><i>φ</i></span></b> under the truth asigment <span class="formula"><i>v</i></span>. 
+</li>
+
+</ul>
+
+</li>
+<li>
+Etc.
+</li>
+
+</ul>
+<div class="Unindented">
+Modal epistemic logic:
+</div>
+<h1 class="title">
+<span lang="en">Notes on &ldquo;Reasoning about Uncertainty&rdquo;</span>
+</h1>
+<div class="Unindented">
+<span lang="en">Uncertainty = Ungewissheit</span>
+</div>
+<div class="Indented">
+<span lang="en">Probability = Wahrscheinlichkeit</span>
+</div>
+<h2 class="Subsection-">
+<a class="toc" name="toc-Subsection--1"></a><span lang="en">Secon Ace-Puzzle</span>
+</h2>
+<div class="Unindented">
+<span lang="en">Ace = Ass, Deuce = Zwei</span>
+</div>
+<ul>
+<li>
+<span lang="en">Ein Deck besteht aus 4 Karten: Herz-Ass, Herz-2, Pik-Ass, Pik-2</span>
+</li>
+<li>
+<span lang="en">P(H) = 2/4, P(A) = 2/4, P(2) = P(2) = 2/4</span>
+</li>
+<li>
+<span lang="en">Alice zieht aus einem gemischtem Stapel 2 Karten (d.h. erst eine aus 4, dann eine aus 3).</span>
+</li>
+<li>
+<span lang="en">Die Wahrscheinlichkeit, dass Alice beide Asse zieht hat beträgt <span class="formula"><span class="fraction"><span class="ignored">(</span><span class="numerator">2</span><span class="ignored">)/(</span><span class="denominator">4</span><span class="ignored">)</span></span>⋅<span class="fraction"><span class="ignored">(</span><span class="numerator">1</span><span class="ignored">)/(</span><span class="denominator">3</span><span class="ignored">)</span></span> = <span class="fraction"><span class="ignored">(</span><span class="numerator">1</span><span class="ignored">)/(</span><span class="denominator">6</span><span class="ignored">)</span></span></span> </span>
+</li>
+
+</ul>
+<h2 class="Subsection-">
+<a class="toc" name="toc-Subsection--2"></a><span lang="en">3 Türen, eine Ziege Problem</span>
+</h2>
+<div class="Unindented">
+<span lang="en">Es stehen 3 verschlossene Türen zur Auswahl. Hinter 2 der 3 Türen verbergen sich Schafe, hinter einer Tür eine Auto. Man darf sich eine Tür auswähle und wählt Tür 1. Der Quizmaster (welcher weiß was hinter den Türen ist) öffnet Tür 3 und es kommt ein Schaf zum Vorschein. Nun darf man, wenn man möchte sich eine neue Tür auswählen. Was sollte man machen? Bei der Tür 1 bleiben oder zur Tür 2 wechseln? Was ist nun die Wahrscheinlichkeit, dass sich das Auto hinter Tür 1 verbirt? 1/3 oder 2/3?</span>
+</div>
+
+<hr class="footer"/>
+<div class="footer" id="generated-by">
+Dokument wurde erzeugt von <a href="http://elyxer.nongnu.org/">eLyXer 1.2.5 (2013-03-10)</a> am <span class="create-date">2015-05-05T16:33:25.140430</span>
+</div>
+</div>
+</body>
+</html>
