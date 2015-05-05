@@ -1,5 +1,7 @@
 **/*.pdf
 *.bak
+*.acsm
+*.ps
 *.zip
 *~
 *xoj
