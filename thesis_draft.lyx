@@ -2,12 +2,13 @@
 \lyxformat 474
 \begin_document
 \begin_header
-\textclass amsbook
+\textclass extarticle
 \use_default_options true
 \begin_modules
 theorems-ams
 eqs-within-sections
-figs-within-sections
+fix-cm
+fixltx2e
 minimalistic
 \end_modules
 \maintain_unincluded_children false
@@ -30,7 +31,7 @@ minimalistic
 \output_sync 0
 \bibtex_command bibtex8
 \index_command default
-\paperfontsize 12
+\paperfontsize 11
 \spacing single
 \use_hyperref false
 \papersize a4paper
@@ -129,55 +130,629 @@ key "AlgebGruWitt13"
 
 \end_inset
 
-, ist eine formale Sprache zur Darstellung primitiver Aussagen sowie Aussagen
- welche aus, durch Verknüpfungen wie 
-\emph on
-oder
-\emph default
-, 
-\emph on
+, ist eine formale Sprache zur formulierung von Ausdrücken welche aus primitiven
+ Aussagen (bspw.
+ 
+\begin_inset Quotes gld
+\end_inset
+
+2 ist eine Primzahl
+\begin_inset Quotes grd
+\end_inset
+
+) und aus durch Junktoren (bspw.
+ 
+\begin_inset Quotes gld
+\end_inset
+
 und
-\emph default
+\begin_inset Quotes grd
+\end_inset
+
 , 
-\emph on
+\begin_inset Quotes gld
+\end_inset
+
+oder
+\begin_inset Quotes grd
+\end_inset
+
+, 
+\begin_inset Quotes gld
+\end_inset
+
+wenn, dann
+\begin_inset Quotes grd
+\end_inset
+
+, 
+\begin_inset Quotes gld
+\end_inset
+
 nicht
-\emph default
-, 
-\emph on
-folgt
-\emph default
- zusammengesetzten Aussagen aufgebaut ist.
- Dabei wird jeder Aussage genau eine von zwei möglichen Wahrheitswerten
- zugeordnet.
- Die Bestandteile dieser Sprache sind: Das Alphabet der Aussagenlogik 
-\begin_inset Formula $\Sigma_{AL}$
+\begin_inset Quotes grd
 \end_inset
 
-, über 
-\begin_inset Formula $\Sigma_{AL}$
+) verknüpften Ausdrücken bestehen (bspw.
+ 
+\begin_inset Quotes gld
 \end_inset
 
- erichtete 
+2 ist eine Primzahl oder 2 ist keine Primzahl
+\begin_inset Quotes grd
+\end_inset
+
+).
+ Formal werden primitive Ausdrücke als 
 \emph on
 Aussagensymbole
 \emph default
-, über 
-\begin_inset Formula $\Sigma_{AL}$
-\end_inset
-
- erichtete 
+, und Ausdrücke als 
 \emph on
 Formeln
 \emph default
- sowie einige 
-\emph on
-Inferenzregeln
-\emph default
-.
+ bezeichnet.
+ Jedem Ausdruck wird durch eine Semantik genau einer von zwei möglichen
+ Wahrheitswerten zugeordnet.
+ Formal kann die Sprache der Aussagenlogik durch ein Quadrupel 
+\begin_inset Formula $\mathcal{L}=(\Sigma_{AL},AS,AF,\sigma)$
+\end_inset
+
+ beschrieben werden.
+ Dabei ist 
+\begin_inset Formula $\Sigma_{AL}$
+\end_inset
+
+ ein endliches, nichtleeres Alphabet.
+ 
+\begin_inset Formula $AS$
+\end_inset
+
+ ist eine über 
+\begin_inset Formula $\Sigma_{AL}$
+\end_inset
+
+ errichtete Menge von Aussagensymbole.
+\begin_inset Formula $AF$
+\end_inset
+
+ ist eine über 
+\begin_inset Formula $\Sigma_{AL}$
+\end_inset
+
+ errichteten Menge von Formeln.
+ 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ ist eine Semantik welche jedem Aussagensymbol genau einen Wahrheitswert
+ zuordnet.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $\Sigma_{PL}:=\left\{ \right\} $
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Definition
+Alphabet der Aussagenlogik 
+\begin_inset Formula $\Sigma_{AL}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Definition
+Sei eine Menge von Zeichen (das Grundalphabet) definiert durch 
+\begin_inset Formula $G_{AL}:=\left\{ (,),\neg,\vee,\wedge,\rightarrow\right\} $
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Definition
+Sei außerdem eine endliche Mengen von Zeichen (das Symbolalphabet) 
+\begin_inset Formula $V_{AL}$
+\end_inset
+
+ gegeben mit 
+\begin_inset Formula $V_{AL}\cap G_{AL}=\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+Dann ist das Alphabet der Aussagenlogik 
+\begin_inset Formula $\Sigma_{AL}$
+\end_inset
+
+ definiert durch: 
+\begin_inset Formula $\Sigma_{AL}:=G_{AL}\cup V_{AL}\cup\left\{ \#\right\} $
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Definition
+Die Menge der Aussagensymbole 
+\begin_inset Formula $AS\subseteq(\Sigma_{AL})^{*}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $AS$
+\end_inset
+
+ wird induktiv wie folgt definiert:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\alpha\in V_{AL}\Rightarrow\alpha\in AS$
+\end_inset
+
+ (d.h.
+ alle Zeichen des Symbolalphabets 
+\begin_inset Formula $V_{AL}$
+\end_inset
+
+ sind Aussagensymbole in 
+\begin_inset Formula $AS$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\alpha\in AS\Rightarrow\alpha\#\in AS$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Nichts sonst gehört zu 
+\begin_inset Formula $AS$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remark*
+Die Variable 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ ist ein Bezeichner welcher stellvertretender für ein Zeichen aus dem Symbolalph
+abet 
+\begin_inset Formula $V_{AL}$
+\end_inset
+
+ steht.
+ Hingegen ist 
+\begin_inset Formula $\#$
+\end_inset
+
+ das Zeichen selbst.
+ Sei beispielsweise 
+\begin_inset Formula $V_{AL}=\left\{ \text{à}\right\} $
+\end_inset
+
+ gewählt und ein 
+\begin_inset Formula $\alpha\in V_{AL}$
+\end_inset
+
+ mit 
+\begin_inset Formula $\alpha=à$
+\end_inset
+
+ gewählt.
+ So wird das Zeichen 
+\begin_inset Formula $\text{à}$
+\end_inset
+
+ durch 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ bezeichnet.
+ Der Ausdruck 
+\begin_inset Formula $\alpha\#$
+\end_inset
+
+ steht dann für das Wort 
+\begin_inset Formula $à\#$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example*
+Wird 
+\begin_inset Formula $V_{AL}:=\left\{ p,q\right\} $
+\end_inset
+
+ gewählt, so sind die Zeichenketten 
+\begin_inset Formula $p,p\#,p\#\#,\cdots,q,q\#,q\#\#,\cdots\in AS$
+\end_inset
+
+ Elemente der Menge der Aussagensymbole.
+\end_layout
+
+\begin_layout Example*
+Da die Handhabung von Symbolen wie 
+\begin_inset Formula $q\#\#\#\#\#\#,p\#\#,r\#\#\#\#\#\#\#$
+\end_inset
+
+ schnell unübersichtlich werden kann, sei die Definition der Menge 
+\begin_inset Formula $AS$
+\end_inset
+
+ so erweitert, dass es möglich ist, indizierte Aussagensymbole wie bspw.
+ 
+\begin_inset Formula $q_{6},p_{2},r_{7}$
+\end_inset
+
+ darzustellen.
+ Dazu werden einigen Hilfsfunktionen benötigt.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Definition
+Hilfsfunktionen 
+\begin_inset Formula $cardletter_{\alpha}:(\Sigma)^{*}\to\mathbb{N}$
+\end_inset
+
+ und 
+\begin_inset Formula $\setminus_{\alpha}:(\Sigma)^{*}\to(\Sigma)^{*}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $cardletter_{\alpha}:(\Sigma)^{*}\to\mathbb{N}$
+\end_inset
+
+ mit 
+\begin_inset Formula $\alpha\in\Sigma$
+\end_inset
+
+ ist definiert durch 
+\begin_inset Formula $cardletter_{\alpha}(w):=\text{Anzahl der Vorkommen des Buchstaben }\alpha\text{ im Wort }w$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $\setminus_{\alpha}:(\Sigma)^{*}\to(\Sigma)^{*}$
+\end_inset
+
+ mit 
+\begin_inset Formula $\alpha\in\Sigma$
+\end_inset
+
+ ist definiert durch 
+\begin_inset Formula $\setminus_{\alpha}(w):=w\text{ ohne jedes Vorkommen von }\alpha$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Definition
+Vereinfachten Darstellung von Aussagensymbolen aus 
+\begin_inset Formula $AS$
+\end_inset
+
+: 
+\end_layout
+
+\begin_layout Definition
+Ergänzend zur Definition von 
+\begin_inset Formula $AS$
+\end_inset
+
+ sei folgende Erweiterung definiert:
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $\alpha\in V_{AL}\Rightarrow\setminus_{\#}(\alpha){}_{cardletter_{\#}(\alpha)}\in V_{AL}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example*
+Sei ein Symbolalphabet 
+\begin_inset Formula $V_{AL}:=\left\{ q\right\} $
+\end_inset
+
+ gewählt, dann sind 
+\begin_inset Formula $q,q\#,q\#\#,\cdots\in AS$
+\end_inset
+
+ Aussagensymbole.
+ Sei beispielhaft ein Wort 
+\begin_inset Formula $w\in(\Sigma)^{*}$
+\end_inset
+
+ mit 
+\begin_inset Formula $w=q\#\#\#$
+\end_inset
+
+ betrachtet.
+ Die Hilfsfunktionen 
+\begin_inset Formula $cardletter_{\#}(w)$
+\end_inset
+
+ liefert 
+\begin_inset Formula $cardletter_{\#}(q\#\#\#)=3$
+\end_inset
+
+.
+ Die Hilfsfunktion 
+\begin_inset Formula $\setminus_{\#}(w)$
+\end_inset
+
+ liefert 
+\begin_inset Formula $\setminus_{\#}(q\#\#\#)=q$
+\end_inset
+
+.
+ Mit der Vereinfachung ergibt sich damit:
+\end_layout
+
+\begin_layout Example*
+\begin_inset Formula 
+\[
+q\#\#\#\in V_{AL}\Rightarrow\setminus_{\#}(q\#\#\#)_{cardletter_{\#}(q\#\#\#)}=q_{cardletter_{\#}(q\#\#\#)}=q_{3}\in V_{AL}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example*
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Definition
+Die Menge der aussagenlogischen Formeln 
+\begin_inset Formula $AF\subseteq(\Sigma_{AF})^{*}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Definition
+AF wird induktiv definiert:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\alpha\in AS\Rightarrow\alpha\in AF$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\alpha,\beta\in AF\Rightarrow\neg\alpha\in AF,(\alpha\wedge\beta)\in AF,(\alpha\vee\beta)\in AF,(\alpha\to\beta)\in AF$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Nichts sonst gehört zu 
+\begin_inset Formula $AF$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Wird für jedes Aussagensymbols aus 
+\begin_inset Formula $AS$
+\end_inset
+
+ ein Wahrheitswert aus 
+\begin_inset Formula $\left\{ W,F\right\} $
+\end_inset
+
+ fest gelegt, und diese Festlegung mittels festern Regeln auf die aussagenlogisc
+hen Formeln 
+\begin_inset Formula $AF$
+\end_inset
+
+ übertragen, so ergibt sich eine Semantik der Aussagenlogik.
+ Damit ist jedem Ausdruck der Sprache 
+\begin_inset Formula $\mathcal{L}^{AL}(\Phi)$
+\end_inset
+
+ genau ein Wahrheitswert zugeordnet.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Definition
+Die Semantik 
+\begin_inset Formula $\sigma:AS\to\left\{ W,F\right\} $
+\end_inset
+
+ der Aussagensymbole ist eine Abbildung welche jedem Aussagensymbol 
+\begin_inset Formula $AS$
+\end_inset
+
+ ein Element aus 
+\begin_inset Formula $\left\{ W,F\right\} $
+\end_inset
+
+ zuweist.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example*
+Die Werte von 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ stehen dabei für Wahrheitswerte.
+ Sei eine Menge 
+\begin_inset Formula $AS=\left\{ q_{1},q_{2}\right\} $
+\end_inset
+
+ gegeben, so könnte eine Semantik wie folgt aussehen: 
+\begin_inset Formula $\sigma(q_{1})=W,\sigma(q_{2})=F$
+\end_inset
+
+.
+ (Siehe auch 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "S.9,1503.00806v1.pdf"
+key "LogiBeliDitm15"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Definition
+Die Auswertzungsfunktion 
+\begin_inset Formula $AW_{\sigma}:AF\to\left\{ W,F\right\} $
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $AW_{\sigma}(\alpha)$
+\end_inset
+
+ ...
+\end_layout
+
 \end_inset
 
 
