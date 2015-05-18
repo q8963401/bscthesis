@@ -60,8 +60,8 @@ figs-within-sections
 \topmargin 2cm
 \bottommargin 2cm
 \headsep 2cm
-\secnumdepth 3
-\tocdepth 3
+\secnumdepth 5
+\tocdepth 5
 \paragraph_separation skip
 \defskip smallskip
 \quotes_language german
@@ -103,114 +103,378 @@ Erläuterung des Themas
 \end_layout
 
 \begin_layout Standard
-Das Thema der Arbeit ist die Ausführliche Darstellung eines klassischen
- Systems der probalistischen epistemischen Logik sowie die Beschreibung
- neuerer Entwicklung auf diesem Gebiet.
+Die Arbeit stellt ausführlich ein klassisches System der probalistischen
+ epistemischen Logik dar und beschreibt neuere Entwicklungen auf diesem
+ Gebiet.
  
 \end_layout
 
 \begin_layout Standard
-Die Darstellung eines klassischen Systems der probalistischen epistemischen
- Logik wird auf Grundlage des in 
+Die Arbeit gliedert sich in zwei Teile.
+ Im ersten Teil wird eine probalistische epistemische Logik ausgearbeitet.
+ Dabei wird die in 
 \shape italic
 Reasoning about uncertainty, 2005 - J.Y.
  Halpern
 \emph on
- vorgestellten Systems ausgehen.
- Die Darstellung des Systems wird dabei möglichst technisch und vollständig
- ausgearbeitet werden.
- Vollständig heißt in diesem Kontext, dass alle zur Darstellung eines Systems
- notwendigen Vorraussetzungen dargestellt werden.
-\end_layout
+ vorgestellte Sprache 
+\shape default
+\emph default
 
-\begin_layout Standard
+\begin_inset Formula $\mathcal{L}_{n}^{QU}$
+\end_inset
+
 
 \shape italic
 \emph on
-Insbesondere werden die Systeme einer Aussagenlogik, einer allgemeine Modallogik
-, einer epistemische Modallogik, der Represäntation von Ungewissheit durch
- mögliche Welten
+ und das Axiomensystem 
 \shape default
 \emph default
- sowie Kripke Strukturen genaue dargestellt.
- 
-\end_layout
 
-\begin_layout Standard
-wird die Axiomatisierung 
 \begin_inset Formula $AX_{n}^{prob}$
 \end_inset
 
- der Sprache 
-\begin_inset Formula $\mathcal{L}_{n}^{QU}$
+
+\shape italic
+\emph on
+ ausgearbeitet und dargestellt.
+ Es wird ein System der Logik mit Wahrscheiblichkeiten konstruiert, welches
+ es ermöglicht, Aussagen der Art 
+\begin_inset Quotes gld
 \end_inset
 
- ausgearbeitet.
- Wichtige Sätze wie bspw.
- 
-\begin_inset Formula $K,T,D,4,5,MP,GEN$
+Es ist doppelt so wahrscheinlich, dass es am Montag regnet wenn es am Sonntag
+ geregnet hat, als wenn es am Sonntag nicht geregnet hat
+\begin_inset Quotes grd
 \end_inset
 
- sowie Sätze bezüglich der Korrektheits- und Vollständigkeitseigenschaften
- werden ausgearbeitet.
- Zum Ende des ersten Teils werden Komplexitätseigenschaften, insbesondere
- von 
-\begin_inset Formula $\mathcal{L}_{n}^{QU}$
+ durch bspw.
+ einen Term 
+\begin_inset Formula $2\ell_{1}(Montag_{REGEN}\wedge Sonntag_{REGEN})>\ell_{1}(Montag_{REGEN}\wedge\neg Sonntag_{REGEN})$
 \end_inset
 
- ausgearbeitet.
-\end_layout
-
-\begin_layout Part*
-Motivation
+ formalisiert auszudrücken.
 \end_layout
 
 \begin_layout Standard
-Im ersten Teil wird die in 
+
 \shape italic
-Reasoning about uncertainty, 2005 - J.Y.
- Halpern
+\emph on
+Ausgehend von einem System der modalen Logik für einen Agenten wird ein
+ System für mehrere Agenten konstruiert und dieses um ein Wahrscheinlichkeitsmaß
+ für Aussagen erweitert.
+ Das vorgestellte Sytem der epistemischen probalistischen Logik erlaubt,
+ logische Aussagen über Wahrscheinlichkeiten bestimmter Ereignisse mit mehreren
+ Agenten zu formulieren.
+ Bspw.
+ lässt sich damit der Satzt 
+\begin_inset Quotes gld
+\end_inset
+
+Die Wahrscheinlichkeit für Sonne am Montag ist für Alice mehr als 3 mal
+ so hoch als für Bob
+\begin_inset Quotes grd
+\end_inset
+
+ formal durch einen Term
+\end_layout
+
+\begin_layout Standard
+
+\shape italic
+\emph on
+\begin_inset Formula $3\ell_{ALICE}(Montag_{SONNE})>\ell_{BOB}(Montag_{SONNE})$
+\end_inset
+
+ ausdrücken und nachweisen.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+
+\shape italic
+\emph on
+Befände sich Alice im spanischen Almería mit 
+\begin_inset Formula $25$
+\end_inset
+
+ Regentagen/Jahr und Bob in Glasgow mit 
+\begin_inset Formula $262$
+\end_inset
+
+ Regentagen/Jahr, so würde sich durch die vereinfachte Annahme der Wahrscheinlic
+hkeiten für Sonnenschein: 
+\begin_inset Formula $\ell_{ALICE}(Montag_{SONNE})=\frac{365-25}{365}\approx0,932$
+\end_inset
+
+ und 
+\begin_inset Formula $\ell_{BOB}(Montag_{SONNE})=\frac{365-262}{365}\approx0,282$
+\end_inset
+
+, ergeben, dass Alice eine 
+\begin_inset Formula $\frac{\frac{365-25}{365}}{\frac{365-262}{365}}=\frac{340}{103}\approx3,301$
+\end_inset
+
+ mal höhere Wahrscheinlichkeit für Sonnenschein pro Tag hat als Bob.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\shape italic
+\emph on
+Mit einer Semantik aus der Klasse 
+\begin_inset Formula $\mathcal{M}_{n}^{prop}$
+\end_inset
+
+ der Wahrscheinlichkeitsstrukturen lässt sich darüber hinaus feststellen,
+ ob Sätze aus 
 \shape default
- vorgestellte Es werden grundlegende Begriffe wie bspw.
- Wahrscheinlichkeit, Ungewissheit und Wissen bezüglich ihrer technischen
- Representation im Rahmen der Logik dargestellt.
- 
+\emph default
+
+\begin_inset Formula $\mathcal{L}_{n}^{QU}$
+\end_inset
+
+
+\shape italic
+\emph on
+ wahr sind oder nicht.
+ Die formale Darstellung dieses Systems erfordert einige Vorarbeiten, insbesonde
+re die Darstellung weiterer Systeme, welche als formale Grundlage dienen.
+ Im einzelnen sind dies
+\shape default
+\emph default
+:
+\end_layout
+
+\begin_layout Itemize
+Die Sprache der Aussagenlogik 
+\begin_inset Formula $\mathcal{L}^{PROP}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Eine allgemeine Darstellung der Sprache einer modalen Logik 
+\begin_inset Formula $\mathcal{L}_{\mathfrak{K}}$
+\end_inset
+
+ sowie ihrer Semantik durch Kripke Strukturen
+\end_layout
+
+\begin_layout Itemize
+Die Repräsentation von Ungewissheit durch Wahrscheinlichkeitsmaße im Wahrscheinl
+ichkeitsraum 
+\begin_inset Formula $(W,\mathcal{F},\mu)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Eine epistemische Logik (eine spezielle modale Logik) 
+\begin_inset Formula $\mathcal{L}_{n}^{K}(\Phi)$
+\end_inset
+
+ für 
+\begin_inset Formula $n\geq1$
+\end_inset
+
+ Agenten und ihrer Semantik durch epistemische Strukturen
+\end_layout
+
+\begin_layout Itemize
+Eine Aximatisierung der epistemischen Logik durch ein System aus Axiomen
+ (
+\begin_inset Formula $K,T,D,4,5$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Itemize
+Die Sprache der epistemisch probalistischen Logik 
+\begin_inset Formula $\mathcal{L}_{n}^{QU}$
+\end_inset
+
+ mit der Darstellung ihrer Semantiken durch die Klasse 
+\begin_inset Formula $\mathcal{M}_{n}^{prob}$
+\end_inset
+
+ der probalistischen Strukturen
+\end_layout
+
+\begin_layout Standard
+Neben der Darstellung der Systeme werden wichtige Sätze und Eigenschaften
+ betrachtet.
+ Insbesondere wird das Axiomensystem der epistemischen Logik bezüglich Korrekthe
+its- und Vollständigkeitseigenschaften untersucht.
+ Es wird die Sprache 
+\begin_inset Formula $\mathcal{L}_{n}^{QU}$
+\end_inset
+
+ hinsichtlich ihrer Ausdrucksstärke untersucht.
+ Zum Ende des ersten Teils, werden Eigenschaften das Axiomensystem 
+\begin_inset Formula $AX_{n}^{prob}$
+\end_inset
+
+ der epistemischen probalistischen Logik, insbesondere Eigenschaften der
+ Korrektheit und Vollständigkeit sowie Komplexitätseigenschaften betrachtet.
 \end_layout
 
 \begin_layout Standard
 Im zweiten Teil werden neuere Entwicklungen auf dem Gebiet der dynamischen
  probalistischen Wissenslogik dargestellt.
- Es werden die in 
+ Es wird ausgehend von den in 
 \shape italic
 Logical dynamics of information and interaction, 2012 - J.
  van Benthem
 \shape default
- eingeführten Logiken 
+ präsentierten Logiken 
+\begin_inset Formula $PAL$
+\end_inset
+
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Eine Logik welche neben Agentenwissen und dem gemeinsamen Wissen aller Agenten,
+ Dynamiken 
+\begin_inset Formula $\left[!P\right]K_{i}\varphi$
+\end_inset
+
+ zu formulieren erlaubt, welche ausdrücken was Agent 
+\begin_inset Formula $i$
+\end_inset
+
+ nach dem Bekanntwerden von 
+\begin_inset Formula $P$
+\end_inset
+
+ weiß.
+ 
+\end_layout
+
+\end_inset
+
+ und 
 \series bold
 
 \begin_inset Formula $DEL$
 \end_inset
 
- 
-\series default
-und 
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Eine Erweiterunung von 
 \begin_inset Formula $PAL$
 \end_inset
 
- dargestellt und anhand von Beispielen erläutert.
- Es wird technisch dargestellt, wie sich eine dynamische Wissenslogik um
- Wahrscheinlichkeiten erweitern lässt und welche Eigenschaften sich daraus
- ergeben.
+, welche private Informationen handhaben kann und es erlaubt, die Auswirkungen
+ von Beobachtungen von Agenten eines Events auszudrücken.
+ 
+\end_layout
+
+\end_inset
+
+
+\series default
+ dargestellt, wie sich eine epistemische probalistische Logik konstruieren
+ lässt, welche Dynamiken realisiert.
+ Mit Dynamiken sind allgemein Mechanismen zur Aktualisierung von Wahrscheinlichk
+eiten gemeint.
+ Diese Dynamiken betreffen die Wahrscheinlichkeiten von Welten
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Auch 
+\begin_inset Quotes gld
+\end_inset
+
+Rahmen
+\begin_inset Quotes grd
+\end_inset
+
+ oder 
+\begin_inset Quotes gld
+\end_inset
+
+Frames
+\begin_inset Quotes grd
+\end_inset
+
+ im Sinne der Modallogik
+\end_layout
+
+\end_inset
+
+ aus Sicht von Agenten, die Eintrittswahrscheinlichkeitenen von Events und
+ die Wahrscheinlichkeiten bezüglich der Beobachtungen von Agenten.
+ Dabei wird untersucht, wie sich Dynamiken charakterisieren lassen und wie
+ diese sich von z.B.
+ bedingtem Agentenwissen unterscheiden.
+ An Beispielen soll die Ausdrucksstärke von 
+\begin_inset Formula $DEL$
+\end_inset
+
+ untersucht und dargestellt werden.
+ Ausgehend von einer statischen epistemischen probalistischen Logik, wird
+ dargestellt, welchen Einfluss verschiedene Dynamik-Szenarien auf die Wahrschein
+lichkeiten nehmen und welche Probleme dabei auftreten.
+ Es wird gezeigt, für welche Bestandteile einer epistemischen Logik sich
+ Wahrscheinlichkeiten sinnvoll anwenden lassen.
+ Nach den einführenden Betrachtungen wird auf Basis der statischen epistemischen
+ probalistischen Logik sowie der Einführung eines probalistischen Eventmodells,
+ eine Regel zur Aktualisierung der Wahrscheinlichkeiten eingeführt, welche
+ die zuvor formulierten Eigenschaften realisiert.
+ Abschließend wird die dynamische epistemische probalistische Logik vollständig
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Insbesondere wird eine Semantik des eingeführten Eventmodells angegeben
+\end_layout
+
+\end_inset
+
+ axiomatisiert dargestellt.
+ Zum Ende des zweiten Teils werden offene Fragen, Probleme und aktuelle
+ Forschungsbemühungen zur Thematik dynamischer epistemischer probalistischer
+ Logiken präsentiert und diskutiert.
+\end_layout
+
+\begin_layout Part*
+Wissenschaftliche Motivation
 \end_layout
 
 \begin_layout Standard
-Der dritte Teil analysiert das im zweiten Teil dargestellte System der dynamisch
-en Wissenslogik mit Wahrscheinlichkeiten bezüglich aktueller Forschungsfragen.
- Insbesondere soll dabei ein Vergleich mit Bayesschen Netzen durchgeführt
- werden.
- Der Vergleich wird durch die Frage motiviert, wie sich die logischen Eigenschaf
-ten der dargestellten Systeme mit der ausgereiften Theorie Bayesscher Netzte
- kombinieren lassen
+Das im ersten Teil auszuarbeitende System wurde in zahlreichen Publikationen
+ und Lehrbüchern dargestellt und untersucht und ist damit sehr gut dokumentiert.
+ Das Thema des zweite Teils der Arbeit ist gut dokumentiert und Gegenstand
+ aktueller Forschungen.
+ Es existieren verschiedene, auf 
+\begin_inset Formula $DEL$
+\end_inset
+
+ referenzierende Modifikationen, welche in aktuellen Papers dargestellt
+ und diskutiert werden.
+ Die Motivation und Intention dieser Arbeit soll es sein, eine in sich geschloss
+ene und technisch/formal vereinheitlichte Darstellung eines klassischen
+ (statischen) Systems und eines dynamischen Systems der Wissenslogik mit
+ mehreren Agenten über Wahrscheinlichkeiten zu bieten.
+ Die Arbeit soll es dem Leser ermöglichen, ohne weitere Recherchen und mit
+ grundlegende Kenntnissen der Logik und Stochastik, einen technischen Überblick
+ über die Thematik zu gewinnen.
+ 
 \end_layout
 
 \begin_layout Part*
@@ -218,15 +482,24 @@ Methodik
 \end_layout
 
 \begin_layout Itemize
-Die zur Darstellung notwendigen Formalismen (wie bspw.
- ein System der Aussagenlogik und der Modallogik) werden technisch eingeführt
- und relevante Sätze ausführlich dargestellt.
- Soweit es das Verständnis erfordert werden Beispiele angegeben.
+
+\shape italic
+\emph on
+Die Ausarbeitung erfolgt deduktiv in dem Sinne, dass alle zu einer Darstellung
+ notwendigen Vorraussetzungen vorhergehend dargestellt werden.
+ Im Falle trivialer oder nicht relevanter Bezüge wird auf entsprechende
+ Quellen verwiesen.
  
 \end_layout
 
 \begin_layout Itemize
-Soweit es erforderlich ist werden Formalismen syntaktisch vereinheitlicht.
+Systeme, Sätze, Definitionen, usw.
+ werden technisch/formal eingeführt und ggf.
+ zur Anschaulicheit anhand von Beispielen erläutert.
+\end_layout
+
+\begin_layout Itemize
+Soweit es erforderlich ist, werden Formalismen syntaktisch vereinheitlicht.
 \end_layout
 
 \begin_layout Itemize
@@ -238,7 +511,7 @@ Fachlich wird sich die Arbeit primär an Arbeiten von J.
 \end_layout
 
 \begin_layout Itemize
-Die Formalismen und Termina werden sich an der aktuellen englischsprachigen
+Die Formalismen und Termina werden sich an der gängigen englischsprachigen
  Literatur orientieren.
 \end_layout
 
@@ -250,12 +523,420 @@ Die Formalismen und Termina werden sich an der aktuellen englischsprachigen
 \end_layout
 
 \begin_layout Part*
-Abhängigkeiten der Definitionen
+Struktur der Arbeit
 \end_layout
 
 \begin_layout Standard
+Die Struktur der Arbeit wird sich an folgendem Strukturentwurf orientieren.
+ Im Hinblick auf die Verträglichkeit des zweiten zum ersten Teil, wird vorraussi
+chtlich eine geringfügige Umstrukturierung erfolgen.
+ 
+\end_layout
 
-\size scriptsize
+\begin_layout Enumerate
+Inhaltsverzeichnis
+\end_layout
+
+\begin_layout Enumerate
+Einleitung
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Motivation und Ziel der Arbeit 
+\end_layout
+
+\begin_layout Enumerate
+Allgemeine Einführung in die Thematik [Anschauliche Einführung der Begriffe
+ Aussagenlogik, Modallogik, Wahrscheinlichkeit, Ungewissheit, Glauben/Wissen,
+ Agenten, Wissensrepräsentation und Dynamiken]
+\end_layout
+
+\begin_layout Enumerate
+Allgemeine Vereinbarungen [Bzgl.
+ Syntax und Begrifflichkeiten wie bspw.
+ epistemisch, probalistisch, usw.] 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Hauptteil
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Darstellung eines klassischen Systems der Wissenslogik mit Wahrscheinlichkeiten
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Formalisierung der Aussagenlogik [Einführung einer formalen Aussagenlogik]
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Eine Sprache der Aussagenlogik 
+\begin_inset Formula $\mathcal{L}^{PROP}$
+\end_inset
+
+ [Mittels 
+\begin_inset Formula $\mathcal{L}=(\Sigma_{AL},AS,AF,\sigma)$
+\end_inset
+
+ : Alphabet 
+\begin_inset Formula $\Sigma_{AL}$
+\end_inset
+
+, Aussagensymbole 
+\begin_inset Formula $AS\subseteq(\Sigma_{AL})^{*}$
+\end_inset
+
+, Hilfsfunktionen 
+\begin_inset Formula $cardletter_{\alpha}:(\Sigma)^{*}\to\mathbb{N}$
+\end_inset
+
+ und 
+\begin_inset Formula $\setminus_{\alpha}:(\Sigma)^{*}\to(\Sigma)^{*}$
+\end_inset
+
+, Formeln 
+\begin_inset Formula $AF\subseteq(\Sigma_{AF})^{*}$
+\end_inset
+
+, 
+\begin_inset Formula $AW_{\sigma}:AF\to\left\{ W,F\right\} $
+\end_inset
+
+ / Semantik, 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "7.1"
+key "HalpernReason05"
+
+\end_inset
+
+,
+\begin_inset CommandInset citation
+LatexCommand cite
+after "S.9,1503.00806v1.pdf"
+key "LogiBeliDitm15"
+
+\end_inset
+
+,
+\begin_inset CommandInset citation
+LatexCommand cite
+key "AlgebGruWitt13"
+
+\end_inset
+
+]
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Eine modale Logik 
+\begin_inset Formula $\mathcal{L}_{\mathfrak{K}}$
+\end_inset
+
+ [Einführung der Sprache und Semantik / Kripke Strukturen, 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ModLogBlackRijke02"
+
+\end_inset
+
+]
+\end_layout
+
+\begin_layout Enumerate
+Repräsentation von Ungewissheit [Beantworten der Frage (im technischen Sinne):
+ Was ist Wissen? Was ist glauben? Wie lässt sich dies formal repsäsentieren?
+ Einführung möglicher Welten 
+\begin_inset Formula $W$
+\end_inset
+
+, eines Wahrscheinlichkeitsmaßes sowie des Wahrscheinlichkeitsraums 
+\begin_inset Formula $(W,\mathcal{F},\mu)$
+\end_inset
+
+, 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "2.1"
+key "HalpernReason05"
+
+\end_inset
+
+]
+\end_layout
+
+\begin_layout Enumerate
+Eine epistemische Logik für mehrere Agenten [Einführung der Sprache 
+\begin_inset Formula $\mathcal{L}_{n}^{K}(\Phi)$
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "7.2.1"
+key "HalpernReason05"
+
+\end_inset
+
+]
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Eine Semantik der epistemischen Logik für mehrere Agenten [
+\begin_inset Formula $\mathcal{N}$
+\end_inset
+
+,
+\begin_inset Formula $M=(W,\mathcal{K}_{1},\cdots,\pi)$
+\end_inset
+
+, Referenzierung der Repräsentation von Ungewissheit, der Mehr-Agenten Modallogi
+k sowie Kripke-Strukturen]
+\end_layout
+
+\begin_layout Enumerate
+Eine Axiomatisierung der epistemischen Logik [Betrachten der Sätze 
+\begin_inset Formula $K,T,D,4,5$
+\end_inset
+
+, 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "7.2.3"
+key "HalpernReason05"
+
+\end_inset
+
+]
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Erweiterung der epistemischen Logik für mehrere Agenten um Wahrscheinlichkeiten
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Ein Einführendes Beispiel [Veranschaulichung anhand eines Beispiels (Monty
+ Hall)]
+\end_layout
+
+\begin_layout Enumerate
+Die Sprache 
+\begin_inset Formula $\mathcal{L}_{n}^{QU}$
+\end_inset
+
+ der epistemischen probalistischen Logik für mehrere Agenten [
+\begin_inset CommandInset citation
+LatexCommand cite
+after "7.3"
+key "HalpernReason05"
+
+\end_inset
+
+]
+\end_layout
+
+\begin_layout Enumerate
+Eine Semantik für 
+\begin_inset Formula $\mathcal{L}_{n}^{QU}$
+\end_inset
+
+ [
+\begin_inset Formula $\mathcal{M}_{n}^{prob}$
+\end_inset
+
+, 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "7.3"
+key "HalpernReason05"
+
+\end_inset
+
+]
+\end_layout
+
+\begin_layout Enumerate
+Die vollständige Axiomatisierung der epistemischen probalistischen Logik
+ für mehrere Agenten [
+\begin_inset CommandInset citation
+LatexCommand cite
+after "7.3"
+key "HalpernReason05"
+
+\end_inset
+
+] 
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Darstellung eines dynamischen Systemes der Wissenslogik mit Wahrscheinlichkeiten
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Einführung in die Dynamik über Wahrscheinlichkeiten [Anschauliche Einführung
+ Anhand von Beispielen]
+\end_layout
+
+\begin_layout Enumerate
+Eine Logik mit öffentlichen Bekanntmachungen [
+\begin_inset Formula $PAL$
+\end_inset
+
+, 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "2.1, 8.1"
+key "LogDynBenth12"
+
+\end_inset
+
+]
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Erweiterung der im ersten Teil eingeführten epistemischen Logik [Gemeinsames
+ Wissen: 
+\begin_inset Formula $C_{G}\varphi$
+\end_inset
+
+, Erweiterung der Semantik um die Erreichbarkeitsrelation 
+\begin_inset Formula $\to_{i}$
+\end_inset
+
+, Pointed Models 
+\begin_inset Formula $(M,s)$
+\end_inset
+
+, Aktualisierungen 
+\begin_inset Formula $[!P]K_{i}\varphi$
+\end_inset
+
+]
+\end_layout
+
+\begin_layout Enumerate
+Eine Axiomatisierung von 
+\begin_inset Formula $PAL$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Formale Einführung der Logik 
+\begin_inset Formula $DEL$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Epistemische Eventmodelle [
+\begin_inset Formula $E=(E,\left\{ \sim_{i}\right\} _{i\in G},\left\{ Pre_{e}\right\} _{e\in E},e)$
+\end_inset
+
+,
+\begin_inset CommandInset citation
+LatexCommand cite
+after "4.2"
+key "LogDynBenth12"
+
+\end_inset
+
+]
+\end_layout
+
+\begin_layout Enumerate
+Einführung und Analyse der Produkt-Aktualisierung 
+\end_layout
+
+\begin_layout Enumerate
+Eine vollständige Axiomatisierung der Logik 
+\begin_inset Formula $DEL$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Revision und Analyse verschiedener Arten von Aktualisierungen [Stichworte:
+ Bedingte Wahrscheinlichkeiten / Bayes' Regel, Jeffrey Rule, Produkt-Aktualisier
+ung]
+\end_layout
+
+\begin_layout Enumerate
+Erweiterung von 
+\begin_inset Formula $DEL$
+\end_inset
+
+ um probalistische Produkt-Aktualsierung
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Erweiterung des Eventmodells
+\end_layout
+
+\begin_layout Enumerate
+Einführung der probalistischen Produkt-Aktualisierung
+\end_layout
+
+\begin_layout Enumerate
+Analyse des Systems anhand eines komplexne Beispiels
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Ein vollständiges Axiomensystem der dynamischen epistemischen probalistischen
+ Logik
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Diskussion aktueller Forschungsfragen der dynamischen epistemischen probalistisc
+hen Logik
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Schlussteil
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Zusammenfassung
+\end_layout
+
+\begin_layout Enumerate
+Fazit
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Literaturverzeichniss
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset Tabular
 <lyxtabular version="3" rows="19" columns="5">
 <features rotate="0" tabularvalignment="middle">
@@ -271,7 +952,6 @@ Abhängigkeiten der Definitionen
 \begin_layout Plain Layout
 
 \series bold
-\size scriptsize
 ID
 \end_layout
 
@@ -283,7 +963,6 @@ ID
 \begin_layout Plain Layout
 
 \series bold
-\size scriptsize
 Name
 \end_layout
 
@@ -295,7 +974,6 @@ Name
 \begin_layout Plain Layout
 
 \series bold
-\size scriptsize
 Relevante Symbolik
 \end_layout
 
@@ -307,7 +985,6 @@ Relevante Symbolik
 \begin_layout Plain Layout
 
 \series bold
-\size scriptsize
 Quelle / Erwähnung
 \end_layout
 
@@ -319,7 +996,6 @@ Quelle / Erwähnung
 \begin_layout Plain Layout
 
 \series bold
-\size scriptsize
 Referenzen
 \end_layout
 
@@ -331,8 +1007,6 @@ Referenzen
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size scriptsize
 PROP
 \end_layout
 
@@ -342,8 +1016,6 @@ PROP
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size scriptsize
 Aussagenlogik
 \end_layout
 
@@ -353,8 +1025,6 @@ Aussagenlogik
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size scriptsize
 \begin_inset Formula $\mathcal{L}^{PROP}$
 \end_inset
 
@@ -367,8 +1037,6 @@ Aussagenlogik
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size scriptsize
 \begin_inset CommandInset citation
 LatexCommand cite
 after "7.1"
@@ -396,8 +1064,6 @@ key "HalpernReason05"
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size scriptsize
 MOD
 \end_layout
 
@@ -407,8 +1073,6 @@ MOD
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size scriptsize
 Modale Logik
 \end_layout
 
@@ -418,8 +1082,6 @@ Modale Logik
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size scriptsize
 \begin_inset Formula $\mathcal{L}_{\mathfrak{K}}$
 \end_inset
 
@@ -432,8 +1094,6 @@ Modale Logik
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size scriptsize
 \begin_inset CommandInset citation
 LatexCommand cite
 key "ModLogBlackRijke02"
@@ -460,8 +1120,6 @@ key "ModLogBlackRijke02"
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size scriptsize
 KRIPKE_SEM
 \end_layout
 
@@ -471,8 +1129,6 @@ KRIPKE_SEM
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size scriptsize
 Kripke Struktur (Semantik)
 \end_layout
 
@@ -491,8 +1147,6 @@ Kripke Struktur (Semantik)
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size scriptsize
 \begin_inset CommandInset citation
 LatexCommand cite
 key "ModLogBlackRijke02"
@@ -519,8 +1173,6 @@ key "ModLogBlackRijke02"
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size scriptsize
 UNCERT
 \end_layout
 
@@ -530,8 +1182,6 @@ UNCERT
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size scriptsize
 Ungewissheit durch
 \end_layout
 
@@ -541,8 +1191,6 @@ Ungewissheit durch
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size scriptsize
 \begin_inset Formula $W$
 \end_inset
 
@@ -555,8 +1203,6 @@ Ungewissheit durch
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size scriptsize
 \begin_inset CommandInset citation
 LatexCommand cite
 after "2.1"
@@ -593,8 +1239,6 @@ key "HalpernReason05"
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size scriptsize
 mögliche Welten
 \end_layout
 
@@ -633,8 +1277,6 @@ mögliche Welten
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size scriptsize
 MOD_K
 \end_layout
 
@@ -644,8 +1286,6 @@ MOD_K
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size scriptsize
 Modale Aussagenlogik
 \end_layout
 
@@ -655,8 +1295,6 @@ Modale Aussagenlogik
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size scriptsize
 \begin_inset Formula $\mathcal{L}_{n}^{K}(\Phi)$
 \end_inset
 
@@ -669,8 +1307,6 @@ Modale Aussagenlogik
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size scriptsize
 \begin_inset CommandInset citation
 LatexCommand cite
 after "7.2.1"
@@ -687,8 +1323,6 @@ key "HalpernReason05"
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size scriptsize
 PROP, MOD
 \end_layout
 
@@ -709,8 +1343,6 @@ PROP, MOD
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size scriptsize
  für 
 \begin_inset Formula $n$
 \end_inset
@@ -753,8 +1385,6 @@ PROP, MOD
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size scriptsize
 EPI_SEM
 \end_layout
 
@@ -764,8 +1394,6 @@ EPI_SEM
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size scriptsize
 Epistemische Struktur (Semantik)
 \end_layout
 
@@ -775,8 +1403,6 @@ Epistemische Struktur (Semantik)
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size scriptsize
 \begin_inset Formula $M=(W,\mathcal{K}_{1},\cdots,\pi)$
 \end_inset
 
@@ -789,8 +1415,6 @@ Epistemische Struktur (Semantik)
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size scriptsize
 \begin_inset CommandInset citation
 LatexCommand cite
 after "7.2.1"
@@ -807,8 +1431,6 @@ key "HalpernReason05"
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size scriptsize
 MOD_K
 \end_layout
 
@@ -838,8 +1460,6 @@ MOD_K
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size scriptsize
 \begin_inset Formula $\mathcal{N}$
 \end_inset
 
@@ -861,8 +1481,6 @@ MOD_K
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size scriptsize
 KRIPKE_SEM, UNCERT
 \end_layout
 
@@ -874,8 +1492,6 @@ KRIPKE_SEM, UNCERT
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size scriptsize
 EPI_AX
 \end_layout
 
@@ -885,8 +1501,6 @@ EPI_AX
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size scriptsize
 Axiomatisierung
 \end_layout
 
@@ -896,8 +1510,6 @@ Axiomatisierung
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size scriptsize
 \begin_inset Formula $K,T,D,4,5$
 \end_inset
 
@@ -910,8 +1522,6 @@ Axiomatisierung
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size scriptsize
 \begin_inset CommandInset citation
 LatexCommand cite
 after "7.2.3"
@@ -928,8 +1538,6 @@ key "HalpernReason05"
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size scriptsize
 EPI_SEM
 \end_layout
 
@@ -950,8 +1558,6 @@ EPI_SEM
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size scriptsize
 der Wissenslogik
 \end_layout
 
@@ -990,8 +1596,6 @@ der Wissenslogik
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size scriptsize
 PROB
 \end_layout
 
@@ -1001,8 +1605,6 @@ PROB
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size scriptsize
 Epistemische probalistische
 \end_layout
 
@@ -1012,8 +1614,6 @@ Epistemische probalistische
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size scriptsize
 \begin_inset Formula $\mathcal{L}_{n}^{QU}$
 \end_inset
 
@@ -1026,8 +1626,6 @@ Epistemische probalistische
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size scriptsize
 \begin_inset CommandInset citation
 LatexCommand cite
 after "7.3"
@@ -1044,8 +1642,6 @@ key "HalpernReason05"
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size scriptsize
 MOD_K, EPI_SEM
 \end_layout
 
@@ -1066,8 +1662,6 @@ MOD_K, EPI_SEM
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size scriptsize
 Logik
 \end_layout
 
@@ -1106,8 +1700,6 @@ Logik
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size scriptsize
 PROB_SEM
 \end_layout
 
@@ -1117,8 +1709,6 @@ PROB_SEM
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size scriptsize
 Probalistische Struktur
 \end_layout
 
@@ -1128,8 +1718,6 @@ Probalistische Struktur
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size scriptsize
 \begin_inset Formula $\mathcal{M}_{n}^{prob}$
 \end_inset
 
@@ -1142,8 +1730,6 @@ Probalistische Struktur
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size scriptsize
 \begin_inset CommandInset citation
 LatexCommand cite
 after "7.3"
@@ -1160,8 +1746,6 @@ key "HalpernReason05"
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size scriptsize
 PROB, EPI_SEM
 \end_layout
 
@@ -1220,8 +1804,6 @@ PROB, EPI_SEM
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size scriptsize
 PROB_AX
 \end_layout
 
@@ -1231,8 +1813,6 @@ PROB_AX
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size scriptsize
 Axiomatisierung 
 \end_layout
 
@@ -1242,8 +1822,6 @@ Axiomatisierung
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size scriptsize
 \begin_inset Formula $AX_{n}^{prob}$
 \end_inset
 
@@ -1256,8 +1834,6 @@ Axiomatisierung
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size scriptsize
 \begin_inset CommandInset citation
 LatexCommand cite
 after "7.3"
@@ -1274,8 +1850,6 @@ key "HalpernReason05"
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size scriptsize
 PROB,PROB_SEM
 \end_layout
 
@@ -1296,8 +1870,6 @@ PROB,PROB_SEM
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size scriptsize
 der epistemischen
 \end_layout
 
@@ -1345,8 +1917,6 @@ der epistemischen
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size scriptsize
 probalistischen Logik
 \end_layout
 
@@ -1387,77 +1957,16 @@ probalistischen Logik
 
 \end_layout
 
-\begin_layout Part*
-Struktur der Arbeit
-\end_layout
+\end_inset
 
-\begin_layout Standard
-Die Struktur der Arbeit wird sich an folgender Grobstruktur orientieren.
- 
-\end_layout
 
-\begin_layout Enumerate
-Inhaltsverzeichnis
-\end_layout
-
-\begin_layout Enumerate
-Einleitung
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-Motivation und Ziel der Arbeit 
-\end_layout
-
-\begin_layout Enumerate
-Allgemeine Darstellung des Themas 
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-Hauptteil
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-Darstellung eines klassischen Systems der Wissenslogik mit Wahrscheinlichkeiten
-\end_layout
-
-\begin_layout Enumerate
-Darstellung eines dynamischen Systemes der Wissenslogik mit Wahrscheinlichkeiten
-\end_layout
-
-\begin_layout Enumerate
-Analyse aktueller Forschungsfragen 
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-Schlussteil
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-Zusammenfassung 
-\end_layout
-
-\begin_layout Enumerate
-Fazit
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-Literaturverzeichniss
-\end_layout
-
-\begin_layout Standard
 \begin_inset Newpage newpage
 \end_inset
 
 
 \end_layout
 
-\begin_layout Part
+\begin_layout Part*
 Literaturliste
 \end_layout
 
