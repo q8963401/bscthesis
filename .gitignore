@@ -1,4 +1,4 @@
-**/*.pdf
+/**/*.pdf
 *.bak
 *.acsm
 *.ps
@@ -10,3 +10,6 @@ elyxer-1.2.5
 *.py
 *.sh
 *.log
+!expose_draft.pdf
+!general_notes.pdf
+!thesis_draft.pdf
