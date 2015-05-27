@@ -2,7 +2,8 @@
 \lyxformat 474
 \begin_document
 \begin_header
-\textclass extarticle
+\textclass extbook
+\options a4paper,11pt,oneside
 \use_default_options true
 \begin_modules
 theorems-ams
@@ -16,12 +17,12 @@ minimalistic
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman default
+\font_roman Optima
 \font_sans default
 \font_typewriter default
 \font_math auto
 \font_default_family default
-\use_non_tex_fonts false
+\use_non_tex_fonts true
 \font_sc false
 \font_osf false
 \font_sf_scale 100

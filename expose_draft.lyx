@@ -103,7 +103,7 @@ Erläuterung des Themas
 \end_layout
 
 \begin_layout Standard
-Die Arbeit stellt ausführlich ein klassisches System der probalistischen
+Die Arbeit stellt ausführlich ein klassisches System der probabilistischen
  epistemischen Logik dar und beschreibt neuere Entwicklungen auf diesem
  Gebiet.
  
@@ -111,7 +111,7 @@ Die Arbeit stellt ausführlich ein klassisches System der probalistischen
 
 \begin_layout Standard
 Die Arbeit gliedert sich in zwei Teile.
- Im ersten Teil wird eine probalistische epistemische Logik ausgearbeitet.
+ Im ersten Teil wird eine probabilistische epistemische Logik ausgearbeitet.
  Dabei wird die in 
 \shape italic
 Reasoning about uncertainty, 2005 - J.Y.
@@ -138,7 +138,7 @@ Reasoning about uncertainty, 2005 - J.Y.
 \shape italic
 \emph on
  ausgearbeitet und dargestellt.
- Es wird ein System der Logik mit Wahrscheiblichkeiten konstruiert, welches
+ Es wird ein System der Logik mit Wahrscheinlichkeiten konstruiert, welches
  es ermöglicht, Aussagen der Art 
 \begin_inset Quotes gld
 \end_inset
@@ -163,11 +163,11 @@ Es ist doppelt so wahrscheinlich, dass es am Montag regnet wenn es am Sonntag
 Ausgehend von einem System der modalen Logik für einen Agenten wird ein
  System für mehrere Agenten konstruiert und dieses um ein Wahrscheinlichkeitsmaß
  für Aussagen erweitert.
- Das vorgestellte Sytem der epistemischen probalistischen Logik erlaubt,
+ Das vorgestellte System der epistemischen probabilistischen Logik erlaubt,
  logische Aussagen über Wahrscheinlichkeiten bestimmter Ereignisse mit mehreren
  Agenten zu formulieren.
  Bspw.
- lässt sich damit der Satzt 
+ lässt sich damit der Satz 
 \begin_inset Quotes gld
 \end_inset
 
@@ -176,7 +176,8 @@ Die Wahrscheinlichkeit für Sonne am Montag ist für Alice mehr als 3 mal
 \begin_inset Quotes grd
 \end_inset
 
- formal durch einen Term
+ durch bspw.
+ einen Term
 \end_layout
 
 \begin_layout Standard
@@ -186,7 +187,7 @@ Die Wahrscheinlichkeit für Sonne am Montag ist für Alice mehr als 3 mal
 \begin_inset Formula $3\ell_{ALICE}(Montag_{SONNE})>\ell_{BOB}(Montag_{SONNE})$
 \end_inset
 
- ausdrücken und nachweisen.
+ ausdrücken und formal beweisen.
 \begin_inset Foot
 status open
 
@@ -289,7 +290,7 @@ Eine epistemische Logik (eine spezielle modale Logik)
 \end_layout
 
 \begin_layout Itemize
-Eine Aximatisierung der epistemischen Logik durch ein System aus Axiomen
+Eine Axiomatisierung der epistemischen Logik durch ein System aus Axiomen
  (
 \begin_inset Formula $K,T,D,4,5$
 \end_inset
@@ -298,7 +299,7 @@ Eine Aximatisierung der epistemischen Logik durch ein System aus Axiomen
 \end_layout
 
 \begin_layout Itemize
-Die Sprache der epistemisch probalistischen Logik 
+Die Sprache der epistemisch probabilistischen Logik 
 \begin_inset Formula $\mathcal{L}_{n}^{QU}$
 \end_inset
 
@@ -306,7 +307,7 @@ Die Sprache der epistemisch probalistischen Logik
 \begin_inset Formula $\mathcal{M}_{n}^{prob}$
 \end_inset
 
- der probalistischen Strukturen
+ der probabilistischen Strukturen
 \end_layout
 
 \begin_layout Standard
@@ -323,13 +324,13 @@ its- und Vollständigkeitseigenschaften untersucht.
 \begin_inset Formula $AX_{n}^{prob}$
 \end_inset
 
- der epistemischen probalistischen Logik, insbesondere Eigenschaften der
+ der epistemischen probabilistischen Logik, insbesondere Eigenschaften der
  Korrektheit und Vollständigkeit sowie Komplexitätseigenschaften betrachtet.
 \end_layout
 
 \begin_layout Standard
 Im zweiten Teil werden neuere Entwicklungen auf dem Gebiet der dynamischen
- probalistischen Wissenslogik dargestellt.
+ probabilistischen Wissenslogik dargestellt.
  Es wird ausgehend von den in 
 \shape italic
 Logical dynamics of information and interaction, 2012 - J.
@@ -374,7 +375,7 @@ Eine Logik welche neben Agentenwissen und dem gemeinsamen Wissen aller Agenten,
 status open
 
 \begin_layout Plain Layout
-Eine Erweiterunung von 
+Eine Erweiterung von 
 \begin_inset Formula $PAL$
 \end_inset
 
@@ -387,7 +388,7 @@ Eine Erweiterunung von
 
 
 \series default
- dargestellt, wie sich eine epistemische probalistische Logik konstruieren
+ dargestellt, wie sich eine epistemische probabilistische Logik konstruieren
  lässt, welche Dynamiken realisiert.
  Mit Dynamiken sind allgemein Mechanismen zur Aktualisierung von Wahrscheinlichk
 eiten gemeint.
@@ -417,7 +418,7 @@ Frames
 
 \end_inset
 
- aus Sicht von Agenten, die Eintrittswahrscheinlichkeitenen von Events und
+ aus Sicht von Agenten, die Eintrittswahrscheinlichkeiten von Events und
  die Wahrscheinlichkeiten bezüglich der Beobachtungen von Agenten.
  Dabei wird untersucht, wie sich Dynamiken charakterisieren lassen und wie
  diese sich von z.B.
@@ -427,16 +428,17 @@ Frames
 \end_inset
 
  untersucht und dargestellt werden.
- Ausgehend von einer statischen epistemischen probalistischen Logik, wird
+ Ausgehend von einer statischen epistemischen probabilistischen Logik, wird
  dargestellt, welchen Einfluss verschiedene Dynamik-Szenarien auf die Wahrschein
 lichkeiten nehmen und welche Probleme dabei auftreten.
  Es wird gezeigt, für welche Bestandteile einer epistemischen Logik sich
  Wahrscheinlichkeiten sinnvoll anwenden lassen.
  Nach den einführenden Betrachtungen wird auf Basis der statischen epistemischen
- probalistischen Logik sowie der Einführung eines probalistischen Eventmodells,
- eine Regel zur Aktualisierung der Wahrscheinlichkeiten eingeführt, welche
+ probabilistischen Logik sowie der Einführung eines probabilistischen Eventmodel
+ls, eine Regel zur Aktualisierung der Wahrscheinlichkeiten eingeführt, welche
  die zuvor formulierten Eigenschaften realisiert.
- Abschließend wird die dynamische epistemische probalistische Logik vollständig
+ Abschließend wird die dynamische epistemische probabilistische Logik vollständi
+g
 \begin_inset Foot
 status open
 
@@ -448,7 +450,7 @@ Insbesondere wird eine Semantik des eingeführten Eventmodells angegeben
 
  axiomatisiert dargestellt.
  Zum Ende des zweiten Teils werden offene Fragen, Probleme und aktuelle
- Forschungsbemühungen zur Thematik dynamischer epistemischer probalistischer
+ Forschungsbemühungen zur Thematik dynamischer epistemischer probabilistischer
  Logiken präsentiert und diskutiert.
 \end_layout
 
@@ -486,7 +488,7 @@ Methodik
 \shape italic
 \emph on
 Die Ausarbeitung erfolgt deduktiv in dem Sinne, dass alle zu einer Darstellung
- notwendigen Vorraussetzungen vorhergehend dargestellt werden.
+ notwendigen Voraussetzungen vorhergehend dargestellt werden.
  Im Falle trivialer oder nicht relevanter Bezüge wird auf entsprechende
  Quellen verwiesen.
  
@@ -495,7 +497,7 @@ Die Ausarbeitung erfolgt deduktiv in dem Sinne, dass alle zu einer Darstellung
 \begin_layout Itemize
 Systeme, Sätze, Definitionen, usw.
  werden technisch/formal eingeführt und ggf.
- zur Anschaulicheit anhand von Beispielen erläutert.
+ zur Anschaulichkeit anhand von Beispielen erläutert.
 \end_layout
 
 \begin_layout Itemize
@@ -511,8 +513,8 @@ Fachlich wird sich die Arbeit primär an Arbeiten von J.
 \end_layout
 
 \begin_layout Itemize
-Die Formalismen und Termina werden sich an der gängigen englischsprachigen
- Literatur orientieren.
+Die Formalismen und Termini werden sich an der zugrundeliegende englischsprachig
+en Literatur orientieren.
 \end_layout
 
 \begin_layout Standard
@@ -528,8 +530,8 @@ Struktur der Arbeit
 
 \begin_layout Standard
 Die Struktur der Arbeit wird sich an folgendem Strukturentwurf orientieren.
- Im Hinblick auf die Verträglichkeit des zweiten zum ersten Teil, wird vorraussi
-chtlich eine geringfügige Umstrukturierung erfolgen.
+ Im Hinblick auf die Verträglichkeit des zweiten zum ersten Teil, wird voraussic
+htlich eine geringfügige Umstrukturierung erfolgen.
  
 \end_layout
 
@@ -555,7 +557,7 @@ Allgemeine Einführung in die Thematik [Anschauliche Einführung der Begriffe
 \begin_layout Enumerate
 Allgemeine Vereinbarungen [Bzgl.
  Syntax und Begrifflichkeiten wie bspw.
- epistemisch, probalistisch, usw.] 
+ epistemisch, probabilistisch, usw.] 
 \end_layout
 
 \end_deeper
@@ -587,7 +589,7 @@ Eine Sprache der Aussagenlogik
 \begin_inset Formula $\Sigma_{AL}$
 \end_inset
 
-, Aussagensymbole 
+, Aussagesymbole 
 \begin_inset Formula $AS\subseteq(\Sigma_{AL})^{*}$
 \end_inset
 
@@ -733,7 +735,7 @@ Die Sprache
 \begin_inset Formula $\mathcal{L}_{n}^{QU}$
 \end_inset
 
- der epistemischen probalistischen Logik für mehrere Agenten [
+ der epistemischen probabilistischen Logik für mehrere Agenten [
 \begin_inset CommandInset citation
 LatexCommand cite
 after "7.3"
@@ -765,7 +767,7 @@ key "HalpernReason05"
 \end_layout
 
 \begin_layout Enumerate
-Die vollständige Axiomatisierung der epistemischen probalistischen Logik
+Die vollständige Axiomatisierung der epistemischen probabilistischen Logik
  für mehrere Agenten [
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -885,7 +887,7 @@ Erweiterung von
 \begin_inset Formula $DEL$
 \end_inset
 
- um probalistische Produkt-Aktualsierung
+ um probabilistische Produkt-Aktualsierung
 \end_layout
 
 \begin_deeper
@@ -894,23 +896,23 @@ Erweiterung des Eventmodells
 \end_layout
 
 \begin_layout Enumerate
-Einführung der probalistischen Produkt-Aktualisierung
+Einführung der probabilistischen Produkt-Aktualisierung
 \end_layout
 
 \begin_layout Enumerate
-Analyse des Systems anhand eines komplexne Beispiels
+Analyse des Systems anhand eines komplexen Beispiels
 \end_layout
 
 \end_deeper
 \begin_layout Enumerate
-Ein vollständiges Axiomensystem der dynamischen epistemischen probalistischen
+Ein vollständiges Axiomensystem der dynamischen epistemischen probabilistischen
  Logik
 \end_layout
 
 \end_deeper
 \begin_layout Enumerate
-Diskussion aktueller Forschungsfragen der dynamischen epistemischen probalistisc
-hen Logik
+Diskussion aktueller Forschungsfragen der dynamischen epistemischen probabilisti
+schen Logik
 \end_layout
 
 \end_deeper
@@ -929,7 +931,7 @@ Fazit
 
 \end_deeper
 \begin_layout Enumerate
-Literaturverzeichniss
+Literaturverzeichnis
 \end_layout
 
 \begin_layout Standard
@@ -1605,7 +1607,7 @@ PROB
 \begin_inset Text
 
 \begin_layout Plain Layout
-Epistemische probalistische
+Epistemische probabilistische
 \end_layout
 
 \end_inset
@@ -1709,7 +1711,7 @@ PROB_SEM
 \begin_inset Text
 
 \begin_layout Plain Layout
-Probalistische Struktur
+Probabilistische Struktur
 \end_layout
 
 \end_inset
@@ -1917,7 +1919,7 @@ der epistemischen
 \begin_inset Text
 
 \begin_layout Plain Layout
-probalistischen Logik
+probabilistischen Logik
 \end_layout
 
 \end_inset
