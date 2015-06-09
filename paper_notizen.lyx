@@ -1,0 +1,1185 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass extarticle
+\use_default_options true
+\maintain_unincluded_children false
+\language british
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman Optima
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 11
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\headsep 3cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Artikel, Papers, Bücher
+\begin_inset Newline linebreak
+\end_inset
+
+
+\begin_inset Newline linebreak
+\end_inset
+
+
+\size larger
+Zur Bachelorarbeit 
+\size default
+
+\begin_inset Newline linebreak
+\end_inset
+
+
+\size larger
+\emph on
+Ausführliche Darstellung eines klassischen Systems der probabilistischen
+ 
+\size default
+\emph default
+
+\begin_inset Newline linebreak
+\end_inset
+
+
+\size larger
+\emph on
+epistemischen Logik und Beschreibung neuerer Entwicklungen
+\end_layout
+
+\begin_layout Author
+David Baldin
+\end_layout
+
+\begin_layout Part*
+Intro
+\end_layout
+
+\begin_layout Standard
+Short list of literature rawly classified by different topics.
+ Annotated with symbols with the following semantics: 
+\begin_inset Formula $\frownie\equiv\text{not available}$
+\end_inset
+
+ 
+\begin_inset Formula $\smiley\equiv\text{available}$
+\end_inset
+
+ 
+\begin_inset Formula $\Square\equiv\text{to be read}$
+\end_inset
+
+ 
+\begin_inset Formula $\checkmark\equiv\text{read}$
+\end_inset
+
+ 
+\begin_inset Formula $\blacktriangle\equiv\text{nice read}$
+\end_inset
+
+, 
+\begin_inset Formula $\blacktriangledown\equiv\text{not so nice read}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section*
+Logik | Allgemein
+\end_layout
+
+\begin_layout Subsection*
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+\begin_inset Formula $\smiley\checkmark\blacktriangledown$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang british
+ Title: Symbolic Logic | Author: Lewis, Langford | Year: 1959
+\end_layout
+
+\begin_layout Subsection*
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+\begin_inset Formula $\smiley\checkmark\blacktriangle$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang british
+ Title: A Mathematical Introduction to Logic | Author: Enderton | Year:
+ 1972
+\end_layout
+
+\begin_layout Standard
+The Author has a slightly different approach, more oriented towards machine
+ compatibility of introducing formal logics.
+ I like the straight forward way of Mendelson more but Enderton is more
+ fundamental!
+\end_layout
+
+\begin_layout Subsection*
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+\begin_inset Formula $\smiley\checkmark\blacktriangle$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang british
+ Title: Introduction to Mathematical Logic | Author: Mendelson | Year: 1997
+\end_layout
+
+\begin_layout Description
+34 The more complex parts of logic we shall treat later cannot be handled
+ by truth tables or by any other similar effective procedure.
+ Consequently, another approach, by means of formal axiomatic theories,
+ will have to be tried.
+ [AN AXIOM SYSTEM FOR THE PROPOSITIONAL CALCULUS]
+\end_layout
+
+\begin_layout Description
+34 A formal theory 
+\begin_inset Formula $\mathscr{L}$
+\end_inset
+
+ is defined when the following conditions are satisfied: 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+A countable set of symbols is given as the symbols of 
+\begin_inset Formula $\mathscr{L}$
+\end_inset
+
+.
+ A finite sequence of symbols of 
+\begin_inset Formula $\mathscr{L}$
+\end_inset
+
+ is called an 
+\emph on
+expression
+\emph default
+ of 
+\begin_inset Formula $\mathscr{L}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+There is a subset of the set of expressions of 
+\begin_inset Formula $\mathscr{L}$
+\end_inset
+
+ called the set of well-formed-formulas (
+\begin_inset Formula $\text{wfs}$
+\end_inset
+
+) of 
+\begin_inset Formula $\mathscr{L}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+There is usually an effective procedure to determine whether a given expression
+ is a 
+\begin_inset Formula $\text{wf}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+There is a set of 
+\begin_inset Formula $\text{wfs}$
+\end_inset
+
+ called the set of axioms of 
+\begin_inset Formula $\mathscr{L}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Most often, one can effectively decide whether a given 
+\begin_inset Formula $\text{wf}$
+\end_inset
+
+ is an axiom; in such a case, 
+\begin_inset Formula $\mathscr{L}$
+\end_inset
+
+ is called an 
+\emph on
+axiomatic theory
+\emph default
+.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+There is a finite set 
+\begin_inset Formula $R_{1}\cdots,R_{n}$
+\end_inset
+
+ of 
+\emph on
+relations
+\emph default
+ among 
+\begin_inset Formula $\text{wfs}$
+\end_inset
+
+, called 
+\emph on
+rules of inference
+\emph default
+.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+For each 
+\begin_inset Formula $R_{i}$
+\end_inset
+
+ there is a unique positive integer 
+\begin_inset Formula $j$
+\end_inset
+
+ such that, for every set of 
+\begin_inset Formula $j$
+\end_inset
+
+ 
+\begin_inset Formula $\text{wfs}$
+\end_inset
+
+ and each 
+\begin_inset Formula $\text{wf}$
+\end_inset
+
+ 
+\begin_inset Formula $\mathscr{B}$
+\end_inset
+
+, one can effectively decide whether the given 
+\begin_inset Formula $j$
+\end_inset
+
+ 
+\begin_inset Formula $\text{wfs}$
+\end_inset
+
+ are in the relation 
+\begin_inset Formula $R_{i}$
+\end_inset
+
+ to 
+\begin_inset Formula $\mathscr{B}$
+\end_inset
+
+, and, if so, 
+\begin_inset Formula $\mathscr{B}$
+\end_inset
+
+ is said to 
+\emph on
+follow from
+\emph default
+ or to be a 
+\emph on
+direct consequence
+\emph default
+ of the given 
+\begin_inset Formula $\text{wfs}$
+\end_inset
+
+ by virtue of 
+\begin_inset Formula $R_{i}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+A proof in 
+\begin_inset Formula $\mathscr{L}$
+\end_inset
+
+ is a sequence 
+\begin_inset Formula $\mathscr{B}_{i},\cdots,\mathscr{B}_{k}$
+\end_inset
+
+ of 
+\begin_inset Formula $\text{wfs}$
+\end_inset
+
+ such that, for each 
+\begin_inset Formula $i$
+\end_inset
+
+, either 
+\begin_inset Formula $\mathscr{B}_{i}$
+\end_inset
+
+ is an axiom of 
+\begin_inset Formula $\mathscr{L}$
+\end_inset
+
+ or 
+\begin_inset Formula $\mathscr{B}_{i}$
+\end_inset
+
+ is a direct consequence of some of the preceding 
+\begin_inset Formula $\text{wfs}$
+\end_inset
+
+ in the sequence by virtue of one of the rules of inference of 
+\begin_inset Formula $\mathscr{L}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+A theorem of 
+\begin_inset Formula $\mathscr{L}$
+\end_inset
+
+ is a 
+\begin_inset Formula $\text{wf}$
+\end_inset
+
+ 
+\begin_inset Formula $\mathscr{B}$
+\end_inset
+
+ of 
+\begin_inset Formula $\mathscr{L}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\mathscr{B}$
+\end_inset
+
+ is the last 
+\begin_inset Formula $\text{wf}$
+\end_inset
+
+ of some proof in 
+\begin_inset Formula $\mathscr{L}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Such a proof is called a proof 
+\begin_inset Formula $\mathscr{B}$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathscr{L}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Description
+35 A 
+\begin_inset Formula $\text{wf}$
+\end_inset
+
+ 
+\begin_inset Formula $\ell$
+\end_inset
+
+ is said to be a consequence in 
+\begin_inset Formula $\mathscr{L}$
+\end_inset
+
+ of a set 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ of 
+\begin_inset Formula $\text{wfs}$
+\end_inset
+
+ if and only if there is a sequence 
+\begin_inset Formula $\mathscr{B}_{1},\cdots,\mathscr{B}_{k}$
+\end_inset
+
+ of 
+\begin_inset Formula $\text{wfs}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\ell$
+\end_inset
+
+ is 
+\begin_inset Formula $\mathscr{B}_{k}$
+\end_inset
+
+ and, for each 
+\begin_inset Formula $i$
+\end_inset
+
+, 
+\begin_inset Formula $\mathscr{B}_{i}$
+\end_inset
+
+is an axiom or 
+\begin_inset Formula $\mathscr{B}_{i}$
+\end_inset
+
+ is in 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+, or 
+\begin_inset Formula $\mathscr{B}_{i}$
+\end_inset
+
+ is a direct consequence by some rule of inference of some preceding 
+\begin_inset Formula $\text{wfs}$
+\end_inset
+
+ in the sequence.
+ Such a sequence is called a 
+\emph on
+proof
+\emph default
+ of 
+\begin_inset Formula $\ell$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathscr{L}$
+\end_inset
+
+ from 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+.
+ The members of 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ are called the 
+\emph on
+hypotheses
+\emph default
+ or 
+\emph on
+premisses
+\emph default
+ of the proof.
+ 
+\begin_inset Formula $\Gamma\vdash_{\mathscr{L}}\ell$
+\end_inset
+
+ is the abbreviation for 
+\emph on
+
+\begin_inset Formula $\ell$
+\end_inset
+
+ is a consequence of 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+...
+ and so forth ...
+ should be considered while creating the axiomatisation of formal logics!
+\end_layout
+
+\begin_layout Section*
+Logik | Modal
+\end_layout
+
+\begin_layout Subsection*
+Title: Modal Logic | Author: Chellas | Year: 1980
+\end_layout
+
+\begin_layout Subsection*
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+\begin_inset Formula $☺☐$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang british
+ Title: Modal Logic and Classical Logic | Author: Benthem | Year: 1985 |
+ Library : Signatur CC 2500 B476 - Barcode 30296813
+\end_layout
+
+\begin_layout Subsection*
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+\begin_inset Formula $☺☐$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang british
+ Title: First Steps in Modal Logic | Author: Popkorn | Year: 1994 | Library
+ : Signatur SK 130 P828 - Barcode 30294137
+\end_layout
+
+\begin_layout Subsection*
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+\begin_inset Formula $☺☐$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang british
+ Title: Modal Logic | Author: Blackburn, Rijke, Venema | Year: 2001 | Library
+ : Signatur SK 130 B628 - Barcode 30924421
+\end_layout
+
+\begin_layout Subsection*
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+\begin_inset Formula $☺☐$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang british
+ Title: Handbook of Modal Logic | Author: Blackburn | Year: 2007 | Library
+ : Signatur SK 130 B628 - Barcode 31780645
+\end_layout
+
+\begin_layout Subsection*
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+\begin_inset Formula $☺☐\blacktriangle$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang british
+ Title: Modal Logic for Open Minds | Author: Benthem | Year : 2010 | PDF
+\end_layout
+
+\begin_layout Section*
+Wahrscheinlichkeit
+\end_layout
+
+\begin_layout Subsection*
+Title: Obere und untere Wahrscheinlichkeiten | Author: Wolf | Year: 1977
+\end_layout
+
+\begin_layout Section*
+Logik und Wahrscheinlichkeit
+\end_layout
+
+\begin_layout Subsection*
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+\begin_inset Formula $☐$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang british
+ Title: An Analysis of First-Order Logics of Probability | Author: Halpern
+ | Year: 1990 | 
+\bar under
+
+\begin_inset CommandInset href
+LatexCommand href
+name "PS"
+target "http://www.cs.cornell.edu/Info/People/halpern/papers/first-order_prob_analysis.ps"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+\begin_inset Formula $☐$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang british
+ Title: Representing and Reasoning with Probabilistic Knowledge | Author:
+ Bacchus | Year: 1990
+\end_layout
+
+\begin_layout Subsection*
+Title: An Investigation into the Laws of Thought on Which Are Founded the
+ Mathematical Theories of Logic and Probabilites | Author: Boole | Year:
+ 1854
+\end_layout
+
+\begin_layout Subsection*
+Title: A first-order conditional logic with qualitative statistical semantics
+ | Author: Brafman | Year: 1997
+\end_layout
+
+\begin_layout Subsection*
+Title: The concept of conditional fuzzy measure | Author: Campos, Lamata,
+ Moral | Year: 1990
+\end_layout
+
+\begin_layout Subsection*
+Title: Logical Foundations of Probability | Author: Carnap | Year: 1950
+ | Library : Signatur CI 1804 F771(2) - Barcode 33057119
+\end_layout
+
+\begin_layout Subsection*
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+\begin_inset Formula $☐$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang british
+ Title: An analysis of first-order logics of probability | Author: Halpern
+ | Year: 1990
+\end_layout
+
+\begin_layout Subsection*
+Title: Probabilistic logic | Author: Nilsson | Year: 1986
+\end_layout
+
+\begin_layout Section*
+Wissen und Wahrscheinlichkeit
+\end_layout
+
+\begin_layout Subsection*
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+\begin_inset Formula $☺☐$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang british
+ Title: Reasoning about knowledge and probability | Author: Fagin, Halpern
+ | Year: 1994 | 
+\bar under
+
+\begin_inset CommandInset href
+LatexCommand href
+name "PDF"
+target "http://delivery.acm.org/10.1145/180000/174658/p340-fagin.pdf?ip=141.76.111.188&id=174658&acc=ACTIVE%20SERVICE&key=2BA2C432AB83DA15.71FE45B894D107A6.4D4702B0C3E38B35.4D4702B0C3E38B35&CFID=518024822&CFTOKEN=72245935&__acm__=1433857827_fb804f8bc12cca3bb046b326f324cfce"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+\begin_inset Formula $☺\checkmark$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang british
+ Title: Two views of belief: belief as generalized probability and belief
+ as evidence | Author: Halpern, Fagin | Year: 1990 | 
+\bar under
+
+\begin_inset CommandInset href
+LatexCommand href
+name "PDF"
+target "http://ac.els-cdn.com/0004370292900483/1-s2.0-0004370292900483-main.pdf?_tid=aba8fd2a-0eac-11e5-ba4f-00000aacb35f&acdnat=1433857228_dc1fc92ac30863b64d9be44503e3b144"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A 
+\series bold
+belief function
+\series default
+ is a function that assigns to every subset of a given set 
+\begin_inset Formula $S$
+\end_inset
+
+ a number between 
+\begin_inset Formula $0$
+\end_inset
+
+ and 
+\begin_inset Formula $1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The 
+\series bold
+belief
+\series default
+ in a event 
+\begin_inset Formula $A$
+\end_inset
+
+ (the term 
+\series bold
+event
+\series default
+ is synonymous for a subset of a set 
+\begin_inset Formula $S$
+\end_inset
+
+ that contains possibilities (...
+ a agent considers possible)) describes a lower bound on the degree of belief
+ of an agent that 
+\begin_inset Formula $A$
+\end_inset
+
+ is the case.
+ The corresponding upper bound is provided by the so called plausibility
+ function.
+ Dempster defines 
+\emph on
+belief
+\emph default
+ as 
+\emph on
+lower probability
+\emph default
+ and 
+\emph on
+plausibility
+\emph default
+ as 
+\emph on
+upper probability
+\emph default
+).
+\end_layout
+
+\begin_layout Subsection*
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+\begin_inset Formula $☺☐$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang british
+ Title: A logical approach for reasoning about uncertainty: a tutorial |
+ Author: Halpern | Year: 1998b
+\end_layout
+
+\begin_layout Section*
+Sonstiges
+\end_layout
+
+\begin_layout Subsection*
+Title: The other person's envelope is always a greener | Author: Nalebuff
+ | Year: 1989
+\end_layout
+
+\begin_layout Subsection*
+Title: Puzzle or Paradox? | Author: Freund | Year: 1965
+\end_layout
+
+\begin_layout Subsection*
+Title: Mathematical Recreations | Author: Kraitchik | Year: 1953
+\end_layout
+
+\end_body
+\end_document
