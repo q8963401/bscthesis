@@ -119,11 +119,11 @@ Intro
 \begin_layout Standard
 Short list of literature rawly classified by different topics.
  Annotated with symbols with the following semantics: 
-\begin_inset Formula $\frownie\equiv\text{not available}$
+\begin_inset Formula $\frownie\equiv\text{not yet obtained}$
 \end_inset
 
  
-\begin_inset Formula $\smiley\equiv\text{available}$
+\begin_inset Formula $\smiley\equiv\text{obtained}$
 \end_inset
 
  
@@ -145,11 +145,11 @@ Short list of literature rawly classified by different topics.
 .
 \end_layout
 
-\begin_layout Section*
+\begin_layout Subsection*
 Logik | Allgemein
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Subsubsection*
 
 \family roman
 \series medium
@@ -182,7 +182,7 @@ Logik | Allgemein
  Title: Symbolic Logic | Author: Lewis, Langford | Year: 1959
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Subsubsection*
 
 \family roman
 \series medium
@@ -223,7 +223,7 @@ The Author has a slightly different approach, more oriented towards machine
  fundamental!
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Subsubsection*
 
 \family roman
 \series medium
@@ -669,7 +669,7 @@ Title: Modal Logic | Author: Chellas | Year: 1980
 \noun off
 \color none
 \lang english
-\begin_inset Formula $☺☐$
+\begin_inset Formula $☺\square$
 \end_inset
 
 
@@ -703,7 +703,7 @@ Title: Modal Logic | Author: Chellas | Year: 1980
 \noun off
 \color none
 \lang english
-\begin_inset Formula $☺☐$
+\begin_inset Formula $☺\square$
 \end_inset
 
 
@@ -737,7 +737,7 @@ Title: Modal Logic | Author: Chellas | Year: 1980
 \noun off
 \color none
 \lang english
-\begin_inset Formula $☺☐$
+\begin_inset Formula $☺\square$
 \end_inset
 
 
@@ -771,41 +771,7 @@ Title: Modal Logic | Author: Chellas | Year: 1980
 \noun off
 \color none
 \lang english
-\begin_inset Formula $☺☐$
-\end_inset
-
-
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-\lang british
- Title: Handbook of Modal Logic | Author: Blackburn | Year: 2007 | Library
- : Signatur SK 130 B628 - Barcode 31780645
-\end_layout
-
-\begin_layout Subsection*
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-\lang english
-\begin_inset Formula $☺☐\blacktriangle$
+\begin_inset Formula $☺\square\blacktriangle$
 \end_inset
 
 
@@ -971,6 +937,124 @@ Title: Logical Foundations of Probability | Author: Carnap | Year: 1950
 
 \begin_layout Subsection*
 Title: Probabilistic logic | Author: Nilsson | Year: 1986
+\end_layout
+
+\begin_layout Subsection*
+Title: Probabilistic Dynamic Epistemic Logic | Author: B.
+ P.
+ Kooi | Year : 2003 | 
+\begin_inset CommandInset href
+LatexCommand href
+name "URL"
+target "http://www.researchgate.net/profile/Barteld_Kooi/publication/30486528_Probabilistic_Dynamic_Epistemic_Logic/links/0c96051c9a68c47ca5000000.pdf"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Title: Logic and Probability | Author: Demey, Lorenz, Kooi, Barteld and
+ Sack, Joshua | Year : 2013 | 
+\begin_inset CommandInset href
+LatexCommand href
+name "URL"
+target "http://plato.stanford.edu/entries/logic-probability/"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Quotes eld
+\end_inset
+
+probability preservation
+\begin_inset Quotes erd
+\end_inset
+
+ or 
+\begin_inset Quotes eld
+\end_inset
+
+uncertainty propagation
+\begin_inset Quotes erd
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Description
+Propositional
+\begin_inset space \thinspace{}
+\end_inset
+
+Probabilities
+\begin_inset space \thinspace{}
+\end_inset
+
+Logic Studies how probabilities flow from the premises to the conclusion,
+ in other words, they do not study truth preservation but probability preservati
+on.
+ Example : Take the term 
+\begin_inset Formula $\text{it rains tomorrow}\Rightarrow\text{it will get wet}$
+\end_inset
+
+, here the premises and the conclusion are 
+\emph on
+hard
+\emph default
+ truth values of 
+\begin_inset Formula $true$
+\end_inset
+
+ or 
+\begin_inset Formula $false$
+\end_inset
+
+, if the premises is 
+\begin_inset Formula $true$
+\end_inset
+
+ the conclusion must be also.
+ Lets take the probability measure 
+\begin_inset Formula $P:\Omega\to[0,1]$
+\end_inset
+
+ and formulate something like 
+\begin_inset Formula $P(\text{it rains tomorrow})\vee P(\text{it gets hot tomorrow})\Rightarrow P(\text{it will get wet})$
+\end_inset
+
+.
+ Sure, the whole terms domain is 
+\begin_inset Formula $\left\{ true,false\right\} $
+\end_inset
+
+ but how will the probabilities of the premisses affect the conclusion?
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+\begin_inset Formula $\mathscr{L}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Subsection*
+Title: Probabilistic Dynamic Epistemic Logic | Author: B.
+ P.
+ Kooi | Year : 2003 | 
+\begin_inset CommandInset href
+LatexCommand href
+name "URL"
+target "http://www.researchgate.net/profile/Barteld_Kooi/publication/30486528_Probabilistic_Dynamic_Epistemic_Logic/links/0c96051c9a68c47ca5000000.pdf"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section*
