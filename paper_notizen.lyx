@@ -2,10 +2,10 @@
 \lyxformat 474
 \begin_document
 \begin_header
-\textclass extarticle
+\textclass extbook
 \use_default_options true
 \maintain_unincluded_children false
-\language british
+\language ngerman
 \language_package default
 \inputencoding auto
 \fontencoding global
@@ -61,7 +61,7 @@
 \tocdepth 3
 \paragraph_separation skip
 \defskip medskip
-\quotes_language english
+\quotes_language german
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -112,7 +112,7 @@ epistemischen Logik und Beschreibung neuerer Entwicklungen
 David Baldin
 \end_layout
 
-\begin_layout Part*
+\begin_layout Section
 Intro
 \end_layout
 
@@ -142,14 +142,18 @@ Short list of literature rawly classified by different topics.
 \begin_inset Formula $\blacktriangledown\equiv\text{not so nice read}$
 \end_inset
 
+, 
+\begin_inset Formula $!!!\equiv\text{important}$
+\end_inset
+
 .
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Section
 Logik | Allgemein
 \end_layout
 
-\begin_layout Subsubsection*
+\begin_layout Subsection
 
 \family roman
 \series medium
@@ -178,11 +182,11 @@ Logik | Allgemein
 \uwave default
 \noun default
 \color inherit
-\lang british
+\lang ngerman
  Title: Symbolic Logic | Author: Lewis, Langford | Year: 1959
 \end_layout
 
-\begin_layout Subsubsection*
+\begin_layout Subsection
 
 \family roman
 \series medium
@@ -211,7 +215,7 @@ Logik | Allgemein
 \uwave default
 \noun default
 \color inherit
-\lang british
+\lang ngerman
  Title: A Mathematical Introduction to Logic | Author: Enderton | Year:
  1972
 \end_layout
@@ -223,7 +227,7 @@ The Author has a slightly different approach, more oriented towards machine
  fundamental!
 \end_layout
 
-\begin_layout Subsubsection*
+\begin_layout Subsection
 
 \family roman
 \series medium
@@ -252,7 +256,7 @@ The Author has a slightly different approach, more oriented towards machine
 \uwave default
 \noun default
 \color inherit
-\lang british
+\lang ngerman
  Title: Introduction to Mathematical Logic | Author: Mendelson | Year: 1997
 \end_layout
 
@@ -647,7 +651,7 @@ premisses
  should be considered while creating the axiomatisation of formal logics!
 \end_layout
 
-\begin_layout Section*
+\begin_layout Section
 Logik | Modal
 \end_layout
 
@@ -684,7 +688,7 @@ Title: Modal Logic | Author: Chellas | Year: 1980
 \uwave default
 \noun default
 \color inherit
-\lang british
+\lang ngerman
  Title: Modal Logic and Classical Logic | Author: Benthem | Year: 1985 |
  Library : Signatur CC 2500 B476 - Barcode 30296813
 \end_layout
@@ -718,7 +722,7 @@ Title: Modal Logic | Author: Chellas | Year: 1980
 \uwave default
 \noun default
 \color inherit
-\lang british
+\lang ngerman
  Title: First Steps in Modal Logic | Author: Popkorn | Year: 1994 | Library
  : Signatur SK 130 P828 - Barcode 30294137
 \end_layout
@@ -752,7 +756,7 @@ Title: Modal Logic | Author: Chellas | Year: 1980
 \uwave default
 \noun default
 \color inherit
-\lang british
+\lang ngerman
  Title: Modal Logic | Author: Blackburn, Rijke, Venema | Year: 2001 | Library
  : Signatur SK 130 B628 - Barcode 30924421
 \end_layout
@@ -786,67 +790,1654 @@ Title: Modal Logic | Author: Chellas | Year: 1980
 \uwave default
 \noun default
 \color inherit
-\lang british
+\lang ngerman
  Title: Modal Logic for Open Minds | Author: Benthem | Year : 2010 | PDF
 \end_layout
 
-\begin_layout Section*
+\begin_layout Subsection*
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+\begin_inset Formula $☺\square\blacktriangle$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang ngerman
+ Title: Handbook of Modal Logic | Author: Gabbay, Gärdenfors, Siekmann,
+ Benthem, Vardi, Woods | Year : 2010 | PDF
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ be a alphabet.
+ The so called 
+\emph on
+signature
+\emph default
+ consists of a denumerably infinite set of propositional symbols 
+\begin_inset Formula $PROP\subseteq\Sigma$
+\end_inset
+
+ and a set of modality symbols 
+\begin_inset Formula $MOD\subseteq\Sigma$
+\end_inset
+
+ (with 
+\begin_inset Formula $PROP\cap MOD=\emptyset$
+\end_inset
+
+ to avoid confusion).
+\end_layout
+
+\begin_layout Standard
+Basic grammar of a Modal logic in BNF 
+\begin_inset Formula $\varphi\Coloneqq p|\top|\bot|\neg\varphi|\varphi\wedge\psi|\varphi\vee\psi|\varphi\to\psi|\varphi\leftrightarrow\psi|\langle m\rangle\varphi|[m]\varphi$
+\end_inset
+
+ with 
+\begin_inset Formula $p\in PROP$
+\end_inset
+
+ and 
+\begin_inset Formula $m\in MOD$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\mathcal{L}^{MOD}$
+\end_inset
+
+ be the langauge of modal logic.
+\end_layout
+
+\begin_layout Standard
+But for convenience the syntax contain all boolean operations as 
+\begin_inset Formula $\to,\leftrightarrow,\vee$
+\end_inset
+
+ even though these are redundant because 
+\begin_inset Formula $\varphi\to\psi\coloneqq\neg\varphi\wedge\psi$
+\end_inset
+
+ and 
+\begin_inset Formula $\varphi\leftrightarrow\psi\coloneqq(\varphi\to\psi)\wedge(\psi\to\varphi)$
+\end_inset
+
+ and 
+\begin_inset Formula $\varphi\vee\psi\coloneqq\neg(\neg\varphi\wedge\neg\psi)$
+\end_inset
+
+ and even
+\begin_inset Formula $\langle m\rangle\varphi\coloneqq\neg[m]\neg\varphi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $|M|=1$
+\end_inset
+
+, its written 
+\begin_inset Formula $\Box,\Diamond$
+\end_inset
+
+ instead of 
+\begin_inset Formula $[m],\langle m\rangle$
+\end_inset
+
+ for the single 
+\begin_inset Formula $m\in M$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+A Kripke model 
+\begin_inset Formula $\mathfrak{M}$
+\end_inset
+
+ for this basic modal language (wherer 
+\begin_inset Formula $PROP$
+\end_inset
+
+ and 
+\begin_inset Formula $MOD$
+\end_inset
+
+ are fixed) is 
+\begin_inset Formula $\mathfrak{M}=(W,\underset{m\in MOD}{\left\{ R^{m}\right\} },V)$
+\end_inset
+
+ where 
+\begin_inset Formula $W$
+\end_inset
+
+ is the so called set of 
+\series bold
+points
+\series default
+ or 
+\series bold
+worlds
+\series default
+.
+ The binary relations 
+\begin_inset Formula $\forall m\in MOD:R^{m}:\subseteq W\times W$
+\end_inset
+
+ on 
+\begin_inset Formula $W$
+\end_inset
+
+.
+ And the valuation function 
+\begin_inset Formula $V:PROP\to2^{W}$
+\end_inset
+
+ that assigns to each propositional symbol a subset of 
+\begin_inset Formula $W$
+\end_inset
+
+.
+ 
+\begin_inset Formula $V(p)$
+\end_inset
+
+ for a propositional symbol 
+\begin_inset Formula $p\in PROP$
+\end_inset
+
+ denotes the set of points where 
+\begin_inset Formula $p$
+\end_inset
+
+ is true.
+ The tuple of 
+\begin_inset Formula $(W,\underset{m\in MOD}{\left\{ R^{m}\right\} })$
+\end_inset
+
+ is called a 
+\series bold
+frame
+\series default
+, again if 
+\begin_inset Formula $|M|=1$
+\end_inset
+
+, the notation of the frame is 
+\begin_inset Formula $(W,R)$
+\end_inset
+
+ and for the model is 
+\begin_inset Formula $(W,R,V)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Let a model 
+\begin_inset Formula $\mathfrak{M}=(W,\underset{m\in MOD}{\left\{ R^{m}\right\} },V)$
+\end_inset
+
+ and a point 
+\begin_inset Formula $w\in W$
+\end_inset
+
+.
+ The inductive definition for a formula 
+\begin_inset Formula $\varphi\in\mathcal{L}^{MOD}$
+\end_inset
+
+ to be called 
+\series bold
+satisfied
+\series default
+ or 
+\emph on
+true
+\emph default
+ in 
+\begin_inset Formula $\mathfrak{M}$
+\end_inset
+
+ at 
+\begin_inset Formula $w$
+\end_inset
+
+, symbolized by 
+\begin_inset Formula $\mathfrak{M},w\models\varphi$
+\end_inset
+
+ is given in following:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\mathfrak{M},w\models p & :\Leftrightarrow & w\in V(p)\\
+\mathfrak{M},w\models\top & :\Leftrightarrow & \text{always}\\
+\mathfrak{M},w\models\bot & :\Leftrightarrow & \text{never}\\
+\mathfrak{M},w\models\neg\varphi & :\Leftrightarrow & \mathfrak{M},w\nvDash\varphi\\
+\mathfrak{M},w\models\varphi\wedge\psi & :\Leftrightarrow & \mathfrak{M},w\models\varphi\wedge\mathfrak{M},w\models\psi\\
+\mathfrak{M},w\models[m]\varphi & :\Leftrightarrow & \forall v\in W:((w,v)\in R^{m}\Rightarrow\mathfrak{M},v\models\varphi)\\
+\mathfrak{M},w\models\langle m\rangle\varphi & :\Leftrightarrow & \exists v\in W:((w,v)\in R^{m}\Rightarrow\mathfrak{M},v\models\varphi)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathfrak{M},w\models\langle m\rangle\varphi:\Leftrightarrow\exists v\in W:((w,v)\in R^{m}\wedge\mathfrak{M},v\models\varphi)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A formula 
+\begin_inset Formula $\varphi\in\mathcal{L}^{MOD}$
+\end_inset
+
+ is called 
+\series bold
+gobally satisfied in 
+\begin_inset Formula $\mathfrak{M}$
+\end_inset
+
+
+\series default
+, symbolized by 
+\begin_inset Formula $\mathfrak{M}\models\varphi$
+\end_inset
+
+ if 
+\begin_inset Formula $\forall m\in M\ :\ \mathfrak{M},w\models\varphi$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+If for all Models 
+\begin_inset Formula $\mathfrak{M}$
+\end_inset
+
+ a formula 
+\begin_inset Formula $\varphi\in\mathcal{L}^{MOD}$
+\end_inset
+
+ is globally satisfied, 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ is called 
+\series bold
+valid
+\series default
+, this is symbolized by 
+\begin_inset Formula $\models\varphi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+A formula 
+\begin_inset Formula $\varphi\in\mathcal{L}^{MOD}$
+\end_inset
+
+ is called 
+\series bold
+satisfiable in a model 
+\begin_inset Formula $\mathfrak{M}$
+\end_inset
+
+
+\series default
+, if 
+\begin_inset Formula $\exists w\in W\ :\ \mathfrak{M},w\models\varphi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+A formula 
+\begin_inset Formula $\varphi\in\mathcal{L}^{MOD}$
+\end_inset
+
+ is called 
+\series bold
+satisfiable
+\series default
+, if there exists a 
+\begin_inset Formula $\mathfrak{M}$
+\end_inset
+
+ for which there exists a 
+\begin_inset Formula $w\in W$
+\end_inset
+
+ so that 
+\begin_inset Formula $\mathfrak{M},w\models\varphi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+A set of formulas 
+\begin_inset Formula $\Gamma\subseteq\mathcal{L}^{MOD}$
+\end_inset
+
+ is called 
+\series bold
+satisfiable in a model 
+\begin_inset Formula $\mathfrak{M}$
+\end_inset
+
+
+\series default
+, symbolized by 
+\begin_inset Formula $\mathfrak{M},w\models\Gamma$
+\end_inset
+
+, if 
+\begin_inset Formula $\forall\psi\in\Gamma:\exists w\in W\ :\ \mathfrak{M},w\models\psi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+A set of formulas 
+\begin_inset Formula $\Gamma\subseteq\mathcal{L}^{MOD}$
+\end_inset
+
+ is called 
+\series bold
+satisfiable
+\series default
+, symbolized by 
+\begin_inset Formula $\models\Gamma$
+\end_inset
+
+, if there exists a 
+\begin_inset Formula $\mathfrak{M}$
+\end_inset
+
+ for which there exists a 
+\begin_inset Formula $w\in W$
+\end_inset
+
+ so that 
+\begin_inset Formula $\forall\psi\in\Gamma:\mathfrak{M},w\models\psi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+For 
+\series bold
+
+\begin_inset Formula $\Gamma\cup\left\{ \varphi\right\} \subseteq\mathcal{L}^{MOD}$
+\end_inset
+
+
+\series default
+ the formula 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ is called a 
+\series bold
+semantic consequence of a set of formulas
+\series default
+, symbolized by 
+\begin_inset Formula $\Gamma\models\varphi$
+\end_inset
+
+, if for all models 
+\begin_inset Formula $\mathfrak{M}$
+\end_inset
+
+ and for all 
+\begin_inset Formula $w\in W$
+\end_inset
+
+ it is that 
+\begin_inset Formula $\models\Gamma\Rightarrow\models\varphi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
 Wahrscheinlichkeit
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Subsection
 Title: Obere und untere Wahrscheinlichkeiten | Author: Wolf | Year: 1977
 \end_layout
 
-\begin_layout Section*
+\begin_layout Section
 Logik und Wahrscheinlichkeit
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Subsection
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-\lang english
-\begin_inset Formula $☐$
+\color red
+Title : A logic for Reasoning about Probabilities | Author: R.
+ Fagin, J.Y.
+ Halpern | Year: 1990 
+\end_layout
+
+\begin_layout Standard
+Es gibt 4 Teile: 1.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Measurable Case
+\begin_inset Quotes erd
+\end_inset
+
+, 2.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+General (Non-Measurable) Case
+\begin_inset Quotes erd
+\end_inset
+
+, 3.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Reasoning about linear inequalities
+\begin_inset Quotes erd
+\end_inset
+
+, 4.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Reasoning about Conditional Probabilities
+\begin_inset Quotes erd
+\end_inset
+
+.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Measurable
+\begin_inset Quotes erd
+\end_inset
+
+ meint, dass die Menge der Events (in modallogischen Sinne) ein 
+\begin_inset Quotes eld
+\end_inset
+
+Measurable Set
+\begin_inset Quotes erd
+\end_inset
+
+ ist.
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $\sigma$
+\end_inset
+
+-Algebra Sei eine (Grund-)Menge 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ Es ist 
+\begin_inset Formula $\mathcal{R}\subseteq2^{X}$
+\end_inset
+
+ eine 
+\begin_inset Formula $\sigma$
+\end_inset
+
+-Algebra wenn folgende Bedingungen erfüllt sind:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $X\in\mathcal{R}$
+\end_inset
+
+ (
+\emph on
+Bemerkung
+\emph default
+: Die Menge 
+\begin_inset Formula $X$
+\end_inset
+
+ ist selbst in 
+\begin_inset Formula $\mathcal{R}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A\in\mathcal{R}\Rightarrow X\setminus A\in\mathcal{R}$
+\end_inset
+
+ (
+\emph on
+Bemerkung
+\emph default
+: Das Komplement 
+\begin_inset Formula $X\setminus A$
+\end_inset
+
+ von 
+\begin_inset Formula $A$
+\end_inset
+
+ ist in 
+\begin_inset Formula $\mathcal{R}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Itemize
+Sei 
+\begin_inset Formula $I\subseteq\mathbb{N}$
+\end_inset
+
+ eine Indexmenge.
+ 
+\begin_inset Formula $\forall i\in I:A_{i}\in\mathcal{R}\Rightarrow\underset{i\in I}{\bigcup}A_{i}\in\mathcal{R}$
+\end_inset
+
+.
+ (
+\emph on
+Bemerkung
+\emph default
+: 
+\begin_inset Formula $\mathcal{R}$
+\end_inset
+
+ ist abgeschlossen unter abzählbarer Vereinigung.
+ Dabei ist 
+\begin_inset Formula $I\subseteq\mathbb{N}$
+\end_inset
+
+ höchstens abzählbar unendlich und damit auch 
+\begin_inset Formula $\underset{i_{1},i_{2},i_{3},\cdots\in I}{\left\{ A_{i_{1}},A_{i_{2}},A_{i_{3}},\cdots\right\} }$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Description
+Messraum
+\begin_inset space \thinspace{}
+\end_inset
+
+/
+\begin_inset space \thinspace{}
+\end_inset
+
+Measurable
+\begin_inset space \thinspace{}
+\end_inset
+
+Space Das Paar 
+\begin_inset Formula $(X,\mathcal{R})$
+\end_inset
+
+ wird Messraum / Measurable Space genannt.
+\end_layout
+
+\begin_layout Description
+Maßraum Das Triple 
+\begin_inset Formula $(X,\mathcal{R},\mu)$
+\end_inset
+
+ wird Maßraum genannt, genau dann wenn, 
+\begin_inset Formula $\mu$
+\end_inset
+
+ ein Maß auf 
+\begin_inset Formula $\mathcal{R}$
+\end_inset
+
+ ist und 
+\begin_inset Formula $(X,\mathcal{R})$
+\end_inset
+
+ einen Messraum bilden.
+ Ist 
+\begin_inset Formula $\mu$
+\end_inset
+
+ ein Wahrscheinlichkeitsmaß, so wird 
+\begin_inset Formula $(X,\mathcal{R},\mu)$
+\end_inset
+
+ 
+\emph on
+Wahrscheinlichkeitsraum
+\emph default
+ genannt.
+\end_layout
+
+\begin_layout Description
+Maß Sei 
+\begin_inset Formula $(X,\mathcal{R})$
+\end_inset
+
+ ein Messraum.
+ Eine Funktion 
+\begin_inset Formula $\mu:\mathcal{R}\to\left[0,\infty\right]$
+\end_inset
+
+ heißt Maß auf 
+\begin_inset Formula $\mathcal{R}$
+\end_inset
+
+, genau dann wenn gilt : 
+\begin_inset Formula $\mu(\emptyset)=0$
+\end_inset
+
+ und für jede Folge 
+\begin_inset Formula $\underset{n\in\mathbb{N}\wedge A_{n}\in\mathcal{R}}{\left(A_{n}\right)}$
+\end_inset
+
+paarweise disjunkter Mengen gilt 
+\begin_inset Formula $\mu(\stackrel[i=1]{\infty}{\bigcup}A_{i})=\stackrel[i=1]{\infty}{\sum}\mu(A_{i})$
+\end_inset
+
+ (diese Eigenschaft wird 
+\emph on
+
+\begin_inset Formula $\sigma$
+\end_inset
+
+-Additivität
+\emph default
+ genannt).
+ Ist 
+\begin_inset Formula $\mathcal{R}$
+\end_inset
+
+ eine endliche Menge, so genügt die sogenannte 
+\emph on
+endliche Additivität
+\emph default
+ : für zwei disjunkte 
+\begin_inset Formula $X,Y\in\mathcal{H}$
+\end_inset
+
+, 
+\begin_inset Formula $X\cap Y=\emptyset$
+\end_inset
+
+ sei 
+\begin_inset Formula $\mu(X\cup Y)=\mu(X)+\mu(Y)$
+\end_inset
+
+ die endliche Additivität.
+\end_layout
+
+\begin_layout Description
+Wahrscheinlichkeitsmaß Sei 
+\begin_inset Formula $(X,\mathcal{R})$
+\end_inset
+
+ ein Messraum.
+ Ist ein Maß 
+\begin_inset Formula $\mu:\mathcal{R}\to\left[0,1\right]$
+\end_inset
+
+ definiert und gilt 
+\begin_inset Formula $\mu(X)=1$
+\end_inset
+
+, so heißt 
+\begin_inset Formula $\mu$
+\end_inset
+
+ Wahrscheinlichkeitsmaß
+\end_layout
+
+\end_deeper
+\begin_layout Description
+Messbare
+\begin_inset space \thinspace{}
+\end_inset
+
+Menge
+\begin_inset space \thinspace{}
+\end_inset
+
+/
+\begin_inset space \thinspace{}
+\end_inset
+
+Measurable
+\begin_inset space \thinspace{}
+\end_inset
+
+Set Sei 
+\begin_inset Formula $(X,\mathcal{R})$
+\end_inset
+
+ ein Messraum.
+ Eine Menge 
+\begin_inset Formula $S\subseteq X$
+\end_inset
+
+ wird 
+\emph on
+messbar
+\emph default
+ genannt genau dann wenn 
+\begin_inset Formula $S\in\mathcal{R}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Measurable Case
+\end_layout
+
+\begin_layout Description
+Syntax der Sprache 
+\begin_inset Formula $\mathcal{L}^{PL}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+Propositionen 
+\begin_inset Formula $\varPhi$
+\end_inset
+
+ eine fest gewählte, ggf.
+ unendlichen Mengen, primitiver Aussagensymbole.
+ (
+\begin_inset Formula $\varPhi=\left\{ p_{1},p_{2},\cdots\right\} $
+\end_inset
+
+)
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+Grammatik Seien 
+\begin_inset Formula $p,q\in\varPhi$
+\end_inset
+
+, 
+\begin_inset Formula $\varphi,\psi\in\mathcal{L}^{PL}$
+\end_inset
+
+, 
+\begin_inset Formula $a,a_{1},\cdots,a_{i},\cdots,a_{k},c\in\mathbb{N}$
+\end_inset
+
+ (für 
+\begin_inset Formula $k\ge1$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall p\in\varPhi:p\in\mathcal{L}^{PL}$
 \end_inset
 
 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-\lang british
- Title: An Analysis of First-Order Logics of Probability | Author: Halpern
- | Year: 1990 | 
-\bar under
+\end_layout
 
-\begin_inset CommandInset href
-LatexCommand href
-name "PS"
-target "http://www.cs.cornell.edu/Info/People/halpern/papers/first-order_prob_analysis.ps"
+\begin_layout Itemize
+\begin_inset Formula $\top,\bot\in\mathcal{L}^{PL}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $p\in\mathcal{L}^{PL}:\Leftrightarrow\neg p\in\mathcal{L}^{PL}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $p,q\in\mathcal{L}^{PL}:\Leftrightarrow(p\wedge q),(p\vee q)\in\mathcal{L}^{PL}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\top:=p\vee\neg p$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\bot:=\neg\bot$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $w(\varphi)\in\mathcal{L}^{PL}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a_{1}w(\varphi),\cdots,a_{k}w(\varphi)\in\mathcal{L}^{PL}:\Leftrightarrow a_{1}w(\varphi)+\cdots+a_{k}w(\varphi)\in\mathcal{L}^{PL}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a_{1}w(\varphi)+\cdots+a_{k}w(\varphi)\in\mathcal{L}^{PL}:\Leftrightarrow a_{1}w(\varphi)+\cdots+a_{k}w(\varphi)\geq c\in\mathcal{L}^{PL}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $w(\varphi)+(-1)w(\varPsi)\geq a:=w(\varphi)-w(\varPsi)\geq a$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $w(\varphi)\geq w(\varPsi):=w(\varphi)-w(\varPsi)\geq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $w(\varphi)\leq c:=-w(\varphi)\geq-c$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $w(\varphi)<c:=\neg(w(\varphi)\geq c)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $w(\varphi)=c:=(w(\varphi)\geq c)\wedge(w(\varphi)<c)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Description
+Semantics Sei das 3-Tuple 
+\begin_inset Formula $(S,\mathcal{H},\mu)$
+\end_inset
+
+ ein Wahrscheinlichkeitsraum mit der Menge 
+\begin_inset Formula $S$
+\end_inset
+
+ der Zustände, der 
+\begin_inset Formula $\sigma$
+\end_inset
+
+-Algebra 
+\begin_inset Formula $\mathcal{H}$
+\end_inset
+
+ über 
+\begin_inset Formula $S$
+\end_inset
+
+.
+ (D.h.
+ 
+\begin_inset Formula $\left(S,\mathcal{H}\right)$
+\end_inset
+
+ bilden einen Maßraum) und dem Wahrscheinlichkeitsmaß 
+\begin_inset Formula $\mu:\mathcal{H}\to\left[0,1\right]$
+\end_inset
+
+.
+ Dann hat 
+\begin_inset Formula $\mu$
+\end_inset
+
+ folgende Eigenschaften:
+\end_layout
+
+\begin_layout Description
+P1 
+\begin_inset Formula $\mu(S)=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+P2 
+\begin_inset Formula $\forall X\in\mathcal{H}:\mu(X)\geq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+P3 
+\begin_inset Formula $\mu(\stackrel[i=1]{\infty}{\bigcup}A_{i})=\stackrel[i=1]{\infty}{\sum}\mu(A_{i})$
+\end_inset
+
+ für alle paarweise disjunkten 
+\begin_inset Formula $A_{i}\in\mathcal{H}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+P3' Für 
+\begin_inset Formula $\mathcal{H}$
+\end_inset
+
+ endlich, kann 
+\series bold
+P3
+\series default
+ zu 
+\series bold
+P3'
+\series default
+ wie folgt vereinfacht werden: 
+\begin_inset Formula $\mu(X\cup Y)=\mu(X)+\mu(Y)$
+\end_inset
+
+ für 
+\begin_inset Formula $X,Y\in\mathcal{H}$
+\end_inset
+
+ und 
+\begin_inset Formula $X\cap Y=\emptyset$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Description
+Folgerungen
+\end_layout
+
+\begin_layout Description
+S1 
+\begin_inset Formula $\mu(\mathcal{H}\setminus X)=1-\mu(X)$
+\end_inset
+
+ : Sei ein 
+\begin_inset Formula $X\in\mathcal{H}$
+\end_inset
+
+, dann sind  
+\begin_inset Formula $X\cap(\mathcal{H}\setminus X)=\emptyset$
+\end_inset
+
+ und 
+\begin_inset Formula $X\cup\mathcal{H}\setminus X=\mathcal{H}$
+\end_inset
+
+.
+ Mit 
+\begin_inset Formula $S\in\mathcal{H}$
+\end_inset
+
+ und P3' gilt dann 
+\begin_inset Formula $\mu(S\cup\mathcal{H}\setminus S)=\mu(S)+\mu(\mathcal{H}\setminus S)=\mu(S)=1.$
+\end_inset
+
+ Mit einem 
+\begin_inset Formula $X\in\mathcal{H}$
+\end_inset
+
+ gilt entweder 
+\begin_inset Formula $S\in\mathcal{H}$
+\end_inset
+
+ oder 
+\begin_inset Formula $S\in\mathcal{H}\setminus X$
+\end_inset
+
+ und damit 
+\begin_inset Formula $S\in\mathcal{H}\cup\mathcal{H}\setminus X$
+\end_inset
+
+.
+ Damit folgt, dass 
+\begin_inset Formula $1=\mu(X\cup\mathcal{H}\setminus X)=\mu(X)+\mu(\mathcal{H}\setminus X)\Rightarrow\mu(\mathcal{H}\setminus X)=1-\mu(X)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+S2 
+\begin_inset Formula $\mbox{\mu(\emptyset)=0}$
+\end_inset
+
+ : Sei 
+\begin_inset Formula $X=S$
+\end_inset
+
+, es gilt mit P3'', für 
+\begin_inset Formula $X:=S$
+\end_inset
+
+, dass 
+\begin_inset Formula $\mu(\mathcal{H}\setminus S)=1-\mu(S)=0$
+\end_inset
+
+ ...
+ nochmal ansehen
+\end_layout
+
+\begin_layout Description
+S3 
+\begin_inset Formula $\mu(X)=\mu(X\cap Y)+\mu(X\cap\mathcal{H}\setminus Y)\equiv P3'$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Description
+Probability
+\begin_inset space \thinspace{}
+\end_inset
+
+Structure Eine Wahrscheinlichkeitsstruktur ist definiert durch ein Quadrupel
+ 
+\begin_inset Formula $M=(S,\mathcal{H},\mu,\pi)$
+\end_inset
+
+, wobei das Triple 
+\begin_inset Formula $(S,\mathcal{H},\mu)$
+\end_inset
+
+ ein Wahrscheinlichkeitsraum ist und 
+\begin_inset Formula $\pi:S\to\varPhi\to\left\{ \top,\bot\right\} $
+\end_inset
+
+ eine Auswertungsfunktion ist, welche jeder Proposition für eine Zustand
+ einen Wahrheitswert zuordnet, d.h.
+ 
+\begin_inset Formula $(\forall s\in S,\forall p\in\varPhi):\pi(s)(p)\in\left\{ \top,\bot\right\} $
+\end_inset
+
+.
+ Sei dabei 
+\begin_inset Formula $p^{M}\coloneqq\left\{ s\in S|\pi(s)(p)=\top\right\} $
+\end_inset
+
+ die Menge aller Zustände für eine Proposition 
+\begin_inset Formula $p$
+\end_inset
+
+ für die 
+\begin_inset Formula $\pi(s)(p)$
+\end_inset
+
+ den Wert 
+\begin_inset Formula $\top$
+\end_inset
+
+ liefert (D.h.
+ anders gesprochen ist 
+\begin_inset Formula $p^{M}$
+\end_inset
+
+ die Menge aller Zustände in denen 
+\begin_inset Formula $p$
+\end_inset
+
+ wahr ist).
+ Die Auswertungsfunktion für Propositionen lässt sich als Auswertungsfunktion
+ 
+\begin_inset Formula $\pi(s)(\varphi)$
+\end_inset
+
+ für Formeln 
+\begin_inset Formula $\varphi\in\mathcal{L}^{PL}$
+\end_inset
+
+ erweitern.
+ 
+\begin_inset Formula $\varphi^{M}\coloneqq\left\{ s\in S|\pi(s)(\varphi)=\top\right\} $
+\end_inset
+
+ ist die Menge aller Zustände für die 
+\begin_inset Formula $\pi(s)(\varphi)=\top$
+\end_inset
+
+ für eine Formel 
+\begin_inset Formula $\varphi\in\mathcal{L}^{PL}$
+\end_inset
+
+ gilt.
+\end_layout
+
+\begin_layout Description
+Messbares
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset Formula $M$
+\end_inset
+
+ Die Wahrscheinlichkeitsstruktur 
+\begin_inset Formula $M$
+\end_inset
+
+ heißt messbar, genau dann wenn 
+\begin_inset Formula $p^{M}$
+\end_inset
+
+ messbar ist.
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+\begin_inset Quotes gld
+\end_inset
+
+Erfüllt
+\begin_inset Quotes grd
+\end_inset
+
+: 
+\begin_inset Formula $M\models a_{1}w(\varphi_{1})+\cdots+a_{k}w(\varphi_{k})\leq c:\Leftrightarrow a_{1}\mu(\varphi_{1}^{M})+\cdots+a_{1}\mu(\varphi_{k}^{M})\leq c$
+\end_inset
+
+.
+ Die Wahrscheinlichkeitsstruktur 
+\begin_inset Formula $M$
+\end_inset
+
+, legt mit der Auswertungsfunktion 
+\begin_inset Formula $\pi$
+\end_inset
+
+ die Belegung der Formeln 
+\begin_inset Formula $\varphi_{1},\varphi_{2},\cdots,\varphi_{k}$
+\end_inset
+
+ für alle Zustände 
+\begin_inset Formula $S$
+\end_inset
+
+ fest und mit dem Wahrscheinlichkeitsmaß 
+\begin_inset Formula $\mu$
+\end_inset
+
+ und die Wahrscheinlichkeiten (d.h.
+ die Werte 
+\begin_inset Formula $w\in\left[0,1\right]$
+\end_inset
+
+) der Formeln 
+\begin_inset Formula $\varphi_{1},\varphi_{2},\cdots,\varphi_{k}$
+\end_inset
+
+ fest.
+ 
+\begin_inset Formula $M\models\varPsi$
+\end_inset
+
+ sagt, ob aus der Definition von 
+\begin_inset Formula $M$
+\end_inset
+
+ die Richtigkeit von 
+\begin_inset Formula $\varPsi$
+\end_inset
+
+ folgt, wobei 
+\begin_inset Formula $\varPsi$
+\end_inset
+
+ eine gewichtete Formel der Art 
+\begin_inset Formula $a_{1}w(\varphi_{1})+\cdots+a_{k}w(\varphi_{k})\leq c$
+\end_inset
+
+ ist.
+\end_layout
+
+\begin_layout Description
+\begin_inset Quotes gld
+\end_inset
+
+Erfüllt
+\begin_inset Quotes grd
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+II: Sei 
+\begin_inset Formula $\varPsi$
+\end_inset
+
+ eine gewichtete Formel der Art 
+\begin_inset Formula $a_{1}w(\varphi_{1})+\cdots+a_{k}w(\varphi_{k})\leq c$
+\end_inset
+
+, dann ist 
+\begin_inset Formula $\pi(s)(\varPsi)\in\left\{ \top,\bot\right\} $
+\end_inset
+
+ für einen Zustand 
+\begin_inset Formula $s$
+\end_inset
+
+.
+ Mit 
+\begin_inset Formula $M\models\varUpsilon$
+\end_inset
+
+ kann 
+\begin_inset Formula $\varUpsilon$
+\end_inset
+
+ auch eine aussagenlogische Kombination aus gewichteten Formel sein.
+ Zusammenfassend: 
+\begin_inset Formula 
+\begin{eqnarray*}
+M\models a_{1}w(\varphi_{1})+\cdots+a_{k}w(\varphi_{k})\leq c & :\Leftrightarrow & a_{1}\mu(\varphi_{1}^{M})+\cdots+a_{1}\mu(\varphi_{k}^{M})\leq c\\
+M\models\neg\varUpsilon & :\Leftrightarrow & M\nvDash\varUpsilon\\
+M\models\varPsi\wedge\varUpsilon & :\Leftrightarrow & M\models\varPsi\text{ und }M\models\varUpsilon
+\end{eqnarray*}
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Description
+Gültig Eine gewichtete Formel 
+\begin_inset Formula $\varPsi$
+\end_inset
+
+ wird genau dann 
+\emph on
+gültig
+\emph default
+ genannt, wenn für alle 
+\begin_inset Formula $M$
+\end_inset
+
+ gilt, 
+\begin_inset Formula $M\models\varPsi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+Erfüllbar Eine gewichtete Formel 
+\begin_inset Formula $\varPsi$
+\end_inset
+
+ wird genau dann 
+\emph on
+erfüllbar
+\emph default
+ genannt, wenn ein 
+\begin_inset Formula $M$
+\end_inset
+
+ existiert mit 
+\begin_inset Formula $M\models\varPsi$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Description
+Kalkül Sei ein Alphabet 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+.
+ Das Tupel 
+\begin_inset Formula $\mathcal{K}^{X}\coloneqq\left(X,\mathcal{A}_{1},\cdots,\mathcal{A}_{k},\mathcal{R}_{1},\cdots,\mathcal{R}_{m}\right)$
+\end_inset
+
+ ist ein Kalkül über 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ mit 
+\begin_inset Formula $k,m\in\mathbb{N}$
+\end_inset
+
+ bestehend aus den Axiomen 
+\begin_inset Formula $\mathcal{A}_{1},\cdots,\mathcal{A}_{k}\subseteq\Sigma^{*}$
+\end_inset
+
+, den Inferenzregeln 
+\begin_inset Formula $\mathcal{R}_{i}\subseteq(\Sigma^{*})^{n_{i}}$
+\end_inset
+
+ mit 
+\begin_inset Formula $1<n_{i}\in\mathbb{N}$
+\end_inset
+
+ für alle 
+\begin_inset Formula $i=1,\cdots,m$
+\end_inset
+
+ und den Voraussetzungen 
+\begin_inset Formula $X\subseteq\Sigma^{*}$
+\end_inset
+
+.
+ Sei ein 
+\begin_inset Formula $\mathcal{K}^{X}$
+\end_inset
+
+ und ein Satz 
+\begin_inset Formula $w\in X$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Description
+Formaler
+\begin_inset space \thinspace{}
+\end_inset
+
+Beweis Sei 
+\begin_inset Formula $\mathcal{K}^{X}$
+\end_inset
+
+ ein Kalkül.
+ Ein formaler Beweis von 
+\begin_inset Formula $w$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathcal{K}^{X}$
+\end_inset
+
+, im Zeichen 
+\begin_inset Formula $X\vdash_{\mathcal{K}}w$
+\end_inset
+
+ oder 
+\begin_inset Formula $\vdash_{\mathcal{K}}w$
+\end_inset
+
+.
+ ist eine Wortfolge 
+\begin_inset Formula $w_{0},\cdots,w_{n}$
+\end_inset
+
+ so dass 
+\begin_inset Formula $w_{n}=w$
+\end_inset
+
+ gilt sowie für alle 
+\begin_inset Formula $i=0,\cdots,n$
+\end_inset
+
+ gilt, dass: 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $w_{i}\in X$
+\end_inset
+
+ oder 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $w_{i}\in A_{k}$
+\end_inset
+
+ für ein 
+\begin_inset Formula $j=1,\cdots,k$
+\end_inset
+
+ oder 
+\end_layout
+
+\begin_layout Itemize
+es gibt ein 
+\begin_inset Formula $j\in\left\{ 1,\cdots,m\right\} $
+\end_inset
+
+ und 
+\begin_inset Formula $v_{1},\cdots,v_{n_{j}-1}\in\left\{ w_{0},\cdots,w_{i-1}\right\} $
+\end_inset
+
+ , so dass 
+\begin_inset Formula $\left(v_{1},\cdots,v_{n_{j}-1},w\right)\in R_{j}$
+\end_inset
+
+.
+ Anstatt 
+\begin_inset Formula $\left(v_{1},\cdots,v_{n_{j}-1},w\right)\in R_{j}$
+\end_inset
+
+ sei 
+\begin_inset Formula $\frac{v_{1},\cdots,v_{n_{j}-1}}{w}\in R_{j}$
+\end_inset
+
+ äquivalent.
+\end_layout
+
+\begin_layout Description
+Grundbegriffe 
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+Beweisbar Eine Formel 
+\begin_inset Formula $\varphi\in\mathcal{L}\subseteq(\Sigma)^{*}$
+\end_inset
+
+ heißt 
+\emph on
+beweisbar
+\emph default
+ wenn für eine Kalkül 
+\begin_inset Formula $\mathcal{K}^{X}$
+\end_inset
+
+ über 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+, gilt dass 
+\begin_inset Formula $\vdash_{\mathcal{K}}\varphi$
+\end_inset
+
+, d.h.
+ wenn ein formaler Beweis von 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathcal{K}^{X}$
+\end_inset
+
+ existiert.
+ 
+\end_layout
+
+\begin_layout Description
+Konsistent Lässt sich für die 
+\begin_inset Formula $AX\coloneqq\left\{ \mathcal{A}_{1},\cdots,\mathcal{A}_{k}\right\} $
+\end_inset
+
+ eines Kalküls 
+\begin_inset Formula $\mathcal{K}^{X}$
+\end_inset
+
+ über 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ herleiten, dass sowohl 
+\begin_inset Formula $\vdash_{\mathcal{K}}\varphi$
+\end_inset
+
+ als auch 
+\begin_inset Formula $\vdash_{\mathcal{K}}\neg\varphi$
+\end_inset
+
+, so heißt 
+\begin_inset Formula $AX$
+\end_inset
+
+ 
+\emph on
+inkonsistent
+\emph default
+, sonst heißt 
+\begin_inset Formula $AX$
+\end_inset
+
+ 
+\emph on
+konsistent.
+
+\emph default
+ 
+\end_layout
+
+\begin_layout Description
+Korrekt Sei 
+\begin_inset Formula $X\cup\left\{ \varphi\right\} \subseteq\mathcal{L}^{PL}\subseteq(\Sigma)^{*}$
+\end_inset
+
+ und mit 
+\begin_inset Formula $AX\coloneqq\left\{ \mathcal{A}_{1},\cdots,\mathcal{A}_{k}\right\} $
+\end_inset
+
+ ein Kalkül 
+\begin_inset Formula $\mathcal{K}^{X}$
+\end_inset
+
+ über 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+.
+ 
+\begin_inset Formula $AX$
+\end_inset
+
+ heißt 
+\emph on
+korrekt
+\emph default
+, genau dann, wenn für alle 
+\begin_inset Formula $X\cup\left\{ \varphi\right\} $
+\end_inset
+
+ gilt : 
+\begin_inset Formula $\vdash_{\mathcal{K}^{X}}\varphi\Rightarrow X\models\varphi$
+\end_inset
+
+ (D.h.
+ jede beweisbare Formel ist auch valide, d.h.
+ eine logische Konsequenz)
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection
+General (Non-Measurable) Case
+\end_layout
+
+\begin_layout Subsubsection
+Reasoning about linear inequalities
+\end_layout
+
+\begin_layout Subsubsection
+Reasoning about Conditional Probabilities
+\end_layout
+
+\begin_layout Subsection
 
 \family roman
 \series medium
@@ -875,33 +2466,67 @@ target "http://www.cs.cornell.edu/Info/People/halpern/papers/first-order_prob_an
 \uwave default
 \noun default
 \color inherit
-\lang british
+\lang ngerman
+ Title: An Analysis of First-Order Logics of Probability | Author: Halpern
+ | Year: 1990 
+\end_layout
+
+\begin_layout Subsection
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+\begin_inset Formula $☐$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang ngerman
  Title: Representing and Reasoning with Probabilistic Knowledge | Author:
  Bacchus | Year: 1990
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Subsection
 Title: An Investigation into the Laws of Thought on Which Are Founded the
  Mathematical Theories of Logic and Probabilites | Author: Boole | Year:
  1854
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Subsection
 Title: A first-order conditional logic with qualitative statistical semantics
  | Author: Brafman | Year: 1997
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Subsection
 Title: The concept of conditional fuzzy measure | Author: Campos, Lamata,
  Moral | Year: 1990
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Subsection
 Title: Logical Foundations of Probability | Author: Carnap | Year: 1950
  | Library : Signatur CI 1804 F771(2) - Barcode 33057119
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Subsection
 
 \family roman
 \series medium
@@ -930,40 +2555,24 @@ Title: Logical Foundations of Probability | Author: Carnap | Year: 1950
 \uwave default
 \noun default
 \color inherit
-\lang british
+\lang ngerman
  Title: An analysis of first-order logics of probability | Author: Halpern
  | Year: 1990
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Subsection
 Title: Probabilistic logic | Author: Nilsson | Year: 1986
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Subsection
 Title: Probabilistic Dynamic Epistemic Logic | Author: B.
  P.
- Kooi | Year : 2003 | 
-\begin_inset CommandInset href
-LatexCommand href
-name "URL"
-target "http://www.researchgate.net/profile/Barteld_Kooi/publication/30486528_Probabilistic_Dynamic_Epistemic_Logic/links/0c96051c9a68c47ca5000000.pdf"
-
-\end_inset
-
-
+ Kooi | Year : 2003 
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Subsection
 Title: Logic and Probability | Author: Demey, Lorenz, Kooi, Barteld and
- Sack, Joshua | Year : 2013 | 
-\begin_inset CommandInset href
-LatexCommand href
-name "URL"
-target "http://plato.stanford.edu/entries/logic-probability/"
-
-\end_inset
-
-
+ Sack, Joshua | Year : 2013
 \end_layout
 
 \begin_layout Standard
@@ -1043,69 +2652,29 @@ hard
 \end_layout
 
 \end_deeper
-\begin_layout Subsection*
-Title: Probabilistic Dynamic Epistemic Logic | Author: B.
- P.
- Kooi | Year : 2003 | 
-\begin_inset CommandInset href
-LatexCommand href
-name "URL"
-target "http://www.researchgate.net/profile/Barteld_Kooi/publication/30486528_Probabilistic_Dynamic_Epistemic_Logic/links/0c96051c9a68c47ca5000000.pdf"
-
-\end_inset
-
-
+\begin_layout Section
+Logik, Wahrscheinlichk, Wissen
 \end_layout
 
-\begin_layout Section*
+\begin_layout Subsection
+
+\color red
+Title : Reasoning about Knowledge and Probability | Author: R.
+ Fagin, J.Y.
+ Halpern | Year: 1995 
+\end_layout
+
+\begin_layout Subsection
+Title: Probabilistic Dynamic Epistemic Logic | Author: B.
+ P.
+ Kooi | Year : 2003
+\end_layout
+
+\begin_layout Section
 Wissen und Wahrscheinlichkeit
 \end_layout
 
-\begin_layout Subsection*
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-\lang english
-\begin_inset Formula $☺☐$
-\end_inset
-
-
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-\lang british
- Title: Reasoning about knowledge and probability | Author: Fagin, Halpern
- | Year: 1994 | 
-\bar under
-
-\begin_inset CommandInset href
-LatexCommand href
-name "PDF"
-target "http://delivery.acm.org/10.1145/180000/174658/p340-fagin.pdf?ip=141.76.111.188&id=174658&acc=ACTIVE%20SERVICE&key=2BA2C432AB83DA15.71FE45B894D107A6.4D4702B0C3E38B35.4D4702B0C3E38B35&CFID=518024822&CFTOKEN=72245935&__acm__=1433857827_fb804f8bc12cca3bb046b326f324cfce"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection*
+\begin_layout Subsection
 
 \family roman
 \series medium
@@ -1134,19 +2703,9 @@ target "http://delivery.acm.org/10.1145/180000/174658/p340-fagin.pdf?ip=141.76.1
 \uwave default
 \noun default
 \color inherit
-\lang british
+\lang ngerman
  Title: Two views of belief: belief as generalized probability and belief
- as evidence | Author: Halpern, Fagin | Year: 1990 | 
-\bar under
-
-\begin_inset CommandInset href
-LatexCommand href
-name "PDF"
-target "http://ac.els-cdn.com/0004370292900483/1-s2.0-0004370292900483-main.pdf?_tid=aba8fd2a-0eac-11e5-ba4f-00000aacb35f&acdnat=1433857228_dc1fc92ac30863b64d9be44503e3b144"
-
-\end_inset
-
-
+ as evidence | Author: Halpern, Fagin | Year: 1990
 \end_layout
 
 \begin_layout Standard
@@ -1214,7 +2773,7 @@ upper probability
 ).
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Subsection
 
 \family roman
 \series medium
@@ -1243,25 +2802,25 @@ upper probability
 \uwave default
 \noun default
 \color inherit
-\lang british
+\lang ngerman
  Title: A logical approach for reasoning about uncertainty: a tutorial |
  Author: Halpern | Year: 1998b
 \end_layout
 
-\begin_layout Section*
+\begin_layout Section
 Sonstiges
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Subsection
 Title: The other person's envelope is always a greener | Author: Nalebuff
  | Year: 1989
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Subsection
 Title: Puzzle or Paradox? | Author: Freund | Year: 1965
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Subsection
 Title: Mathematical Recreations | Author: Kraitchik | Year: 1953
 \end_layout
 

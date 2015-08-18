@@ -60,9 +60,9 @@ minimalistic
 \shortcut idx
 \color #008000
 \end_index
-\leftmargin 3cm
+\leftmargin 1.8cm
 \topmargin 3cm
-\rightmargin 2cm
+\rightmargin 1.8cm
 \bottommargin 2cm
 \secnumdepth 3
 \tocdepth 2
@@ -274,7 +274,7 @@ Konkatenation Ist definiert als
 \end_layout
 
 \begin_layout Description
-Mengenoperationen Das 
+Mengenoperationen Da 
 \begin_inset Formula $L_{1},L_{2}$
 \end_inset
 
@@ -391,7 +391,19 @@ Grammatik Eine kontextfreie Grammatik ist ein 4-Tupel
 \end_inset
 
  ist eine Menge sogenannter Produktionsregeln.
- Eine Produktionsregel 
+ 
+\end_layout
+
+\begin_layout Description
+Notation
+\begin_inset space \thinspace{}
+\end_inset
+
+der
+\begin_inset space \thinspace{}
+\end_inset
+
+Produktionsregel Eine Produktionsregel 
 \begin_inset Formula $(A,\alpha)\in P$
 \end_inset
 
@@ -432,6 +444,128 @@ Grammatik Eine kontextfreie Grammatik ist ein 4-Tupel
  ersetzen darf.
 \end_layout
 
+\begin_layout Description
+Direkt
+\begin_inset space \thinspace{}
+\end_inset
+
+ableitbar Seien die Worte 
+\begin_inset Formula $\alpha,\beta,\gamma,\delta,\eta\in(N\cup\Sigma)^{*}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\beta$
+\end_inset
+
+ ist aus 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ direkt ableitbar, im Zeichen 
+\begin_inset Formula $\alpha\Rightarrow\beta$
+\end_inset
+
+, genau dann, wenn es Worte 
+\begin_inset Formula $\gamma,\delta$
+\end_inset
+
+ und eine Produktionsregel 
+\begin_inset Formula $A\to\tau$
+\end_inset
+
+ gibt, so dass gilt: 
+\begin_inset Formula $\alpha=\gamma A\delta$
+\end_inset
+
+ und 
+\begin_inset Formula $\beta=\gamma\tau\delta$
+\end_inset
+
+.
+ 
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Seien bspw.
+ 
+\begin_inset Formula $N=\left\{ A\right\} $
+\end_inset
+
+ und 
+\begin_inset Formula $\Sigma=\left\{ (,),\#\right\} $
+\end_inset
+
+ und 
+\begin_inset Formula $R=\left\{ F\to(F),F\to\#\right\} $
+\end_inset
+
+ und 
+\begin_inset Formula $\beta=((\#))$
+\end_inset
+
+.
+ Es gilt dann: 
+\begin_inset Formula $\alpha=(F)\Rightarrow(\#)=\beta$
+\end_inset
+
+ da es Worte 
+\begin_inset Formula $\gamma=(,\delta=)$
+\end_inset
+
+ und eine Produktionsregel 
+\begin_inset Formula $F\to\#$
+\end_inset
+
+ gibt so dass gilt: 
+\begin_inset Formula $\alpha=\gamma F\delta=(F)$
+\end_inset
+
+ und 
+\begin_inset Formula $\beta=\gamma\#\delta=(\#)$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Ableitbar 
+\begin_inset Formula $\beta$
+\end_inset
+
+ ist aus 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ ableitbar, im Zeichen 
+\begin_inset Formula $\alpha\overset{*}{\Rightarrow}\beta$
+\end_inset
+
+, falls eine Folge 
+\begin_inset Formula $\gamma_{1},\cdots,\gamma_{n}$
+\end_inset
+
+ existiert, so dass gilt: 
+\begin_inset Formula $\alpha=\gamma_{1}$
+\end_inset
+
+ und 
+\begin_inset Formula $\beta=\gamma_{n}$
+\end_inset
+
+ sowie 
+\begin_inset Formula $\underset{1\leq i<n}{\gamma_{i}\Rightarrow\gamma_{i+1}}$
+\end_inset
+
+ .
+\end_layout
+
 \end_deeper
 \begin_layout Description
 Erzeugte
@@ -448,7 +582,7 @@ Sprache Sei
 \end_inset
 
  erzeugte Sprache ist 
-\begin_inset Formula $L(G)={w\in\Sigma^{*}|}$
+\begin_inset Formula $L(G)=\left\{ w\in\Sigma^{*}|\thinspace S\overset{*}{\Rightarrow}w\right\} $
 \end_inset
 
 .
@@ -868,18 +1002,26 @@ Nichts sonst gehört zu
 
 \begin_layout Standard
 Die durch die kontextfreie Grammatik 
-\begin_inset Formula $G=(\left\{ F\right\} \cap\mathcal{S},\left\{ (,),\neg,\to,\wedge,\vee,\mathtt{w},\mathtt{f}\right\} ,F\to\thinspace\mathcal{S}\thinspace|\thinspace(F\wedge F)\thinspace|\thinspace(F\vee F)\thinspace|\thinspace(F\to F)\thinspace|\thinspace\neg F)$
+\begin_inset Formula $G=(N,\Sigma,R,S)$
+\end_inset
+
+, mit 
+\begin_inset Formula $N=\left\{ \thinspace F\thinspace\right\} $
+\end_inset
+
+, 
+\begin_inset Formula $\Sigma=\left\{ (,),\neg,\to,\wedge,\vee\right\} \cap\mathcal{S}$
+\end_inset
+
+ ,
+\begin_inset Formula $R=F\to\thinspace\mathcal{S}\thinspace|\thinspace(F\wedge F)\thinspace|\thinspace(F\vee F)\thinspace|\thinspace(F\to F)\thinspace|\thinspace\neg F,F)$
 \end_inset
 
  erzeugte Sprache 
 \begin_inset Formula $\mathcal{\mathtt{L}}^{PROP}=L(G)$
 \end_inset
 
- ist mit der durch 
-\begin_inset Formula $\mathcal{T}$
-\end_inset
-
- festgelegten Syntax von 
+ ist syntaktisch mit der Sprache 
 \begin_inset Formula $\mathcal{L}^{PROP}$
 \end_inset
 
@@ -893,6 +1035,23 @@ status open
 Beweis!
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Sei 
+\begin_inset Formula $\mathcal{L}^{PROP}$
+\end_inset
+
+ mit 
+\begin_inset Formula $V=\left\{ \mathtt{x}\right\} $
+\end_inset
+
+.
+ Dann gilt 
+\begin_inset Formula $\mathtt{x},\mathtt{x\#},\cdots\in\mathcal{S}$
 \end_inset
 
 
@@ -960,7 +1119,7 @@ ion
 \begin_inset Formula $\sigma$
 \end_inset
 
- jede aussagenlogische Formeln auf ein Element aus 
+ jede aussagenlogische Formeln auf genau ein Element aus 
 \begin_inset Formula $\left\{ \mathtt{true},\mathtt{false}\right\} $
 \end_inset
 
@@ -977,7 +1136,7 @@ ab.
 \begin_inset Formula $\varLambda$
 \end_inset
 
- rekursiv folgend definiert:
+ folgendermaßen rekursiv definiert:
 \begin_inset Formula 
 \begin{eqnarray*}
 \varLambda_{\sigma}(A) & := & \sigma(A)\\
@@ -1045,13 +1204,13 @@ kontradiktorisch
 \begin_inset Formula $\alpha,\beta$
 \end_inset
 
- spricht man von 
-\emph on
 
+\emph on
+ gilt: 
 \begin_inset Formula $\alpha$
 \end_inset
 
- impliziert 
+ impliziert logisch 
 \begin_inset Formula $\beta$
 \end_inset
 
@@ -1061,7 +1220,11 @@ kontradiktorisch
 \begin_inset Formula $\alpha\models\beta$
 \end_inset
 
-, genau dann wenn aus 
+, genau dann, wenn für alle Belegungen 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ gilt, dass: Aus 
 \begin_inset Formula $\varLambda_{\sigma}(\alpha)=\mathtt{wahr}$
 \end_inset
 
@@ -1093,6 +1256,31 @@ logisch äquivalent
 .
 \end_layout
 
+\begin_layout Remark
+Ein klassisches NP-Vollständiges Problem ist das Erfüllbarkeitsproblem (Engl.:
+ Satisfiability Problem 
+\begin_inset Formula $\equiv SAT$
+\end_inset
+
+) welches fragt: 
+\begin_inset Quotes gld
+\end_inset
+
+Gibt es eine Belegung 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ so dass für eine Formel 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ gilt: 
+\begin_inset Formula $\varLambda_{\sigma}(\alpha)=\mathtt{wahr}$
+\end_inset
+
+?”.
+\end_layout
+
 \begin_layout Example
 Sei ein Symbolalphabet 
 \begin_inset Formula $V:=\left\{ \mathtt{x}\right\} $
@@ -1121,17 +1309,6 @@ Sei ein Symbolalphabet
 \end_inset
 
  wie folgt:
-\begin_inset Formula 
-\begin{eqnarray*}
-\varLambda(\mathtt{x})=\sigma(\mathtt{x})=\mathtt{wahr}\Rightarrow\varLambda(\neg\mathtt{x}) & = & \mathtt{falsch}\\
-\varLambda(\mathtt{x\#})=\sigma(\mathtt{x\#}) & = & \mathtt{falsch}\\
-\varLambda((\neg\mathtt{x}\vee\mathtt{x\#})) & = & \mathtt{falsch}\\
-\varLambda((\neg\mathtt{x}\vee\mathtt{x\#})\wedge\mathtt{x\#}))=\varLambda(\alpha) & = & \mathtt{falsch}
-\end{eqnarray*}
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Example
@@ -1166,17 +1343,7 @@ Für eine Formel
 \end_inset
 
 :
-\end_layout
-
-\begin_layout Example
-\begin_inset Formula 
-\begin{eqnarray*}
-\varLambda(\beta)=\mathtt{wahr} & \Rightarrow & \varLambda(\neg(\mathtt{x}\vee\mathtt{x\#}))\text{=\mathtt{wahr} und }\varLambda((\mathtt{x}\to\neg\mathtt{x\#\#}))=\mathtt{wahr}\\
-\varLambda(\neg(\mathtt{x}\vee\mathtt{x\#}))=\mathtt{wahr} & \Rightarrow & \varLambda(\mathtt{x}\vee\mathtt{x\#})=\mathtt{falsch}\\
-\varLambda(\mathtt{x}\vee\mathtt{x\#})=\mathtt{falsch} & \Rightarrow & \varLambda(\mathtt{x})=\varLambda(\mathtt{x\#})=\mathtt{falsch}\\
-\varLambda(\mathtt{x}\to\neg\mathtt{x\#\#})=\mathtt{wahr} & \Rightarrow & \varLambda(\mathtt{x})=\mathtt{wahr}\text{ Widerspruch!}
-\end{eqnarray*}
-
+\begin_inset Newline linebreak
 \end_inset
 
 Damit existiert keine Belegung, so dass 
@@ -1194,22 +1361,13 @@ nicht erfüllbar
 .
 \end_layout
 
-\begin_layout Example
+\begin_layout Standard
 Damit liegt mit 
 \begin_inset Formula $\mathcal{L}^{PROP}$
 \end_inset
 
  eine formale Sprache der Aussagenlogik vor, in welcher Formeln, bestehend
  aus logischen Aussagen formuliert werden können.
- Da laut Voraussetzung das Symbolalphabet 
-\begin_inset Formula $V$
-\end_inset
-
- endlich ist, ist auch 
-\begin_inset Formula $\Sigma$
-\end_inset
-
- endlich.
 \end_layout
 
 \begin_layout Example
