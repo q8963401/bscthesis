@@ -1,0 +1,205 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass extarticle
+\use_default_options true
+\begin_modules
+minimalistic
+\end_modules
+\maintain_unincluded_children false
+\language ngerman
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 11
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\headsep 3cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language german
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Subsection*
+Kapitel 7.3
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Phi$
+\end_inset
+
+ Mengen primitiver Aussagen.
+ Abgeschlossen unter 
+\begin_inset Formula $\neg,\wedge$
+\end_inset
+
+ und 
+\begin_inset Formula $\underset{i=1\cdots n}{K_{i}}$
+\end_inset
+
+ mit 
+\begin_inset Formula $\forall\alpha,\beta\in\Phi:\alpha\wedge\beta\in\Phi,\neg\alpha\in\Phi,K_{i}\alpha\in\Phi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\top\coloneqq p\vee\neg p$
+\end_inset
+
+ für ein festes 
+\begin_inset Formula $p\in\Phi$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\bot\coloneqq\neg\top$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Wahrheitszuweisung 
+\begin_inset Formula $\pi:S\times\Phi\to\left\{ \top,\bot\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathcal{K}_{i}:S\times S$
+\end_inset
+
+ Äquivalenzrelation (=reflexiv+transitiv+symmetrisch).
+ Für ein 
+\begin_inset Formula $s\in S$
+\end_inset
+
+ ist 
+\begin_inset Formula $\mathcal{K}_{i}(s)\coloneqq\left\{ t|(s,t)\in\mathcal{K}_{i}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(S,\pi,\mathcal{K}_{1},\cdots,\mathcal{K}_{n})$
+\end_inset
+
+ epistemische Kripke-Struktur mit Menge von States 
+\begin_inset Formula $S$
+\end_inset
+
+ (auch Rahmen / Events / Welten / ...) 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(M,s)\models p\iff\pi(s)(p)=\top$
+\end_inset
+
+ für 
+\begin_inset Formula $p\in\Phi$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(M,s)\models p\wedge q\iff(M,s)\models p\text{ und }(M,s)\models q$
+\end_inset
+
+ für 
+\begin_inset Formula $p,q\in\Phi$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(M,s)\models\neg p\iff(M,s)\not\models p$
+\end_inset
+
+ für 
+\begin_inset Formula $p\in\Phi$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(M,s)\models\mathcal{K}_{i}p\iff\forall t\in\mathcal{K}_{i}(s)\ :\ (M,t)\models p$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathcal{M}_{n}^{prob}$
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

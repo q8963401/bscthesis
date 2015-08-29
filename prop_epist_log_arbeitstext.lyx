@@ -1,0 +1,343 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass extarticle
+\use_default_options true
+\begin_modules
+minimalistic
+\end_modules
+\maintain_unincluded_children false
+\language ngerman
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 11
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\headsep 3cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language german
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+Um eine Semantik für Formeln der Sprache 
+\begin_inset Formula $\mathcal{L}_{n}^{QU}$
+\end_inset
+
+ zu definieren, werden analog zu Kripke-Strukturen, sogenannte Wahrscheinlichkei
+tsstruktur definiert, und diese um ein Wahrscheinlichkeitsmaß 
+\begin_inset Formula $\mu$
+\end_inset
+
+ erweitert.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Definition
+Sei 
+\begin_inset Formula $\mathbb{I}_{n}\coloneqq\left\{ 1,\cdots,n\right\} $
+\end_inset
+
+ eine Menge von 
+\begin_inset Formula $n$
+\end_inset
+
+ Agenten.
+ Eine Wahrscheinlichkeitsstruktur ist ein Tupel 
+\begin_inset Formula $M=(S,\mathcal{PR}_{1},\cdots,\mathcal{PR}_{n},\pi)$
+\end_inset
+
+ mit folgenden Komponenten:
+\end_layout
+
+\begin_layout Itemize
+Der Menge 
+\begin_inset Formula $S$
+\end_inset
+
+ der Welten
+\end_layout
+
+\begin_layout Itemize
+Für alle Agenten 
+\begin_inset Formula $i\in\mathbb{I}$
+\end_inset
+
+ weißt die Funktion 
+\begin_inset Formula $\mathcal{PR}_{i}(s)\coloneqq(S_{s,i},\mathcal{R}_{s,i},\mu_{s,i})$
+\end_inset
+
+ für jeden Zustand 
+\begin_inset Formula $s\in S$
+\end_inset
+
+ einen Wahrscheinlichkeitsraum 
+\begin_inset Formula $(S_{s,i},\mathcal{R}_{s,i},\mu_{s,i})$
+\end_inset
+
+ mit 
+\begin_inset Formula $S_{s,i}\subseteq S$
+\end_inset
+
+ zu.
+ 
+\begin_inset Formula $\mathcal{PR}_{i}$
+\end_inset
+
+ wird auch als Wahrscheinlichkeitszuweisung
+\end_layout
+
+\begin_layout Itemize
+Die Interpretation 
+\begin_inset Formula $\pi:(S\times\Phi)\to\left\{ \top,\bot\right\} $
+\end_inset
+
+ ist eine Abbildung und weiß für jeden Zustand 
+\begin_inset Formula $s\in S$
+\end_inset
+
+ und jeder primitive Aussage 
+\begin_inset Formula $p\in\Phi$
+\end_inset
+
+ genau einen Wahrheitswert aus 
+\begin_inset Formula $\left\{ \top,\bot\right\} $
+\end_inset
+
+ zu.
+\end_layout
+
+\begin_layout Plain Layout
+Sei 
+\begin_inset Formula $M=(S,\mathcal{PR}_{1},\cdots,\mathcal{PR}_{n},\pi)$
+\end_inset
+
+ eine Wahrscheinlichkeitsstruktur.
+ Das Tupel 
+\begin_inset Formula $M=(S,\mathcal{PR}_{1},\cdots,\mathcal{PR}_{n})$
+\end_inset
+
+ wird auch als Wahrscheinlichkeitsrahmen bezeichnet.
+\end_layout
+
+\begin_layout Plain Layout
+Mit 
+\begin_inset Formula $x=(s,p)\in S\times\Phi$
+\end_inset
+
+ sei für die Interpretation 
+\begin_inset Formula $\pi$
+\end_inset
+
+ vereinbart, dass folgende Schreibweisen semantisch äquivalent sind: 
+\begin_inset Formula $\pi(x),\pi((s,p)),\pi(s)(p)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathcal{M}^{prob}$
+\end_inset
+
+ ist die Klasse aller Wahrscheinlichkeitsstrukturen und 
+\begin_inset Formula $\mathcal{M}^{meas}$
+\end_inset
+
+ ist die Klasse aller Wahrscheinlichkeitsstrukturen in welchen für jede
+ Wahrscheinlichkeitsstruktur 
+\begin_inset Formula $(S,\mathcal{PR}_{1},\cdots,\mathcal{PR}_{n},\pi)$
+\end_inset
+
+, alle Mengen 
+\begin_inset Formula $S_{s,i}\subseteq S$
+\end_inset
+
+ messbare Mengen sind.
+ D.h 
+\begin_inset Formula $\mathcal{M}^{meas}$
+\end_inset
+
+ enthält die Strukturen 
+\begin_inset Formula $(S,\mathcal{PR}_{1},\cdots,\mathcal{PR}_{n},\pi)$
+\end_inset
+
+ in welchen für alle 
+\begin_inset Formula $i\in\mathbb{I}$
+\end_inset
+
+ und alle 
+\begin_inset Formula $s\in S$
+\end_inset
+
+ für die Mengen 
+\begin_inset Formula $S_{s,i}$
+\end_inset
+
+ aus 
+\begin_inset Formula $\mathcal{PR}_{i}(s)\coloneqq(S_{s,i},\mathcal{R}_{s,i},\mu_{s,i})$
+\end_inset
+
+, dass 
+\begin_inset Formula $S_{s,i}\in\mathcal{R}_{s,i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Um Wahrscheinlichkeitsformeln zu interpretieren, wird eine Menge 
+\begin_inset Formula $\llbracket\varphi\rrbracket_{M}\coloneqq\left\{ s\in S|\pi(s)(\varphi)=\top\right\} $
+\end_inset
+
+ benötigt.
+ Diese beinhaltet alle Zustände aus 
+\begin_inset Formula $S$
+\end_inset
+
+ für die eine Formel 
+\begin_inset Formula $\varphi\in\mathcal{L}_{n}^{QU}$
+\end_inset
+
+ in der Wahrscheinlichkeitsstruktur 
+\begin_inset Formula $M=(S,\mathcal{PR}_{1},\cdots,\mathcal{PR}_{n},\pi)$
+\end_inset
+
+ wahr sind.
+\end_layout
+
+\begin_layout Standard
+Im Fokus der Darstellung stehen messbare Wahrscheinlichkeitsstrukturen aus
+ 
+\begin_inset Formula $\mathcal{M}^{meas}$
+\end_inset
+
+.
+ Für eine Struktur aus 
+\begin_inset Formula $M\in\mathcal{M}^{meas}$
+\end_inset
+
+ wird ein Term 
+\begin_inset Formula $\ell_{i}(\varphi)$
+\end_inset
+
+ interpretiert als die Wahrscheinlichkeit für 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ in 
+\begin_inset Formula $M$
+\end_inset
+
+ für den Agenten 
+\begin_inset Formula $i$
+\end_inset
+
+ wahr zu sein.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+(M,s)\models a_{1}\ell_{i_{1}}(\varphi_{1})+\cdots+a_{k}\ell_{i_{k}}(\varphi_{k})\geq b & \Longleftrightarrow & a_{1}\mu_{s,i_{1}}(\llbracket\varphi_{1}\rrbracket_{M}\cap S_{s,i_{1}})+\cdots+a_{k}\mu_{s,i_{k}}(\llbracket\varphi_{k}\rrbracket_{M}\cap S_{s,i_{k}})\geq b\\
+ &  & \text{mit }\mathcal{PR}_{i_{j}}(s)=(S_{s,i_{j}},\mu_{s,i_{j}})\text{ für alle }\mbox{j\in\left\{ 1,\cdots,k\right\} }
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Man beachte dabei, dass die Wahrheit eines 
+\begin_inset Formula $a_{j}\ell_{i_{j}}(\varphi_{j})$
+\end_inset
+
+ vom zugehörigen 
+\begin_inset Formula $\llbracket\varphi_{j}\rrbracket_{M}$
+\end_inset
+
+ abhängt .
+ 
+\end_layout
+
+\end_body
+\end_document

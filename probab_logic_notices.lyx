@@ -1,0 +1,1209 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass scrbook
+\use_default_options true
+\begin_modules
+minimalistic
+theorems-ams
+\end_modules
+\maintain_unincluded_children false
+\language ngerman
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 11
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\headsep 3cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language german
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+Es gibt eine große Menge von Zuständen auch Welten genannt.
+ Von diesen Zuständen, hält ein Agent eine Teilmenge für möglich.
+ Die Teilmenge der Zustände, die ein Agent für möglich hält, kann man als
+ qualitatives Maß der Ungewissheit des Agenten betrachten.
+ Je mehr Zustände ein Agent für möglich hält, desto ungewisser ist der Agent
+ sich darüber, welche Zustände tatsächlich wahr sind d.h.
+ desto geringer ist das Wissens des Agenten.
+ Sei 
+\begin_inset Formula $S$
+\end_inset
+
+ die Menge möglicher Zustände.
+ Die Ungewissheit eines Agenten wird durch die Teilmenge 
+\begin_inset Formula $S^{'}\subseteq S$
+\end_inset
+
+ repräsentiert.
+ Der Agent hält ein 
+\begin_inset Formula $U\subseteq S$
+\end_inset
+
+ für möglich, genau dann wenn 
+\begin_inset Formula $S^{'}\cap U\neq\emptyset$
+\end_inset
+
+ gilt.
+ D.h.
+ wenn es mindestens einen Zustand in 
+\begin_inset Formula $U$
+\end_inset
+
+ gibt der auch in 
+\begin_inset Formula $S^{'}$
+\end_inset
+
+ ist.
+ Der Agent weiß 
+\begin_inset Formula $U$
+\end_inset
+
+, genau dann wenn 
+\begin_inset Formula $W^{'}\subseteq U$
+\end_inset
+
+.
+ D.h.
+ wenn 
+\begin_inset Formula $U$
+\end_inset
+
+ in allen Zuständen gilt welche der Agent für möglich hält.
+\end_layout
+
+\begin_layout Standard
+Eine genauere Darstellung der Ungewissheit ist durch Wahrscheinlichkeiten
+ möglich.
+ Sei 
+\begin_inset Formula $S\coloneqq\left\{ s_{1},s_{2},\cdots,s_{k}\right\} $
+\end_inset
+
+ die Menge möglicher Zustände eines Agenten.
+ Ein Wahrscheinlichkeitsmaß weißt nun jedem 
+\begin_inset Formula $s_{i}\in S$
+\end_inset
+
+ für 
+\begin_inset Formula $i=1\cdots k$
+\end_inset
+
+ eine Wahrscheinlichkeit zu.
+ Ein Maß für die Wahrscheinlichkeit wird üblicherweise durch eine reellen
+ Zahl aus dem Intervall 
+\begin_inset Formula $\left[0,1\right]$
+\end_inset
+
+ repräsentiert.
+ Die Zuweisung einer Wahrscheinlichkeit zu einem 
+\begin_inset Formula $s_{i}\in S$
+\end_inset
+
+ für 
+\begin_inset Formula $i=1\cdots k$
+\end_inset
+
+ wird mittels einer Abbildung 
+\begin_inset Formula $\mu:S\to\left[0,\infty\right]$
+\end_inset
+
+ dargestellt.
+ Oft sind jedoch nicht nur die Wahrscheinlichkeiten einzelner Element von
+ 
+\begin_inset Formula $S$
+\end_inset
+
+ interessant, sondern die Wahrscheinlichkeiten von Teilmengen 
+\begin_inset Formula $S^{'}\subseteq S$
+\end_inset
+
+.
+ Seien z.B.
+ die möglichen Ausgänge eines Würfelspiels mit einem fairen Würfel durch
+ die Zustände 
+\begin_inset Formula $S=\left\{ \mathtt{1},\mathtt{2},\mathtt{3},\mathtt{4},\mathtt{5},\mathtt{6}\right\} $
+\end_inset
+
+ festgehalten mit den Wahrscheinlichkeiten 
+\begin_inset Formula $\mu(\mathtt{1})=\mu(\mathtt{2})=\mu(\mathtt{3})=\mu(\mathtt{4})=\mu(\mathtt{5})=\mu(\mathtt{6})=\frac{1}{6}$
+\end_inset
+
+.
+ Interessant sind dabei nicht nur einzelne Elemente, sondern Teilmengen
+ aller Zustände.
+ Intuitiv würde z.B.
+ die Wahrscheinlichkeit für 
+\begin_inset Formula $S^{'}=\left\{ \mathtt{1},\mathtt{6}\right\} $
+\end_inset
+
+ der Summe 
+\begin_inset Formula $\mu(\mathtt{1})\text{+\mu(\mathtt{6})=\frac{1}{3}}$
+\end_inset
+
+, und die der gesamten Menge 
+\begin_inset Formula $S=\left\{ \mathtt{1},\mathtt{2},\mathtt{3},\mathtt{4},\mathtt{5},\mathtt{6}\right\} $
+\end_inset
+
+ der Summe 
+\begin_inset Formula $\mu(\mathtt{1})+\mu(\mathtt{2})+\mu(\mathtt{3})+\mu(\mathtt{4})+\mu(\mathtt{5})+\mu(\mathtt{6})=1$
+\end_inset
+
+ entsprechen.
+ 
+\end_layout
+
+\begin_layout Standard
+Technisch wird dabei die Wahrscheinlichkeit von Teilmengen einer potenziell
+ abzählbar unendlichen Grundmenge 
+\begin_inset Formula $S$
+\end_inset
+
+ mittels einer Algebra realisiert.
+\end_layout
+
+\begin_layout Description
+
+\series bold
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Definition
+Sei eine Grundmenge 
+\begin_inset Formula $Y$
+\end_inset
+
+ und bezeichne 
+\begin_inset Formula $2^{X}$
+\end_inset
+
+ die Potenzmenge von 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ Sei die Menge 
+\begin_inset Formula $I\subseteq\mathbb{N}$
+\end_inset
+
+ als Indexmenge bezeichnet.
+ Die Menge 
+\begin_inset Formula $\mathcal{R}\subseteq2^{X}$
+\end_inset
+
+ ist eine Algebra, genau dann wenn 
+\begin_inset Formula $\mathcal{R}$
+\end_inset
+
+ folgende Bedingungen erfüllt:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $X\in\mathcal{R}$
+\end_inset
+
+ (Die Menge 
+\begin_inset Formula $X$
+\end_inset
+
+ ist selbst in 
+\begin_inset Formula $\mathcal{R}$
+\end_inset
+
+ enthalten)
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A\in\mathcal{R}\Rightarrow X\setminus A\in\mathcal{R}$
+\end_inset
+
+ (Das Komplement 
+\begin_inset Formula $X\setminus A$
+\end_inset
+
+ von 
+\begin_inset Formula $A$
+\end_inset
+
+ ist in 
+\begin_inset Formula $\mathcal{R}$
+\end_inset
+
+ enthalten)
+\end_layout
+
+\begin_layout Itemize
+Für alle 
+\begin_inset Formula $i\in I:$
+\end_inset
+
+ mit 
+\begin_inset Formula $A_{i}\in\mathcal{R}$
+\end_inset
+
+ folgt, dass 
+\begin_inset Formula $\underset{i\in I}{\bigcup}A_{i}\in\mathcal{R}$
+\end_inset
+
+.
+ (Man sagt 
+\begin_inset Formula $\mathcal{R}$
+\end_inset
+
+ ist abgeschlossen unter abzählbarer Vereinigung.
+ Dabei ist 
+\begin_inset Formula $I\subseteq\mathbb{N}$
+\end_inset
+
+ höchstens abzählbar unendlich
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Eine Menge 
+\begin_inset Formula $M$
+\end_inset
+
+ heißt abzählbar unendlich, genau dann wenn eine bijektive Abbildung 
+\begin_inset Formula $f:\mathbb{N}\to M$
+\end_inset
+
+ existiert.
+\end_layout
+
+\end_inset
+
+ und damit auch 
+\begin_inset Formula $\underset{i_{1},i_{2},i_{3},\cdots\in I}{\left\{ A_{i_{1}},A_{i_{2}},A_{i_{3}},\cdots\right\} }$
+\end_inset
+
+).
+\end_layout
+
+\end_deeper
+\begin_layout Plain Layout
+Das Paar 
+\begin_inset Formula $(X,\mathcal{R})$
+\end_inset
+
+ aus der Grundmenge 
+\begin_inset Formula $X$
+\end_inset
+
+ und der 
+\begin_inset Formula $\sigma$
+\end_inset
+
+-Algebra 
+\begin_inset Formula $\mathcal{R}$
+\end_inset
+
+ wird als Messraum
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Engl.
+ Measurable Space
+\end_layout
+
+\end_inset
+
+ bezeichnet.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ist 
+\begin_inset Formula $S$
+\end_inset
+
+ maximal abzählbar unendlich, so ist es ohne weiteres möglich jedem 
+\begin_inset Formula $s_{i}\in S$
+\end_inset
+
+ für 
+\begin_inset Formula $i=1\cdots k$
+\end_inset
+
+ eine Wahrscheinlichkeit zuzuweisen.
+ Eine Ist 
+\begin_inset Formula $S$
+\end_inset
+
+ überabzählbar unendlich, so ergeben sich einige Probleme.
+\end_layout
+
+\begin_layout Description
+
+\series bold
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Definition
+Sei eine Grundmenge 
+\begin_inset Formula $Y$
+\end_inset
+
+ und bezeichne 
+\begin_inset Formula $2^{X}$
+\end_inset
+
+ die Potenzmenge von 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ Sei die Menge 
+\begin_inset Formula $I\subseteq\mathbb{N}$
+\end_inset
+
+ als Indexmenge bezeichnet.
+ Die Menge 
+\begin_inset Formula $\mathcal{R}\subseteq2^{X}$
+\end_inset
+
+ ist eine 
+\begin_inset Formula $\sigma$
+\end_inset
+
+-Algebra, genau dann wenn 
+\begin_inset Formula $\mathcal{R}$
+\end_inset
+
+ folgende Bedingungen erfüllt:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $X\in\mathcal{R}$
+\end_inset
+
+ (Die Menge 
+\begin_inset Formula $X$
+\end_inset
+
+ ist selbst in 
+\begin_inset Formula $\mathcal{R}$
+\end_inset
+
+ enthalten)
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A\in\mathcal{R}\Rightarrow X\setminus A\in\mathcal{R}$
+\end_inset
+
+ (Das Komplement 
+\begin_inset Formula $X\setminus A$
+\end_inset
+
+ von 
+\begin_inset Formula $A$
+\end_inset
+
+ ist in 
+\begin_inset Formula $\mathcal{R}$
+\end_inset
+
+ enthalten)
+\end_layout
+
+\begin_layout Itemize
+Für alle 
+\begin_inset Formula $i\in I:$
+\end_inset
+
+ mit 
+\begin_inset Formula $A_{i}\in\mathcal{R}$
+\end_inset
+
+ folgt, dass 
+\begin_inset Formula $\underset{i\in I}{\bigcup}A_{i}\in\mathcal{R}$
+\end_inset
+
+.
+ (Man sagt 
+\begin_inset Formula $\mathcal{R}$
+\end_inset
+
+ ist abgeschlossen unter abzählbarer Vereinigung.
+ Dabei ist 
+\begin_inset Formula $I\subseteq\mathbb{N}$
+\end_inset
+
+ höchstens abzählbar unendlich
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Eine Menge 
+\begin_inset Formula $M$
+\end_inset
+
+ heißt abzählbar unendlich, genau dann wenn eine bijektive Abbildung 
+\begin_inset Formula $f:\mathbb{N}\to M$
+\end_inset
+
+ existiert.
+\end_layout
+
+\end_inset
+
+ und damit auch 
+\begin_inset Formula $\underset{i_{1},i_{2},i_{3},\cdots\in I}{\left\{ A_{i_{1}},A_{i_{2}},A_{i_{3}},\cdots\right\} }$
+\end_inset
+
+).
+\end_layout
+
+\end_deeper
+\begin_layout Plain Layout
+Das Paar 
+\begin_inset Formula $(X,\mathcal{R})$
+\end_inset
+
+ aus der Grundmenge 
+\begin_inset Formula $X$
+\end_inset
+
+ und der 
+\begin_inset Formula $\sigma$
+\end_inset
+
+-Algebra 
+\begin_inset Formula $\mathcal{R}$
+\end_inset
+
+ wird als Messraum
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Engl.
+ Measurable Space
+\end_layout
+
+\end_inset
+
+ bezeichnet.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Es liegt nun nahe, ein Maß 
+\begin_inset Formula $\mu$
+\end_inset
+
+ für die Wahrscheinlichkeit über einer 
+\begin_inset Formula $\sigma$
+\end_inset
+
+-Algebra 
+\begin_inset Formula $\mathcal{F}$
+\end_inset
+
+ für eine Grundmenge 
+\begin_inset Formula $S$
+\end_inset
+
+ zu definieren um auch für Teilmengen von 
+\begin_inset Formula $S$
+\end_inset
+
+ Wahrscheinlichkeiten definieren zu können.
+ Zuvor muss aber noch genau geklärt werden, was ein Maß und insbesondere
+ ein Wahrscheinlichkeitsmaß ist.
+\end_layout
+
+\begin_layout Description
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Definition
+Sei 
+\begin_inset Formula $(X,\mathcal{R})$
+\end_inset
+
+ ein Messraum.
+ Eine Abbildung 
+\begin_inset Formula $\mu:\mathcal{R}\to\left[0,\infty\right]$
+\end_inset
+
+ heißt Maß auf 
+\begin_inset Formula $\mathcal{R}$
+\end_inset
+
+, genau dann wenn gilt : 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Für 
+\begin_inset Formula $\mathcal{R}$
+\end_inset
+
+ unendlich: 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\mu(\emptyset)=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Für jede Folge 
+\begin_inset Formula $\underset{n\in\mathbb{N}\wedge A_{n}\in\mathcal{R}}{\left(A_{n}\right)}$
+\end_inset
+
+ paarweise disjunkter Mengen gilt : 
+\begin_inset Formula $\mu(\stackrel[i=1]{\infty}{\bigcup}A_{i})=\stackrel[i=1]{\infty}{\sum}\mu(A_{i})$
+\end_inset
+
+ (Diese Eigenschaft wird 
+\emph on
+
+\begin_inset Formula $\sigma$
+\end_inset
+
+
+\emph default
+-Additivität genannt).
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Für 
+\begin_inset Formula $\mathcal{R}$
+\end_inset
+
+ endlich:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Für zwei disjunkte Mengen 
+\begin_inset Formula $X,Y\in\mathcal{R}$
+\end_inset
+
+, d.h.
+ 
+\begin_inset Formula $X\cap Y=\emptyset$
+\end_inset
+
+, gilt 
+\begin_inset Formula $\mu(X\cup Y)=\mu(X)+\mu(Y)$
+\end_inset
+
+ (Diese Eigenschaft wird endliche Additivität genannt)
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Plain Layout
+
+\series bold
+Es sind folgende Begriffe gebräuchlich:
+\series default
+ 
+\end_layout
+
+\begin_layout Itemize
+Sei 
+\begin_inset Formula $(X,\mathcal{R})$
+\end_inset
+
+ ein Messraum und ein Maß 
+\begin_inset Formula $\mu$
+\end_inset
+
+ auf 
+\begin_inset Formula $\mathcal{R}$
+\end_inset
+
+.
+ Ist Wertebereich des Maßes 
+\begin_inset Formula $\mu$
+\end_inset
+
+ das Intervall 
+\begin_inset Formula $\left[0,1\right]$
+\end_inset
+
+, d.h.
+ ist 
+\begin_inset Formula $\mu:\mathcal{R}\to\left[0,1\right]$
+\end_inset
+
+ und gilt 
+\begin_inset Formula $\mu(X)=1$
+\end_inset
+
+, so heißt 
+\begin_inset Formula $\mu$
+\end_inset
+
+ Wahrscheinlichkeitsmaß.
+\end_layout
+
+\begin_layout Itemize
+Das Tripel 
+\begin_inset Formula $(X,\mathcal{R},\mu)$
+\end_inset
+
+ wird als Maßraum bezeichnet, genau dann wenn, 
+\begin_inset Formula $\mu$
+\end_inset
+
+ ein Maß auf 
+\begin_inset Formula $\mathcal{R}$
+\end_inset
+
+ ist und 
+\begin_inset Formula $(X,\mathcal{R})$
+\end_inset
+
+ einen Messraum bilden.
+ 
+\end_layout
+
+\begin_layout Itemize
+Sei 
+\begin_inset Formula $(X,\mathcal{R})$
+\end_inset
+
+ ein Messraum und 
+\begin_inset Formula $\mu$
+\end_inset
+
+ ein Wahrscheinlichkeitsmaß, dann wird da 3-Tupel 
+\begin_inset Formula $(X,\mathcal{R},\mu)$
+\end_inset
+
+ als Wahrscheinlichkeitsraum bezeichnet.
+\end_layout
+
+\begin_layout Itemize
+Sei 
+\begin_inset Formula $(X,\mathcal{R})$
+\end_inset
+
+ ein Messraum.
+ Eine Menge 
+\begin_inset Formula $S\subseteq X$
+\end_inset
+
+ wird messbar oder messbare Menge
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Engl.
+ Measurable Set
+\end_layout
+
+\end_inset
+
+ genannt, genau dann, wenn 
+\begin_inset Formula $S\in\mathcal{R}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Der Wahrscheinlichkeitsraum 
+\begin_inset Formula $(S,\mathcal{R},\mu)$
+\end_inset
+
+ formalisiert den Wunsch, den Elemente von 
+\begin_inset Formula $S$
+\end_inset
+
+ sowie Teilmengen von 
+\begin_inset Formula $S$
+\end_inset
+
+ bzw.
+ Elementen der Potenzmenge 
+\begin_inset Formula $2^{S}$
+\end_inset
+
+ von 
+\begin_inset Formula $S$
+\end_inset
+
+ Wahrscheinlichkeiten aus dem Intervall 
+\begin_inset Formula $\left[0,1\right]$
+\end_inset
+
+ zuzuweisen.
+ Die Eigenschaften des Wahrscheinlichkeitsmaßes von 
+\begin_inset Formula $\mathcal{R}$
+\end_inset
+
+ sind wie folgt zusammengefasst: 
+\end_layout
+
+\begin_layout Description
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Proposition
+
+\emph on
+Sei 
+\begin_inset Formula $S$
+\end_inset
+
+ eine Menge von Zuständen und 
+\begin_inset Formula $(S,\mathcal{R},\mu)$
+\end_inset
+
+ ein Wahrscheinlichkeitsraum.
+ Dann hat 
+\begin_inset Formula $\mu$
+\end_inset
+
+ folgende Eigenschaften:
+\end_layout
+
+\begin_layout Description
+P1 
+\begin_inset Formula $\mu(S)=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+P2 
+\begin_inset Formula $\forall A\in\mathcal{R}:\mu(A)\geq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+P3 
+\begin_inset Formula $\mu(\stackrel[i=1]{\infty}{\bigcup}A_{i})=\stackrel[i=1]{\infty}{\sum}\mu(A_{i})$
+\end_inset
+
+ für alle paarweise disjunkten 
+\begin_inset Formula $A_{i}\in\mathcal{R}$
+\end_inset
+
+ (Dies ist die sogenannte 
+\begin_inset Formula $\sigma$
+\end_inset
+
+-Additivität)
+\end_layout
+
+\begin_layout Plain Layout
+Für ein endliches 
+\begin_inset Formula $S$
+\end_inset
+
+ kann die Eigenschaft 
+\series bold
+P3
+\series default
+ mit 
+\begin_inset Formula $U,V\in\mathcal{\mathcal{R}}$
+\end_inset
+
+ wie folgt vereinfacht werden: 
+\begin_inset Formula $\mu(X\cup Y)=\mu(X)+\mu(Y)$
+\end_inset
+
+ und 
+\begin_inset Formula $X\cap Y=\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Für einen  Wahrscheinlichkeitsraum 
+\begin_inset Formula $(S,\mathcal{R},\mu)$
+\end_inset
+
+ ergeben sich einige interessante Folgerungen.
+ Es gilt, dass 
+\begin_inset Formula $\mu(\mathcal{R}\setminus X)=1-\mu(X)$
+\end_inset
+
+.
+ Denn sei ein 
+\begin_inset Formula $X\in\mathcal{R}$
+\end_inset
+
+, dann gilt, da 
+\begin_inset Formula $\mathcal{R}$
+\end_inset
+
+ eine 
+\begin_inset Formula $\sigma$
+\end_inset
+
+-Algebra ist, dass sowohl  
+\begin_inset Formula $X\cap(\mathcal{R}\setminus X)=\emptyset$
+\end_inset
+
+ als auch 
+\begin_inset Formula $X\cup\mathcal{R}\setminus X=\mathcal{R}$
+\end_inset
+
+.
+ Mit 
+\begin_inset Formula $S\in\mathcal{R}$
+\end_inset
+
+ und P3 gilt dann 
+\begin_inset Formula $\mu(S\cup\mathcal{R}\setminus S)=\mu(S)+\mu(\mathcal{R}\setminus S)=\mu(S)=1.$
+\end_inset
+
+ Für ein 
+\begin_inset Formula $X\in\mathcal{R}$
+\end_inset
+
+ gilt nun entweder 
+\begin_inset Formula $S\in\mathcal{R}$
+\end_inset
+
+ oder 
+\begin_inset Formula $S\in\mathcal{R}\setminus X$
+\end_inset
+
+ und damit 
+\begin_inset Formula $S\in\mathcal{R}\cup\mathcal{R}\setminus X$
+\end_inset
+
+.
+ Damit folgt insgesamt, dass 
+\begin_inset Formula $1=\mu(X\cup\mathcal{R}\setminus X)=\mu(X)+\mu(\mathcal{R}\setminus X)\Rightarrow\mu(\mathcal{R}\setminus X)=1-\mu(X)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Eine weitere Folgerung ist 
+\begin_inset Formula $\mbox{\mu(\emptyset)=0}$
+\end_inset
+
+.
+ Die Grundmenge 
+\begin_inset Formula $S$
+\end_inset
+
+ und 
+\begin_inset Formula $\emptyset$
+\end_inset
+
+ sind disjunkt, d.h.
+ 
+\begin_inset Formula $S\cap\emptyset=\emptyset$
+\end_inset
+
+ .
+ Wegen P1 und P2 gilt dann 
+\begin_inset Formula $1=\mu(S)=\mu(S\cup\emptyset)=\mu(S)+\mu(\emptyset)=1+\mu(\emptyset)\Rightarrow\mu(\emptyset)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+Probability
+\begin_inset space \thinspace{}
+\end_inset
+
+Structure Eine Wahrscheinlichkeitsstruktur ist definiert durch ein Quadrupel
+ 
+\begin_inset Formula $M=(S,\mathcal{H},\mu,\pi)$
+\end_inset
+
+, wobei das Triple 
+\begin_inset Formula $(S,\mathcal{H},\mu)$
+\end_inset
+
+ ein Wahrscheinlichkeitsraum ist und 
+\begin_inset Formula $\pi:S\to\varPhi\to\left\{ \top,\bot\right\} $
+\end_inset
+
+ eine Auswertungsfunktion ist, welche jeder Proposition für eine Zustand
+ einen Wahrheitswert zuordnet, d.h.
+ 
+\begin_inset Formula $(\forall s\in S,\forall p\in\varPhi):\pi(s)(p)\in\left\{ \top,\bot\right\} $
+\end_inset
+
+.
+ Sei dabei 
+\begin_inset Formula $p^{M}\coloneqq\left\{ s\in S|\pi(s)(p)=\top\right\} $
+\end_inset
+
+ die Menge aller Zustände für eine Proposition 
+\begin_inset Formula $p$
+\end_inset
+
+ für die 
+\begin_inset Formula $\pi(s)(p)$
+\end_inset
+
+ den Wert 
+\begin_inset Formula $\top$
+\end_inset
+
+ liefert (D.h.
+ anders gesprochen ist 
+\begin_inset Formula $p^{M}$
+\end_inset
+
+ die Menge aller Zustände in denen 
+\begin_inset Formula $p$
+\end_inset
+
+ wahr ist).
+ Die Auswertungsfunktion für Propositionen lässt sich als Auswertungsfunktion
+ 
+\begin_inset Formula $\pi(s)(\varphi)$
+\end_inset
+
+ für Formeln 
+\begin_inset Formula $\varphi\in\mathcal{L}^{PL}$
+\end_inset
+
+ erweitern.
+ 
+\begin_inset Formula $\varphi^{M}\coloneqq\left\{ s\in S|\pi(s)(\varphi)=\top\right\} $
+\end_inset
+
+ ist die Menge aller Zustände für die 
+\begin_inset Formula $\pi(s)(\varphi)=\top$
+\end_inset
+
+ für eine Formel 
+\begin_inset Formula $\varphi\in\mathcal{L}^{PL}$
+\end_inset
+
+ gilt.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Definition
+Kripke-Struktur der probabilistischen Wissenslogik.
+ Eine Kripke-Struktur der probabilistischen Wissenslogik für 
+\begin_inset Formula $n$
+\end_inset
+
+ Agenten ist ein Tupel 
+\begin_inset Formula $M=(S,\mathcal{PR}_{1},\cdots,\mathcal{PR}_{n},\mu)$
+\end_inset
+
+ mit folgenden Komponenten:
+\end_layout
+
+\begin_layout Itemize
+Der Menge 
+\begin_inset Formula $S$
+\end_inset
+
+ der Welten (Analog zu 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Kripke-Struktur"
+
+\end_inset
+
+ wird 
+\begin_inset Formula $S$
+\end_inset
+
+ je nach Kontext als Menge der Zustände, Welten oder Punkte bezeichnet).
+\end_layout
+
+\begin_layout Itemize
+Für alle 
+\begin_inset Formula $i=1,\cdots,n$
+\end_inset
+
+ ist die sogenannte Wahrscheinlichkeitszuweisung 
+\begin_inset Formula $\mathcal{PR}_{i}$
+\end_inset
+
+ eine Abbildung welche jedem 
+\begin_inset Formula $s\in S$
+\end_inset
+
+ einen Sei 
+\begin_inset Formula $(X,\mathcal{R})$
+\end_inset
+
+ ein Wahrscheinlichkeitsraum 
+\begin_inset Formula $(S_{s,i},\mathcal{F}_{s,i},\mu_{s,i})$
+\end_inset
+
+ zuweist.
+\end_layout
+
+\begin_layout Plain Layout
+Das Paar 
+\begin_inset Formula $(S,\mathcal{PR}_{1},\cdots,\mathcal{PR}_{n})$
+\end_inset
+
+ bildet einen Wahrscheinlichkeitsrahmen für 
+\begin_inset Formula $n$
+\end_inset
+
+ Agenten.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\end_body
+\end_document

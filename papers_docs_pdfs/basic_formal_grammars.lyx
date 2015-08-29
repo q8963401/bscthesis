@@ -1,0 +1,587 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass extbook
+\use_default_options true
+\begin_modules
+minimalistic
+\end_modules
+\maintain_unincluded_children false
+\language ngerman
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 11
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\headsep 3cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language german
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Quick summary of formal Grammars
+\end_layout
+
+\begin_layout Description
+Alphabet Ein Alphabet 
+\begin_inset Formula $\Sigma\neq\emptyset$
+\end_inset
+
+ ist eine nichtleer, endlich, fest gewählte Menge von Zeichen.
+\end_layout
+
+\begin_layout Description
+Kleenesche
+\begin_inset space \thinspace{}
+\end_inset
+
+Hülle
+\begin_inset space \thinspace{}
+\end_inset
+
+/
+\begin_inset space \thinspace{}
+\end_inset
+
+Abschluss Sei 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ ein Alphabet und bezeichne 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ das leere Wort.
+ Der Abschluss 
+\begin_inset Formula $\Sigma^{*}$
+\end_inset
+
+ ist induktiv wie folgt definiert: 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\epsilon\in\Sigma^{*}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $(\alpha\in\Sigma^{*}\wedge\beta\in\Sigma)\Rightarrow\alpha\beta\in\Sigma^{*}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(
+\begin_inset Formula $\Sigma^{*}$
+\end_inset
+
+ ist damit die Menge aller Folgen von Elementen aus 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+)
+\end_layout
+
+\end_deeper
+\begin_layout Description
+Positive
+\begin_inset space \thinspace{}
+\end_inset
+
+Hülle
+\begin_inset space \thinspace{}
+\end_inset
+
+/
+\begin_inset space \thinspace{}
+\end_inset
+
+Positiver
+\begin_inset space \thinspace{}
+\end_inset
+
+Abschluss Die positive Hülle ist definiert als 
+\begin_inset Formula $\Sigma^{+}:=\Sigma^{*}\setminus\left\{ \epsilon\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Sprache Allgemein ist eine Sprache 
+\begin_inset Formula $\mathcal{L}\subseteq\Sigma^{*}$
+\end_inset
+
+ über einem Alphabet 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ ist eine Teilmenge von 
+\begin_inset Formula $\Sigma^{*}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Operationen
+\begin_inset space \thinspace{}
+\end_inset
+
+auf
+\begin_inset space \thinspace{}
+\end_inset
+
+Sprachen Seien 
+\begin_inset Formula $\mathcal{L}_{1},\mathcal{L}_{2}$
+\end_inset
+
+ Sprachen über einem Alphabet 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+Konkatenation Ist definiert als 
+\begin_inset Formula $\mathcal{L}_{1}\mathcal{L}_{2}:=\left\{ \alpha,\beta|\alpha\in\mathcal{L}_{1},\beta\in\mathcal{L}_{2}\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Mengenoperationen Auf den Sprachen 
+\begin_inset Formula $\mathcal{L}_{1},\mathcal{L}_{2}$
+\end_inset
+
+ welche insbesondere Mengen sind, gelten die üblichen Mengenoperationen
+ (
+\begin_inset Formula $\cup,\cap,\setminus,\triangle$
+\end_inset
+
+).
+\end_layout
+
+\end_deeper
+\begin_layout Description
+Reguläre
+\begin_inset space \thinspace{}
+\end_inset
+
+Sprache Eine reguläre Sprache 
+\begin_inset Formula $\mathcal{L}_{\Sigma}$
+\end_inset
+
+ über 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ wird durch folgende Regeln induktiv definiert: 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\emptyset$
+\end_inset
+
+ und 
+\begin_inset Formula $\left\{ \epsilon\right\} $
+\end_inset
+
+ sind reguläre Sprachen über 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall a\in\Sigma:\left\{ a\right\} $
+\end_inset
+
+ ist eine reguläre Sprache über 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Seien 
+\begin_inset Formula $\mathcal{R}$
+\end_inset
+
+ und 
+\begin_inset Formula $\mathcal{S}$
+\end_inset
+
+ reguläre Sprachen über 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+, dann sind auch 
+\begin_inset Formula $\mathcal{R}\cup\mathcal{S}$
+\end_inset
+
+, 
+\begin_inset Formula $\mathcal{RS}$
+\end_inset
+
+ und 
+\begin_inset Formula $\mathcal{R}^{*}$
+\end_inset
+
+ reguläre Sprachen über 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Nichts sonst ist eine reguläre Sprache über 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ist klar über welchem Alphabet die Sprache errichtet ist, schreibt man einfach
+ 
+\begin_inset Formula $\mathcal{L}$
+\end_inset
+
+.
+ Eine Element der 
+\begin_inset Formula $\alpha\in\mathcal{L}$
+\end_inset
+
+ wird Wort genannt.
+\end_layout
+
+\end_deeper
+\begin_layout Description
+Kontextfreie
+\begin_inset space \thinspace{}
+\end_inset
+
+Grammatik Eine kontextfreie Grammatik ist ein 4-Tupel 
+\begin_inset Formula $G=(N,\Sigma,P,S)$
+\end_inset
+
+ bestehend aus:
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+\begin_inset Formula $N$
+\end_inset
+
+ ist ein Alphabet aus sogenannten Nichtterminalen
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ ist ein Alphabet aus sogenannten Terminale mit 
+\begin_inset Formula $N\cap\Sigma=\emptyset$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $P\subseteq N\times(N\cup\Sigma)^{*}$
+\end_inset
+
+ ist die Menge der Produktionsregeln.
+ 
+\end_layout
+
+\begin_layout Description
+Notation
+\begin_inset space \thinspace{}
+\end_inset
+
+der
+\begin_inset space \thinspace{}
+\end_inset
+
+Produktionsregel Eine Produktionsregel 
+\begin_inset Formula $(A,\alpha)\in P$
+\end_inset
+
+ wird notiert als 
+\begin_inset Formula $A\to\alpha$
+\end_inset
+
+.
+ Mehrere Regeln mit dem gleichen Nichtterminal 
+\begin_inset Formula $(A,\alpha),(A,\beta),\cdots\in P$
+\end_inset
+
+ werden notiert als 
+\begin_inset Formula $A\Coloneqq\alpha\thinspace|\thinspace\beta\thinspace|\thinspace\cdots$
+\end_inset
+
+.
+ Die Produktionsregel 
+\begin_inset Formula $A\to\alpha$
+\end_inset
+
+ angewendet auf ein Wort 
+\begin_inset Formula $\beta\in(N\cup\Sigma)^{*}$
+\end_inset
+
+ besagt, dass jedes Auftreten des Nichtterminalwortes 
+\begin_inset Formula $A$
+\end_inset
+
+ im Wort 
+\begin_inset Formula $\beta$
+\end_inset
+
+ durch das Wort 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ ersetzt wird.
+\end_layout
+
+\begin_layout Description
+Direkt
+\begin_inset space \thinspace{}
+\end_inset
+
+ableitbar Seien die Worte 
+\begin_inset Formula $\alpha,\beta,\gamma,\delta,\eta\in(N\cup\Sigma)^{*}$
+\end_inset
+
+.
+ Das Wort 
+\begin_inset Formula $\beta$
+\end_inset
+
+ ist aus dem Wort 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ 
+\emph on
+direkt ableitbar
+\emph default
+, im Zeichen 
+\begin_inset Formula $\alpha\Rightarrow\beta$
+\end_inset
+
+, genau dann, wenn es Worte 
+\begin_inset Formula $\gamma,\delta$
+\end_inset
+
+ und eine Produktionsregel 
+\begin_inset Formula $A\to\tau$
+\end_inset
+
+ gibt, so dass gilt: 
+\begin_inset Formula $\alpha=\gamma A\delta$
+\end_inset
+
+ und 
+\begin_inset Formula $\beta=\gamma\tau\delta$
+\end_inset
+
+.
+ 
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Seien bspw.
+ 
+\begin_inset Formula $N=\left\{ A\right\} $
+\end_inset
+
+ und 
+\begin_inset Formula $\Sigma=\left\{ (,),\#\right\} $
+\end_inset
+
+ und 
+\begin_inset Formula $R=\left\{ F\to(F),F\to\#\right\} $
+\end_inset
+
+ und 
+\begin_inset Formula $\beta=((\#))$
+\end_inset
+
+.
+ Es gilt dann: 
+\begin_inset Formula $\alpha=(F)\Rightarrow(\#)=\beta$
+\end_inset
+
+ da es Worte 
+\begin_inset Formula $\gamma=(,\delta=)$
+\end_inset
+
+ und eine Produktionsregel 
+\begin_inset Formula $F\to\#$
+\end_inset
+
+ gibt so dass gilt: 
+\begin_inset Formula $\alpha=\gamma F\delta=(F)$
+\end_inset
+
+ und 
+\begin_inset Formula $\beta=\gamma\#\delta=(\#)$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Ableitbar Das Wort 
+\begin_inset Formula $\beta$
+\end_inset
+
+ ist aus dem Wort 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ 
+\emph on
+ableitbar
+\emph default
+, im Zeichen 
+\begin_inset Formula $\alpha\overset{*}{\Rightarrow}\beta$
+\end_inset
+
+, falls eine Folge 
+\begin_inset Formula $\gamma_{1},\cdots,\gamma_{n}$
+\end_inset
+
+ existiert, so dass gilt: 
+\begin_inset Formula $\alpha=\gamma_{1}$
+\end_inset
+
+ und 
+\begin_inset Formula $\beta=\gamma_{n}$
+\end_inset
+
+ sowie 
+\begin_inset Formula $\underset{1\leq i<n}{\gamma_{i}\Rightarrow\gamma_{i+1}}$
+\end_inset
+
+ .
+\end_layout
+
+\end_deeper
+\begin_layout Description
+Erzeugte
+\begin_inset space \thinspace{}
+\end_inset
+
+Sprache Sei 
+\begin_inset Formula $G=(N,\Sigma,P,S)$
+\end_inset
+
+ eine kontextfreie Grammatik.
+ Die von 
+\begin_inset Formula $G$
+\end_inset
+
+ 
+\emph on
+erzeugte Sprache
+\emph default
+ ist definiert als 
+\begin_inset Formula $\mathcal{L}^{G}=L(G)=\left\{ w\in\Sigma^{*}|\thinspace S\overset{*}{\Rightarrow}w\right\} $
+\end_inset
+
+.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Gueting2013"
+
+\end_inset
+
+ Ist klar welche Grammatik die Sprache erzeugt, schreibt man einfach 
+\begin_inset Formula $\mathcal{L}$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document

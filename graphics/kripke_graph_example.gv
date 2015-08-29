@@ -1,0 +1,15 @@
+strict digraph kripke_graph_example {
+    node [shape = circle, fontname=Optima,fontsize=12, style=filled, color="#333333", fillcolor="#EEEEEE"]
+    edge [color="#31CEF0"]
+    forcelabels=true;
+    concentrate=true;
+    size="8,5"
+    A [xlabel="¬p", label="t"];
+    B [xlabel="p", label="s"];
+    C [xlabel="p", label="u"];
+    A -> A [ label = "1,2" ];
+    B -> A [ label = "1", dir="both"];
+    B -> B [ label = "1,2" ];
+    B -> C [ label = "2", dir="both"];
+    C -> C [ label = "1,2" ];
+}

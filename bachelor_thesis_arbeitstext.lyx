@@ -1,0 +1,8161 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass scrbook
+\begin_preamble
+\usepackage[bottom]{footmisc}
+\usepackage{footnote}
+\end_preamble
+\use_default_options true
+\begin_modules
+minimalistic
+figs-within-sections
+logicalmkup
+theorems-ams
+shapepar
+\end_modules
+\maintain_unincluded_children false
+\language ngerman
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\boxbgcolor #f5f5f5
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\headsep 3cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language german
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Ausführliche Darstellung eines klassischen Systems der probabilistischen
+ epistemischen Logik und Beschreibung neuerer Entwicklungen
+\begin_inset Newline linebreak
+\end_inset
+
+
+\begin_inset Newline linebreak
+\end_inset
+
+
+\size larger
+Bachelorarbeit (Draft)
+\end_layout
+
+\begin_layout Author
+David Baldin
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part*
+Inhaltsverzeichnis
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Einleitung
+\end_layout
+
+\begin_layout Section
+Motivation und Ziel der Arbeit 
+\end_layout
+
+\begin_layout Section
+Allgemeine Einführung in die Thematik
+\end_layout
+
+\begin_layout Standard
+[Anschauliche Einführung der Begriffe Aussagenlogik, Modallogik, Wahrscheinlichk
+eit, Ungewissheit, Glauben/Wissen, Agenten, Wissensrepräsentation und Dynamiken]
+\end_layout
+
+\begin_layout Subsection
+Technische Vereinbarungen
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Definition
+Ein Alphabet
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Alphabet
+\end_layout
+
+\end_inset
+
+, üblicherweise bezeichnet mit 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+, ist eine nichtleer, endlich Menge von Symbolen / Zeichen.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Definition
+Kleenesche
+\begin_inset space \thinspace{}
+\end_inset
+
+Hülle
+\begin_inset space \thinspace{}
+\end_inset
+
+/
+\begin_inset space \thinspace{}
+\end_inset
+
+Abschluss Sei 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ ein Alphabet und bezeichne 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ das leere Wort.
+ Der Abschluss 
+\begin_inset Formula $\Sigma^{*}$
+\end_inset
+
+ ist induktiv wie folgt definiert: 
+\end_layout
+
+\begin_layout Itemize
+Induktionsanfang: 
+\begin_inset Formula $\epsilon\in\Sigma^{*}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Induktionsschritt: 
+\begin_inset Formula $(\alpha\in\Sigma^{*}\wedge\beta\in\Sigma)\Rightarrow\alpha\beta\in\Sigma$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+(
+\begin_inset Formula $\Sigma^{*}$
+\end_inset
+
+ ist damit die Menge aller Folgen von Symbolen des Alphabets 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Definition
+Eine Sprache 
+\begin_inset Formula $\mathcal{L}_{\Sigma}\subseteq\Sigma^{*}$
+\end_inset
+
+ über einem Alphabet 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+, ist eine Teilmengen aus allen Folgen von Symbolen aus 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+.
+ Eine formale Sprache wird durch eine kontextfreie Grammatik
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "KontextfreieGrammatik"
+
+\end_inset
+
+ erzeugt.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Definition
+Seien 
+\begin_inset Formula $L_{1},L_{2}$
+\end_inset
+
+ Sprachen über einem Alphabet 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+.
+ Es sind folgende Operationen auf den Sprachen definiert:
+\end_layout
+
+\begin_layout Definition
+Positive
+\begin_inset space \thinspace{}
+\end_inset
+
+Hülle
+\begin_inset space \thinspace{}
+\end_inset
+
+/
+\begin_inset space \thinspace{}
+\end_inset
+
+Positiver
+\begin_inset space \thinspace{}
+\end_inset
+
+Abschluss Ist definiert als 
+\begin_inset Formula $\Sigma^{+}:=\Sigma^{*}\setminus\left\{ \epsilon\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+Konkatenation Ist definiert als 
+\begin_inset Formula $L_{1}L_{2}:=\left\{ \alpha,\beta|\alpha\in L_{1},\beta\in L_{2}\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+Mengenoperationen Da 
+\begin_inset Formula $L_{1},L_{2}$
+\end_inset
+
+ Mengen sind, gelten die üblichen Mengenoperationen (
+\begin_inset Formula $\cup,\cap,\setminus,\triangle$
+\end_inset
+
+).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Definition
+Reguläre
+\begin_inset space \thinspace{}
+\end_inset
+
+Sprache Eine reguläre Sprache über 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ wird durch folgende Regeln induktiv definiert: 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\emptyset$
+\end_inset
+
+ und 
+\begin_inset Formula $\left\{ \epsilon\right\} $
+\end_inset
+
+ sind reguläre Sprachen.
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall a\in\Sigma:$
+\end_inset
+
+ 
+\begin_inset Formula $\left\{ a\right\} $
+\end_inset
+
+ ist eine reguläre Sprache
+\end_layout
+
+\begin_layout Itemize
+Seien 
+\begin_inset Formula $R$
+\end_inset
+
+ und 
+\begin_inset Formula $S$
+\end_inset
+
+ reguläre Sprachen, dann sind auch 
+\begin_inset Formula $R\cup S$
+\end_inset
+
+, 
+\begin_inset Formula $RS$
+\end_inset
+
+ und 
+\begin_inset Formula $R^{*}$
+\end_inset
+
+ reguläre Sprachen
+\end_layout
+
+\begin_layout Itemize
+Nichts sonst ist eine reguläre Sprache über 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Definition
+\begin_inset CommandInset label
+LatexCommand label
+name "KontextfreieGrammatik"
+
+\end_inset
+
+Eine kontextfreie Grammatik (abgekürzt mit KfG.) ist ein 4-Tupel 
+\begin_inset Formula $G=(N,\Sigma,P,S)$
+\end_inset
+
+ bestehend aus:
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+\begin_inset Formula $N$
+\end_inset
+
+ ist ein Alphabet aus sogenannten Nichtterminalen
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ ist ein Alphabet aus sogenannten Terminale mit 
+\begin_inset Formula $V\cap\Sigma=\emptyset$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $P\subseteq N\times(N\cup\Sigma)^{*}$
+\end_inset
+
+ ist eine Menge sogenannter Produktionsregeln.
+ 
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Definition
+Eine Produktionsregel 
+\begin_inset Formula $(A,\alpha)\in P$
+\end_inset
+
+ wird als 
+\begin_inset Formula $A\to\alpha\in P$
+\end_inset
+
+ notiert bzw.
+ als 
+\begin_inset Formula $A\to\alpha$
+\end_inset
+
+ notiert falls 
+\begin_inset Formula $P$
+\end_inset
+
+ eindeutig ist.
+ Mehrere Regeln 
+\begin_inset Formula $(A,\alpha),(A,\beta),\cdots\in P$
+\end_inset
+
+ mit dem gleichen Nichtterminal 
+\begin_inset Formula $A$
+\end_inset
+
+, werden als 
+\begin_inset Formula $A\to\alpha\thinspace|\thinspace\beta\thinspace|\thinspace\cdots\in P$
+\end_inset
+
+ notiert bzw.
+ als 
+\begin_inset Formula $A\to\alpha\thinspace|\thinspace\beta\thinspace|\thinspace\cdots$
+\end_inset
+
+ notiert falls 
+\begin_inset Formula $P$
+\end_inset
+
+ eindeutig ist.
+ Die Produktionsregel 
+\begin_inset Formula $A\to\alpha$
+\end_inset
+
+ angewendet auf ein Wort 
+\begin_inset Formula $\beta\in(N\cup\Sigma)^{*}$
+\end_inset
+
+ besagt, dass man ein Auftreten von 
+\begin_inset Formula $A$
+\end_inset
+
+ in 
+\begin_inset Formula $\beta$
+\end_inset
+
+ durch 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ ersetzen darf.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Definition
+Sei 
+\begin_inset Formula $G=(N,\Sigma,P,S)$
+\end_inset
+
+ eine kontextfreie Grammatik.
+ Bei Notation einer Produktionsregeln einer kontextfreien Grammatik in der
+ Backus-Naur-Form (abgekürzt BNF) wird jede Produktionsregeln 
+\begin_inset Formula $A\to\alpha\thinspace|\thinspace\beta\thinspace|\thinspace\cdots\in P$
+\end_inset
+
+ der Grammatik notiert als 
+\begin_inset Formula $\langle A\rangle\Coloneqq\alpha\thinspace|\thinspace\beta\thinspace|\thinspace\cdots$
+\end_inset
+
+.
+ Steht dabei auf der rechten Seite ein Terminalwort aus 
+\begin_inset Formula $\Sigma^{*}$
+\end_inset
+
+, so wird dieses im typografischen Typewriterstil dargestellt.
+ Steht dabei auf der rechten Seite ein Nichtterminalwort aus 
+\begin_inset Formula $N^{*}$
+\end_inset
+
+, so wird dieses von 
+\begin_inset Formula $\langle$
+\end_inset
+
+ und 
+\begin_inset Formula $\rangle$
+\end_inset
+
+ eingeklammert.
+ Die Klammern 
+\begin_inset Formula $\langle$
+\end_inset
+
+ und 
+\begin_inset Formula $\rangle$
+\end_inset
+
+ werden zum Zwecke einer kompaktere Notation oft weggelassen.
+ 
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Sei bspw.
+ 
+\begin_inset Formula $G=(\left\{ A\right\} ,\left\{ \mathtt{x},\mathtt{y},\mathtt{*},\mathtt{(},\mathtt{)},\mathtt{+}\right\} ,\left\{ (A,A\mathtt{*}A),(A,\mathtt{(}A+A\mathtt{)}),(A,\mathtt{x}),(A,\mathtt{y}),(A,\epsilon)\right\} ,A)$
+\end_inset
+
+ eine KfG.
+ Dann lautet die BNF der Grammatik 
+\begin_inset Formula $\langle A\rangle\Coloneqq\langle A\rangle\mathtt{*}\langle A\rangle\thinspace|\thinspace\mathtt{(}\langle A\rangle\mathtt{+}\langle A\rangle\mathtt{)}\thinspace|\thinspace\mathtt{x}\thinspace|\thinspace\mathtt{y}\thinspace|\thinspace\epsilon$
+\end_inset
+
+ bzw.
+ kompakt 
+\begin_inset Formula $A\Coloneqq A\mathtt{*}A\thinspace|\thinspace\mathtt{(}A\mathtt{+}A\mathtt{)}\thinspace|\thinspace\mathtt{x}\thinspace|\thinspace\mathtt{y}\thinspace|\thinspace\epsilon$
+\end_inset
+
+ .
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Definition
+Direkt
+\begin_inset space \thinspace{}
+\end_inset
+
+ableitbar Seien die Worte 
+\begin_inset Formula $\alpha,\beta,\gamma,\delta,\eta\in(N\cup\Sigma)^{*}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\beta$
+\end_inset
+
+ ist aus 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ direkt ableitbar, im Zeichen 
+\begin_inset Formula $\alpha\Rightarrow\beta$
+\end_inset
+
+, genau dann, wenn es Worte 
+\begin_inset Formula $\gamma,\delta$
+\end_inset
+
+ und eine Produktionsregel 
+\begin_inset Formula $A\to\tau$
+\end_inset
+
+ gibt, so dass gilt: 
+\begin_inset Formula $\alpha=\gamma A\delta$
+\end_inset
+
+ und 
+\begin_inset Formula $\beta=\gamma\tau\delta$
+\end_inset
+
+.
+ 
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Seien bspw.
+ 
+\begin_inset Formula $N=\left\{ A\right\} $
+\end_inset
+
+ und 
+\begin_inset Formula $\Sigma=\left\{ (,),\#\right\} $
+\end_inset
+
+ und 
+\begin_inset Formula $R=\left\{ F\to(F),F\to\#\right\} $
+\end_inset
+
+ und 
+\begin_inset Formula $\beta=((\#))$
+\end_inset
+
+.
+ Es gilt dann: 
+\begin_inset Formula $\alpha=(F)\Rightarrow(\#)=\beta$
+\end_inset
+
+ da es Worte 
+\begin_inset Formula $\gamma=(,\delta=)$
+\end_inset
+
+ und eine Produktionsregel 
+\begin_inset Formula $F\to\#$
+\end_inset
+
+ gibt so dass gilt: 
+\begin_inset Formula $\alpha=\gamma F\delta=(F)$
+\end_inset
+
+ und 
+\begin_inset Formula $\beta=\gamma\#\delta=(\#)$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 1
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Definition
+Ableitbar 
+\begin_inset Formula $\beta$
+\end_inset
+
+ ist aus 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ ableitbar, im Zeichen 
+\begin_inset Formula $\alpha\overset{*}{\Rightarrow}\beta$
+\end_inset
+
+, falls eine Folge 
+\begin_inset Formula $\gamma_{1},\cdots,\gamma_{n}$
+\end_inset
+
+ existiert, so dass gilt: 
+\begin_inset Formula $\alpha=\gamma_{1}$
+\end_inset
+
+ und 
+\begin_inset Formula $\beta=\gamma_{n}$
+\end_inset
+
+ sowie 
+\begin_inset Formula $\underset{1\leq i<n}{\gamma_{i}\Rightarrow\gamma_{i+1}}$
+\end_inset
+
+ .
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Definition
+Erzeugte
+\begin_inset space \thinspace{}
+\end_inset
+
+Sprache Sei 
+\begin_inset Formula $G=(N,\Sigma,P,S)$
+\end_inset
+
+ eine kontextfreie Grammatik.
+ Die von 
+\begin_inset Formula $G$
+\end_inset
+
+ erzeugte Sprache ist 
+\begin_inset Formula $L(G)=\left\{ w\in\Sigma^{*}|\thinspace S\overset{*}{\Rightarrow}w\right\} $
+\end_inset
+
+.
+ Ein Wort 
+\begin_inset Formula $w\in L(G)$
+\end_inset
+
+ heißt Satz.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Gueting2013"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Hauptteil I 
+\end_layout
+
+\begin_layout Standard
+Angenommen ein Chemiker stellt Folgendes fest 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Enderton2001"
+
+\end_inset
+
+: 
+\begin_inset Quotes gld
+\end_inset
+
+Die Probe enthält Kalium
+\begin_inset Quotes grd
+\end_inset
+
+.
+ Dies lässt sich durch ein Aussagesymbol, bspw.
+ 
+\begin_inset Formula $K$
+\end_inset
+
+ festhalten.
+ Die Verneinung der Aussage lässt sich Symbolisch durch 
+\begin_inset Formula $\neg K$
+\end_inset
+
+ darstellen.
+ Dabei kehrt das Symbol 
+\begin_inset Formula $\neg$
+\end_inset
+
+ den Wahrheitswert des Nachfolgenden um.
+ Damit lautet der Satz 
+\begin_inset Quotes gld
+\end_inset
+
+Es ist nicht wahr, dass die Probe Kalium enthält
+\begin_inset Quotes grd
+\end_inset
+
+.
+ Eine weitere Aussage kann lauten 
+\begin_inset Quotes gld
+\end_inset
+
+Die Probe enthält Chlor
+\begin_inset Quotes grd
+\end_inset
+
+ und lässt sich durch ein Aussagesymbol 
+\begin_inset Formula $C$
+\end_inset
+
+ festhalten.
+ Der Chemiker könnten nun Folgendes feststellen: 
+\begin_inset Formula $\mathcal{A}:$
+\end_inset
+
+ 
+\begin_inset Quotes gld
+\end_inset
+
+Wenn die Probe Kalium enthält, enthält die Probe kein Chlor
+\begin_inset Quotes grd
+\end_inset
+
+ oder 
+\begin_inset Formula $\mathcal{B}:$
+\end_inset
+
+
+\begin_inset Quotes gld
+\end_inset
+
+Die Probe enthält Kalium und Chlor
+\begin_inset Quotes grd
+\end_inset
+
+ oder 
+\begin_inset Formula $\mathcal{C}:$
+\end_inset
+
+
+\begin_inset Quotes gld
+\end_inset
+
+Die Probe enthält kein Chlor oder kein Kalium
+\begin_inset Quotes grd
+\end_inset
+
+ oder aber 
+\begin_inset Formula $\mathcal{D}:$
+\end_inset
+
+ 
+\begin_inset Quotes gld
+\end_inset
+
+Die Probe enthält weder Chlor noch Kalium
+\begin_inset Quotes grd
+\end_inset
+
+.
+ Für die Feststellungen 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ und 
+\begin_inset Formula $\mathcal{D}$
+\end_inset
+
+ kann eine Interpretation des Wahrheitswertes ggf.
+ zu Missverständnissen führen.
+ Stellt der Chemiker fest, dass 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ gilt, kann dann die Probe weder Kalium noch Chlor enthalten? Meint die
+ Feststellung 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ das gleiche wie 
+\begin_inset Formula $\mathcal{D}$
+\end_inset
+
+? Mit einem Symbol 
+\begin_inset Formula $\wedge$
+\end_inset
+
+ für das Wort 
+\begin_inset Quotes gld
+\end_inset
+
+und
+\begin_inset Quotes grd
+\end_inset
+
+, einem Symbol 
+\begin_inset Formula $\vee$
+\end_inset
+
+ für das Wort 
+\begin_inset Quotes gld
+\end_inset
+
+oder
+\begin_inset Quotes grd
+\end_inset
+
+, einem Symbol 
+\begin_inset Formula $\to$
+\end_inset
+
+ für das 
+\begin_inset Quotes gld
+\end_inset
+
+wenn ...
+ dann
+\begin_inset Quotes grd
+\end_inset
+
+ sowie den Klammersymbolen 
+\begin_inset Formula $($
+\end_inset
+
+ und 
+\begin_inset Formula $)$
+\end_inset
+
+ lassen sich die Feststellungen in Sätzen einer formalen Sprache formulieren.
+ 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ lautet dann 
+\begin_inset Formula $(K\to(\neg C))$
+\end_inset
+
+, 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ lautet 
+\begin_inset Formula $(C\wedge K)$
+\end_inset
+
+, 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ lautet 
+\begin_inset Formula $((\neg C)\vee(\neg K))$
+\end_inset
+
+ und 
+\begin_inset Formula $\mathcal{D}$
+\end_inset
+
+ lautet 
+\begin_inset Formula $((\neg C)\wedge(\neg K))$
+\end_inset
+
+.
+ Setzt man voraus, dass Aussagen, dargestellt durch die Symbole 
+\begin_inset Formula $K$
+\end_inset
+
+ oder 
+\begin_inset Formula $C$
+\end_inset
+
+ jeweils nur einen der beiden Wahrheitswerte 
+\begin_inset Formula $\mathtt{wahr}$
+\end_inset
+
+ oder 
+\begin_inset Formula $\mathtt{falsch}$
+\end_inset
+
+ annehmen können, so lässt sich durch Ersetzen der Aussagesymbole durch
+ die Wahrheitswerte und Bilden aller Kombinationsmöglichkeiten für einen
+ Satz herausfinden, ob bspw.
+ 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ und 
+\begin_inset Formula $\mathcal{D}$
+\end_inset
+
+ das gleiche Aussagen, also logisch äquivalent sind oder nicht.
+\end_layout
+
+\begin_layout Standard
+Im Folgenden wird eine formale Sprache der Logik angegeben, in welcher die
+ Ungenauigkeiten und Mehrdeutigkeiten der natürlichsprachlichen Repräsentation
+ logischer Aussagen vermieden werden.
+\end_layout
+
+\begin_layout Subsection
+Sprache 
+\begin_inset Formula $\mathcal{L}^{prop}$
+\end_inset
+
+ (Propositionale Logik)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Definition
+Sei 
+\begin_inset Formula $\Sigma^{prop}\coloneqq\left\{ \neg,\wedge,\vee,\Rightarrow,\Leftrightarrow,(,),\top,\bot\right\} $
+\end_inset
+
+ das Alphabet der Aussagenlogik.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Definition
+\begin_inset CommandInset label
+LatexCommand label
+name "Primitive-Aussagen"
+
+\end_inset
+
+Sei 
+\begin_inset Formula $\varPhi$
+\end_inset
+
+ eine Menge von Aussagensymbolen mit 
+\begin_inset Formula $\Sigma^{prop}\thinspace\cap\thinspace\Phi=\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Die Elemente von 
+\begin_inset Formula $\Phi$
+\end_inset
+
+ werden auch primitive Aussagen genannt und werden üblicherweise durch Kleinbuch
+staben aus der Mitte des lateinischen Alpohabets symbolisiert.
+ Dabei steht jedes Element von 
+\begin_inset Formula $\Phi$
+\end_inset
+
+ für eine Objekt welches eine Interpretation zulässt, in dem Sinne, dass
+ dieses Objekt entweder wahr ist oder falsch ist.
+ Ein Beispiel wäre 
+\begin_inset Quotes gld
+\end_inset
+
+In Dresden regnet es
+\begin_inset Quotes grd
+\end_inset
+
+, 
+\begin_inset Quotes gld
+\end_inset
+
+Alma hat Ferien
+\begin_inset Quotes grd
+\end_inset
+
+, 
+\begin_inset Quotes gld
+\end_inset
+
+3 ist eine gerade Zahl
+\begin_inset Quotes grd
+\end_inset
+
+, 
+\begin_inset Quotes gld
+\end_inset
+
+Es gibt unendlich viele Primzahlen
+\begin_inset Quotes grd
+\end_inset
+
+, 
+\begin_inset Quotes gld
+\end_inset
+
+
+\begin_inset Formula $2+5^{6}\geq log(2+5^{6})$
+\end_inset
+
+
+\begin_inset Quotes grd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Die Menge 
+\begin_inset Formula $\mathcal{L}^{prop}(\Phi)\subseteq(\Sigma\cup\Phi)^{*}$
+\end_inset
+
+ der Formeln
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Auch Terme genannt
+\end_layout
+
+\end_inset
+
+ bilden sich aus Elementen aus 
+\begin_inset Formula $\Phi$
+\end_inset
+
+ verknüpft durch bestimmte Operatoren aus 
+\begin_inset Formula $\Sigma^{prop}$
+\end_inset
+
+, sind wie folgt, induktiv definiert:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Definition
+\begin_inset CommandInset label
+LatexCommand label
+name "Die-Sprache-der-Aussagenlogik"
+
+\end_inset
+
+Die Sprache der Aussagenlogik 
+\begin_inset Formula $\mathcal{L}^{prop}(\Phi)\subseteq(\Sigma\cup\Phi)^{*}$
+\end_inset
+
+ ist induktiv wie folgt definiert:
+\end_layout
+
+\begin_layout Itemize
+Für alle 
+\begin_inset Formula $\varphi\in\Phi\cup\left\{ \top,\bot\right\} $
+\end_inset
+
+ gilt: 
+\begin_inset Formula $\varphi\in\mathcal{L}^{prop}(\Phi)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Ist 
+\begin_inset Formula $\varphi\in\mathcal{L}^{prop}(\Phi)$
+\end_inset
+
+, so auch 
+\begin_inset Formula $\neg\varphi\in\mathcal{L}^{prop}(\Phi)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Sind 
+\begin_inset Formula $\varphi,\psi\in\mathcal{L}^{prop}(\Phi)$
+\end_inset
+
+, so auch 
+\begin_inset Formula $(\varphi\wedge\psi)\in\mathcal{L}^{prop}(\Phi)$
+\end_inset
+
+ und 
+\begin_inset Formula $(\varphi\vee\psi)\in\mathcal{L}^{prop}(\Phi)$
+\end_inset
+
+ und 
+\begin_inset Formula $\varphi\Rightarrow\psi\in\mathcal{L}^{prop}(\Phi)$
+\end_inset
+
+ und 
+\begin_inset Formula $\varphi\Leftrightarrow\psi\in\mathcal{L}^{prop}(\Phi)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Nichts sonst ist in 
+\begin_inset Formula $\mathcal{T}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Definition
+Es gelten außerdem folgende Vereinbarungen:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\top\in\mathcal{L}^{prop}(\Phi)\coloneqq\varphi\wedge\neg\varphi$
+\end_inset
+
+ für eine feste Formel 
+\begin_inset Formula $\varphi\in\mathcal{L}^{prop}(\Phi)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\bot\in\mathcal{L}^{prop}(\Phi)\coloneqq\neg\top$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Die Formel 
+\begin_inset Formula $\varphi\vee\psi\in\mathcal{L}^{prop}(\Phi)$
+\end_inset
+
+ kann ersetzt werden durch 
+\begin_inset Formula $\neg(\neg\varphi\wedge\neg\psi)\in\mathcal{L}^{prop}(\Phi)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Die Formel 
+\begin_inset Formula $\varphi\Rightarrow\psi\in\mathcal{L}^{prop}(\Phi)$
+\end_inset
+
+ kann ersetzt werden durch 
+\begin_inset Formula $(\neg\varphi\vee\psi)\in\mathcal{L}^{prop}(\Phi)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Die Formel 
+\begin_inset Formula $\varphi\Leftrightarrow\psi\in\mathcal{L}^{prop}(\Phi)$
+\end_inset
+
+ kann ersetzt werden durch 
+\begin_inset Formula $(\varphi\Rightarrow\psi)\wedge(\psi\Rightarrow\varphi)\in\mathcal{L}^{prop}(\Phi)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Damit beinhaltet 
+\begin_inset Formula $\mathcal{L}^{prop}(\Phi)$
+\end_inset
+
+ alle aussagenlogische Formeln welche sich aus primitiven Aussagen aus 
+\begin_inset Formula $\Phi$
+\end_inset
+
+ mittels der genannten Regeln formulieren lassen.
+ 
+\end_layout
+
+\begin_layout Standard
+Eine logische Aussagen, wie z.B.
+ 
+\begin_inset Formula $\psi\coloneqq\text{Die Probe enthält Kalium}$
+\end_inset
+
+, kann genau einen der Wahrheitswerte wahr oder falsch haben.
+ Für eine Formel der Sprache 
+\begin_inset Formula $\mathcal{L}^{prop}$
+\end_inset
+
+ wird der Wahrheitswert durch 
+\begin_inset Formula $\pi:\Phi\to\left\{ \top,\bot\right\} $
+\end_inset
+
+ erreicht.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Definition
+Die Belegung 
+\begin_inset Formula $\pi:\Phi\to\left\{ \top,\bot\right\} $
+\end_inset
+
+ weißt jedem Element 
+\begin_inset Formula $\varphi\in\Phi$
+\end_inset
+
+ genau einen Wert aus 
+\begin_inset Formula $\left\{ \top,\bot\right\} $
+\end_inset
+
+ zu.
+ Eine primitive Aussage 
+\begin_inset Formula $\varphi\in\Phi$
+\end_inset
+
+ heißt genau wann 
+\emph on
+wahr
+\emph default
+, wenn 
+\begin_inset Formula $v(\varphi)=\bot$
+\end_inset
+
+ und genau dann 
+\emph on
+falsch
+\emph default
+, wenn 
+\begin_inset Formula $v(\varphi)=\top$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Auf Grundlage der Belegung 
+\begin_inset Formula $v$
+\end_inset
+
+ einer Menge primitiver Aussagen 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+
+\begin_inset Formula $\Phi$
+\end_inset
+
+,
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang ngerman
+ wird rekursiv eine Semantik 
+\begin_inset Formula $\overline{v}:\mathcal{L}^{prop}(\Phi)\to\left\{ \top,\bot\right\} $
+\end_inset
+
+ definiert, welche jeder Formel 
+\begin_inset Formula $\varphi\in\mathcal{L}^{prop}$
+\end_inset
+
+ genau einen Wert aus 
+\begin_inset Formula $\left\{ \top,\bot\right\} $
+\end_inset
+
+ zuweist.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Definition
+Die Semantik 
+\begin_inset Formula $\overline{v}:\mathcal{L}^{prop}(\Phi)\to\left\{ \top,\bot\right\} $
+\end_inset
+
+ ist für alle 
+\begin_inset Formula $p\in\Phi$
+\end_inset
+
+ und für alle 
+\begin_inset Formula $\varphi,\psi\in\mathcal{L}^{prop}(\Phi)$
+\end_inset
+
+ wie folgt, rekursiv definiert:
+\begin_inset Formula 
+\begin{eqnarray*}
+\overline{v}(p) & := & v(p)\\
+\overline{v}(\neg\varphi):=\mathtt{\top} & :\Longleftrightarrow & \overline{v}(\varphi):=\mathtt{\bot}\\
+\overline{v}((\varphi\wedge\psi):=\mathtt{\top} & :\Longleftrightarrow & \overline{v}(\varphi)=\overline{v}(\psi)=\mathtt{\top}\\
+\overline{v}(\varphi\vee\psi):=\mathtt{\bot} & :\Longleftrightarrow & \overline{v}(\varphi)=\overline{v}(\psi)=\mathtt{\bot}\\
+\overline{v}(\varphi\Rightarrow\psi):=\mathtt{\bot} & :\Longleftrightarrow & \overline{v}(\varphi)=\mathtt{\top}\text{ und }\overline{v}(\psi)=\mathtt{\bot}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Eine Formel 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ wird genau dann tautologisch bzw.
+ Tautologie genannt, wenn für jede Belegung 
+\begin_inset Formula $\overline{v}$
+\end_inset
+
+ gilt, dass 
+\begin_inset Formula $\overline{v}(\varphi)=\top$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Eine Formel 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ wird genau dann erfüllbar genannt, wenn eine Belegung 
+\begin_inset Formula $\overline{v}$
+\end_inset
+
+ existiert, so dass 
+\begin_inset Formula $\overline{v}(\varphi)=\mathtt{\top}$
+\end_inset
+
+ ist.
+ 
+\end_layout
+
+\begin_layout Standard
+Genau dann wird 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ kontradiktorisch genannt, wenn für alle Belegungen 
+\begin_inset Formula $\overline{v}$
+\end_inset
+
+, gilt dass 
+\begin_inset Formula $\overline{v}(\varphi)=\bot$
+\end_inset
+
+ ist.
+ 
+\end_layout
+
+\begin_layout Standard
+Für zwei Formeln 
+\begin_inset Formula $\varphi,\psi$
+\end_inset
+
+
+\emph on
+ 
+\emph default
+gilt
+\emph on
+: 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ 
+\emph default
+impliziert
+\emph on
+ 
+\emph default
+logisch
+\emph on
+ 
+\begin_inset Formula $\psi$
+\end_inset
+
+
+\emph default
+, im Zeichen 
+\begin_inset Formula $\varphi\models\psi$
+\end_inset
+
+, genau dann, wenn für alle Belegungen 
+\begin_inset Formula $\overline{v}$
+\end_inset
+
+ gilt, dass: Aus 
+\begin_inset Formula $\overline{v}(\varphi)=\top$
+\end_inset
+
+ folgt 
+\begin_inset Formula $\overline{v}(\psi)=\top$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Zwei Formeln 
+\begin_inset Formula $\varphi,\psi$
+\end_inset
+
+ heißen logisch äquivalent, im Zeichen 
+\begin_inset Formula $\varphi\equiv\psi$
+\end_inset
+
+, genau dann, wenn für alle Belegungen 
+\begin_inset Formula $\overline{v}$
+\end_inset
+
+ gilt, dass 
+\begin_inset Formula $\overline{v}(\varphi)=\overline{v}(\psi)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Remark
+Ein klassischen NP-Vollständiges Probleme, ist das sogenannte Erfüllbarkeitsprob
+lem (Engl.
+ Satisfiability Problem, Abk.
+ 
+\begin_inset Formula $SAT$
+\end_inset
+
+) welches fragt: 
+\begin_inset Quotes gld
+\end_inset
+
+Gibt es eine Belegung 
+\begin_inset Formula $\overline{v}$
+\end_inset
+
+ so dass für eine Formel 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ gilt: 
+\begin_inset Formula $\overline{v}(\varphi)=\mathtt{\top}$
+\end_inset
+
+?”.
+\end_layout
+
+\begin_layout Remark
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Example
+Sei eine Menge primitiver Aussagen 
+\begin_inset Formula $\Phi:=\left\{ \mathtt{p},\mathtt{q}\right\} $
+\end_inset
+
+ und eine Belegung 
+\begin_inset Formula $v(\mathtt{p)}=\mathtt{\bot}$
+\end_inset
+
+,
+\begin_inset Formula $v(\mathtt{q)}=\top$
+\end_inset
+
+ gewählt.
+ Dann ist 
+\begin_inset Formula $\varphi=((\neg\mathtt{p}\vee\mathtt{q})\wedge\mathtt{q})\in\mathcal{L}^{prop}(\Phi)$
+\end_inset
+
+ eine aussagenlogische Formel.
+ Mit der Auswertungsfunktion ergibt sich der Wahrheitswert 
+\begin_inset Formula $\overline{v}(\varphi)$
+\end_inset
+
+ wie folgt:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+\overline{v}(\varphi)=\overline{v}(((\neg\mathtt{p}\vee\mathtt{q})\wedge\mathtt{q}))= & \top\Rightarrow & \overline{v}(((\neg\mathtt{p}\vee\mathtt{q}))\text{=}\overline{v}(\mathtt{q})=\top\\
+\overline{v}(\mathtt{q})= & \top & =v(\mathtt{q})\\
+\overline{v}((\neg\mathtt{p}\vee\mathtt{q}))=\bot & \Rightarrow & \overline{v}(\neg\mathtt{p})=\overline{v}(\mathtt{q}))=\bot\\
+\overline{v}(\mathtt{\neg p})=\bot & \Rightarrow & \overline{v}(\mathtt{p})=\top\\
+\overline{v}(\mathtt{p})= & \bot & =v(\mathtt{p})\\
+\top=v(\mathtt{p})\neq v(\mathtt{q})=\bot & \Rightarrow & \overline{v}((\neg\mathtt{p}\vee\mathtt{q}))\neq\bot\\
+\overline{v}((\neg\mathtt{p}\vee\mathtt{q}))\neq\bot & \Rightarrow & \overline{v}((\neg\mathtt{p}\vee\mathtt{q}))=\top\\
+\overline{v}(((\neg\mathtt{p}\vee\mathtt{q}))\text{=}\overline{v}(\mathtt{q})=\top & \Rightarrow & \overline{v}(((\neg\mathtt{p}\vee\mathtt{q})\wedge\mathtt{q}))=\overline{v}(\varphi)=\top
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remark
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Example
+Für eine Formel 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ und die primitiven Aussagen 
+\begin_inset Formula $\Phi$
+\end_inset
+
+ lässt sich auf umgekehrtem Weg berechnen, ob eine Belegung 
+\begin_inset Formula $v$
+\end_inset
+
+ existiert, so dass bspw.
+ 
+\begin_inset Formula $\overline{v}(\varphi)=\mathtt{\top}$
+\end_inset
+
+ ist.
+ Seien die primitiven Aussagen 
+\begin_inset Formula $\Phi:=\left\{ \mathtt{p},\mathtt{q}\right\} $
+\end_inset
+
+ und eine Formel 
+\begin_inset Formula $\varphi:=(\neg(\mathtt{p}\vee\mathtt{q})\wedge(\mathtt{p}\Rightarrow\neg\mathtt{q}))\in\mathcal{L}^{prop}(\Phi)$
+\end_inset
+
+ und sei eine Belegung 
+\begin_inset Formula $v$
+\end_inset
+
+ gesucht damit 
+\begin_inset Formula $\overline{v}(\varphi)=\mathtt{\top}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Example
+...
+\end_layout
+
+\begin_layout Example
+Damit existiert keine Belegung, so dass 
+\begin_inset Formula $\overline{v}(\varphi)=\mathtt{\top}$
+\end_inset
+
+ gilt, 
+\begin_inset Formula $\overline{v}(\varphi)=\mathtt{\top}$
+\end_inset
+
+ ist also nicht erfüllbar.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Sprache 
+\begin_inset Formula $\mathcal{L}_{\mathfrak{K}}$
+\end_inset
+
+ (Modale Logik)
+\end_layout
+
+\begin_layout Standard
+Sei 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ eine Alphabet.
+ The so called 
+\emph on
+signature
+\emph default
+ consists of a denumerably infinite set of propositional symbols 
+\begin_inset Formula $PROP\subseteq\Sigma$
+\end_inset
+
+ and a set of modality symbols 
+\begin_inset Formula $MOD\subseteq\Sigma$
+\end_inset
+
+ (with 
+\begin_inset Formula $PROP\cap MOD=\emptyset$
+\end_inset
+
+ to avoid confusion).
+\end_layout
+
+\begin_layout Standard
+Basic grammar of a Modal logic in BNF 
+\begin_inset Formula $\varphi\Coloneqq p|\top|\bot|\neg\varphi|\varphi\wedge\psi|\varphi\vee\psi|\varphi\to\psi|\varphi\leftrightarrow\psi|\langle m\rangle\varphi|[m]\varphi$
+\end_inset
+
+ with 
+\begin_inset Formula $p\in PROP$
+\end_inset
+
+ and 
+\begin_inset Formula $m\in MOD$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\mathcal{L}^{MOD}$
+\end_inset
+
+ be the langauge of modal logic.
+\end_layout
+
+\begin_layout Standard
+But for convenience the syntax contain all boolean operations as 
+\begin_inset Formula $\to,\leftrightarrow,\vee$
+\end_inset
+
+ even though these are redundant because 
+\begin_inset Formula $\varphi\to\psi\coloneqq\neg\varphi\wedge\psi$
+\end_inset
+
+ and 
+\begin_inset Formula $\varphi\leftrightarrow\psi\coloneqq(\varphi\to\psi)\wedge(\psi\to\varphi)$
+\end_inset
+
+ and 
+\begin_inset Formula $\varphi\vee\psi\coloneqq\neg(\neg\varphi\wedge\neg\psi)$
+\end_inset
+
+ and even
+\begin_inset Formula $\langle m\rangle\varphi\coloneqq\neg[m]\neg\varphi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $|M|=1$
+\end_inset
+
+, its written 
+\begin_inset Formula $\Box,\Diamond$
+\end_inset
+
+ instead of 
+\begin_inset Formula $[m],\langle m\rangle$
+\end_inset
+
+ for the single 
+\begin_inset Formula $m\in M$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+A Kripke model 
+\begin_inset Formula $\mathfrak{M}$
+\end_inset
+
+ for this basic modal language (wherer 
+\begin_inset Formula $PROP$
+\end_inset
+
+ and 
+\begin_inset Formula $MOD$
+\end_inset
+
+ are fixed) is 
+\begin_inset Formula $\mathfrak{M}=(W,\underset{m\in MOD}{\left\{ R^{m}\right\} },V)$
+\end_inset
+
+ where 
+\begin_inset Formula $W$
+\end_inset
+
+ is the so called set of 
+\series bold
+points
+\series default
+ or 
+\series bold
+worlds
+\series default
+.
+ The binary relations 
+\begin_inset Formula $\forall m\in MOD:R^{m}:\subseteq W\times W$
+\end_inset
+
+ on 
+\begin_inset Formula $W$
+\end_inset
+
+.
+ And the valuation function 
+\begin_inset Formula $V:PROP\to2^{W}$
+\end_inset
+
+ that assigns to each propositional symbol a subset of 
+\begin_inset Formula $W$
+\end_inset
+
+.
+ 
+\begin_inset Formula $V(p)$
+\end_inset
+
+ for a propositional symbol 
+\begin_inset Formula $p\in PROP$
+\end_inset
+
+ denotes the set of points where 
+\begin_inset Formula $p$
+\end_inset
+
+ is true.
+ The tuple of 
+\begin_inset Formula $(W,\underset{m\in MOD}{\left\{ R^{m}\right\} })$
+\end_inset
+
+ is called a 
+\series bold
+frame
+\series default
+, again if 
+\begin_inset Formula $|M|=1$
+\end_inset
+
+, the notation of the frame is 
+\begin_inset Formula $(W,R)$
+\end_inset
+
+ and for the model is 
+\begin_inset Formula $(W,R,V)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Let a model 
+\begin_inset Formula $\mathfrak{M}=(W,\underset{m\in MOD}{\left\{ R^{m}\right\} },V)$
+\end_inset
+
+ and a point 
+\begin_inset Formula $w\in W$
+\end_inset
+
+.
+ The inductive definition for a formula 
+\begin_inset Formula $\varphi\in\mathcal{L}^{MOD}$
+\end_inset
+
+ to be called 
+\series bold
+satisfied
+\series default
+ or 
+\emph on
+true
+\emph default
+ in 
+\begin_inset Formula $\mathfrak{M}$
+\end_inset
+
+ at 
+\begin_inset Formula $w$
+\end_inset
+
+, symbolized by 
+\begin_inset Formula $\mathfrak{M},w\models\varphi$
+\end_inset
+
+ is given in following:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\mathfrak{M},w\models p & :\Leftrightarrow & w\in V(p)\\
+\mathfrak{M},w\models\top & :\Leftrightarrow & \text{always}\\
+\mathfrak{M},w\models\bot & :\Leftrightarrow & \text{never}\\
+\mathfrak{M},w\models\neg\varphi & :\Leftrightarrow & \mathfrak{M},w\nvDash\varphi\\
+\mathfrak{M},w\models\varphi\wedge\psi & :\Leftrightarrow & \mathfrak{M},w\models\varphi\wedge\mathfrak{M},w\models\psi\\
+\mathfrak{M},w\models[m]\varphi & :\Leftrightarrow & \forall v\in W:((w,v)\in R^{m}\Rightarrow\mathfrak{M},v\models\varphi)\\
+\mathfrak{M},w\models\langle m\rangle\varphi & :\Leftrightarrow & \exists v\in W:((w,v)\in R^{m}\Rightarrow\mathfrak{M},v\models\varphi)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathfrak{M},w\models\langle m\rangle\varphi:\Leftrightarrow\exists v\in W:((w,v)\in R^{m}\wedge\mathfrak{M},v\models\varphi)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A formula 
+\begin_inset Formula $\varphi\in\mathcal{L}^{MOD}$
+\end_inset
+
+ is called 
+\series bold
+gobally satisfied in 
+\begin_inset Formula $\mathfrak{M}$
+\end_inset
+
+
+\series default
+, symbolized by 
+\begin_inset Formula $\mathfrak{M}\models\varphi$
+\end_inset
+
+ if 
+\begin_inset Formula $\forall m\in M\ :\ \mathfrak{M},w\models\varphi$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+If for all Models 
+\begin_inset Formula $\mathfrak{M}$
+\end_inset
+
+ a formula 
+\begin_inset Formula $\varphi\in\mathcal{L}^{MOD}$
+\end_inset
+
+ is globally satisfied, 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ is called 
+\series bold
+valid
+\series default
+, this is symbolized by 
+\begin_inset Formula $\models\varphi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+A formula 
+\begin_inset Formula $\varphi\in\mathcal{L}^{MOD}$
+\end_inset
+
+ is called 
+\series bold
+satisfiable in a model 
+\begin_inset Formula $\mathfrak{M}$
+\end_inset
+
+
+\series default
+, if 
+\begin_inset Formula $\exists w\in W\ :\ \mathfrak{M},w\models\varphi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+A formula 
+\begin_inset Formula $\varphi\in\mathcal{L}^{MOD}$
+\end_inset
+
+ is called 
+\series bold
+satisfiable
+\series default
+, if there exists a 
+\begin_inset Formula $\mathfrak{M}$
+\end_inset
+
+ for which there exists a 
+\begin_inset Formula $w\in W$
+\end_inset
+
+ so that 
+\begin_inset Formula $\mathfrak{M},w\models\varphi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+A set of formulas 
+\begin_inset Formula $\Gamma\subseteq\mathcal{L}^{MOD}$
+\end_inset
+
+ is called 
+\series bold
+satisfiable in a model 
+\begin_inset Formula $\mathfrak{M}$
+\end_inset
+
+
+\series default
+, symbolized by 
+\begin_inset Formula $\mathfrak{M},w\models\Gamma$
+\end_inset
+
+, if 
+\begin_inset Formula $\forall\psi\in\Gamma:\exists w\in W\ :\ \mathfrak{M},w\models\psi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+A set of formulas 
+\begin_inset Formula $\Gamma\subseteq\mathcal{L}^{MOD}$
+\end_inset
+
+ is called 
+\series bold
+satisfiable
+\series default
+, symbolized by 
+\begin_inset Formula $\models\Gamma$
+\end_inset
+
+, if there exists a 
+\begin_inset Formula $\mathfrak{M}$
+\end_inset
+
+ for which there exists a 
+\begin_inset Formula $w\in W$
+\end_inset
+
+ so that 
+\begin_inset Formula $\forall\psi\in\Gamma:\mathfrak{M},w\models\psi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+For 
+\series bold
+
+\begin_inset Formula $\Gamma\cup\left\{ \varphi\right\} \subseteq\mathcal{L}^{MOD}$
+\end_inset
+
+
+\series default
+ the formula 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ is called a 
+\series bold
+semantic consequence of a set of formulas
+\series default
+, symbolized by 
+\begin_inset Formula $\Gamma\models\varphi$
+\end_inset
+
+, if for all models 
+\begin_inset Formula $\mathfrak{M}$
+\end_inset
+
+ and for all 
+\begin_inset Formula $w\in W$
+\end_inset
+
+ it is that 
+\begin_inset Formula $\models\Gamma\Rightarrow\models\varphi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Wissenslogik
+\end_layout
+
+\begin_layout Standard
+Epistemologie ist die Lehre vom Wissen.
+ Die epistemische Logik betrachtet das Wissen vom Standpunkt einer formalen
+ Logik.
+ Ein Hauptanliegen einer Logik des Wissens ist es, die Eigenschaften des
+ Wissens formal zu untersuchen und ein System der Wissenslogik
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Der Begriff 
+\begin_inset Quotes gld
+\end_inset
+
+Wissenslogik
+\begin_inset Quotes grd
+\end_inset
+
+ ist die sinnbildliche Übersetzung des Begriffs 
+\begin_inset Quotes gld
+\end_inset
+
+epistemic logic
+\begin_inset Quotes grd
+\end_inset
+
+ aus dem Englischen.
+\end_layout
+
+\end_inset
+
+ zu Axiomatisieren.
+\end_layout
+
+\begin_layout Standard
+Eine Hauptanwendung der Wissenslogik ist die Untersuchung des Wissens einer
+ Menge sogenannter Agenten.
+ Man spricht auch von einer Gruppe von Agenten und von Multi-Agenten-Systemen.
+ 
+\end_layout
+
+\begin_layout Standard
+Das Wissen eines Agenten, enthält dabei wahre Fakten über die Welt, als
+ auch Wissen über andere Agenten der Gruppe umfassen.
+ Es ist nicht selbstverständlich, dass alle Agenten einer Gruppe das gleiche
+ Wissen haben.
+ In einer Gruppe von Agenten, kann es Agenten geben, welche Wissen, z.B.
+ über andere Agenten haben, welches andere Agenten nicht haben.
+ Weiß jeder Agent einer Gruppe einen Fakt 
+\begin_inset Formula $\varphi$
+\end_inset
+
+, so gehört 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ zum sogenannten gemeinsamen Wissen (Engl.
+ Common Knowledge).
+ Das Gegenstück zum gemeinsamen Wissen ist das verteilte Wissen.
+ Das Wissen 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ ist über die Agenten einer Gruppe verteilt, wenn jeder Agent der Gruppe
+ einen Teil von 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ weiß und es durch Zusammenlegen des Teilwissens aller Agenten möglich ist,
+ die Wahrheit von 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ festzustellen.
+ Üblicherweise unterscheidet sich das Wissen der Agenten eines Multi-Agenten-Sys
+tems.
+\end_layout
+
+\begin_layout Standard
+Das Wissen von Agenten einer Gruppe unterliegt unter Umständen Dynamiken,
+ d.h.
+ es verändert sich über die Zeit und hat damit einen Zustand.
+ Von Interesse ist dabei, wie sich dieser Zustand des Wissens einer Gruppe
+ in der Wissenslogik beschreiben und untersuchen lässt.
+\end_layout
+
+\begin_layout Standard
+Dem Wissen eines Agenten steht gegenüber, das ein Agent eine Sache für möglich
+ hält.
+ Um diese Unterscheidung zu treffen, wird ein semantisches Model möglicher
+ Welten eingeführt.
+ Man spricht davon, dass ein Agent einen Fakt 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ genau dann weiß, wenn 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ in allen Welten wahr ist, welche der Agent für möglich hält.
+ Eine mögliche Welt meint dabei intuitiv die möglichen Zustände des Wissens
+ über Dinge.
+ Hält ein Agent eine Sache 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ für möglich, so gibt es eine Welt, von welcher der Agent nicht weiß ob
+ 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ in dieser wahr oder falsch ist.
+ Dies deck sich mit dem intuitiven Verständnis vom Wissen, denn würde ein
+ Agenten 
+\begin_inset Formula $A$
+\end_inset
+
+ einen Fakt 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ wissen und ein anderer Agent 
+\begin_inset Formula $B$
+\end_inset
+
+ einen Fakt 
+\begin_inset Formula $\neg\varphi$
+\end_inset
+
+ wissen, so könnte das Wissen beider Agenten nicht die selbe Welt betreffen
+ da nicht gleichzeitig 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ und 
+\begin_inset Formula $\neg\varphi$
+\end_inset
+
+ wahr sein kann.
+\end_layout
+
+\begin_layout Standard
+Die Begriffe werden nun präzisiert und formal eingeführt.
+\end_layout
+
+\begin_layout Standard
+Die Wissenslogik ist eine Modallogik
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BlackburnPatrick2002"
+
+\end_inset
+
+.
+ Dabei steht die Menge 
+\begin_inset Formula $\Phi$
+\end_inset
+
+ der primitiven Aussagen (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Primitive-Aussagen"
+
+\end_inset
+
+) für grundlegende Aussagen über die Welt die wahr oder falsch sein können.
+\end_layout
+
+\begin_layout Standard
+Die Sprache 
+\begin_inset Formula $\mathcal{L}_{n}^{K}(\Phi)$
+\end_inset
+
+ der Wissenslogik erweitert die Sprache 
+\begin_inset Formula $\mathcal{L}^{prop}(\Phi)$
+\end_inset
+
+ der Aussagenlogik um modallogische Wissensoperatoren.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "FaginHalpernMosesVardiReasoningAboutKnowledge2004"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Definition
+
+\series bold
+Die Sprache 
+\lang english
+
+\begin_inset Formula $\mathcal{L}_{n}^{K}(\Phi)$
+\end_inset
+
+
+\lang ngerman
+ der Wissenslogik
+\series default
+
+\begin_inset CommandInset label
+LatexCommand label
+name "epistemic-language"
+
+\end_inset
+
+.
+ Sei 
+\begin_inset Formula $\Phi$
+\end_inset
+
+ eine Menge primitiver Aussagen (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Primitive-Aussagen"
+
+\end_inset
+
+).
+ Sei 
+\begin_inset Formula $\mathcal{L}^{prop}(\Phi)$
+\end_inset
+
+ die Sprache Aussagenlogik (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Die-Sprache-der-Aussagenlogik"
+
+\end_inset
+
+).
+ Sei 
+\begin_inset Formula $K_{1},\cdots,K_{n}$
+\end_inset
+
+ eine Menge modallogischer Operatoren.
+ Die Sprache 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+
+\begin_inset Formula $\mathcal{L}_{n}^{K}(\Phi)$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang ngerman
+ der Wissenslogik ist folgend definiert:
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\begin{eqnarray*}
+\text{für alle }\varphi\in\mathcal{L}^{prop}(\Phi) & :\Longleftrightarrow & \thinspace\varphi\in\mathcal{L}_{n}^{K}(\Phi)\\
+\varphi\in\mathcal{L}_{n}^{K}(\Phi) & :\Longleftrightarrow & \neg\varphi\in\mathcal{L}_{n}^{K}(\Phi)\\
+\varphi\in\mathcal{L}_{n}^{K}(\Phi) & :\Longleftrightarrow & K_{i}\varphi\in\mathcal{L}_{n}^{K}(\Phi)\text{ für alle }i=1,\cdots,n\\
+\varphi,\psi\in\mathcal{L}_{n}^{K}(\Phi) & :\Longleftrightarrow & (\varphi\wedge\psi)\in\mathcal{L}_{n}^{K}(\Phi)\text{ und }(\varphi\vee\psi)\in\mathcal{L}_{n}^{K}(\Phi)\text{ und }\\
+ &  & (\varphi\Rightarrow\psi)\in\mathcal{L}_{n}^{K}(\Phi)\text{ und }(\varphi\Leftrightarrow\psi)\in\mathcal{L}_{n}^{K}(\Phi)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Es gelten außerdem folgende, abkürzende Schreibweisen und Vereinbarungen
+\begin_inset CommandInset label
+LatexCommand label
+name "epistemic-language-abkürzungen"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Ist 
+\begin_inset Formula $\varphi\vee\psi\in\mathcal{L}_{n}^{K}(\Phi)$
+\end_inset
+
+ kann ersetzt werden durch 
+\begin_inset Formula $\neg(\neg\varphi\wedge\neg\psi)\in\mathcal{L}_{n}^{K}(\Phi)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Die Formel 
+\begin_inset Formula $\varphi\Rightarrow\psi\in\mathcal{L}_{n}^{K}(\Phi)$
+\end_inset
+
+ kann ersetzt werden durch 
+\begin_inset Formula $(\neg\varphi\vee\psi)\in\mathcal{L}_{n}^{K}(\Phi)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Die Formel 
+\begin_inset Formula $\varphi\Leftrightarrow\psi\in\mathcal{L}_{n}^{K}(\Phi)$
+\end_inset
+
+ kann ersetzt werden durch 
+\begin_inset Formula $(\varphi\Rightarrow\psi)\wedge(\psi\Rightarrow\varphi)\in\mathcal{L}_{n}^{K}(\Phi)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Der Wahrheitswert 
+\emph on
+wahr
+\emph default
+ ist mittels einer fest gewählten Aussage 
+\begin_inset Formula $\varphi\in\mathcal{L}^{prop}(\Phi)$
+\end_inset
+
+ als Tautologie 
+\begin_inset Formula $\top\in\mathcal{L}_{n}^{K}(\Phi)\coloneqq\varphi\vee\neg\varphi$
+\end_inset
+
+ definiert.
+\end_layout
+
+\begin_layout Itemize
+Der Wahrheitswert 
+\emph on
+falsch
+\emph default
+ ist definiert als 
+\begin_inset Formula $\bot\in\mathcal{L}_{n}^{K}(\Phi)\coloneqq\neg\top$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Eine Formel 
+\begin_inset Formula $K_{1}\varphi$
+\end_inset
+
+ meint nur, dass Agent 
+\begin_inset Formula $1$
+\end_inset
+
+ weiß, dass 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ der Fall ist.
+ Aufgrund der induktiven Definition kann 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ eine Aussage der primitiven Aussagen 
+\begin_inset Formula $\Phi$
+\end_inset
+
+ sein, als auch eine Aussage über das wissen eines anderen Agenten wie bspw.
+ 
+\begin_inset Formula $\varphi\coloneqq K_{2}\psi$
+\end_inset
+
+.
+ Womit sich 
+\begin_inset Formula $K_{1}K_{2}\psi$
+\end_inset
+
+ ergibt und meint, dass Agent 
+\begin_inset Formula $1$
+\end_inset
+
+ weiß, dass Agent 
+\begin_inset Formula $2$
+\end_inset
+
+ weiß, dass 
+\begin_inset Formula $\psi$
+\end_inset
+
+ der Fall ist.
+ Damit lassen sich komplizierte Zusammenhänge darstellen.
+ Beispielsweise meint 
+\begin_inset Formula $K_{1}K_{2}\varphi\wedge K_{2}K_{1}K_{2},$
+\end_inset
+
+ dass Agent 
+\begin_inset Formula $1$
+\end_inset
+
+ weiß, dass Agent 
+\begin_inset Formula $2$
+\end_inset
+
+ weiß, dass 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ der Fall ist.
+ Außerdem weiß Agent 
+\begin_inset Formula $2$
+\end_inset
+
+ nicht, dass Agent 
+\begin_inset Formula $1$
+\end_inset
+
+ weiß, dass Agent 
+\begin_inset Formula $2$
+\end_inset
+
+ weiß, dass 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ der Fall ist.
+\end_layout
+
+\begin_layout Standard
+Wie lässt sich ausdrücken, dass ein Agent eine Sache nicht weiß und nur
+ für möglich hält? Die zur modallogischen Operation des Wissens duale Operation,
+ ist es, eine Sache für möglich zu halten.
+ Ein Agent hält ein 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ genau dann für möglich, wenn er weder 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ noch 
+\begin_inset Formula $\neg\varphi$
+\end_inset
+
+ weiß.
+ In Formeln ausgedrückt würde das Duale zu 
+\begin_inset Formula $K_{i}\varphi$
+\end_inset
+
+ lauten: 
+\begin_inset Formula $\neg K_{i}\neg\varphi$
+\end_inset
+
+.
+ Agent 
+\begin_inset Formula $i$
+\end_inset
+
+ weiß nicht, dass 
+\begin_inset Formula $\neg\varphi$
+\end_inset
+
+ der Fall ist.
+ Es gilt der Zusammenhang: 
+\begin_inset Formula $K_{i}\varphi\Leftrightarrow\neg K_{i}\neg\varphi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Eine natürlichsprachliche Aussage könnte bspw.
+ lauten 
+\begin_inset Quotes gld
+\end_inset
+
+Alex weiß nicht, ob Rom in Italien liegt.
+\begin_inset Quotes grd
+\end_inset
+
+, d.h.
+ wenn er nicht weiß ob die Aussage 
+\begin_inset Quotes gld
+\end_inset
+
+Rom liegt in Italien
+\begin_inset Quotes grd
+\end_inset
+
+ falsch ist, weiß er auch nicht ob die Aussage wahr ist, d.h.
+ er hält insgesamt es sowohl 
+\begin_inset Quotes gld
+\end_inset
+
+Rom liegt in Italien
+\begin_inset Quotes grd
+\end_inset
+
+, als auch 
+\begin_inset Quotes gld
+\end_inset
+
+Rom liegt nicht in Italien
+\begin_inset Quotes grd
+\end_inset
+
+ für möglich, dies wird genau durch 
+\begin_inset Formula $\neg K_{ALEX}\neg\text{Rom liegt in Italien}$
+\end_inset
+
+ ausgedrückt.
+\end_layout
+
+\begin_layout Standard
+Wie eingangs formuliert, möchte man neben dem Agentenwissen, welches primitiven
+ Aussagen 
+\begin_inset Formula $\Phi$
+\end_inset
+
+ und Wissen über weiterer Agenten betrifft, festhalten, dass ein Agent mögliche
+ Welten in betrachtet zieht, in denen potentiell wahre Aussagen Aussagen
+ festgehalten werden.
+ 
+\end_layout
+
+\begin_layout Standard
+Diese Mögliche-Welten-Semantik ist ein formales Modell und wird durch Kripke-Str
+ukturen formalisiert.
+ Da Model legt fest, ob eine Formel 
+\begin_inset Formula $\varphi\in\mathcal{L}_{n}^{K}(\Phi)$
+\end_inset
+
+ der Sprache der Wissenslogik, wahr oder falsch ist.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Definition
+Eine Kripke-Struktur
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Die Definition einer Struktur ist bspw.
+ in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Rautenberg2013"
+
+\end_inset
+
+ angegeben.
+\end_layout
+
+\end_inset
+
+ für das Wissens von 
+\begin_inset Formula $n$
+\end_inset
+
+ Agenten mit einer Menge 
+\begin_inset Formula $\Phi$
+\end_inset
+
+ primitiver Aussagen ist ein Tupel 
+\begin_inset Formula $M=(S,\mathcal{K}_{1},\cdots,\mathcal{K}_{n},\pi)$
+\end_inset
+
+ mit folgenden Komponenten:
+\end_layout
+
+\begin_layout Itemize
+Der Menge 
+\begin_inset Formula $S$
+\end_inset
+
+ der Welten (
+\begin_inset Formula $S$
+\end_inset
+
+ wird, je nach Kontext auch Welten, Punkte oder Zustände bezeichnet).
+\end_layout
+
+\begin_layout Itemize
+Für alle 
+\begin_inset Formula $i=1,\cdots,n$
+\end_inset
+
+ ist 
+\begin_inset Formula $\mathcal{K}_{i}:\subseteq S\times S$
+\end_inset
+
+ eine binäre Relation über 
+\begin_inset Formula $S$
+\end_inset
+
+ mit 
+\begin_inset Formula $\mathcal{K}_{i}(s)\coloneqq\left\{ s^{'}|(s,s^{'})\in\mathcal{K}_{i}\right\} $
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+Die Interpretation 
+\begin_inset Formula $\pi:S\to\Phi\to\left\{ \top,\bot\right\} $
+\end_inset
+
+ ist eine Abbildung und weist mit 
+\begin_inset Formula $\pi(s)(p)\in\left\{ \top,\bot\right\} $
+\end_inset
+
+ jedem Zustand 
+\begin_inset Formula $s\in S$
+\end_inset
+
+ und jeder primitive Aussage 
+\begin_inset Formula $p\in\Phi$
+\end_inset
+
+, genau einen Wahrheitswert aus 
+\begin_inset Formula $\left\{ \top,\bot\right\} $
+\end_inset
+
+ zu.
+\end_layout
+
+\begin_layout Plain Layout
+Ein Tupel 
+\begin_inset Formula $(S,\mathcal{K}_{1},\cdots,\mathcal{K}_{n})$
+\end_inset
+
+ aus Zuständen und 
+\begin_inset Formula $n$
+\end_inset
+
+ binären Relationen 
+\begin_inset Formula $\mathcal{K}_{1},\cdots,\mathcal{K}_{n}$
+\end_inset
+
+ wird allgemein als Kripke-Rahmen, sowie im Umfeld der Wissenslogik als
+ wissenslogischer Rahmen
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Engl.: epistemic Frame
+\end_layout
+
+\end_inset
+
+ bezeichnet.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Die Relationen 
+\begin_inset Formula $\mathcal{K}_{i}$
+\end_inset
+
+ für alle 
+\begin_inset Formula $i=1,\cdots,n$
+\end_inset
+
+ werden auch Möglichkeitsrelation genannt.
+ Ein 
+\begin_inset Formula $\mathcal{K}_{i}$
+\end_inset
+
+ hält die Welten fest, welche ein Agenten 
+\begin_inset Formula $i$
+\end_inset
+
+, ausgebend von seinen aktuellen Welt für möglich hält.
+ Genauer ist 
+\begin_inset Formula $(s,t)\in\mathcal{K}_{i}$
+\end_inset
+
+ genau dann, wenn der Agent 
+\begin_inset Formula $i$
+\end_inset
+
+ in einer Welt 
+\begin_inset Formula $s$
+\end_inset
+
+, die Welt 
+\begin_inset Formula $t$
+\end_inset
+
+ für möglich hält.
+ Die Relationen 
+\begin_inset Formula $\mathcal{K}_{i}$
+\end_inset
+
+ können bezüglich ihrer natürlichen Eigenschaften eingeschränkt werden.
+ Die Einschränkungen halten einige Annahmen über die Eigenschaften der Möglichke
+itsrelation eines Agenten fest.
+ Werden die Eigenschaften der Relationen 
+\begin_inset Formula $\mathcal{K}_{i}$
+\end_inset
+
+ ganz allgemein getroffen, hat dies einen wesentlichen Einfluss auf die
+ Eigenschaften der sich ergebenden Wissenslogik.
+ Die gewählten Eigenschaften werden üblicherweise entsprechend der speziellen
+ Notwendigkeiten der gewünschten Wissenslogik getroffen.
+ Es hat sich, insbesondere im Rahmen verteilter Anwendungen als sinnvoll
+ erwiesen, die 
+\begin_inset Formula $\mathcal{K}_{i}$
+\end_inset
+
+ als Äquivalenzrelationen, d.h.
+ reflexiv, euklidisch und transitiv zu wählen.
+ Um den Zusammenhang der Eigenschaften der Wissenslogik mit den Eigenschaften
+ der Relationen 
+\begin_inset Formula $\mathcal{K}_{i}$
+\end_inset
+
+ ganz allgemein untersuchen zu können, werden 
+\begin_inset Formula $\mathcal{K}_{i}$
+\end_inset
+
+ vorerst nur als binäre Relationen gewählt.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Definition*
+
+\series bold
+\begin_inset CommandInset label
+LatexCommand label
+name "Eigenschaften-binärer-Relationen"
+
+\end_inset
+
+Eigenschaften binärer Relationen.
+ 
+\series default
+Sei 
+\begin_inset Formula $R:\subseteq A\times A$
+\end_inset
+
+ eine binäre Relation über einer Menge 
+\begin_inset Formula $A$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $R$
+\end_inset
+
+ heißt reflexiv, genau dann, wenn für alle 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ gilt, dass 
+\begin_inset Formula $(a,a)\in R$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $R$
+\end_inset
+
+ heißt symmetrisch, genau dann wenn für alle 
+\begin_inset Formula $s,t\in A$
+\end_inset
+
+ gilt, dass 
+\begin_inset Formula $(s,t)\in R\Leftrightarrow(t,s)\in R$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $R$
+\end_inset
+
+ heißt transitiv, genau dann wenn für alle 
+\begin_inset Formula $s,t,u\in A$
+\end_inset
+
+ gilt, dass mit 
+\begin_inset Formula $(s,t)\in R$
+\end_inset
+
+ und 
+\begin_inset Formula $(t,u)\in R$
+\end_inset
+
+ folgt 
+\begin_inset Formula $(s,u)\in R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $R$
+\end_inset
+
+ heißt euklidisch, genau dann wenn für alle 
+\begin_inset Formula $s,t,u\in A$
+\end_inset
+
+ gilt, dass mit 
+\begin_inset Formula $(s,t)\in R$
+\end_inset
+
+ und 
+\begin_inset Formula $(s,u)\in R$
+\end_inset
+
+ folgt 
+\begin_inset Formula $(t,u)\in R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $R$
+\end_inset
+
+ heißt linkstotal oder seriell, wenn für jedes 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ eine 
+\begin_inset Formula $b\in A$
+\end_inset
+
+ existiert mit 
+\begin_inset Formula $(a,b)\in R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $R$
+\end_inset
+
+ heißt Äquivalenzrelation, wenn 
+\begin_inset Formula $R$
+\end_inset
+
+ reflexiv, symmetrisch und transitiv ist.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bronstein2008"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Theorem
+Sei 
+\begin_inset Formula $R:\subseteq A\times A$
+\end_inset
+
+ eine Relation.
+ Ist 
+\begin_inset Formula $R$
+\end_inset
+
+ reflexiv, dann ist 
+\begin_inset Formula $R$
+\end_inset
+
+ auch linkstotal / seriell.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Proof
+Sei 
+\begin_inset Formula $R:\subseteq A\times A$
+\end_inset
+
+ eine binäre, reflexive Relation über einer Menge 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ Es existiert für jede 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ ein 
+\begin_inset Formula $b\in A$
+\end_inset
+
+ mit 
+\begin_inset Formula $b\coloneqq a$
+\end_inset
+
+, so dass 
+\begin_inset Formula $(a,b)\in R$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Auf Basis der Kripke-Strukturen wird nun definiert, wann eine Formel 
+\begin_inset Formula $\varphi\in\mathcal{L}_{n}^{K}(\Phi)$
+\end_inset
+
+ für eine Welt in einer Struktur wahr ist.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Definition
+\begin_inset CommandInset label
+LatexCommand label
+name "Kripke-Struktur"
+
+\end_inset
+
+Sei eine Kripke-Struktur 
+\begin_inset Formula $M=(S,\mathcal{K}_{1},\cdots,\mathcal{K}_{n},\pi)$
+\end_inset
+
+, eine Welt 
+\begin_inset Formula $s\in S$
+\end_inset
+
+, die Menge
+\begin_inset Formula $\Phi$
+\end_inset
+
+ der primitiven Aussagen sowie Formeln 
+\begin_inset Formula $\varphi,\psi\in\mathcal{L}_{n}^{K}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+Die Relation 
+\begin_inset Formula $(M,s)\models\varphi$
+\end_inset
+
+ ist induktiv über der Struktur von 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ definiert: 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+(M,s)\models\varphi\text{ (für }\varphi\in\Phi\text{)} & :\Longleftrightarrow & \pi(s)(\varphi)=\top\\
+(M,s)\models\neg\varphi & :\Longleftrightarrow & (M,s)\nvDash\varphi\\
+(M,s)\models\varphi\wedge\psi & :\Longleftrightarrow & (M,s)\models\varphi\text{ und }(M,s)\models\psi\\
+(M,s)\models K_{i}\varphi & :\Longleftrightarrow & (M,t)\models\varphi\text{für alle }t\in\mathcal{K}_{i}(s)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Gilt 
+\begin_inset Formula $(M,s)\models\varphi$
+\end_inset
+
+, so spricht man davon, dass 
+\begin_inset Quotes gld
+\end_inset
+
+
+\begin_inset Formula $\varphi\in\mathcal{L}_{n}^{K}(\Phi)$
+\end_inset
+
+ wahr ist in der Welt 
+\begin_inset Formula $s$
+\end_inset
+
+ des Models 
+\begin_inset Formula $M$
+\end_inset
+
+
+\begin_inset Quotes grd
+\end_inset
+
+ oder 
+\begin_inset Quotes gld
+\end_inset
+
+Das Model 
+\begin_inset Formula $(M,s)$
+\end_inset
+
+ erfüllt 
+\begin_inset Formula $\varphi\in\mathcal{L}_{n}^{K}$
+\end_inset
+
+
+\begin_inset Quotes grd
+\end_inset
+
+ oder einfach 
+\begin_inset Quotes gld
+\end_inset
+
+
+\begin_inset Formula $\varphi\in\mathcal{L}_{n}^{K}$
+\end_inset
+
+ erfüllt 
+\begin_inset Formula $(M,s)$
+\end_inset
+
+
+\begin_inset Quotes grd
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Die letzte Klausel hält fest, dass ein Agent 
+\begin_inset Formula $i$
+\end_inset
+
+ genau dann 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ weiß, wenn 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ in allen Welten wahr ist, die Agent 
+\begin_inset Formula $i$
+\end_inset
+
+ für möglich hält.
+ 
+\end_layout
+
+\begin_layout Standard
+Eine Formel der Aussagenlogik ist für eine Belegung immer entweder wahr
+ oder falsch.
+ Hingegen hängt die Wahrheit einer Formel der Wissenslogik von einem Paar
+ 
+\begin_inset Formula $(M,s)$
+\end_inset
+
+, d.h.
+ einer konkreten Kripke-Struktur 
+\begin_inset Formula $M$
+\end_inset
+
+ und einer Welt 
+\begin_inset Formula $s$
+\end_inset
+
+ ab.
+ Mit der Definition der Kripke-Struktur liegt eine Vorschrift vor, um zu
+ bestimmen, ob eine Formel wahr ist oder nicht.
+\end_layout
+
+\begin_layout Standard
+Kripke-Strukturen lassen sich als gerichteter Graph mit benannten Kanten
+ darstellen.
+ Dabei sind die Knoten die Welten aus 
+\begin_inset Formula $S$
+\end_inset
+
+, der Name eines Knoten 
+\begin_inset Formula $s\in S$
+\end_inset
+
+ beschreibt, welche primitiven Aussagen aus 
+\begin_inset Formula $\Phi$
+\end_inset
+
+ in 
+\begin_inset Formula $s$
+\end_inset
+
+ wahr und falsch sind.
+ Kanten zwischen zwei Knoten werden mit einer Menge von Agenten benannt.
+ Dabei enthält der Name der Kante 
+\begin_inset Formula $s\in S$
+\end_inset
+
+ nach 
+\begin_inset Formula $t\in S$
+\end_inset
+
+ den Index 
+\begin_inset Formula $i$
+\end_inset
+
+ eines Agenten 
+\begin_inset Formula $i$
+\end_inset
+
+, genau dann wenn 
+\begin_inset Formula $(s,t)\in\mathcal{K}_{i}$
+\end_inset
+
+ ist.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Example
+Sei eine Menge primitiver Aussagen 
+\begin_inset Formula $\Phi\coloneqq\left\{ p\right\} $
+\end_inset
+
+ und 
+\begin_inset Formula $n=2$
+\end_inset
+
+ Agenten.
+ Sei außerdem eine Struktur 
+\begin_inset Formula $M=(S,\mathcal{K}_{1},\mathcal{K}_{2},\pi)$
+\end_inset
+
+ mit 
+\begin_inset Formula $S=\left\{ s,t,u\right\} $
+\end_inset
+
+ und eine Interpretation 
+\begin_inset Formula $\pi$
+\end_inset
+
+ mit 
+\begin_inset Formula $\pi(s)(p)=\pi(u)(p)=\top$
+\end_inset
+
+ und 
+\begin_inset Formula $\pi(t)(p)=\bot$
+\end_inset
+
+ sowie zwei Äquivalenzrelationen mit 
+\begin_inset Formula $\mathcal{K}_{1}\coloneqq\left\{ (s,s),(s,t),(t,s),(t,t),(t,u)\right\} $
+\end_inset
+
+ und 
+\begin_inset Formula $\mathcal{K}_{2}\coloneqq\left\{ (s,s),(s,u),(t,t),(u,s),(u,u)\right\} $
+\end_inset
+
+.
+ Daraus ergibt sich folgender Graph:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename graphics/kripke_graph_example.gv.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Es ist gut zu erkennen wie die Eigenschaften der Äquivalenzrelationen repräsenti
+ert sind.
+ Die Reflexivität zeigt sich dadurch, dass jeder Knoten zu sich selbst eine
+ Kante besitzt.
+ Die Symmetrie ist durch die bidirektionalen Kanten erkennbar.
+ Die Transitivität ist dadurch sichtbar, dass zwischen allen in Beziehung
+ stehenden Knoten ein Pfad existiert.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Analog zu den Eigenschaften von Formeln der Aussagenlogik, haben Formeln
+ der Wissenslogik einige grundlegende Eigenschaften.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Definition
+
+\series bold
+\emph on
+\begin_inset CommandInset label
+LatexCommand label
+name "Eigenschaften-wissenslogischer-Formeln"
+
+\end_inset
+
+
+\emph default
+Eigenschaften wissenslogischer Formeln
+\series default
+.
+ Sei 
+\begin_inset Formula $M$
+\end_inset
+
+ eine Kripke-Struktur, 
+\begin_inset Formula $S$
+\end_inset
+
+ die Menge der Welten, 
+\begin_inset Formula $\varphi\in\mathcal{L}_{n}^{K}$
+\end_inset
+
+ eine Formel und 
+\begin_inset Formula $\Gamma\subseteq\mathcal{L}_{n}^{K}$
+\end_inset
+
+ eine Menge von Formeln sowie Klasse 
+\begin_inset Formula $\mathcal{N}$
+\end_inset
+
+ aller Kripke-Strukturen.
+\end_layout
+
+\begin_layout Enumerate
+Eine Formel 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ wird erfüllbar in 
+\begin_inset Formula $M$
+\end_inset
+
+ genannt, wenn ein 
+\begin_inset Formula $s\in S$
+\end_inset
+
+ existiert, so dass 
+\begin_inset Formula $(M,s)\models\varphi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Eine Formel 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ wird erfüllbar genannt, wenn eine eine Struktur 
+\begin_inset Formula $M$
+\end_inset
+
+ mit einer Welt 
+\begin_inset Formula $s\in S$
+\end_inset
+
+ existiert, so dass 
+\begin_inset Formula $(M,s)\models\varphi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Eine Formel 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ wird gültig in 
+\begin_inset Formula $M$
+\end_inset
+
+ genannt, symbolisiert durch 
+\begin_inset Formula $M\models\varphi$
+\end_inset
+
+, genau dann wenn für alle 
+\begin_inset Formula $s\in S$
+\end_inset
+
+ gilt, dass 
+\begin_inset Formula $(M,s)\models\varphi$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Eine Formel 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ wird gültig in 
+\begin_inset Formula $\mathcal{N}$
+\end_inset
+
+ genannt, symbolisiert durch 
+\begin_inset Formula $\mathcal{N}\models\varphi$
+\end_inset
+
+, wenn für jede Struktur 
+\begin_inset Formula $M$
+\end_inset
+
+ und jedes 
+\begin_inset Formula $s\in S$
+\end_inset
+
+ gilt, dass 
+\begin_inset Formula $(M,s)\models\varphi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Eine Menge von Formeln 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ wird erfüllbar in einem Model 
+\begin_inset Formula $M$
+\end_inset
+
+ genannt, genau dann wenn für alle 
+\begin_inset Formula $\psi\in\Gamma$
+\end_inset
+
+ gilt, dass eine Welt 
+\begin_inset Formula $s\in S$
+\end_inset
+
+ existiert mit 
+\begin_inset Formula $(M,w)\models\psi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Eine Menge von Formeln 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ wird erfüllbar genannt, wenn eine Struktur 
+\begin_inset Formula $M$
+\end_inset
+
+ mit einer Welt 
+\begin_inset Formula $s\in S$
+\end_inset
+
+ existiert, so dass für alle 
+\begin_inset Formula $\psi\in\Gamma$
+\end_inset
+
+ gilt, dass 
+\begin_inset Formula $(M,s)\models\psi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Eine Formel 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ wird semantische Konsequenz der Menge der Formeln 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ genannt, symbolisiert durch 
+\begin_inset Formula $\Gamma\models\varphi$
+\end_inset
+
+, genau dann, wenn für alle Strukturen 
+\begin_inset Formula $M$
+\end_inset
+
+ gilt, dass 
+\begin_inset Formula $\Gamma\text{ist erfüllbar in }M\Rightarrow\varphi\text{ ist erfüllbar in }M$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Aufbauend auf diesen Eigenschaften werden nun einige, das Agentenwissen
+ betreffende Eigenschaften diskutiert.
+ 
+\end_layout
+
+\begin_layout Standard
+Angenommen es gilt für einen Agenten 
+\begin_inset Formula $i$
+\end_inset
+
+ und zwei Formeln 
+\emph on
+
+\begin_inset Formula $\varphi,\psi\in\mathcal{L}_{n}^{K}$
+\end_inset
+
+
+\emph default
+, dass 
+\begin_inset Formula $\models(K_{i}\varphi\wedge K_{i}(\varphi\Rightarrow\psi))$
+\end_inset
+
+, dass also ein Agent 
+\begin_inset Formula $i$
+\end_inset
+
+, 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ weiß, als auch dass er 
+\begin_inset Formula $\varphi\Rightarrow\psi$
+\end_inset
+
+ weiß.
+ Da der Agent 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ und 
+\begin_inset Formula $\varphi\Rightarrow\psi$
+\end_inset
+
+ weiß, müssen 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ und 
+\begin_inset Formula $\varphi\Rightarrow\psi$
+\end_inset
+
+ in allen Welten wahr sein, welche der Agent für möglich hält.
+ Also muss auch 
+\begin_inset Formula $\psi$
+\end_inset
+
+ in allen Welten wahr sein, welche der Agent für möglich hält.
+ Es folgt, dass 
+\begin_inset Formula $\models(K_{i}\varphi\wedge K_{i}(\varphi\Rightarrow\psi))\Rightarrow\models K_{i}\psi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Gilt für eine Formel 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ und eine Strukturen 
+\begin_inset Formula $M$
+\end_inset
+
+, dass 
+\begin_inset Formula $M\models\varphi$
+\end_inset
+
+, so ist 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ laut Definition 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Eigenschaften-wissenslogischer-Formeln"
+
+\end_inset
+
+ in allen Welten der Struktur 
+\begin_inset Formula $M$
+\end_inset
+
+ wahr, insbesondere in den Welten die ein Agent 
+\begin_inset Formula $i$
+\end_inset
+
+ für möglich hält, d.h.
+ 
+\begin_inset Formula $M\models K_{i}\varphi$
+\end_inset
+
+.
+ Es gilt damit für alle Strukturen 
+\begin_inset Formula $M$
+\end_inset
+
+: 
+\begin_inset Formula $M\models\varphi\Rightarrow M\models K_{i}\varphi$
+\end_inset
+
+.
+ Eine Feinheit der Behauptung 
+\begin_inset Formula $M\models\varphi\Rightarrow M\models K_{i}\varphi$
+\end_inset
+
+ ist, dass mit 
+\begin_inset Formula $M\models\varphi$
+\end_inset
+
+, die Formel 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ zwar für alle Welten 
+\begin_inset Formula $s\in S$
+\end_inset
+
+ wahr in der Struktur 
+\begin_inset Formula $M$
+\end_inset
+
+ ist, es aber falsch wäre es zu behaupten, dass 
+\begin_inset Formula $\varphi\Rightarrow K_{i}\varphi$
+\end_inset
+
+.
+ Denn nicht jede wahre Aussage lässt sich aus allen Welten einer Struktur
+ herleiten.
+ 
+\end_layout
+
+\begin_layout Standard
+Sei 
+\begin_inset Formula $K_{i}\varphi$
+\end_inset
+
+ gültig, gilt also 
+\begin_inset Formula $\models K_{i}\varphi$
+\end_inset
+
+ so gilt für jede Struktur 
+\begin_inset Formula $M$
+\end_inset
+
+ und jede Welt 
+\begin_inset Formula $s\in S$
+\end_inset
+
+, dass 
+\begin_inset Formula $(M,s)\models K_{i}\varphi$
+\end_inset
+
+ und mit 
+\begin_inset Formula $(M,s)\models K_{i}\varphi:\Longleftrightarrow(M,t)\models\varphi\text{für alle }t\in\mathcal{K}_{i}(s)$
+\end_inset
+
+ aus 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Kripke-Struktur"
+
+\end_inset
+
+ folgt, dass 
+\begin_inset Formula $(M,s)\models\varphi$
+\end_inset
+
+ für alle Welten 
+\begin_inset Formula $s\in S$
+\end_inset
+
+ der Struktur 
+\begin_inset Formula $M$
+\end_inset
+
+ gilt.
+ Das heißt, dass wenn ein Agent 
+\begin_inset Formula $i$
+\end_inset
+
+ ein 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ weiß, dann ist 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ in allen Welten 
+\begin_inset Formula $S$
+\end_inset
+
+ der Struktur 
+\begin_inset Formula $M$
+\end_inset
+
+ wahr.
+\end_layout
+
+\begin_layout Standard
+Eine eher philosophisch anmutende, aber recht eingängige Forderung ist die
+ Folgende: Wenn ein Agent 
+\begin_inset Formula $i$
+\end_inset
+
+ ein 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ weiß, dann weiß er, dass er 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ weiß.
+ Weiß ein Agent 
+\begin_inset Formula $i$
+\end_inset
+
+ hingegen nicht, dass ein 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ wahr ist, dann weiß er, dass er dies nicht weiß.
+ Eine anschauliche Illustration ist die, dass ein Agent 
+\begin_inset Formula $i$
+\end_inset
+
+ eine Datenbank seines Wissens führt.
+ Weiß er 
+\begin_inset Formula $\varphi$
+\end_inset
+
+, so wird 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ in die Datenbank geschrieben.
+ Durch Nachsehen in der Datenbank weiß er außerdem, dass er 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ weiß, womit wiederum 
+\begin_inset Formula $K_{i}\varphi$
+\end_inset
+
+ in die Datenbank geschrieben wird
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Ein entscheidender Nachteil einer solchen Datenbank ist, dass sobald die
+ Datenbank den ersten Eintrag enthält, die Datenbank recht bald unendlich
+ viele Einträge enthalten würde.
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Gilt für einen Agent 
+\begin_inset Formula $i$
+\end_inset
+
+ und eine Struktur 
+\begin_inset Formula $M$
+\end_inset
+
+, dass 
+\begin_inset Formula $\mathcal{K}_{i}=\emptyset$
+\end_inset
+
+, dass der Agent also keine Welt für möglich hält, so lässt sich folgern,
+ dass 
+\begin_inset Formula $\models K_{i}\bot$
+\end_inset
+
+.
+ Gilt hingegen für einen Agenten 
+\begin_inset Formula $i$
+\end_inset
+
+ und eine Welt 
+\begin_inset Formula $s\in S$
+\end_inset
+
+ einer Struktur 
+\begin_inset Formula $M$
+\end_inset
+
+, dass 
+\begin_inset Formula $\mathcal{K}_{i}(s)\neq\emptyset$
+\end_inset
+
+, so folgt 
+\begin_inset Formula $(M,s)\models K_{i}\neg\bot$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Die betrachteten Eigenschaften sind Gegenstand zentraler Sätze der Wissenslogik
+ werden häufig als 
+\begin_inset Formula $S5$
+\end_inset
+
+-Eigenschaften bezeichnet.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Theorem
+
+\series bold
+\emph on
+\begin_inset CommandInset label
+LatexCommand label
+name "S5-Eigenschaften"
+
+\end_inset
+
+
+\begin_inset Formula $S5$
+\end_inset
+
+-Eigenschaften
+\series default
+\emph default
+.
+ Für alle Formeln 
+\begin_inset Formula $\varphi,\psi\in\mathcal{L}_{n}^{K}(\Phi)$
+\end_inset
+
+ und alle Strukturen 
+\begin_inset Formula $M$
+\end_inset
+
+ sowie alle Agenten 
+\begin_inset Formula $i=1,\cdots,n$
+\end_inset
+
+, gilt:
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\begin{eqnarray*}
+\thinspace & M\models(K_{i}\varphi\wedge K_{i}(\varphi\Rightarrow\psi))\Rightarrow K_{i}\psi & \text{(Verteilungs Axiom)}\\
+\thinspace & M\models\varphi\Rightarrow M\models K_{i}\varphi & \text{(Necessitirungs Axiom)}\\
+\text{Ist }\mathcal{K}_{i}\text{ reflexiv, so} & M\models K_{i}\varphi\Rightarrow\varphi & \text{(Wissens Axiom)}\\
+\text{Ist }\mathcal{K}_{i}\text{ transitiv, so} & M\models K_{i}\varphi\Rightarrow M\models K_{i}K_{i}\varphi & \text{(positives Introspektion Axiom)}\\
+\text{Ist }\mathcal{K}_{i}\text{ euklidisch, so} & M\models\neg K_{i}\varphi\Rightarrow M\models K_{i}\neg K_{i}\varphi & \text{(negatives Introspektion Axiom)}\\
+\text{Ist }\mathcal{K}_{i}\text{seriell, so} & M\models\neg K_{i}\bot\thinspace & \text{(Konsistenz Axiom)}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+Beweise der Sätze aus 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "S5-Eigenschaften"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset CommandInset label
+LatexCommand label
+name "Beweis-Distributions-Axiom"
+
+\end_inset
+
+Distributions Axiom: Angenommen es gilt 
+\begin_inset Formula $(M,s)\models(K_{i}\varphi\wedge K_{i}(\varphi\Rightarrow\psi))\Rightarrow K_{i}\psi$
+\end_inset
+
+, dann gilt wegen 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Kripke-Struktur"
+
+\end_inset
+
+, dass 
+\begin_inset Formula $(M,t)\models\varphi$
+\end_inset
+
+ und 
+\begin_inset Formula $(M,t)\models\varphi\Rightarrow\psi$
+\end_inset
+
+ für alle Welten 
+\begin_inset Formula $t\in\mathcal{K}_{i}(s)$
+\end_inset
+
+.
+ Aus den Definitionen 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Kripke-Struktur"
+
+\end_inset
+
+ von 
+\begin_inset Formula $\models$
+\end_inset
+
+ sowie den Vereinbarungen 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "epistemic-language-abkürzungen"
+
+\end_inset
+
+ folgt, dass aus 
+\begin_inset Formula $(M,t)\models\varphi\Rightarrow\psi$
+\end_inset
+
+ für alle 
+\begin_inset Formula $t\in\mathcal{K}_{i}(s)$
+\end_inset
+
+ gilt, dass 
+\begin_inset Formula $(M,t)\models\psi$
+\end_inset
+
+ und damit 
+\begin_inset Formula $(M,s)\models K_{i}\psi$
+\end_inset
+
+.
+ Damit folgt insgesamt 
+\begin_inset Formula $(M,s)\models(K_{i}\phi\wedge K_{i}(\phi\Rightarrow\psi))\Rightarrow K_{i}\psi$
+\end_inset
+
+ .
+ Da 
+\begin_inset Formula $(M,s)\models(K_{i}\phi\wedge K_{i}(\phi\Rightarrow\psi))\Rightarrow K_{i}\psi$
+\end_inset
+
+ wahr ist, für alle 
+\begin_inset Formula $s\in S$
+\end_inset
+
+, folgt 
+\begin_inset Formula $M\models(K_{i}\phi\wedge K_{i}(\phi\Rightarrow\psi))\Rightarrow K_{i}\psi$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset CommandInset label
+LatexCommand label
+name "Beweis-Axiom-der-Verallgemeinerung"
+
+\end_inset
+
+Necessitierungs Axiom: ...
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset CommandInset label
+LatexCommand label
+name "Beweis-Wissensaxiom"
+
+\end_inset
+
+Wissensaxiom: ...
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset CommandInset label
+LatexCommand label
+name "Beweis-Positives-Introspektionsaxiom"
+
+\end_inset
+
+Positives Introspektionsaxiom: ...
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset CommandInset label
+LatexCommand label
+name "Beweis-Negatives-Introspektionsaxiom"
+
+\end_inset
+
+Negatives Introspektionsaxiom: ...
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Die Beweise 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Beweis-Wissensaxiom"
+
+\end_inset
+
+,
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Beweis-Positives-Introspektionsaxiom"
+
+\end_inset
+
+ und 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Beweis-Negatives-Introspektionsaxiom"
+
+\end_inset
+
+ machen jeweils von nur einer der Eigenschaften aus 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Eigenschaften-binärer-Relationen"
+
+\end_inset
+
+ der Relation 
+\begin_inset Formula $\mathcal{K}_{i}$
+\end_inset
+
+ Gebrauch.
+ Die Beweise 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Beweis-Axiom-der-Verallgemeinerung"
+
+\end_inset
+
+ und 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Beweis-Distributions-Axiom"
+
+\end_inset
+
+ machen Gebrauch von der Definition der Kripke-Struktur 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Kripke-Struktur"
+
+\end_inset
+
+ und sind völlig unabhängig von den Eigenschaften von 
+\begin_inset Formula $\mathcal{K}_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Example
+Um zu illustrieren warum es im Allgemeinen sinnvoll ist, die Relationen
+ 
+\begin_inset Formula $\mathcal{K}_{i}$
+\end_inset
+
+ aus Definition 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Kripke-Struktur"
+
+\end_inset
+
+ gerade als Äquivalenzrelation zu wählen, sei folgendes Beispiel gegeben:
+\end_layout
+
+\begin_layout Example
+Angenommen wir haben ein Kartenspiel bestehend aus 
+\begin_inset Formula $3$
+\end_inset
+
+ Karten, 
+\begin_inset Formula $A,B,C$
+\end_inset
+
+, einen Agenten 
+\begin_inset Formula $1$
+\end_inset
+
+ und einen Agenten 
+\begin_inset Formula $2$
+\end_inset
+
+.
+ Jeder der Agenten bekommt eine Karte ohne zu sehen welche Karte der andere
+ hat.
+ Die verbleibende Karte wird verdeckt abgelegt.
+ Die möglichen Welten ergeben sich nun aus den möglichen Verteilungen der
+ Karten 
+\begin_inset Formula $A,B,C$
+\end_inset
+
+ an die Agenten 
+\begin_inset Formula $1$
+\end_inset
+
+ und 
+\begin_inset Formula $2$
+\end_inset
+
+.
+ D.h.
+ in einer Welt 
+\begin_inset Formula $(A,B)$
+\end_inset
+
+ hat Agent 
+\begin_inset Formula $1$
+\end_inset
+
+ Karte 
+\begin_inset Formula $A$
+\end_inset
+
+, Agent 
+\begin_inset Formula $2$
+\end_inset
+
+ Karte 
+\begin_inset Formula $B$
+\end_inset
+
+, und Karte 
+\begin_inset Formula $C$
+\end_inset
+
+ ist verdeckt.
+ Die 
+\begin_inset Formula $6$
+\end_inset
+
+ möglichen Welten sind 
+\begin_inset Formula $S\coloneqq\left\{ (A,B),(A,C),(B,A),(B,C),(C,A),(C,B)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+Hält nun Agent 
+\begin_inset Formula $1$
+\end_inset
+
+ die Karte 
+\begin_inset Formula $A$
+\end_inset
+
+, so hält er die Welten 
+\begin_inset Formula $(A,B)$
+\end_inset
+
+ und 
+\begin_inset Formula $(A,C)$
+\end_inset
+
+ für möglich da Agent 
+\begin_inset Formula $2$
+\end_inset
+
+ nur die Karte 
+\begin_inset Formula $B$
+\end_inset
+
+ oder 
+\begin_inset Formula $C$
+\end_inset
+
+ haben kann.
+ Ganz allgemein hält in einer Welt 
+\begin_inset Formula $s=(x,y)$
+\end_inset
+
+ Agent 
+\begin_inset Formula $1$
+\end_inset
+
+ die Welten 
+\begin_inset Formula $s=(x,y)$
+\end_inset
+
+ und 
+\begin_inset Formula $t=(x,z)$
+\end_inset
+
+ für möglich und ein Agent 
+\begin_inset Formula $2$
+\end_inset
+
+ die Welten 
+\begin_inset Formula $s=(x,y)$
+\end_inset
+
+ und 
+\begin_inset Formula $u=(z,y)$
+\end_inset
+
+.
+ Als Relationen ausgedrückt ergibt sich 
+\begin_inset Formula $\mathcal{K}_{1}\coloneqq\left\{ (s,s),(s,t),(t,s)\right\} $
+\end_inset
+
+ und 
+\begin_inset Formula $\mathcal{K}_{2}\coloneqq\left\{ (s,s),(s,u),(u,s)\right\} $
+\end_inset
+
+.
+ Damit ergibt sich folgender Graph:
+\end_layout
+
+\begin_layout Example
+\begin_inset Graphics
+	filename graphics/kripke_graph_cardgame.gv.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Die Relationen 
+\begin_inset Formula $\mathcal{K}_{1}$
+\end_inset
+
+ und 
+\begin_inset Formula $\mathcal{K}_{2}$
+\end_inset
+
+ sind reflexiv, transitiv und symmetrisch und damit Äquivalenzrelationen.
+ Die Relation 
+\begin_inset Formula $\mathcal{K}_{i}$
+\end_inset
+
+ eines Agenten 
+\begin_inset Formula $i\in\left\{ 1,2\right\} $
+\end_inset
+
+ wurde auf Basis der Informationen konstruiert, welche dem Agenten vorliegen,
+ nämlich der eigenen Karte.
+ Ein Agent 
+\begin_inset Formula $i$
+\end_inset
+
+ kennt seine Karte und weiß damit, welche Karte der andere Agent nicht hat.
+ Da er weiß, welche 
+\begin_inset Formula $3$
+\end_inset
+
+ Karten es gibt und welche Karte er selbst hat, weiß er, welche Karte der
+ andere Agent haben könnte und welche nicht.
+ Damit ergeben sich die möglichen Welten aus Sicht des Agenten.
+ Die auf Basis des lokalen Agentenwissens konstruiert Relation 
+\begin_inset Formula $\mathcal{K}_{i}$
+\end_inset
+
+ hat damit die Eigenschaft eine Äquivalenzrelation zu sein.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Axiomatisierung von 
+\begin_inset Formula $\mathcal{L}_{n}^{K}(\Phi)$
+\end_inset
+
+ / 
+\begin_inset Formula $\mathcal{M}$
+\end_inset
+
+ über S5 / KD45
+\end_layout
+
+\begin_layout Standard
+Im vorherigen Abschnitt wurden die 
+\begin_inset Formula $S5$
+\end_inset
+
+-Eigenschaften der Wissenslogik diskutiert und durch Formeln der Sprache
+ 
+\begin_inset Formula $\mathcal{L}_{n}^{K}(\Phi)$
+\end_inset
+
+ der Wissenslogik formuliert.
+ Gibt es noch weitere, grundlegende Eigenschaften, welche sich durch Formeln
+ aus 
+\begin_inset Formula $\mathcal{L}_{n}^{K}(\Phi)$
+\end_inset
+
+ formulieren, aber nicht aus den bekannten 
+\begin_inset Formula $S5$
+\end_inset
+
+-Eigenschaften ableiten lassen?
+\end_layout
+
+\begin_layout Standard
+Um diese Frage zu beantworten wird mittels der Formeln der 
+\begin_inset Formula $S5$
+\end_inset
+
+-Eigenschaften ein Axiomensystem aufgestellt und dessen Vollständigkeit
+ und Korrektheit gezeigt.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Definition
+
+\series bold
+Kalkül
+\series default
+.
+ Sei 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ ein Alphabet.
+ Ein Kalkül über 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ ist ein Tupel 
+\begin_inset Formula $\mathcal{K}^{X}\coloneqq(X,\mathcal{A}_{1},\cdots,\mathcal{A}_{n},\mathcal{R}_{1},\cdots,\mathcal{R}_{m})$
+\end_inset
+
+ mit 
+\begin_inset Formula $m,n\in\mathbb{N}$
+\end_inset
+
+, den Axiomen 
+\begin_inset Formula $\mathcal{A}_{1},\cdots,\mathcal{A}_{n}\subseteq\Sigma^{*}$
+\end_inset
+
+, den Voraussetzungen 
+\begin_inset Formula $X\subseteq\Sigma^{*}$
+\end_inset
+
+ und den Ableitungsregeln 
+\begin_inset Formula $\mathcal{R}_{i}\subseteq(\Sigma^{*})^{n_{i}}$
+\end_inset
+
+ mit 
+\begin_inset Formula $1<n_{i}\in\mathbb{N}$
+\end_inset
+
+ für alle 
+\begin_inset Formula $i=1,\cdots,m$
+\end_inset
+
+.
+ Die Menge 
+\begin_inset Formula $AX=\left\{ \mathcal{A}_{1},\cdots,\mathcal{A}_{n}\right\} $
+\end_inset
+
+wird als Axiomensystem, die Menge 
+\begin_inset Formula $AS=\left\{ \mathcal{A}_{1},\cdots,\mathcal{A}_{n},\mathcal{R}_{1},\cdots,\mathcal{R}_{m}\right\} $
+\end_inset
+
+ als Axiomenschema bezeichnet.
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+Formaler Beweis
+\series default
+.
+ Sei 
+\begin_inset Formula $\mathcal{K}^{X}$
+\end_inset
+
+ ein Kalkül, 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ ein Alphabet und ein Wort 
+\begin_inset Formula $\psi\in\Sigma^{*}$
+\end_inset
+
+.
+ Ein formaler Beweis von 
+\begin_inset Formula $\psi$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathcal{K}^{X}$
+\end_inset
+
+, im Zeichen 
+\begin_inset Formula $\vdash_{\mathcal{K}}\psi$
+\end_inset
+
+ ist eine Folge von Worten 
+\begin_inset Formula $\phi_{0},\cdots,\phi_{n}\in\Sigma^{*}$
+\end_inset
+
+, so dass 
+\begin_inset Formula $\phi_{n}=\psi$
+\end_inset
+
+ gilt und für alle 
+\begin_inset Formula $i=0,\cdots,n$
+\end_inset
+
+ gilt: 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\phi_{i}\in X\thinspace\cup\thinspace\mathcal{A}_{j}$
+\end_inset
+
+ für ein 
+\begin_inset Formula $j\in\left\{ 1,\cdots,n\right\} $
+\end_inset
+
+ oder 
+\end_layout
+
+\begin_layout Itemize
+es gibt ein 
+\begin_inset Formula $j\in\left\{ 1,\cdots,m\right\} $
+\end_inset
+
+ und eine Folge von Worten 
+\begin_inset Formula $\psi{}_{1},\cdots,\psi_{n_{i}-1}\in\left\{ \phi_{0},\cdots,\phi_{i-1}\right\} $
+\end_inset
+
+ , so dass 
+\begin_inset Formula $\left(\psi_{1},\cdots,\psi_{n_{i}-1},\phi_{i}\right)\in R_{j}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+Ein alternative Schreibweise von
+\begin_inset Formula $\left(\psi_{1},\cdots,\psi_{n_{i}-1},\phi_{i}\right)\in R_{j}$
+\end_inset
+
+ sei durch 
+\begin_inset Formula $\frac{\psi_{1},\cdots,\psi_{n_{i}-1}}{\phi_{i}}\in R_{j}$
+\end_inset
+
+ vereinbart.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Definition
+
+\series bold
+Grundbegriffe der Beweistheorie
+\series default
+.
+ Sei ein Alphabet 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+, ein Kalkül 
+\begin_inset Formula $\mathcal{K}^{X}$
+\end_inset
+
+ über 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ mit dem Axiomenschema 
+\begin_inset Formula $AX\coloneqq\left\{ \mathcal{A}_{1},\cdots,\mathcal{A}_{k}\right\} $
+\end_inset
+
+ und den Voraussetzungen 
+\begin_inset Formula $X\thinspace\subseteq\Sigma{}^{*}$
+\end_inset
+
+ und einem Wort 
+\begin_inset Formula $\psi\in\Sigma{}^{*}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\psi$
+\end_inset
+
+ heißt beweisbar, wenn für ein 
+\begin_inset Formula $\mathcal{K}^{X}$
+\end_inset
+
+ gilt, dass 
+\begin_inset Formula $\vdash_{\mathcal{K^{X}}}\psi$
+\end_inset
+
+, d.h.
+ wenn ein formaler Beweis von 
+\begin_inset Formula $\psi$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathcal{K}^{X}$
+\end_inset
+
+ existiert.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Lässt für ein 
+\begin_inset Formula $\psi$
+\end_inset
+
+ und ein Kalkül 
+\begin_inset Formula $\mathcal{K}^{X}$
+\end_inset
+
+ ein formaler Beweis angeben für sowohl 
+\begin_inset Formula $\vdash_{\mathcal{K}}\psi$
+\end_inset
+
+ als auch 
+\begin_inset Formula $\vdash_{\mathcal{K}}\neg\psi$
+\end_inset
+
+, so heißt 
+\begin_inset Formula $AX$
+\end_inset
+
+ inkonsistent, ansonsten heißt 
+\begin_inset Formula $AX$
+\end_inset
+
+ konsistent
+\emph on
+.
+
+\emph default
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $AX$
+\end_inset
+
+ heißt korrekt, genau dann, wenn für alle 
+\begin_inset Formula $X\thinspace\cup\left\{ \psi\right\} \subseteq\Sigma{}^{*}$
+\end_inset
+
+ gilt : 
+\begin_inset Formula $\vdash_{\mathcal{K}^{X}}\psi\Rightarrow X\thinspace\models\varphi$
+\end_inset
+
+.
+ D.h.
+ jedes formal aus 
+\begin_inset Formula $X$
+\end_inset
+
+ beweisbare 
+\begin_inset Formula $\psi$
+\end_inset
+
+ ist auch eine semantische Konsequenz aus 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Definition
+
+\series bold
+Grundbegriffe der Korrektheit und Vollständigkeit einer Sprache bezüglich
+ einer Klasse von Strukturen.
+
+\series default
+ Sei 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ eine Alphabet und 
+\begin_inset Formula $\mathcal{L}\subseteq\Sigma^{*}$
+\end_inset
+
+ Sprache über diesem Alphabet, 
+\begin_inset Formula $\mathcal{N}$
+\end_inset
+
+ die Klasse von Strukturen sowie ein Kalkül 
+\begin_inset Formula $\mathcal{K}^{X}\coloneqq(X,\mathcal{A}_{1},\cdots,\mathcal{A}_{n},\mathcal{R}_{1},\cdots,\mathcal{R}_{m})$
+\end_inset
+
+ über der Sprache 
+\begin_inset Formula $\mathcal{L}$
+\end_inset
+
+ mit 
+\begin_inset Formula $AX=\mathcal{A}_{1},\cdots,\mathcal{A}_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $AX$
+\end_inset
+
+ heißt korrekt für 
+\begin_inset Formula $\mathcal{L}$
+\end_inset
+
+ bezüglich 
+\begin_inset Formula $\mathcal{N}$
+\end_inset
+
+, genau dann, wenn für jede Formel 
+\begin_inset Formula $\varphi\in\mathcal{L}$
+\end_inset
+
+ und 
+\begin_inset Formula $\mathcal{N}$
+\end_inset
+
+ gilt, dass 
+\begin_inset Formula $\vdash_{\mathcal{K^{X}}}\varphi\Rightarrow\mathcal{N}\models\varphi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $AX$
+\end_inset
+
+ heißt vollständig für 
+\begin_inset Formula $\mathcal{L}$
+\end_inset
+
+ bezüglich 
+\begin_inset Formula $\mathcal{N}$
+\end_inset
+
+, genau dann, wenn für jede Formel 
+\begin_inset Formula $\varphi\in\mathcal{L}$
+\end_inset
+
+ und 
+\begin_inset Formula $\mathcal{N}$
+\end_inset
+
+ gilt, dass 
+\begin_inset Formula $\mathcal{N}\models\varphi\Rightarrow\vdash_{\mathcal{K^{X}}}\varphi$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sei 
+\begin_inset Formula $AX=\mathcal{A}_{1},\cdots,\mathcal{A}_{n}$
+\end_inset
+
+ ein Axiomensystem eines Kalküls 
+\begin_inset Formula $\mathcal{K}^{X}\coloneqq(X,\mathcal{A}_{1},\cdots,\mathcal{A}_{n},\mathcal{R}_{1},\cdots,\mathcal{R}_{m})$
+\end_inset
+
+ und eine Sprache 
+\begin_inset Formula $\mathcal{L}\subseteq\Sigma^{*}$
+\end_inset
+
+ eines Alphabets 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ sowie eine Klasse 
+\begin_inset Formula $\mathcal{N}$
+\end_inset
+
+ von Strukturen.
+ Damit ist 
+\begin_inset Formula $AX$
+\end_inset
+
+ eine Charakterisierung der Klasse 
+\begin_inset Formula $\mathcal{N}$
+\end_inset
+
+ von Strukturen, genau dann, wenn für jede Formel 
+\begin_inset Formula $\varphi\in\mathcal{L},$
+\end_inset
+
+ gilt, dass 
+\begin_inset Formula $\mathcal{N}\models\varphi\Leftrightarrow\vdash_{\mathcal{K^{X}}}\varphi$
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "3.1"
+key "FaginHalpernMosesVardiReasoningAboutKnowledge2004"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Auf dieser Grundlage wird im Folgenden ein Axiomensystem der Wissenslogik
+ angegeben.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Definition
+
+\series bold
+Axiomensystem der Wissenslogik.
+
+\series default
+ Sei 
+\begin_inset Formula $\mathcal{L}_{n}^{K}(\Phi)$
+\end_inset
+
+ die Sprache der Wissenslogik mit 
+\begin_inset Formula $\varphi,\psi,K_{i}\in\mathcal{L}_{n}^{K}(\Phi)$
+\end_inset
+
+  für alle Agenten 
+\begin_inset Formula $i=1,\cdots,n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+Prop Es gelten Ersetzungen mit allen Tautologien der Sprache der Aussagenlogik
+ 
+\begin_inset Formula $\mathcal{L}^{prop}(\Phi)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Description
+K1 
+\begin_inset Formula $(K_{i}\varphi\wedge K_{i}(\varphi\Rightarrow\psi))\Rightarrow K_{i}\psi$
+\end_inset
+
+ (Distributions Axiom)
+\end_layout
+
+\begin_layout Description
+K2 
+\begin_inset Formula $K_{i}\varphi\Rightarrow\varphi$
+\end_inset
+
+ (Wissens-Axiom)
+\end_layout
+
+\begin_layout Description
+K3 
+\begin_inset Formula $\neg K_{i}\bot$
+\end_inset
+
+ (Konsistenz-Axiom)
+\end_layout
+
+\begin_layout Description
+K4 
+\begin_inset Formula $K_{i}\varphi\Rightarrow K_{i}K_{i}\varphi$
+\end_inset
+
+ (Positives Introspektions-Axiom)
+\end_layout
+
+\begin_layout Description
+K5 
+\begin_inset Formula $\neg K_{i}\varphi\Rightarrow K_{i}\neg K_{i}\varphi$
+\end_inset
+
+ (Negatives Introspektions-Axiom)
+\end_layout
+
+\begin_layout Description
+MP 
+\begin_inset Formula $(\varphi\wedge\varphi\Rightarrow\psi)\Rightarrow\psi$
+\end_inset
+
+ (Modus Ponens)
+\end_layout
+
+\begin_deeper
+\begin_layout Plain Layout
+Im Zeichen 
+\begin_inset Formula $\frac{\varphi,\varphi\Rightarrow\psi}{\psi}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Description
+Gen 
+\begin_inset Formula $\varphi\Rightarrow K_{i}\varphi$
+\end_inset
+
+ (Necessitierungs Axiom)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Aus den Axiome K1-K5 lassen sich nun verschiedene Axiomenschemata bilden.
+ Die Axiomenschemata werden entsprechend der historischen Bezeichnung der
+ der Axiom 
+\begin_inset Formula $K1$
+\end_inset
+
+ als 
+\begin_inset Formula $K$
+\end_inset
+
+, 
+\begin_inset Formula $K2$
+\end_inset
+
+ als 
+\begin_inset Formula $T$
+\end_inset
+
+, 
+\begin_inset Formula $K3$
+\end_inset
+
+ als 
+\begin_inset Formula $D$
+\end_inset
+
+, 
+\begin_inset Formula $K4$
+\end_inset
+
+ als 
+\begin_inset Formula $4$
+\end_inset
+
+ und 
+\begin_inset Formula $K5$
+\end_inset
+
+ als 
+\begin_inset Formula $5$
+\end_inset
+
+ bezeichnet.
+ Beispielsweise wird 
+\begin_inset Formula $\left\{ K1,K3,K4,K5\right\} $
+\end_inset
+
+ entsprechend der Historischen Bezeichnung 
+\begin_inset Formula $\left\{ K,D,4,5\right\} $
+\end_inset
+
+ als 
+\begin_inset Formula $KD45$
+\end_inset
+
+ bezeichnet.
+ Das Schema 
+\begin_inset Formula $\left\{ K1,K2,K4,K5\right\} $
+\end_inset
+
+ wird als 
+\begin_inset Formula $KT45$
+\end_inset
+
+ bezeichnet, bzw.
+ aus historischen Gründen als 
+\begin_inset Formula $S5$
+\end_inset
+
+ bezeichnet.
+ Behandelt die betrachtete Logik 
+\begin_inset Formula $n>1$
+\end_inset
+
+ Agenten, wird der Bezeichnung des Schemas ein tiefgestelltes 
+\begin_inset Formula $n$
+\end_inset
+
+ angefügt.
+ Im Folgenden werden die Schemata 
+\begin_inset Formula $S5_{n}$
+\end_inset
+
+ und 
+\begin_inset Formula $KD45_{n}$
+\end_inset
+
+näher betrachtet.
+ 
+\end_layout
+
+\begin_layout Standard
+Es seien nochmals die 
+\begin_inset Formula $S5$
+\end_inset
+
+-Eigenschaften 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "S5-Eigenschaften"
+
+\end_inset
+
+ betrachtet.
+ Diese sagen aus, dass eine Wissenslogik bestimmte Eigenschaften in Abhängigkeit
+ der Eigenschaften der 
+\begin_inset Formula $\mathcal{K}_{i}$
+\end_inset
+
+ Relationen hat.
+ Benötigt man bspw.
+ eine Wissenslogik ohne negatives Introspektionsaxiom, so sind alle 
+\begin_inset Formula $\mathcal{K}_{i}$
+\end_inset
+
+ so zu wählen, dass diese nicht euklidisch sind.
+ Der Zusammenhang zwischen den Eigenschaften einer Wissenslogik und den
+ Eigenschaften der Relationen 
+\begin_inset Formula $\mathcal{K}_{i}$
+\end_inset
+
+ derselben, wird über geeignete Axiomensysteme formalisiert.
+ Hierzu wird jeweils eine Kripke-Strukturen so gewählt, dass ihre 
+\begin_inset Formula $\mathcal{K}_{i}$
+\end_inset
+
+ Relationen die gewünschten Eigenschaften haben.
+ Weiterhin wird ein Axiomensystem gewählt und dessen Korrektheit und Vollständig
+keit bezüglich der Kripke-Struktur bewiesen.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Definition
+Seien 
+\begin_inset Formula $\mathcal{M}_{n}$
+\end_inset
+
+,
+\begin_inset Formula $\mathcal{M}_{n}^{r}$
+\end_inset
+
+,
+\begin_inset Formula $\mathcal{M}_{n}^{rt}$
+\end_inset
+
+,
+\begin_inset Formula $\mathcal{M}_{n}^{rst}$
+\end_inset
+
+,
+\begin_inset Formula $\mathcal{M}_{n}^{elt}$
+\end_inset
+
+,
+\begin_inset Formula $\mathcal{M}_{n}^{et}$
+\end_inset
+
+ Klassen von Kripke-Strukturen mit 
+\begin_inset Formula $i=1,\cdots,n$
+\end_inset
+
+ wie folgt: 
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Alle 
+\begin_inset Formula $\mathcal{K}_{i}$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathcal{M}_{n}^{r}$
+\end_inset
+
+ sind reflexive, binäre Relationen.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Alle 
+\begin_inset Formula $\mathcal{K}_{i}$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathcal{M}_{n}^{rt}$
+\end_inset
+
+ sind reflexive und transitive, binäre Relationen.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Alle 
+\begin_inset Formula $\mathcal{K}_{i}$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathcal{M}_{n}^{rst}$
+\end_inset
+
+ sind reflexive, serielle und transitive, binäre Relationen.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Alle 
+\begin_inset Formula $\mathcal{K}_{i}$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathcal{M}_{n}^{est}$
+\end_inset
+
+ sind euklidische, serielle und transitive, binäre Relationen.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Alle 
+\begin_inset Formula $\mathcal{K}_{i}$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathcal{M}_{n}^{et}$
+\end_inset
+
+ sind euklidische und transitive, binäre Relationen.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Alle 
+\begin_inset Formula $\mathcal{K}_{i}$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathcal{M}_{n}$
+\end_inset
+
+ sind binäre Relationen.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Proposition
+Für die Sprache 
+\begin_inset Formula $\mathcal{L}_{n}^{K}$
+\end_inset
+
+ der Wissenslogik mit 
+\begin_inset Formula $n$
+\end_inset
+
+ Agenten gilt:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $K_{n}$
+\end_inset
+
+ ist korrekt und vollständig für 
+\begin_inset Formula $\mathcal{L}_{n}^{K}$
+\end_inset
+
+ bezüglich 
+\begin_inset Formula $\mathcal{M}_{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T_{n}$
+\end_inset
+
+ ist korrekt und vollständig für 
+\begin_inset Formula $\mathcal{L}_{n}^{K}$
+\end_inset
+
+ bezüglich 
+\begin_inset Formula $\mathcal{M}_{n}^{r}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $S4_{n}$
+\end_inset
+
+ ist korrekt und vollständig für 
+\begin_inset Formula $\mathcal{L}_{n}^{K}$
+\end_inset
+
+ bezüglich 
+\begin_inset Formula $\mathcal{M}_{n}^{rt}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $K45_{n}$
+\end_inset
+
+ ist korrekt und vollständig für 
+\begin_inset Formula $\mathcal{L}_{n}^{K}$
+\end_inset
+
+ bezüglich 
+\begin_inset Formula $\mathcal{M}_{n}^{et}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $KD45_{n}$
+\end_inset
+
+ ist korrekt und vollständig für 
+\begin_inset Formula $\mathcal{L}_{n}^{K}$
+\end_inset
+
+ bezüglich 
+\begin_inset Formula $\mathcal{M}_{n}^{est}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $S5_{n}$
+\end_inset
+
+ ist korrekt und vollständig für 
+\begin_inset Formula $\mathcal{L}_{n}^{K}$
+\end_inset
+
+ bezüglich 
+\begin_inset Formula $\mathcal{M}_{n}^{rst}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Anmerkung: Die Beweise stehen in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "FaginHalpernMosesVardiReasoningAboutKnowledge2004"
+
+\end_inset
+
+.
+ Diese später abschreiben / einfügen! Von praktischer Bedeutung sind dabei
+ 
+\begin_inset Formula $KD45_{n}$
+\end_inset
+
+und 
+\begin_inset Formula $S5_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Sprache 
+\begin_inset Formula $\mathcal{L}_{n}^{QU}$
+\end_inset
+
+ und Strukturen 
+\begin_inset Formula $\mathcal{M}_{n}^{prob}$
+\end_inset
+
+ (Probabilistische Logik)
+\end_layout
+
+\begin_layout Standard
+Die Darstellung der Ungewissheit über das Wissen eines Agenten in der klassische
+n Wissenslogik beschränkt sich auf die Welten, welche ein Agent für möglich
+ hält.
+ Je mehr Welten er für möglich hält, desto weniger sicher ist er, welche
+ Welten tatsächlich wahr sind.
+ Diese Repräsentation der Ungewissheit lässt sich dadurch verfeinern, dass
+ einzelne Formeln des Agentenwissens mit Wahrscheinlichkeiten ausgestattet
+ werden.
+ 
+\end_layout
+
+\begin_layout Standard
+Dies sei an folgendem Beispiel illustriert:
+\end_layout
+
+\begin_layout Example
+Angenommen es findet ein fairer Münzwurf zwischen Alice und Bob statt.
+ Alice gewinnt 
+\begin_inset Formula $2$
+\end_inset
+
+ Eur.
+ wenn die Münze auf Kopf landet, muss aber 
+\begin_inset Formula $3$
+\end_inset
+
+ Eur.
+ an Bob zahlen wenn die Münze auf Zahl landet.
+ Die Wahrscheinlichkeiten für Kopf und Zahl sind jeweils 
+\begin_inset Formula $\ell(Kopf)=\ell(Zahl)=\frac{1}{2}$
+\end_inset
+
+.
+ Der erwartete Gewinn für ist 
+\begin_inset Formula $2\ell(Kopf)-3\ell(Zahl)$
+\end_inset
+
+.
+ Der erwartete Gewinn für Bob wäre nun mindestens 
+\begin_inset Formula $1$
+\end_inset
+
+ Eur., was durch die Formel 
+\begin_inset Formula $2\ell(\text{Kopf})-3\ell(\text{Zahl})\geq1$
+\end_inset
+
+ ausgedrückt wird.
+\end_layout
+
+\begin_layout Subsubsection
+Grundbegriffe der Wahrscheinlichkeitstheorie
+\end_layout
+
+\begin_layout Standard
+Um eine Sprache der probabilistischen Logik zu konstruieren, ist es notwendig
+ einige Begriffe der Stochastik zu betrachten.
+ 
+\end_layout
+
+\begin_layout Standard
+Sei 
+\begin_inset Formula $S\coloneqq\left\{ s_{1},s_{2},\cdots,s_{k}\right\} $
+\end_inset
+
+ die Menge möglicher Zustände eines Agenten.
+ Ein Wahrscheinlichkeitsmaß weißt nun jedem 
+\begin_inset Formula $s_{i}\in S$
+\end_inset
+
+ für 
+\begin_inset Formula $i=1\cdots k$
+\end_inset
+
+ eine Wahrscheinlichkeit zu.
+ Ein Maß für die Wahrscheinlichkeit wird üblicherweise durch eine reellen
+ Zahl aus dem Intervall 
+\begin_inset Formula $\left[0,1\right]$
+\end_inset
+
+ repräsentiert.
+ Die Zuweisung einer Wahrscheinlichkeit zu einem 
+\begin_inset Formula $s_{i}\in S$
+\end_inset
+
+ für 
+\begin_inset Formula $i=1\cdots k$
+\end_inset
+
+ wird mittels einer Abbildung 
+\begin_inset Formula $\mu:S\to\left[0,\infty\right]$
+\end_inset
+
+ dargestellt.
+ Oft sind jedoch nicht nur die Wahrscheinlichkeiten einzelner Element von
+ 
+\begin_inset Formula $S$
+\end_inset
+
+ interessant, sondern die Wahrscheinlichkeiten von Teilmengen 
+\begin_inset Formula $S^{'}\subseteq S$
+\end_inset
+
+.
+ Seien z.B.
+ die möglichen Ausgänge eines Würfelspiels mit einem fairen Würfel durch
+ die Zustände 
+\begin_inset Formula $S=\left\{ \mathtt{1},\mathtt{2},\mathtt{3},\mathtt{4},\mathtt{5},\mathtt{6}\right\} $
+\end_inset
+
+ festgehalten mit den Wahrscheinlichkeiten 
+\begin_inset Formula $\mu(\mathtt{1})=\mu(\mathtt{2})=\mu(\mathtt{3})=\mu(\mathtt{4})=\mu(\mathtt{5})=\mu(\mathtt{6})=\frac{1}{6}$
+\end_inset
+
+.
+ Interessant sind dabei nicht nur einzelne Elemente, sondern Teilmengen
+ aller Zustände.
+ Intuitiv würde z.B.
+ die Wahrscheinlichkeit für 
+\begin_inset Formula $S^{'}=\left\{ \mathtt{1},\mathtt{6}\right\} $
+\end_inset
+
+ der Summe 
+\begin_inset Formula $\mu(\mathtt{1})\text{+\mu(\mathtt{6})=\frac{1}{3}}$
+\end_inset
+
+, und die der gesamten Menge 
+\begin_inset Formula $S=\left\{ \mathtt{1},\mathtt{2},\mathtt{3},\mathtt{4},\mathtt{5},\mathtt{6}\right\} $
+\end_inset
+
+ der Summe 
+\begin_inset Formula $\mu(\mathtt{1})+\mu(\mathtt{2})+\mu(\mathtt{3})+\mu(\mathtt{4})+\mu(\mathtt{5})+\mu(\mathtt{6})=1$
+\end_inset
+
+ entsprechen.
+ 
+\end_layout
+
+\begin_layout Standard
+Ist 
+\begin_inset Formula $S$
+\end_inset
+
+ endlich, so ist es ohne weiteres möglich jedem 
+\begin_inset Formula $s_{i}\in S$
+\end_inset
+
+ für 
+\begin_inset Formula $i=1\cdots k$
+\end_inset
+
+ eine Wahrscheinlichkeit zuzuweisen, d.h.
+ die Abbildung 
+\begin_inset Formula $\mu$
+\end_inset
+
+ als linkstotale Abbildung zu wählen.
+ Dies ist jedoch nicht immer gewünscht oder sinnvoll.
+ Technisch wird dabei die Wahrscheinlichkeit von Teilmengen einer potenziell
+ unendlichen Grundmenge 
+\begin_inset Formula $S$
+\end_inset
+
+ mittels einer 
+\begin_inset Formula $\sigma$
+\end_inset
+
+-Algebra realisiert.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Definition
+Sei eine Grundmenge 
+\begin_inset Formula $Y$
+\end_inset
+
+ und bezeichne 
+\begin_inset Formula $2^{X}$
+\end_inset
+
+ die Potenzmenge von 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ Sei die Menge 
+\begin_inset Formula $I\subseteq\mathbb{N}$
+\end_inset
+
+ als Indexmenge bezeichnet.
+ Die Menge 
+\begin_inset Formula $\mathcal{R}\subseteq2^{X}$
+\end_inset
+
+ ist eine 
+\begin_inset Formula $\sigma$
+\end_inset
+
+-Algebra, genau dann wenn 
+\begin_inset Formula $\mathcal{R}$
+\end_inset
+
+ folgende Bedingungen erfüllt:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X\in\mathcal{R}$
+\end_inset
+
+ (Die Menge 
+\begin_inset Formula $X$
+\end_inset
+
+ ist selbst in 
+\begin_inset Formula $\mathcal{R}$
+\end_inset
+
+ enthalten)
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A\in\mathcal{R}\Rightarrow X\setminus A\in\mathcal{R}$
+\end_inset
+
+ (Das Komplement 
+\begin_inset Formula $X\setminus A$
+\end_inset
+
+ von 
+\begin_inset Formula $A$
+\end_inset
+
+ ist in 
+\begin_inset Formula $\mathcal{R}$
+\end_inset
+
+ enthalten)
+\end_layout
+
+\begin_layout Itemize
+Für alle 
+\begin_inset Formula $i\in I:$
+\end_inset
+
+ mit 
+\begin_inset Formula $A_{i}\in\mathcal{R}$
+\end_inset
+
+ folgt, dass 
+\begin_inset Formula $\underset{i\in I}{\bigcup}A_{i}\in\mathcal{R}$
+\end_inset
+
+.
+ (Man sagt 
+\begin_inset Formula $\mathcal{R}$
+\end_inset
+
+ ist abgeschlossen unter abzählbarer Vereinigung.
+ Dabei ist 
+\begin_inset Formula $I\subseteq\mathbb{N}$
+\end_inset
+
+ höchstens abzählbar unendlich
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Eine Menge 
+\begin_inset Formula $M$
+\end_inset
+
+ heißt abzählbar unendlich, genau dann wenn eine bijektive Abbildung 
+\begin_inset Formula $f:\mathbb{N}\to M$
+\end_inset
+
+ existiert.
+\end_layout
+
+\end_inset
+
+ und damit auch 
+\begin_inset Formula $\underset{i_{1},i_{2},i_{3},\cdots\in I}{\left\{ A_{i_{1}},A_{i_{2}},A_{i_{3}},\cdots\right\} }$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Plain Layout
+Das Paar 
+\begin_inset Formula $(X,\mathcal{R})$
+\end_inset
+
+ aus der Grundmenge 
+\begin_inset Formula $X$
+\end_inset
+
+ und der 
+\begin_inset Formula $\sigma$
+\end_inset
+
+-Algebra 
+\begin_inset Formula $\mathcal{R}$
+\end_inset
+
+ wird als Messraum
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Engl.
+ Measurable Space
+\end_layout
+
+\end_inset
+
+ bezeichnet.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Es liegt nun nahe, ein Maß 
+\begin_inset Formula $\mu$
+\end_inset
+
+ für die Wahrscheinlichkeit über einer 
+\begin_inset Formula $\sigma$
+\end_inset
+
+-Algebra 
+\begin_inset Formula $\mathcal{F}$
+\end_inset
+
+ für eine Grundmenge 
+\begin_inset Formula $S$
+\end_inset
+
+ zu definieren um auch für Teilmengen von 
+\begin_inset Formula $S$
+\end_inset
+
+ Wahrscheinlichkeiten definieren zu können.
+ Zuvor muss genau geklärt werden, was ein Maß und insbesondere ein Wahrscheinlic
+hkeitsmaß ist.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Definition
+Sei 
+\begin_inset Formula $(X,\mathcal{R})$
+\end_inset
+
+ ein Messraum.
+ Eine Abbildung 
+\begin_inset Formula $\mu:\mathcal{R}\to\left[0,\infty\right]$
+\end_inset
+
+ heißt Maß auf 
+\begin_inset Formula $\mathcal{R}$
+\end_inset
+
+, genau dann wenn gilt : 
+\end_layout
+
+\begin_layout Definition
+Für 
+\begin_inset Formula $\mathcal{R}$
+\end_inset
+
+ unendlich: 
+\begin_inset Formula $\mu(\emptyset)=0$
+\end_inset
+
+ und für jede Folge 
+\begin_inset Formula $\underset{n\in\mathbb{N}\wedge A_{n}\in\mathcal{R}}{\left(A_{n}\right)}$
+\end_inset
+
+ paarweise disjunkter Mengen gilt : 
+\begin_inset Formula $\mu(\stackrel[i=1]{\infty}{\bigcup}A_{i})=\stackrel[i=1]{\infty}{\sum}\mu(A_{i})$
+\end_inset
+
+ (Diese Eigenschaft wird 
+\emph on
+
+\begin_inset Formula $\sigma$
+\end_inset
+
+
+\emph default
+-Additivität genannt).
+ 
+\end_layout
+
+\begin_layout Plain Layout
+Für 
+\begin_inset Formula $\mathcal{R}$
+\end_inset
+
+ endlich: Für zwei disjunkte Mengen 
+\begin_inset Formula $X,Y\in\mathcal{R}$
+\end_inset
+
+, d.h.
+ 
+\begin_inset Formula $X\cap Y=\emptyset$
+\end_inset
+
+, gilt 
+\begin_inset Formula $\mu(X\cup Y)=\mu(X)+\mu(Y)$
+\end_inset
+
+ (Diese Eigenschaft wird endliche Additivität genannt)
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+Dabei sind folgende Begriffe gebräuchlich:
+\series default
+ 
+\end_layout
+
+\begin_layout Itemize
+Sei 
+\begin_inset Formula $(X,\mathcal{R})$
+\end_inset
+
+ ein Messraum und ein Maß 
+\begin_inset Formula $\mu$
+\end_inset
+
+ auf 
+\begin_inset Formula $\mathcal{R}$
+\end_inset
+
+.
+ Ist Wertebereich des Maßes 
+\begin_inset Formula $\mu$
+\end_inset
+
+ das Intervall 
+\begin_inset Formula $\left[0,1\right]$
+\end_inset
+
+, d.h.
+ ist 
+\begin_inset Formula $\mu:\mathcal{R}\to\left[0,1\right]$
+\end_inset
+
+ und gilt 
+\begin_inset Formula $\mu(X)=1$
+\end_inset
+
+, so heißt 
+\begin_inset Formula $\mu$
+\end_inset
+
+ Wahrscheinlichkeitsmaß.
+\end_layout
+
+\begin_layout Itemize
+Das Tripel 
+\begin_inset Formula $(X,\mathcal{R},\mu)$
+\end_inset
+
+ wird als Maßraum bezeichnet, genau dann wenn, 
+\begin_inset Formula $\mu$
+\end_inset
+
+ ein Maß auf 
+\begin_inset Formula $\mathcal{R}$
+\end_inset
+
+ ist und 
+\begin_inset Formula $(X,\mathcal{R})$
+\end_inset
+
+ einen Messraum bilden.
+ 
+\end_layout
+
+\begin_layout Itemize
+Sei 
+\begin_inset Formula $(X,\mathcal{R})$
+\end_inset
+
+ ein Messraum und 
+\begin_inset Formula $\mu$
+\end_inset
+
+ ein Wahrscheinlichkeitsmaß, dann wird da 3-Tupel 
+\begin_inset Formula $(X,\mathcal{R},\mu)$
+\end_inset
+
+ als Wahrscheinlichkeitsraum bezeichnet.
+\end_layout
+
+\begin_layout Itemize
+Sei 
+\begin_inset Formula $(X,\mathcal{R})$
+\end_inset
+
+ ein Messraum.
+ Eine Menge 
+\begin_inset Formula $S\subseteq X$
+\end_inset
+
+ wird messbar oder messbare Menge
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Engl.
+ Measurable Set
+\end_layout
+
+\end_inset
+
+ genannt, genau dann, wenn 
+\begin_inset Formula $S\in\mathcal{R}$
+\end_inset
+
+ ist.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Der Wahrscheinlichkeitsraum 
+\begin_inset Formula $(S,\mathcal{R},\mu)$
+\end_inset
+
+ formalisiert den Wunsch, den Elemente von 
+\begin_inset Formula $S$
+\end_inset
+
+ sowie beliebigen Teilmengen von 
+\begin_inset Formula $S$
+\end_inset
+
+ bzw.
+ Elementen der Potenzmenge 
+\begin_inset Formula $2^{S}$
+\end_inset
+
+ von 
+\begin_inset Formula $S$
+\end_inset
+
+ Wahrscheinlichkeiten aus dem Intervall 
+\begin_inset Formula $\left[0,1\right]$
+\end_inset
+
+ zuzuweisen.
+ Die Eigenschaften des Wahrscheinlichkeitsmaßes von 
+\begin_inset Formula $\mathcal{R}$
+\end_inset
+
+ sind wie folgt zusammengefasst: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Proposition
+
+\emph on
+Sei 
+\begin_inset Formula $S$
+\end_inset
+
+ eine Menge von Zuständen und 
+\begin_inset Formula $(S,\mathcal{R},\mu)$
+\end_inset
+
+ ein Wahrscheinlichkeitsraum.
+ Dann hat 
+\begin_inset Formula $\mu$
+\end_inset
+
+ folgende Eigenschaften:
+\end_layout
+
+\begin_layout Description
+P1 
+\begin_inset Formula $\mu(S)=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+P2 Für alle 
+\begin_inset Formula $A\in\mathcal{R}$
+\end_inset
+
+ ist 
+\begin_inset Formula $\mu(A)\geq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+P3 
+\begin_inset Formula $\mu(\stackrel[i=1]{\infty}{\bigcup}A_{i})=\stackrel[i=1]{\infty}{\sum}\mu(A_{i})$
+\end_inset
+
+ für alle paarweise disjunkten 
+\begin_inset Formula $A_{i}\in\mathcal{R}$
+\end_inset
+
+ (Dies ist die sogenannte 
+\begin_inset Formula $\sigma$
+\end_inset
+
+-Additivität oder auch abzählbare Additivität)
+\end_layout
+
+\begin_layout Plain Layout
+Für ein endliches 
+\begin_inset Formula $S$
+\end_inset
+
+ kann die Eigenschaft 
+\series bold
+P3
+\series default
+ mit 
+\begin_inset Formula $U,V\in\mathcal{\mathcal{R}}$
+\end_inset
+
+ wie folgt vereinfacht werden: 
+\begin_inset Formula $\mu(X\cup Y)=\mu(X)+\mu(Y)$
+\end_inset
+
+ und 
+\begin_inset Formula $X\cap Y=\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Für einen  Wahrscheinlichkeitsraum 
+\begin_inset Formula $(S,\mathcal{R},\mu)$
+\end_inset
+
+ ergeben sich einige interessante Folgerungen.
+ Es gilt z.B., dass 
+\begin_inset Formula $\mu(\mathcal{R}\setminus X)=1-\mu(X)$
+\end_inset
+
+.
+ Denn sei ein 
+\begin_inset Formula $X\in\mathcal{R}$
+\end_inset
+
+, dann gilt, da 
+\begin_inset Formula $\mathcal{R}$
+\end_inset
+
+ eine 
+\begin_inset Formula $\sigma$
+\end_inset
+
+-Algebra ist, dass sowohl  
+\begin_inset Formula $X\cap(\mathcal{R}\setminus X)=\emptyset$
+\end_inset
+
+ als auch 
+\begin_inset Formula $X\cup\mathcal{R}\setminus X=\mathcal{R}$
+\end_inset
+
+.
+ Mit 
+\begin_inset Formula $S\in\mathcal{R}$
+\end_inset
+
+ und P3 gilt dann 
+\begin_inset Formula $\mu(S\cup\mathcal{R}\setminus S)=\mu(S)+\mu(\mathcal{R}\setminus S)=\mu(S)=1.$
+\end_inset
+
+ Für ein 
+\begin_inset Formula $X\in\mathcal{R}$
+\end_inset
+
+ gilt nun entweder 
+\begin_inset Formula $S\in\mathcal{R}$
+\end_inset
+
+ oder 
+\begin_inset Formula $S\in\mathcal{R}\setminus X$
+\end_inset
+
+ und damit 
+\begin_inset Formula $S\in\mathcal{R}\cup\mathcal{R}\setminus X$
+\end_inset
+
+.
+ Damit folgt insgesamt, dass 
+\begin_inset Formula $1=\mu(X\cup\mathcal{R}\setminus X)=\mu(X)+\mu(\mathcal{R}\setminus X)\Rightarrow\mu(\mathcal{R}\setminus X)=1-\mu(X)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Eine weitere Folgerung ist 
+\begin_inset Formula $\mbox{\mu(\emptyset)=0}$
+\end_inset
+
+.
+ Ist 
+\begin_inset Formula $S$
+\end_inset
+
+ nichtleer, sind 
+\begin_inset Formula $S$
+\end_inset
+
+ und 
+\begin_inset Formula $\emptyset$
+\end_inset
+
+ disjunkte Mengen, d.h.
+ es gilt 
+\begin_inset Formula $S\cap\emptyset=\emptyset$
+\end_inset
+
+ .
+ Wegen 
+\series bold
+P1
+\series default
+ und 
+\series bold
+P2
+\series default
+ gilt dann 
+\begin_inset Formula $1=\mu(S)=\mu(S\cup\emptyset)=\mu(S)+\mu(\emptyset)=1+\mu(\emptyset)\Rightarrow\mu(\emptyset)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Formalisierung der Sprache 
+\series bold
+\lang english
+
+\begin_inset Formula $\mathcal{L}_{n}^{QU}$
+\end_inset
+
+
+\lang ngerman
+ der probabilistischen Logik
+\end_layout
+
+\begin_layout Standard
+Eine Formel 
+\begin_inset Formula $K_{i}\varphi$
+\end_inset
+
+ der Sprache 
+\begin_inset Formula $\mathcal{L}_{n}^{K}$
+\end_inset
+
+ meint, dass 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ in allen Welten wahr ist, die 
+\begin_inset Formula $i$
+\end_inset
+
+ für möglich hält.
+ Nimmt man Wahrscheinlichkeiten hinzu, wären Formeln der Art 
+\begin_inset Formula $\ell_{i}(\varphi)\geq b$
+\end_inset
+
+ denkbar, welche intuitiv ausdrücken, dass es wahr ist, dass Agenten 
+\begin_inset Formula $i$
+\end_inset
+
+ die Formeln 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ mit mindestens der Wahrscheinlichkeit 
+\begin_inset Formula $b$
+\end_inset
+
+ wahr ist.
+ Da 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ eine beliebige Formel der Sprache ist, kann diese eine primitive Aussage
+ oder wiederum eine Formel der probabilistischen Logik sein.
+ Wahrscheinlichkeiten werden als Numerische Wert aus dem Intervall 
+\begin_inset Formula $\left[0,1\right]$
+\end_inset
+
+ ausgedrückt.
+ Entsprechend sind durch arithmetische Operationen verknüpfte Formeln der
+ Art 
+\begin_inset Formula $\ell_{k}(\sigma)\text{+}\ell_{i}(\varphi\vee\ell_{j}(\psi))\geq b$
+\end_inset
+
+ denkbar.
+ In der Stochastik existiert der Begriff der bedingten Wahrscheinlichkeit.
+ Dabei wird z.B.
+ für zwei Ereignisse 
+\begin_inset Formula $A,B\in2^{\Omega}$
+\end_inset
+
+ gefragt, welchen Einfluss die Wahrscheinlichkeit 
+\begin_inset Formula $P(A)>0$
+\end_inset
+
+ auf die Wahrscheinlichkeit 
+\begin_inset Formula $P(B)$
+\end_inset
+
+ hat
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Mit 
+\begin_inset Formula $P(A)=0$
+\end_inset
+
+ tritt 
+\begin_inset Formula $A$
+\end_inset
+
+ niemals ein, womit 
+\begin_inset Formula $P(B|A)=P(B)$
+\end_inset
+
+ ist.
+\end_layout
+
+\end_inset
+
+.
+ Das Eintreten von 
+\begin_inset Formula $A$
+\end_inset
+
+, beeinflusst 
+\begin_inset Formula $P(B)$
+\end_inset
+
+, da nur noch Ereignisse aus 
+\begin_inset Formula $A\cap B$
+\end_inset
+
+ Einfluss auf das Eintreten des Ereignisses 
+\begin_inset Formula $B$
+\end_inset
+
+ haben.
+ Dabei wird die Wahrscheinlichkeit der Ereignisse aus 
+\begin_inset Formula $B$
+\end_inset
+
+ unter dem Eintreten von 
+\begin_inset Formula $A$
+\end_inset
+
+ mit 
+\begin_inset Formula $P(B|A)$
+\end_inset
+
+ bezeichnet.
+ Ist 
+\begin_inset Formula $A$
+\end_inset
+
+ eingetreten, so kann 
+\begin_inset Formula $\overline{A}=2^{\Omega}\setminus A$
+\end_inset
+
+ ausgeschlossen werden.
+ Insgesamt ist die bedingte Wahrscheinlichkeit 
+\begin_inset Formula $P(B|A)$
+\end_inset
+
+ von 
+\begin_inset Formula $B$
+\end_inset
+
+ unter 
+\begin_inset Formula $A$
+\end_inset
+
+ als Anteil von 
+\begin_inset Formula $P(A\cap B)$
+\end_inset
+
+ an 
+\begin_inset Formula $P(A)$
+\end_inset
+
+ wie folgt definiert: 
+\begin_inset Formula $P(B|A)\coloneqq\frac{P(A\cap B)}{P(A)}$
+\end_inset
+
+.
+ Bedingte Wahrscheinlichkeiten prädikatenlogischer Terme, lassen sich durch
+ Formeln der Art 
+\begin_inset Formula $\ell_{i}(\varphi|\psi)\geq b$
+\end_inset
+
+ ausdrücken.
+ Dabei meint 
+\begin_inset Formula $\ell_{i}(\varphi|\psi)\geq b$
+\end_inset
+
+, dass die Wahrscheinlichkeit von 
+\begin_inset Formula $\varphi$
+\end_inset
+
+, wenn 
+\begin_inset Formula $\psi$
+\end_inset
+
+ wahr ist, größer-gleich 
+\begin_inset Formula $b$
+\end_inset
+
+ ist.
+ Gilt 
+\begin_inset Formula $(M,s)\models\psi$
+\end_inset
+
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Sei angenommen, es läge bereits eine Semantik vor, dass eine Formel 
+\begin_inset Formula $\varphi\in\mathcal{L}_{n}^{QU}$
+\end_inset
+
+ für eine Struktur 
+\begin_inset Formula $M$
+\end_inset
+
+ und einen Zustand 
+\begin_inset Formula $s\in S$
+\end_inset
+
+ wahr ist, im Zeichen 
+\begin_inset Formula $(M,s)\models\varphi$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_inset
+
+, so beeinflusst dies 
+\begin_inset Formula $\ell_{i}(\varphi)$
+\end_inset
+
+, da nur noch 
+\begin_inset Formula $(M,s)\models\varphi\wedge\psi$
+\end_inset
+
+ Einfluss auf 
+\begin_inset Formula $(M,s)\models\varphi$
+\end_inset
+
+ hat.
+ Analog zur bedingten Wahrscheinlichkeit der Stochastik, ist die bedingte
+ Wahrscheinlichkeit von 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ unter 
+\begin_inset Formula $\psi$
+\end_inset
+
+, symbolisiert durch 
+\begin_inset Formula $\ell_{i}(\varphi|\psi)$
+\end_inset
+
+, definiert als der Anteil von 
+\begin_inset Formula $\ell_{i}(\varphi\wedge\psi)$
+\end_inset
+
+ an 
+\begin_inset Formula $\ell_{i}(\psi)$
+\end_inset
+
+ wie folgt: 
+\begin_inset Formula $\ell_{i}(\varphi|\psi)\coloneqq\frac{\ell_{i}(\varphi\wedge\psi)}{\ell_{i}(\psi)}$
+\end_inset
+
+.
+ Ein Ausdruck der Art 
+\begin_inset Formula $\ell_{i}(\varphi|\psi)\geq b$
+\end_inset
+
+ lässt sich dann umformulieren in 
+\begin_inset Formula $\frac{\ell_{i}(\varphi\wedge\psi)}{\ell_{i}(\psi)}\geq b\Rightarrow\ell_{i}(\varphi\wedge\psi)-\frac{b}{\ell_{i}(\psi)}\geq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Diese Skizze wird im Folgenden durch die formale Sprache der probabilistischen
+ Logik präzisiert.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 1
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Definition
+
+\series bold
+Die Sprache 
+\lang english
+
+\begin_inset Formula $\mathcal{L}_{n}^{QU}$
+\end_inset
+
+
+\lang ngerman
+ der probabilistischen Logik
+\series default
+.
+ Sei 
+\begin_inset Formula $\Phi$
+\end_inset
+
+ eine Menge primitiver Aussagen (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Primitive-Aussagen"
+
+\end_inset
+
+).
+ Seien 
+\begin_inset Formula $p,q\in\varPhi$
+\end_inset
+
+, 
+\begin_inset Formula $\varphi,\psi\in\mathcal{L}^{PL}$
+\end_inset
+
+, 
+\begin_inset Formula $n,k,i,i_{1},\cdots,i_{k}\in\mathbb{N}$
+\end_inset
+
+ und 
+\begin_inset Formula $a_{i},a_{1},\cdots,a_{k},c\in\mathbb{Q}$
+\end_inset
+
+ für 
+\begin_inset Formula $k\ge1$
+\end_inset
+
+.Die Sprache 
+\series bold
+\lang english
+
+\begin_inset Formula $\mathcal{L}_{n}^{QU}$
+\end_inset
+
+
+\series default
+\lang ngerman
+ der probabilistischen Logik für 
+\begin_inset Formula $n$
+\end_inset
+
+ Agent ist folgend definiert:
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\begin{eqnarray*}
+\forall p\in\Phi & :\Longleftrightarrow & p\in\mathcal{L}_{n}^{QU}\\
+\varphi,\psi\in\mathcal{L}_{n}^{QU} & :\Longleftrightarrow & (\varphi\wedge\psi)\in\mathcal{L}_{n}^{QU}\text{ und }(\varphi\vee\psi)\in\mathcal{L}_{n}^{QU}\text{ und }\\
+ &  & (\varphi\Rightarrow\psi)\in\mathcal{L}_{n}^{QU}\text{ und }(\varphi\Leftrightarrow\psi)\in\mathcal{L}_{n}^{QU}\\
+\varphi\in\mathcal{L}_{n}^{QU} & :\Longleftrightarrow & \neg\varphi\in\mathcal{L}_{n}^{QU}\text{ und }\ell_{i}(\varphi)\in\mathcal{L}_{n}^{QU}\\
+\ell_{i}(\varphi)\in\mathcal{L}_{n}^{QU} & :\Longleftrightarrow & a_{i}\ell_{i}(\varphi)\in\mathcal{L}_{n}^{QU}\\
+a_{1}\ell_{i_{1}}(\varphi),\cdots,a_{k}\ell_{i_{k}}(\varphi)\in\mathcal{L}_{n}^{QU} & :\Longleftrightarrow & a_{1}\ell_{i_{1}}(\varphi)+\cdots+a_{k}\ell_{i_{k}}(\varphi)\in\mathcal{L}_{n}^{QU}\\
+a_{1}\ell_{i_{1}}(\varphi)+\cdots+a_{k}\ell_{i_{k}}(\varphi)\in\mathcal{L}_{n}^{QU} & :\Longleftrightarrow & a_{1}\ell_{i_{1}}(\varphi)+\cdots+a_{k}\ell_{i_{k}}(\varphi)\geq c\in\mathcal{L}_{n}^{QU}\text{ und }\\
+ &  & a_{1}\ell_{i_{1}}(\varphi)+\cdots+a_{k}\ell_{i_{k}}(\varphi)>c\text{ und }\\
+ &  & a_{1}\ell_{i_{1}}(\varphi)+\cdots+a_{k}\ell_{i_{k}}(\varphi)\leq c\text{ und }\\
+ &  & a_{1}\ell_{i_{1}}(\varphi)+\cdots+a_{k}\ell_{i_{k}}(\varphi)<c\text{ und }\\
+ &  & a_{1}\ell_{i_{1}}(\varphi)+\cdots+a_{k}\ell_{i_{k}}(\varphi)=c
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Es gelten außerdem folgende, abkürzende Schreibweisen und Vereinbarungen
+\end_layout
+
+\begin_layout Itemize
+Der Wahrheitswert 
+\emph on
+wahr
+\emph default
+ ist mittels einer fest gewählten Aussage 
+\begin_inset Formula $p\in\Phi$
+\end_inset
+
+ als Tautologie 
+\begin_inset Formula $\top\in\mathcal{L}_{n}^{QU}\coloneqq p\vee\neg p$
+\end_inset
+
+ definiert.
+\end_layout
+
+\begin_layout Itemize
+Der Wahrheitswert 
+\emph on
+falsch
+\emph default
+ ist definiert als 
+\begin_inset Formula $\bot\in\mathcal{L}_{n}^{QU}\coloneqq\neg\top$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Ist 
+\begin_inset Formula $\varphi\vee\psi\in\mathcal{L}_{n}^{QU}$
+\end_inset
+
+ kann ersetzt werden durch 
+\begin_inset Formula $\neg(\neg\varphi\wedge\neg\psi)\in\mathcal{L}_{n}^{QU}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Die Formel 
+\begin_inset Formula $\varphi\Rightarrow\psi\in\mathcal{L}_{n}^{QU}$
+\end_inset
+
+ kann ersetzt werden durch 
+\begin_inset Formula $(\neg\varphi\vee\psi)\in\mathcal{L}_{n}^{QU}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Die Formel 
+\begin_inset Formula $\varphi\Leftrightarrow\psi\in\mathcal{L}_{n}^{QU}$
+\end_inset
+
+ kann ersetzt werden durch 
+\begin_inset Formula $(\varphi\Rightarrow\psi)\wedge(\psi\Rightarrow\varphi)\in\mathcal{L}_{n}^{QU}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Die Formel 
+\begin_inset Formula $\ell(\varphi)+(-1)\ell(\varPsi)\geq a\in\mathcal{L}_{n}^{QU}$
+\end_inset
+
+ kann ersetzt werden durch 
+\begin_inset Formula $\ell(\varphi)-\ell(\varPsi)\geq a\in\mathcal{L}_{n}^{QU}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Die Formel 
+\begin_inset Formula $\ell(\varphi)\geq\ell(\varPsi)\in\mathcal{L}_{n}^{QU}$
+\end_inset
+
+ kann ersetzt werden durch 
+\begin_inset Formula $\ell(\varphi)-\ell(\varPsi)\geq0\in\mathcal{L}_{n}^{QU}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Die Formel 
+\begin_inset Formula $\ell(\varphi)\leq c\in\mathcal{L}_{n}^{QU}$
+\end_inset
+
+ kann ersetzt werden durch 
+\begin_inset Formula $-\ell(\varphi)\geq-c\in\mathcal{L}_{n}^{QU}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Die Formel 
+\begin_inset Formula $\ell(\varphi)<c\in\mathcal{L}_{n}^{QU}$
+\end_inset
+
+ kann ersetzt werden durch 
+\begin_inset Formula $\neg(\ell(\varphi)\geq c)\in\mathcal{L}_{n}^{QU}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Die Formel 
+\begin_inset Formula $\ell(\varphi)=c\in\mathcal{L}_{n}^{QU}$
+\end_inset
+
+ kann ersetzt werden durch 
+\begin_inset Formula $(\ell(\varphi)\geq c)\wedge(\ell(\varphi)<c)\in\mathcal{L}_{n}^{QU}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ist klar um welche Menge primitiver Aussagen 
+\begin_inset Formula $\Phi$
+\end_inset
+
+ es sich handelt wird anstatt 
+\begin_inset Formula $\mathcal{L}_{n}^{QU}(\Phi)$
+\end_inset
+
+ auch 
+\begin_inset Formula $\mathcal{L}_{n}^{QU}$
+\end_inset
+
+ notiert.
+ Das hochgestellt 
+\begin_inset Formula $QU$
+\end_inset
+
+ steht für Quantitative Uncertainty.
+ Die Indizes 
+\begin_inset Formula $i_{1},\cdots,i_{k}$
+\end_inset
+
+ stehen für Agenten und müssen nicht notwendigerweise verschieden sein.
+ Eine Formel der Art 
+\begin_inset Formula $\ell_{i}(\varphi)$
+\end_inset
+
+ wird als Wahrscheinlichkeits-Term bezeichnet und kann interpretiert werden
+ als die Wahrscheinlichkeit für 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ des Agenten 
+\begin_inset Formula $i$
+\end_inset
+
+ wahr zu sein.
+ Eine Formel der Art 
+\begin_inset Formula $a_{1}\ell_{i_{1}}(\varphi)+\cdots+a_{k}\ell_{i_{k}}(\varphi)\geq c$
+\end_inset
+
+ wird als lineare Wahrscheinlichkeits-Formel oder einfach als Wahrscheinlichkeit
+s-Formel bezeichnet.
+\end_layout
+
+\begin_layout Subsubsection
+Eine Semantik für die Sprache 
+\series bold
+\lang english
+
+\begin_inset Formula $\mathcal{L}_{n}^{QU}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Um eine Semantik für Formeln der Sprache 
+\begin_inset Formula $\mathcal{L}_{n}^{QU}$
+\end_inset
+
+ zu definieren, werden analog zu den Kripke-Strukturen, sogenannte Wahrscheinlic
+hkeitsstruktur definiert und diese um ein Wahrscheinlichkeitsmaß 
+\begin_inset Formula $\mu$
+\end_inset
+
+ erweitert.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Definition
+Sei 
+\begin_inset Formula $\mathbb{I}_{n}\coloneqq\left\{ 1,\cdots,n\right\} $
+\end_inset
+
+ eine Menge von 
+\begin_inset Formula $n$
+\end_inset
+
+ Agenten.
+ Eine Wahrscheinlichkeitsstruktur ist ein Tupel 
+\begin_inset Formula $M=(S,\mathcal{PR}_{1},\cdots,\mathcal{PR}_{n},\pi)$
+\end_inset
+
+ mit folgenden Komponenten:
+\end_layout
+
+\begin_layout Itemize
+Der Menge 
+\begin_inset Formula $S$
+\end_inset
+
+ der Welten
+\end_layout
+
+\begin_layout Itemize
+Für alle Agenten 
+\begin_inset Formula $i\in\mathbb{I}$
+\end_inset
+
+ weißt die Funktion 
+\begin_inset Formula $\mathcal{PR}_{i}(s)\coloneqq(S_{s,i},\mathcal{R}_{s,i},\mu_{s,i})$
+\end_inset
+
+ für jeden Zustand 
+\begin_inset Formula $s\in S$
+\end_inset
+
+ einen Wahrscheinlichkeitsraum 
+\begin_inset Formula $(S_{s,i},\mathcal{R}_{s,i},\mu_{s,i})$
+\end_inset
+
+ mit 
+\begin_inset Formula $S_{s,i}\subseteq S$
+\end_inset
+
+ zu.
+ 
+\begin_inset Formula $\mathcal{PR}_{i}$
+\end_inset
+
+ wird auch als Wahrscheinlichkeitszuweisung
+\end_layout
+
+\begin_layout Itemize
+Die Interpretation 
+\begin_inset Formula $\pi:(S\times\Phi)\to\left\{ \top,\bot\right\} $
+\end_inset
+
+ ist eine Abbildung und weiß für jeden Zustand 
+\begin_inset Formula $s\in S$
+\end_inset
+
+ und jeder primitive Aussage 
+\begin_inset Formula $p\in\Phi$
+\end_inset
+
+ genau einen Wahrheitswert aus 
+\begin_inset Formula $\left\{ \top,\bot\right\} $
+\end_inset
+
+ zu.
+\end_layout
+
+\begin_layout Plain Layout
+Sei 
+\begin_inset Formula $M=(S,\mathcal{PR}_{1},\cdots,\mathcal{PR}_{n},\pi)$
+\end_inset
+
+ eine Wahrscheinlichkeitsstruktur.
+ Das Tupel 
+\begin_inset Formula $M=(S,\mathcal{PR}_{1},\cdots,\mathcal{PR}_{n})$
+\end_inset
+
+ wird auch als Wahrscheinlichkeitsrahmen bezeichnet.
+\end_layout
+
+\begin_layout Plain Layout
+Mit 
+\begin_inset Formula $x=(s,p)\in S\times\Phi$
+\end_inset
+
+ sei für die Interpretation 
+\begin_inset Formula $\pi$
+\end_inset
+
+ vereinbart, dass folgende Schreibweisen semantisch äquivalent sind: 
+\begin_inset Formula $\pi(x),\pi((s,p)),\pi(s)(p)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathcal{M}^{prob}$
+\end_inset
+
+ ist die Klasse aller Wahrscheinlichkeitsstrukturen und 
+\begin_inset Formula $\mathcal{M}^{meas}$
+\end_inset
+
+ ist die Klasse aller Wahrscheinlichkeitsstrukturen in welchen für jede
+ Wahrscheinlichkeitsstruktur 
+\begin_inset Formula $(S,\mathcal{PR}_{1},\cdots,\mathcal{PR}_{n},\pi)$
+\end_inset
+
+, alle Mengen 
+\begin_inset Formula $S_{s,i}\subseteq S$
+\end_inset
+
+ messbare Mengen sind.
+ D.h 
+\begin_inset Formula $\mathcal{M}^{meas}$
+\end_inset
+
+ enthält die Strukturen 
+\begin_inset Formula $(S,\mathcal{PR}_{1},\cdots,\mathcal{PR}_{n},\pi)$
+\end_inset
+
+ in welchen für alle 
+\begin_inset Formula $i\in\mathbb{I}$
+\end_inset
+
+ und alle 
+\begin_inset Formula $s\in S$
+\end_inset
+
+ für die Mengen 
+\begin_inset Formula $S_{s,i}$
+\end_inset
+
+ aus 
+\begin_inset Formula $\mathcal{PR}_{i}(s)\coloneqq(S_{s,i},\mathcal{R}_{s,i},\mu_{s,i})$
+\end_inset
+
+, dass 
+\begin_inset Formula $S_{s,i}\in\mathcal{R}_{s,i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+Eine Beispiel für eine Klasse aus 
+\begin_inset Formula $\mathcal{M}^{meas}$
+\end_inset
+
+ wäre die Klasse, in welcher für alle 
+\begin_inset Formula $s\in S$
+\end_inset
+
+ und alle 
+\begin_inset Formula $i\in\mathbb{I}_{n}$
+\end_inset
+
+ mit 
+\begin_inset Formula $\mathcal{PR}_{i}(s)\coloneqq(S_{s,i},\mathcal{R}_{s,i},\mu_{s,i})$
+\end_inset
+
+ gilt, dass 
+\begin_inset Formula $\mathcal{R}_{s,i}=2^{S_{s,i}}$
+\end_inset
+
+.
+ D.h.
+ die Klasse in welcher jede 
+\begin_inset Formula $\sigma$
+\end_inset
+
+-Algebra gleich der Potenzmenge der Zustände 
+\begin_inset Formula $S_{s,i}$
+\end_inset
+
+ ist.
+ Damit sind alle 
+\begin_inset Formula $s^{'}\in S_{s,i}$
+\end_inset
+
+ messbar.
+\end_layout
+
+\begin_layout Standard
+Um Wahrscheinlichkeitsformeln zu interpretieren, wird die Menge 
+\begin_inset Formula $\llbracket\varphi\rrbracket_{M}\coloneqq\left\{ s\in S|\pi(s)(\varphi)=\top\right\} $
+\end_inset
+
+ für jede Formel 
+\begin_inset Formula $\varphi\in\mathcal{L}_{n}^{QU}$
+\end_inset
+
+ definiert.
+ Diese beinhaltet alle Zustände aus 
+\begin_inset Formula $S$
+\end_inset
+
+ für die eine Formel 
+\begin_inset Formula $\varphi\in\mathcal{L}_{n}^{QU}$
+\end_inset
+
+ in der Wahrscheinlichkeitsstruktur 
+\begin_inset Formula $M=(S,\mathcal{PR}_{1},\cdots,\mathcal{PR}_{n},\pi)$
+\end_inset
+
+ wahr sind.
+\end_layout
+
+\begin_layout Standard
+Im Fokus der Darstellung stehen messbare Wahrscheinlichkeitsstrukturen aus
+ 
+\begin_inset Formula $\mathcal{M}^{meas}$
+\end_inset
+
+.
+ Dies vereinfacht die Darstellung dahingehend, dass alle 
+\begin_inset Formula $\mu_{s,i}$
+\end_inset
+
+ keine 
+\begin_inset Quotes gld
+\end_inset
+
+Lücken im Definitionsbereich
+\begin_inset Quotes grd
+\end_inset
+
+ aufweisen.
+ 
+\end_layout
+
+\begin_layout Standard
+Für eine Struktur 
+\begin_inset Formula $M=(S,\mathcal{PR}_{1},\pi)\in\mathcal{M}^{meas}$
+\end_inset
+
+ wird ein Wahrscheinlichkeits-Term 
+\begin_inset Formula $\ell_{i}(\varphi)$
+\end_inset
+
+ interpretiert als die Wahrscheinlichkeit für 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ in 
+\begin_inset Formula $M$
+\end_inset
+
+ für den Agenten 
+\begin_inset Formula $i$
+\end_inset
+
+ wahr zu sein.
+ Für eine Struktur 
+\begin_inset Formula $M=(S,\mathcal{PR}_{1},\cdots,\mathcal{PR}_{n},\pi)\in\mathcal{M}^{meas}$
+\end_inset
+
+ ist eine lineare Wahrscheinlichkeitsformel 
+\begin_inset Formula $a_{1}\ell_{i_{1}}(\varphi_{1})+\cdots+a_{k}\ell_{i_{k}}(\varphi_{k})\geq b$
+\end_inset
+
+ genau dann wahr, wenn die Summe der durch die Faktoren 
+\begin_inset Formula $a_{1},\cdots,a_{k}$
+\end_inset
+
+ gewichteten Wahrscheinlichkeiten für die Zustände in denen die wahren Formeln
+ 
+\begin_inset Formula $\varphi_{1},\cdots,\varphi_{k}$
+\end_inset
+
+ für den Zustand 
+\begin_inset Formula $S$
+\end_inset
+
+ in den entsprechende Wahrscheinlichkeitsstrukturen 
+\begin_inset Formula $(S_{s,i_{1}},\mu_{s,i_{1}}),\cdots,(S_{s,i_{1}},\mu_{s,i_{k}})$
+\end_inset
+
+ möglich sind, größer oder gleich der Wahrscheinlichkeit 
+\begin_inset Formula $b$
+\end_inset
+
+ ist.
+ Die Semantik der propositionalen Logik ist eine Erweiterung der Semantik
+ der Aussagenlogik.
+ Insbesondere wird die Semantik von Wahrscheinlichkeitsformen durch folgende
+ Definition formalisiert.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+(M,s)\models a_{1}\ell_{i_{1}}(\varphi_{1})+\cdots+a_{k}\ell_{i_{k}}(\varphi_{k})\geq b & \Longleftrightarrow & a_{1}\mu_{s,i_{1}}(\llbracket\varphi_{1}\rrbracket_{M}\cap S_{s,i_{1}})+\cdots+a_{k}\mu_{s,i_{k}}(\llbracket\varphi_{k}\rrbracket_{M}\cap S_{s,i_{k}})\geq b\\
+ &  & \text{mit }\mathcal{PR}_{i_{j}}(s)=(S_{s,i_{j}},\mu_{s,i_{j}})\text{ für alle }\mbox{j\in\left\{  1,\cdots,k\right\}  }
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Zu bemerken ist dabei, dass die Wahrheit eines 
+\begin_inset Formula $a_{j}\ell_{i_{j}}(\varphi_{j})$
+\end_inset
+
+ vom zugehörigen 
+\begin_inset Formula $S_{s,i_{1}}$
+\end_inset
+
+ abhängt.
+ 
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Eine einfachere Varianten der probabilistischen Logik geht von einem Wahrscheinl
+ichkeitsmaß 
+\begin_inset Formula $\mu$
+\end_inset
+
+ für alle 
+\begin_inset Formula $\varphi_{1},\cdots,\varphi_{k}$
+\end_inset
+
+ aus.
+ Womit eine Formel 
+\begin_inset Formula $a_{1}\ell_{i_{1}}(\varphi_{1})+\cdots+a_{k}\ell_{i_{k}}(\varphi_{k})\geq b$
+\end_inset
+
+, wenn diese für einen Zustand in 
+\begin_inset Formula $M$
+\end_inset
+
+ wahr ist, für alle 
+\begin_inset Formula $S$
+\end_inset
+
+ aus 
+\begin_inset Formula $M$
+\end_inset
+
+ wahr ist 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "JosephY.Halpern2007"
+
+\end_inset
+
+,
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Fagin1990"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Definition
+Eine Semantik der Sprache 
+\begin_inset Formula $\mathcal{L}_{n}^{QU}$
+\end_inset
+
+.
+ Sei 
+\begin_inset Formula $M=(S,\mathcal{PR}_{1},\cdots,\mathcal{PR}_{n},\pi)\in\mathcal{M}^{meas}$
+\end_inset
+
+ eine Wahrscheinlichkeitsstruktur, sei 
+\begin_inset Formula $s\in S$
+\end_inset
+
+ ein Zustand sowie 
+\begin_inset Formula $\varphi,\psi\in\mathcal{L}_{n}^{QU}$
+\end_inset
+
+ zwei Formeln und 
+\begin_inset Formula $\Phi$
+\end_inset
+
+ die Menge der primitiven Aussagen.
+\end_layout
+
+\begin_layout Plain Layout
+Die Relation 
+\begin_inset Formula $(M,s)\models\varphi$
+\end_inset
+
+ ist induktiv über der Struktur der Formeln aus 
+\begin_inset Formula $\mathcal{L}_{n}^{QU}$
+\end_inset
+
+ wie folgt definiert: 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+(M,s)\models\varphi & :\Longleftrightarrow & \pi(s)(\varphi)=\top\text{ (für}\varphi\in\Phi\text{)}\\
+(M,s)\models\neg\varphi & :\Longleftrightarrow & (M,s)\nvDash\varphi\\
+(M,s)\models\varphi\wedge\psi & :\Longleftrightarrow & (M,s)\models\varphi\text{ und }(M,s)\models\psi\\
+(M,s)\models a_{1}\ell_{i_{1}}(\varphi_{1})+\cdots+a_{k}\ell_{i_{k}}(\varphi_{k})\geq b & \Longleftrightarrow & a_{1}\mu_{s,i_{1}}(\llbracket\varphi_{1}\rrbracket_{M}\cap S_{s,i_{1}})+\cdots+a_{k}\mu_{s,i_{k}}(\llbracket\varphi_{k}\rrbracket_{M}\cap S_{s,i_{k}})\geq b\\
+ &  & \text{mit }\mathcal{PR}_{i_{j}}(s)=(S_{s,i_{j}},\mu_{s,i_{j}})\text{ für alle }\mbox{j\in\left\{  1,\cdots,k\right\}  }
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Gilt 
+\begin_inset Formula $(M,s)\models\varphi$
+\end_inset
+
+, so spricht man davon, dass 
+\begin_inset Quotes gld
+\end_inset
+
+
+\begin_inset Formula $\varphi\in\mathcal{L}_{n}^{QU}$
+\end_inset
+
+ wahr ist im Zustand 
+\begin_inset Formula $s$
+\end_inset
+
+ des Models 
+\begin_inset Formula $M$
+\end_inset
+
+
+\begin_inset Quotes grd
+\end_inset
+
+ oder 
+\begin_inset Quotes gld
+\end_inset
+
+Das Model 
+\begin_inset Formula $(M,s)$
+\end_inset
+
+ erfüllt 
+\begin_inset Formula $\varphi\in\mathcal{L}_{n}^{QU}$
+\end_inset
+
+
+\begin_inset Quotes grd
+\end_inset
+
+ oder einfach 
+\begin_inset Quotes gld
+\end_inset
+
+
+\begin_inset Formula $\varphi\in\mathcal{L}_{n}^{QU}$
+\end_inset
+
+ erfüllt 
+\begin_inset Formula $(M,s)$
+\end_inset
+
+
+\begin_inset Quotes grd
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Analog zur dargestellten Aussagenlogik und Wissenslogik, gelten die üblichen
+ Sprechweisen der Erfüllbarkeit und Gültigkeit einer Formel 
+\begin_inset Formula $\varphi\in\mathcal{L}_{n}^{QU}$
+\end_inset
+
+ bezüglich einer Struktur 
+\begin_inset Formula $M\in\mathcal{M}^{meas}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Definition
+Sei ein 
+\begin_inset Formula $M=(S,\mathcal{PR}_{1},\cdots,\mathcal{PR}_{n},\pi)\in\mathcal{M}^{meas}$
+\end_inset
+
+ eine messbare Struktur, die Menge 
+\begin_inset Formula $S$
+\end_inset
+
+ der Zustände, 
+\begin_inset Formula $\varphi\in\mathcal{L}_{n}^{QU}$
+\end_inset
+
+ eine Formel und 
+\begin_inset Formula $\Gamma\subseteq\mathcal{L}_{n}^{QU}$
+\end_inset
+
+ eine Menge von Formeln.
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\begin{eqnarray*}
+\varphi\text{ heißt erfüllbar in }M & :\Longleftrightarrow & \exists s\in S:(M,s)\models\varphi\\
+\varphi\text{ heißt erfüllbar} & :\Longleftrightarrow & \exists s\in S,\exists M\in\mathcal{M}^{meas}:(M,s)\models\varphi\\
+\varphi\text{ heißt gültig in }M & :\Longleftrightarrow & \forall s\in S:(M,s)\models\varphi\\
+\text{symbolisiert durch }M\models\varphi\\
+\varphi\text{ heißt gültig} & :\Longleftrightarrow & \forall s\in S,\forall M\in\mathcal{M}^{meas}:(M,s)\models\varphi\\
+\text{symbolisiert durch }\models\varphi\\
+\Gamma\text{ heißt gültig in }M & :\Longleftrightarrow & \exists s\in S\thinspace:\thinspace\forall\psi\in\Gamma\thinspace:\thinspace(M,s)\models\psi\\
+\text{symbolisiert durch }M\models\Gamma\\
+\varphi\text{ heißt semantische Konsequenz von }\Gamma & :\Longleftrightarrow & \forall M\in\mathcal{M}^{meas}\thinspace:\thinspace M\models\Gamma\Rightarrow M\models\varphi\\
+\text{symbolisiert durch }\Gamma\models\varphi
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Zur Veranschaulichung sei ein Beispiel gegeben.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Example
+Sei eine Struktur 
+\begin_inset Formula $M_{1}=(S,\mathcal{PR}_{1},\pi)\in\mathcal{M}^{meas}$
+\end_inset
+
+ und eine Formel 
+\begin_inset Formula $p\wedge q\wedge(\ell_{1}(\neg p\wedge q)>\ell_{1}(p\wedge q))\in\mathcal{L}_{n}^{QU}$
+\end_inset
+
+ mit: 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\Phi\coloneqq\left\{ p,q\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $S=\left\{ s_{1},s_{2},s_{3},s_{4}\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\pi(s_{1})(p)=\pi(s_{1})(q)=\pi(s_{2})(p)=\pi(s_{3})(q)=\top$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\pi(s_{2})(q)=\pi(s_{3})(p)=\pi(s_{4})(p)=\pi(s_{4})(q)=\bot$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mu(s_{1})=\mu(s_{2})=\frac{1}{4}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mu(s_{3})=\frac{3}{10}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mu(s_{4})=\frac{2}{10}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mathcal{PR}_{1}\coloneqq(2^{S},\mu)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Aus der Definition von 
+\begin_inset Formula $\pi$
+\end_inset
+
+ folgt, dass die Zustände 
+\begin_inset Formula $s_{1},s_{2},s_{3},s_{4}$
+\end_inset
+
+ alle möglichen Belegungen der Konjunktion von 
+\begin_inset Formula $p$
+\end_inset
+
+ und 
+\begin_inset Formula $q$
+\end_inset
+
+ festhalten: 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $(M_{1},s_{1})\models p\wedge q$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $(M_{1},s_{2})\models p\wedge\neg q$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $(M_{1},s_{3})\models\neg p\wedge q$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $(M_{1},s_{4})\models\neg p\wedge\neg q$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Damit ergeben sich Mengen 
+\begin_inset Formula $\llbracket p\wedge q\rrbracket_{M_{1}}=\left\{ s_{1}\right\} $
+\end_inset
+
+,
+\begin_inset Formula $\llbracket p\wedge\neg q\rrbracket_{M_{1}}=\left\{ s_{2}\right\} $
+\end_inset
+
+,
+\begin_inset Formula $\llbracket\neg p\wedge q\rrbracket_{M_{1}}=\left\{ s_{3}\right\} $
+\end_inset
+
+,
+\begin_inset Formula $\llbracket\neg p\wedge\neg q\rrbracket_{M_{1}}=\left\{ s_{4}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+Nun wird geprüft ob 
+\begin_inset Formula $(M_{1},s_{1})\models p\wedge q\wedge(\ell_{1}(\neg p\wedge q)>\ell_{1}(p\wedge q))$
+\end_inset
+
+ gilt.
+ Dies Formel stellt fest, dass 
+\begin_inset Formula $p\wedge q$
+\end_inset
+
+ wahr in 
+\begin_inset Formula $s_{1}$
+\end_inset
+
+ ist und der Agent 
+\begin_inset Formula $1$
+\end_inset
+
+ 
+\begin_inset Formula $\neg p\wedge q$
+\end_inset
+
+ für wahrscheinlicher hält als 
+\begin_inset Formula $p\wedge q$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+(M_{1},s_{1})\models p\wedge q\wedge(\ell_{1}(\neg p\wedge q)>\ell_{1}(p\wedge q)) & \Rightarrow & (M_{1},s_{1})\models p\wedge q\text{ und }(M_{1},s_{1})\models\ell_{1}(\neg p\wedge q)>\ell_{1}(p\wedge q)\\
+(M_{1},s_{1})\models p\wedge q & \Rightarrow & (M_{1},s_{1})\models q\text{ und }(M_{1},s_{1})\models q\Rightarrow\pi(s_{1})(p)=\pi(s_{1})(q)=\top\\
+(M_{1},s_{1})\models\ell_{1}(\neg p\wedge q)>\ell_{1}(p\wedge q) & \Rightarrow & (M_{1},s_{1})\models\ell_{1}(\neg p\wedge q)-\ell_{1}(p\wedge q)>0\Rightarrow\\
+ &  & (M_{1},s_{1})\models\ell_{1}(\neg p\wedge q)+(-1)\ell_{1}(p\wedge q)>0
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Für die Wahrscheinlichkeiten ergibt sich: NOCHMAL GENAU ÜBERPRÜFEN!!!!
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+\ell_{1}(\neg p\wedge q) & = & \ell_{1}(p|q)=\frac{\ell_{1}(p)\cdot\ell_{1}(q)}{\ell_{1}(q)}=\text{ (wegen }\mbox{\neg p\wedge q=p\to q}\mbox{\equiv P(p|q)})\\
+\frac{\ell_{1}(p)\cdot\ell_{1}(q)}{\ell_{1}(q)} & = & \frac{\mu(\llbracket p\rrbracket_{M_{1}}\cap2^{S})\cdot\mu(\llbracket q\rrbracket_{M_{1}}\cap2^{S})}{\mu(\llbracket q\rrbracket_{M_{1}}\cap2^{S})}\\
+ & = & \frac{\mu(\left\{ s_{1}\right\} )\cdot\mu(\left\{ s_{1}\right\} )}{\mu(\left\{ s_{1}\right\} )}\\
+ & = & \frac{\frac{1}{4}\cdot\frac{1}{4}}{\frac{1}{4}}
+\end{eqnarray*}
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Zu bemerken ist, dass im angeführten Beispiel die zu Beginn des Kapitels
+ erwähnten Umformungen für bedingten Wahrscheinlichkeiten angewendet wurden.
+ Die Sprache 
+\begin_inset Formula $\mathcal{L}_{n}^{QU}$
+\end_inset
+
+ und ihre Semantik sieht bisher keine Ausdrücke dieser Art vor.
+\end_layout
+
+\begin_layout Subsubsection
+Axiomatisierung von 
+\begin_inset Formula $\mathcal{L}_{n}^{QU}$
+\end_inset
+
+ / 
+\begin_inset Formula $\mathcal{M}_{n}^{prob}$
+\end_inset
+
+ mittels 
+\begin_inset Formula $AX_{n}^{prob}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Sprache 
+\begin_inset Formula $\mathcal{L}_{n}^{KQU}$
+\end_inset
+
+ (= 
+\begin_inset Formula $\mathcal{L}_{n}^{K}$
+\end_inset
+
+ + 
+\begin_inset Formula $\mathcal{L}_{n}^{QU}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Subsubsection
+Axiomatisierung von 
+\begin_inset Formula $\mathcal{L}_{n}^{KQU}$
+\end_inset
+
+ / 
+\begin_inset Formula $\mathcal{M}_{n}^{K,prob}$
+\end_inset
+
+ / 
+\begin_inset Formula $\mathcal{M}_{n}^{K,meas}$
+\end_inset
+
+ (=
+\begin_inset Formula $\mathcal{M}_{n}^{K,prob}$
+\end_inset
+
++ alle Mengen sind 
+\emph on
+messbar
+\emph default
+) mittels 
+\begin_inset Formula $AX_{n}^{K,prob}$
+\end_inset
+
+ (=
+\begin_inset Formula $S5_{n}$
+\end_inset
+
++ 
+\begin_inset Formula $AX_{n}^{prob}$
+\end_inset
+
+) (ggf.
+ 
+\begin_inset Formula $AX_{n}^{K,bel}$
+\end_inset
+
+ (=
+\begin_inset Formula $S5_{n}$
+\end_inset
+
++
+\begin_inset Formula $AX_{n}^{bel}$
+\end_inset
+
+))
+\end_layout
+
+\begin_layout Subsection
+Sprache 
+\begin_inset Formula $\mathcal{L}_{n}^{KQUC}$
+\end_inset
+
+(=
+\begin_inset Formula $\mathcal{L}_{n}^{KQU}$
+\end_inset
+
++ Common Knowledge)
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "literature"
+options "plain"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,27 @@
+strict digraph kripke_graph_example {
+    layout="neato";
+    splines=true;
+    node [shape = circle, fontname=Optima,fontsize=12, style=filled, color="#333333", fillcolor="#EEEEEE"];
+    edge [color="#31CEF0"];
+    forcelabels=true;
+    concentrate=true;
+    size="8,5";
+    CB [ label="(C,B)"];
+    CA [ label="(C,A)"];
+    BA [ label="(B,A)"];
+    BC [ label="(B,C)"];
+    AC [ label="(A,C)"];
+    AB [ label="(A,B)"];
+    CB -> AB [ label = "2", dir="both"];
+    AB -> AC [ label = "1", dir="both"];
+    AC -> BC [ label = "2", dir="both"];
+    BC -> BA [ label = "1", dir="both"];
+    BA -> CA [ label = "2", dir="both"];
+    CA -> CB [ label = "1", dir="both"];
+    CB -> CB [ label = "1,2"];
+    CA -> CA [ label = "1,2"];
+    BA -> BA [ label = "1,2"];
+    BC -> BC [ label = "1,2"];
+    AC -> AC [ label = "1,2"];
+    AB -> AB [ label = "1,2"]
+}

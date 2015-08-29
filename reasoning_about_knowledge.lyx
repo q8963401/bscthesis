@@ -1,0 +1,197 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass extarticle
+\use_default_options true
+\begin_modules
+minimalistic
+\end_modules
+\maintain_unincluded_children false
+\language ngerman
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 11
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\headsep 3cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language german
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+Epistemologie ist die Lehre vom Wissen.
+ Die epistemische Logik betrachtet das Wissen vom Standpunkt einer formalen
+ Logik.
+ Ein Hauptanliegen einer Logik des Wissens ist es, die Eigenschaften des
+ Wissens formal zu untersuchen und ein System der epistemischen Logik zu
+ Axiomatisieren.
+\end_layout
+
+\begin_layout Standard
+Eine Hauptanwendung der epistemischen Logik ist die Untersuchung des Wissens
+ einer Menge sogenannter Agenten.
+ Man spricht auch von einer Gruppe von Agenten und von Multi-Agenten-Systemen.
+ 
+\end_layout
+
+\begin_layout Standard
+Das Wissen eines Agenten, enthält dabei wahre Fakten über die Welt, als
+ auch Wissen über andere Agenten der Gruppe umfassen.
+ Es ist nicht selbstverständlich, dass alle Agenten einer Gruppe das gleiche
+ Wissen haben.
+ In einer Gruppe von Agenten, kann es Agenten geben, welche Wissen, z.B.
+ über andere Agenten haben, welches andere Agenten nicht haben.
+ Weiß jeder Agent einer Gruppe einen Fakt 
+\begin_inset Formula $\varphi$
+\end_inset
+
+, so gehört 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ zum sogenannten gemeinsamen Wissen (Engl.
+ Common Knowledge).
+ Das Gegenstück zum gemeinsamen Wissen ist das verteilte Wissen.
+ Das Wissen 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ ist über die Agenten einer Gruppe verteilt, wenn jeder Agent der Gruppe
+ einen Teil von 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ weiß und es durch Zusammenlegen des Teilwissens aller Agenten möglich ist,
+ die Wahrheit von 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ festzustellen.
+ Üblicherweise unterscheidet sich das Wissen der Agenten eines Multi-Agenten-Sys
+tems.
+\end_layout
+
+\begin_layout Standard
+Das Wissen von Agenten einer Gruppe unterliegt unter Umständen Dynamiken,
+ d.h.
+ es verändert sich über die Zeit und hat damit einen Zustand.
+ Von Interesse ist dabei, wie sich dieser Zustand des Wissens einer Gruppe
+ in der epistemischen Logik beschreiben und untersuchen lässt.
+\end_layout
+
+\begin_layout Standard
+Dem Wissen eines Agenten steht gegenüber, das ein Agent eine Sache für möglich
+ hält.
+ Um diese Unterscheidung zu treffen, wird ein semantisches Model möglicher
+ Welten eingeführt.
+ Man spricht davon, dass ein Agent einen Fakt 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ genau dann weiß, wenn 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ in allen Welten wahr ist, welche der Agent für möglich hält.
+ Eine mögliche Welt meint dabei intuitiv die möglichen Zustände des Wissens
+ über Dinge.
+ Hält ein Agent eine Sache 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ für möglich, so gibt es eine Welt, von welcher der Agent nicht weiß ob
+ 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ in dieser wahr oder falsch ist.
+ Dies deck sich mit dem intuitiven Verständnis vom Wissen, denn würde ein
+ Agenten 
+\begin_inset Formula $A$
+\end_inset
+
+ einen Fakt 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ wissen und ein anderer Agent 
+\begin_inset Formula $B$
+\end_inset
+
+ einen Fakt 
+\begin_inset Formula $\neg\varphi$
+\end_inset
+
+ wissen, so könnte das Wissen beider Agenten nicht die selbe Welt betreffen
+ da nicht gleichzeitig 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ und 
+\begin_inset Formula $\neg\varphi$
+\end_inset
+
+ wahr sein kann.
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,49 @@
+\documentclass[11pt,a4paper]{paper}
+\usepackage[german]{babel}
+\usepackage{fontspec}
+\setmainfont{Optima}
+\usepackage[a4paper,vmargin={5mm,5mm},hmargin={10mm,10mm}]{geometry}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{csquotes}
+
+\begin{document}
+
+\subsubsection*{Epistemische Logik : 101}
+
+Sei eine Grammatik der epistemischen logic $EL ::= p\ |\ \neg \varphi\ |\ \varphi \vee \psi\ |\ K_i \varphi\ |\ C_G\varphi$ mit:
+
+\begin{itemize}
+	\item  Dem Modaloperator $K_i \varphi$ für  \enquote{$i$ weiß $\varphi$} für alle Agenten $i \in I$. (äquivalent zur necessarity modalität $\Box\varphi$ der allgemeinen Modallogik)
+	\item Dem gemeinsamen Wissen $C_G\varphi$ der Gruppe $G$, dass $\varphi$ gilt.
+	\item Analog zur Äquivalenz der Existenzmodalität der allgemeinen Modallogik $\Diamond \varphi :\Leftrightarrow \neg\Box \neg \varphi$ sei die Existenzmodalität der epistemischen Logik wie folgt definiert : $\langle i \rangle\varphi := \neg K_i \neg \varphi$. ($\equiv$ Es ist nicht wahr, dass $i$ $\varphi$ nicht weiß.)
+	\item \emph{Bemerkung:} Es ist wichtig zu unterscheiden zwischen \underline{etwas Wissen} und \underline{etwas für möglich halten}. $K_{Alice} \varphi$ meint, dass Alice tatsächlich weiß, dass $\varphi$ gilt. Hingegen sagt $\langle Alice \rangle \varphi$ aus, dass Alice $\varphi$ für möglich hält, da $\langle Alice \rangle \varphi$ gleich $\neg K_{Alice} \neg \varphi$ ist, lässt sich das lesen als \emph{Es ist nicht wahr, dass Alice \underline{weiß}, dass $\varphi$ falsch ist.}, was bedeutet, dass Alice $\varphi$ durchaus für möglich hält oder sogar wissen kann.
+\end{itemize}
+
+\subsubsection*{Beispiel : Drei Cowboys am Marterpfahl}
+
+ \begin{itemize}
+	\item \textbf{Drei Cowboys} wurden von Indianern gefangen genommen und an drei Marterpfähle gefesselt. 
+ 	\item Die Marterpfähle stehen in einer Reihe und die Cowboys sind jeweils so angebunden, dass der am hinteren Marterpfahl angebundene Cowboy seine zwei Vordermänner von hinten sehen kann. 
+ \item Der am mittleren Marterpfahl angebundene Cowboy kann lediglich seinen Vordermann von hinten sehen. 
+ \item Der am vorderen Marterpfahl gefesselte Leidensgenosse kann keinen seiner zwei Mitgefangenen sehen. 
+ \item Der Häuptling zieht fünf Adlerfedern aus seiner Feldtasche, \textbf{drei schwarze} und \textbf{zwei weiße}. 
+ \item Er zeigt die fünf Federn den drei Cowboys. 
+ \item Dann steckt er jedem der drei Gefangenen eine der Federn so an den Hut, dass die Farbe der Feder von hinten zwar erkennbar ist, der Hutträger aber selbst die Feder nicht sehen kann. 
+ \item Die restlichen zwei Federn steckt der Häuptling wieder ein, ohne dass einer der Cowboys erkennen kann, welche Farbe diese zwei Federn haben.
+ \item Der Häuptling spricht zu den Gefangenen: \enquote{Wenn einer von euch herausfinden kann, welche Farbe die Feder auf seinem eigenen Hut hat, lasse ich euch alle frei.}
+ \item Dass Absprachen zwischen den drei Cowboys nicht gestattet sind, versteht sich wohl von selbst.
+  \item Sehr lange schweigen die Cowboys. Dann verkündet einer von ihnen die rettende Antwort.
+\end{itemize}
+
+\subsubsection*{Formalisierung und Lösung:}
+
+Seien die drei Cowboys $I:=\{H,M,V\}$ (Hinten, Mitte, Vorne).
+\begin{itemize}
+    \item Da $H$ nichts sagt, muss $K_H\neg(M_{white} \wedge V_{white})$ gelten. D.h. seine Vordermännern haben nicht beide eine weiße Feder. D.h. mindestens einer der Vordermännern hat eine schwarze Feder. Es ist möglich, dass $M_{black} \wedge V_{black}$ oder $V_{black} \wedge M_{black}$, da es aber drei schwarze Federn gibt, kann $H$ nichts daraus schließen.
+    \item $M$ stellt fest, dass $H$ nichts sagt, woraus es folgert, dass $K_H\neg(M_{white} \wedge V_{white})$, also $K_M\ K_H\neg(M_{white} \wedge V_{white})$.
+    \item Würde $K_{M} V_{white}$ gelten, könnte $M$ sagen, dass $M_{black}$ gilt. Denn wenn $K_{M} V_{white}$, dann auch $K_H V_{white}$ ($\Rightarrow K_M K_H V_{white}$) und damit wäre klar, dass $M_{black}$ gilt, denn $K_M\ K_H\ \neg(M_{white} \wedge V_{white}) \wedge K_M K_H V_{white} \Rightarrow K_M K_H \neg M_{white} \Rightarrow K_M K_H M_{black}$. Dies ist jedoch nicht der Fall, also $K_{M} V_{black}$ (Daraus kann $K_M$ aber nichts schlussfolgern, denn es gilt $K_M K_H \neg(M_{white} \wedge V_{white}) \Rightarrow \langle M \rangle ((V_{black} \wedge M_{white}) \vee (V_{black} \wedge M_{black}))$).
+    \item $V$ lauscht gespannt und hört lange Zeit niemanden rufen. $V$ weiß, dass $K_H\neg(M_{white} \wedge V_{white})$, denn wäre andernfalls ( d.h. wenn $K_H M_{white} \wedge V_{white}$) hätte $H$ sich schon mit $H_{black}$ gemeldet. Also gilt $K_V K_H\neg(M_{white} \wedge V_{white})$. $V$ weiß außerdem $K_M K_H\neg(M_{white} \wedge V_{white})$ (also $K_V K_M K_H\neg(M_{white} \wedge V_{white})$). Da $M$ sich nicht meldet und wegen $K_V K_M K_H\neg(M_{white} \wedge V_{white})$ weiß $V$, dass $M$ grübelt ob nun $M_{white}$ oder $M_{black}$, dass also gilt $\langle M \rangle ((V_{black} \wedge M_{white}) \vee (V_{black} \wedge M_{black}))$ daraus folgt aber $K_M V_{black}$ also $K_V K_M V_{black}$. $V$ meldet sich mit $V_{schwarz}$.
+\end{itemize}
+
+\end{document}
